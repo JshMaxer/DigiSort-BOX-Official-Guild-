@@ -89,7 +89,7 @@ namespace DigiSort_Box.Forms
             // 
             // btndeleteready
             // 
-            this.btndeleteready.Location = new System.Drawing.Point(884, 278);
+            this.btndeleteready.Location = new System.Drawing.Point(877, 278);
             this.btndeleteready.Margin = new System.Windows.Forms.Padding(4);
             this.btndeleteready.Name = "btndeleteready";
             this.btndeleteready.Size = new System.Drawing.Size(100, 28);
@@ -99,7 +99,7 @@ namespace DigiSort_Box.Forms
             // 
             // btnupdateready
             // 
-            this.btnupdateready.Location = new System.Drawing.Point(884, 220);
+            this.btnupdateready.Location = new System.Drawing.Point(877, 220);
             this.btnupdateready.Margin = new System.Windows.Forms.Padding(4);
             this.btnupdateready.Name = "btnupdateready";
             this.btnupdateready.Size = new System.Drawing.Size(100, 28);
@@ -109,7 +109,7 @@ namespace DigiSort_Box.Forms
             // 
             // txtsearchready
             // 
-            this.txtsearchready.Location = new System.Drawing.Point(650, 179);
+            this.txtsearchready.Location = new System.Drawing.Point(643, 179);
             this.txtsearchready.Margin = new System.Windows.Forms.Padding(4);
             this.txtsearchready.Name = "txtsearchready";
             this.txtsearchready.Size = new System.Drawing.Size(132, 22);
@@ -119,7 +119,7 @@ namespace DigiSort_Box.Forms
             // 
             this.dgready.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgready.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgready.Location = new System.Drawing.Point(526, 209);
+            this.dgready.Location = new System.Drawing.Point(519, 209);
             this.dgready.Margin = new System.Windows.Forms.Padding(4);
             this.dgready.Name = "dgready";
             this.dgready.RowHeadersWidth = 51;
