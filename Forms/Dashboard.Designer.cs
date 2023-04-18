@@ -139,7 +139,7 @@ namespace DigiSort_Box.Forms
             // 
             this.txtname.AutoSize = true;
             this.txtname.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtname.Location = new System.Drawing.Point(3, 16);
+            this.txtname.Location = new System.Drawing.Point(4, 16);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(48, 24);
             this.txtname.TabIndex = 0;
