@@ -111,11 +111,11 @@
     <Compile Include="Forms\DigiSortBox.Designer.cs">
       <DependentUpon>DigiSortBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main Dashboard.cs">
+    <Compile Include="Forms\MainDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Main Dashboard.Designer.cs">
-      <DependentUpon>Main Dashboard.cs</DependentUpon>
+    <Compile Include="Forms\MainDashboard.Designer.cs">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Inventory.cs">
       <SubType>Form</SubType>
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="Forms\DigiSortBox.resx">
       <DependentUpon>DigiSortBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Main Dashboard.resx">
-      <DependentUpon>Main Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainDashboard.resx">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>

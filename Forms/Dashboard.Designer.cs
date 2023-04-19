@@ -115,6 +115,7 @@ namespace DigiSort_Box.Forms
             this.btndash.TabIndex = 4;
             this.btndash.Text = "Dashboard";
             this.btndash.UseVisualStyleBackColor = false;
+            this.btndash.Click += new System.EventHandler(this.btndash_Click);
             // 
             // mainpanel
             // 

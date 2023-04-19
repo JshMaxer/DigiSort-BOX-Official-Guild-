@@ -84,5 +84,11 @@ namespace DigiSort_Box.Forms
         {
             txtlogout.ForeColor = Color.Black;
         }
+
+        private void btndash_Click(object sender, EventArgs e)
+        {
+            mainpanel.Controls.Clear();
+           
+        }
     }
 }
