@@ -62,8 +62,17 @@ namespace DigiSort_Box.Forms
         private void txtlogout_Click(object sender, EventArgs e)
         {
             Forms.DigiSortBox digi = new Forms.DigiSortBox();
-            digi.Show();
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Logging out?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                digi.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+            
         }
 
         private void txtlogout_MouseHover(object sender, EventArgs e)

@@ -37,10 +37,10 @@ namespace DigiSort_Box.Forms
             this.btndash = new System.Windows.Forms.Button();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtname = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtlogout = new System.Windows.Forms.Label();
+            this.txtname = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -118,9 +118,9 @@ namespace DigiSort_Box.Forms
             // 
             // mainpanel
             // 
-            this.mainpanel.Location = new System.Drawing.Point(138, 53);
+            this.mainpanel.Location = new System.Drawing.Point(134, 53);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(977, 612);
+            this.mainpanel.Size = new System.Drawing.Size(1008, 612);
             this.mainpanel.TabIndex = 8;
             // 
             // panel1
@@ -130,10 +130,46 @@ namespace DigiSort_Box.Forms
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtlogout);
             this.panel1.Controls.Add(this.txtname);
-            this.panel1.Location = new System.Drawing.Point(138, -3);
+            this.panel1.Location = new System.Drawing.Point(126, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(990, 50);
+            this.panel1.Size = new System.Drawing.Size(1036, 50);
             this.panel1.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(938, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 36);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "-";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(976, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtlogout
+            // 
+            this.txtlogout.AutoSize = true;
+            this.txtlogout.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlogout.Location = new System.Drawing.Point(865, 16);
+            this.txtlogout.Name = "txtlogout";
+            this.txtlogout.Size = new System.Drawing.Size(58, 24);
+            this.txtlogout.TabIndex = 0;
+            this.txtlogout.Text = "Log out";
+            this.txtlogout.Click += new System.EventHandler(this.txtlogout_Click);
+            this.txtlogout.MouseLeave += new System.EventHandler(this.txtlogout_MouseLeave);
+            this.txtlogout.MouseHover += new System.EventHandler(this.txtlogout_MouseHover);
             // 
             // txtname
             // 
@@ -145,48 +181,12 @@ namespace DigiSort_Box.Forms
             this.txtname.TabIndex = 0;
             this.txtname.Text = "Name";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(945, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "X";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(907, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 36);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "-";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txtlogout
-            // 
-            this.txtlogout.AutoSize = true;
-            this.txtlogout.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlogout.Location = new System.Drawing.Point(834, 19);
-            this.txtlogout.Name = "txtlogout";
-            this.txtlogout.Size = new System.Drawing.Size(58, 24);
-            this.txtlogout.TabIndex = 0;
-            this.txtlogout.Text = "Log out";
-            this.txtlogout.Click += new System.EventHandler(this.txtlogout_Click);
-            this.txtlogout.MouseLeave += new System.EventHandler(this.txtlogout_MouseLeave);
-            this.txtlogout.MouseHover += new System.EventHandler(this.txtlogout_MouseHover);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1127, 673);
+            this.ClientSize = new System.Drawing.Size(1158, 682);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.pictureBox1);
