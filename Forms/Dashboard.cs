@@ -70,7 +70,7 @@ namespace DigiSort_Box.Forms
             }
             else if (dialogResult == DialogResult.No)
             {
-                //do something else
+                //do nothing
             }
             
         }

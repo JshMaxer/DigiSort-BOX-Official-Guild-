@@ -29,8 +29,6 @@ namespace DigiSort_Box.Forms
             unprint();
             ready();
 
-            
-
             connection.Close();
         }
 
@@ -76,6 +74,73 @@ namespace DigiSort_Box.Forms
         private void btnupdateready_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtunprinted_TextChanged(object sender, EventArgs e)
+        {
+            connection.Close();
+            connection.Open();
+            if (txtunprinted.Text.Equals(""))
+            {
+                string searchquery = "SELECT * FROM unprinted_shirts";
+                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
+                DataTable tbl = new DataTable();
+                adp.Fill(tbl);
+                dgunprinted.DataSource = tbl;
+            }
+            else
+            {
+                string searchquery = "SELECT * FROM unprinted_shirts WHERE color LIKE '" + txtunprinted.Text + "%'";
+                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
+                DataTable tbl = new DataTable();
+                adp.Fill(tbl);
+                dgunprinted.DataSource = tbl;
+            }
+            
+        }
+
+        private void txtsearchready_TextChanged(object sender, EventArgs e)
+        {
+            connection.Close();
+            connection.Open();
+            if (txtsearchready.Text.Equals(""))
+            {
+                string searchquery = "SELECT * FROM ready_to_sell_items";
+                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
+                DataTable tbl = new DataTable();
+                adp.Fill(tbl);
+                dgready.DataSource = tbl;
+            }
+            else
+            {
+                string searchquery = "SELECT * FROM ready_to_sell_items WHERE product_name LIKE '" + txtsearchready.Text + "%'";
+                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
+                DataTable tbl = new DataTable();
+                adp.Fill(tbl);
+                dgready.DataSource = tbl;
+            }
+        }
+
+        private void txtsearchraw_TextChanged(object sender, EventArgs e)
+        {
+            connection.Close();
+            connection.Open();
+            if (txtsearchraw.Text.Equals(""))
+            {
+                string searchquery = "SELECT * FROM raw_material";
+                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
+                DataTable tbl = new DataTable();
+                adp.Fill(tbl);
+                dgrawmaterial.DataSource = tbl;
+            }
+            else
+            {
+                string searchquery = "SELECT * FROM raw_material WHERE material LIKE '" + txtsearchraw.Text + "%'";
+                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
+                DataTable tbl = new DataTable();
+                adp.Fill(tbl);
+                dgrawmaterial.DataSource = tbl;
+            }
         }
     }
 }

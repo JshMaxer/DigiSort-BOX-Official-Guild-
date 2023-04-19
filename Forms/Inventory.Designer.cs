@@ -89,6 +89,7 @@ namespace DigiSort_Box.Forms
             this.txtsearchready.Name = "txtsearchready";
             this.txtsearchready.Size = new System.Drawing.Size(132, 22);
             this.txtsearchready.TabIndex = 24;
+            this.txtsearchready.TextChanged += new System.EventHandler(this.txtsearchready_TextChanged);
             // 
             // dgready
             // 
@@ -128,6 +129,7 @@ namespace DigiSort_Box.Forms
             this.txtsearchraw.Name = "txtsearchraw";
             this.txtsearchraw.Size = new System.Drawing.Size(132, 22);
             this.txtsearchraw.TabIndex = 20;
+            this.txtsearchraw.TextChanged += new System.EventHandler(this.txtsearchraw_TextChanged);
             // 
             // dgrawmaterial
             // 
@@ -178,6 +180,7 @@ namespace DigiSort_Box.Forms
             this.txtunprinted.Name = "txtunprinted";
             this.txtunprinted.Size = new System.Drawing.Size(132, 22);
             this.txtunprinted.TabIndex = 15;
+            this.txtunprinted.TextChanged += new System.EventHandler(this.txtunprinted_TextChanged);
             // 
             // label4
             // 
