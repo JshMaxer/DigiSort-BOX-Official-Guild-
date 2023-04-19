@@ -250,6 +250,17 @@ namespace DigiSort_Box.Forms
             // cbcolor6
             // 
             this.cbcolor6.FormattingEnabled = true;
+            this.cbcolor6.Items.AddRange(new object[] {
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue"});
             this.cbcolor6.Location = new System.Drawing.Point(170, 371);
             this.cbcolor6.Name = "cbcolor6";
             this.cbcolor6.Size = new System.Drawing.Size(121, 21);
@@ -503,7 +514,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.txtproduct1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReadytoSell";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReadytoSell";
