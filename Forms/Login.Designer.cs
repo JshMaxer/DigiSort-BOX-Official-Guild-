@@ -35,6 +35,7 @@ namespace DigiSort_Box.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@ namespace DigiSort_Box.Forms
             this.btnlogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(124, 28);
-            this.btnlogin.TabIndex = 11;
+            this.btnlogin.TabIndex = 3;
             this.btnlogin.Text = "Log in";
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
@@ -55,7 +56,7 @@ namespace DigiSort_Box.Forms
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(156, 22);
-            this.txtpassword.TabIndex = 10;
+            this.txtpassword.TabIndex = 2;
             // 
             // txtusername
             // 
@@ -63,7 +64,7 @@ namespace DigiSort_Box.Forms
             this.txtusername.Margin = new System.Windows.Forms.Padding(4);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(156, 22);
-            this.txtusername.TabIndex = 9;
+            this.txtusername.TabIndex = 1;
             // 
             // label2
             // 
@@ -97,12 +98,24 @@ namespace DigiSort_Box.Forms
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(13, 13);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(36, 29);
+            this.btnback.TabIndex = 4;
+            this.btnback.Text = "<";
+            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(993, 621);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtusername);
@@ -127,5 +140,6 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnback;
     }
 }

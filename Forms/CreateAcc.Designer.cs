@@ -43,6 +43,7 @@ namespace DigiSort_Box
             this.txtlastname = new System.Windows.Forms.TextBox();
             this.txtfirstname = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@ namespace DigiSort_Box
             this.btncreate.Margin = new System.Windows.Forms.Padding(4);
             this.btncreate.Name = "btncreate";
             this.btncreate.Size = new System.Drawing.Size(165, 28);
-            this.btncreate.TabIndex = 28;
+            this.btncreate.TabIndex = 6;
             this.btncreate.Text = "Create Account";
             this.btncreate.UseVisualStyleBackColor = true;
             this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
@@ -63,7 +64,7 @@ namespace DigiSort_Box
             this.txtretype.Margin = new System.Windows.Forms.Padding(4);
             this.txtretype.Name = "txtretype";
             this.txtretype.Size = new System.Drawing.Size(132, 22);
-            this.txtretype.TabIndex = 27;
+            this.txtretype.TabIndex = 5;
             // 
             // label6
             // 
@@ -132,7 +133,7 @@ namespace DigiSort_Box
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(132, 22);
-            this.txtpassword.TabIndex = 20;
+            this.txtpassword.TabIndex = 4;
             // 
             // txtemail
             // 
@@ -140,7 +141,7 @@ namespace DigiSort_Box
             this.txtemail.Margin = new System.Windows.Forms.Padding(4);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(132, 22);
-            this.txtemail.TabIndex = 19;
+            this.txtemail.TabIndex = 3;
             // 
             // txtusername
             // 
@@ -148,7 +149,7 @@ namespace DigiSort_Box
             this.txtusername.Margin = new System.Windows.Forms.Padding(4);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(132, 22);
-            this.txtusername.TabIndex = 18;
+            this.txtusername.TabIndex = 2;
             // 
             // txtlastname
             // 
@@ -156,7 +157,7 @@ namespace DigiSort_Box
             this.txtlastname.Margin = new System.Windows.Forms.Padding(4);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.Size = new System.Drawing.Size(132, 22);
-            this.txtlastname.TabIndex = 17;
+            this.txtlastname.TabIndex = 1;
             // 
             // txtfirstname
             // 
@@ -164,7 +165,7 @@ namespace DigiSort_Box
             this.txtfirstname.Margin = new System.Windows.Forms.Padding(4);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.Size = new System.Drawing.Size(132, 22);
-            this.txtfirstname.TabIndex = 16;
+            this.txtfirstname.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -177,12 +178,24 @@ namespace DigiSort_Box
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(13, 13);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(36, 29);
+            this.btnback.TabIndex = 7;
+            this.btnback.Text = "<";
+            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
             // CreateAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(993, 621);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.btncreate);
             this.Controls.Add(this.txtretype);
             this.Controls.Add(this.label6);
@@ -223,6 +236,7 @@ namespace DigiSort_Box
         private System.Windows.Forms.TextBox txtlastname;
         private System.Windows.Forms.TextBox txtfirstname;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnback;
     }
 }
 

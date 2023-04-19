@@ -88,7 +88,17 @@ namespace DigiSort_Box.Forms
         private void btndash_Click(object sender, EventArgs e)
         {
             mainpanel.Controls.Clear();
-           
+            Forms.maindashboard maindash = new Forms.maindashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.mainpanel.Controls.Add(maindash);
+            maindash.Show();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            mainpanel.Controls.Clear();
+            Forms.maindashboard maindash = new Forms.maindashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.mainpanel.Controls.Add(maindash);
+            maindash.Show();
         }
     }
 }

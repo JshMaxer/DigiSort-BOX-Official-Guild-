@@ -21,43 +21,56 @@ namespace DigiSort_Box
 
         private void btncreate_Click(object sender, EventArgs e)
         {
-            if(txtfirstname.Text.Equals("") || txtlastname.Text.Equals("") || txtpassword.Text.Equals("") || txtretype.Text.Equals("") || txtusername.Text.Equals(""))
+            try
             {
-                MessageBox.Show("Field is blank!");
-            }
-            else if(!txtretype.Text.Equals(txtpassword.Text))
-            {
-                MessageBox.Show("Password not same");
-            }
-            else
-            {
-                string InsertQuery = "INSERT INTO account VALUES ('" + txtusername.Text + "', '" + txtfirstname.Text + "', '" + txtlastname.Text + "', '" + txtemail.Text + "', '" + txtpassword.Text + "')";
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
-
-                try
+                if (txtfirstname.Text.Equals("") || txtlastname.Text.Equals("") || txtpassword.Text.Equals("") || txtretype.Text.Equals("") || txtusername.Text.Equals(""))
                 {
-                    if (cmd.ExecuteNonQuery() == 1)
-                    {
-                        MessageBox.Show("Account Created Succesful");
-                        Forms.Login log = new Forms.Login();
-                        log.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Account Created UnSuccesful");
-                    }
+                    MessageBox.Show("Field is blank!");
                 }
-                catch (Exception ex)
+                else if (!txtretype.Text.Equals(txtpassword.Text))
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Password not same");
                 }
+                else
+                {
+                    string InsertQuery = "INSERT INTO account VALUES ('" + txtusername.Text + "', '" + txtfirstname.Text + "', '" + txtlastname.Text + "', '" + txtemail.Text + "', '" + txtpassword.Text + "')";
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 
-                connection.Close();
+                    try
+                    {
+                        if (cmd.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("Account Created Succesful");
+                            Forms.Login log = new Forms.Login();
+                            log.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Account Created UnSuccesful");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    connection.Close();
+                }
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
+            }
 
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Forms.DigiSortBox dsb = new Forms.DigiSortBox();
+            dsb.Show();
+            this.Close();
         }
     }
 }
