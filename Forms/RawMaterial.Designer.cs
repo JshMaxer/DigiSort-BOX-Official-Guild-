@@ -54,10 +54,9 @@ namespace DigiSort_Box.Forms
             // 
             // btnaddmore
             // 
-            this.btnaddmore.Location = new System.Drawing.Point(709, 504);
-            this.btnaddmore.Margin = new System.Windows.Forms.Padding(4);
+            this.btnaddmore.Location = new System.Drawing.Point(532, 410);
             this.btnaddmore.Name = "btnaddmore";
-            this.btnaddmore.Size = new System.Drawing.Size(197, 58);
+            this.btnaddmore.Size = new System.Drawing.Size(148, 47);
             this.btnaddmore.TabIndex = 42;
             this.btnaddmore.Text = "Add";
             this.btnaddmore.UseVisualStyleBackColor = true;
@@ -65,144 +64,171 @@ namespace DigiSort_Box.Forms
             // 
             // txtquan4
             // 
-            this.txtquan4.Location = new System.Drawing.Point(721, 402);
-            this.txtquan4.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan4.Location = new System.Drawing.Point(541, 327);
             this.txtquan4.Name = "txtquan4";
-            this.txtquan4.Size = new System.Drawing.Size(132, 22);
+            this.txtquan4.Size = new System.Drawing.Size(100, 20);
             this.txtquan4.TabIndex = 41;
             // 
             // txtquan3
             // 
-            this.txtquan3.Location = new System.Drawing.Point(721, 314);
-            this.txtquan3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan3.Location = new System.Drawing.Point(541, 255);
             this.txtquan3.Name = "txtquan3";
-            this.txtquan3.Size = new System.Drawing.Size(132, 22);
+            this.txtquan3.Size = new System.Drawing.Size(100, 20);
             this.txtquan3.TabIndex = 40;
             // 
             // txtquan2
             // 
-            this.txtquan2.Location = new System.Drawing.Point(721, 237);
-            this.txtquan2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan2.Location = new System.Drawing.Point(541, 193);
             this.txtquan2.Name = "txtquan2";
-            this.txtquan2.Size = new System.Drawing.Size(132, 22);
+            this.txtquan2.Size = new System.Drawing.Size(100, 20);
             this.txtquan2.TabIndex = 39;
             // 
             // txtquan1
             // 
-            this.txtquan1.Location = new System.Drawing.Point(721, 152);
-            this.txtquan1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan1.Location = new System.Drawing.Point(541, 124);
             this.txtquan1.Name = "txtquan1";
-            this.txtquan1.Size = new System.Drawing.Size(132, 22);
+            this.txtquan1.Size = new System.Drawing.Size(100, 20);
             this.txtquan1.TabIndex = 38;
             // 
             // cbcolor4
             // 
             this.cbcolor4.FormattingEnabled = true;
-            this.cbcolor4.Location = new System.Drawing.Point(494, 401);
-            this.cbcolor4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor4.Items.AddRange(new object[] {
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue"});
+            this.cbcolor4.Location = new System.Drawing.Point(370, 326);
             this.cbcolor4.Name = "cbcolor4";
-            this.cbcolor4.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor4.Size = new System.Drawing.Size(121, 21);
             this.cbcolor4.TabIndex = 37;
             // 
             // cbcolor3
             // 
             this.cbcolor3.FormattingEnabled = true;
-            this.cbcolor3.Location = new System.Drawing.Point(494, 313);
-            this.cbcolor3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor3.Items.AddRange(new object[] {
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue"});
+            this.cbcolor3.Location = new System.Drawing.Point(370, 254);
             this.cbcolor3.Name = "cbcolor3";
-            this.cbcolor3.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor3.Size = new System.Drawing.Size(121, 21);
             this.cbcolor3.TabIndex = 36;
             // 
             // cbcolor2
             // 
             this.cbcolor2.FormattingEnabled = true;
-            this.cbcolor2.Location = new System.Drawing.Point(494, 236);
-            this.cbcolor2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor2.Items.AddRange(new object[] {
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue"});
+            this.cbcolor2.Location = new System.Drawing.Point(370, 192);
             this.cbcolor2.Name = "cbcolor2";
-            this.cbcolor2.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor2.Size = new System.Drawing.Size(121, 21);
             this.cbcolor2.TabIndex = 35;
             // 
             // cbcolor1
             // 
             this.cbcolor1.FormattingEnabled = true;
-            this.cbcolor1.Location = new System.Drawing.Point(494, 152);
-            this.cbcolor1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor1.Items.AddRange(new object[] {
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Red ",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue"});
+            this.cbcolor1.Location = new System.Drawing.Point(370, 124);
             this.cbcolor1.Name = "cbcolor1";
-            this.cbcolor1.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor1.Size = new System.Drawing.Size(121, 21);
             this.cbcolor1.TabIndex = 34;
             // 
             // cbdesign4
             // 
-            this.cbdesign4.Location = new System.Drawing.Point(289, 402);
-            this.cbdesign4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbdesign4.Location = new System.Drawing.Point(217, 327);
             this.cbdesign4.Name = "cbdesign4";
-            this.cbdesign4.Size = new System.Drawing.Size(132, 22);
+            this.cbdesign4.Size = new System.Drawing.Size(100, 20);
             this.cbdesign4.TabIndex = 33;
             // 
             // cbdesign3
             // 
-            this.cbdesign3.Location = new System.Drawing.Point(289, 314);
-            this.cbdesign3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbdesign3.Location = new System.Drawing.Point(217, 255);
             this.cbdesign3.Name = "cbdesign3";
-            this.cbdesign3.Size = new System.Drawing.Size(132, 22);
+            this.cbdesign3.Size = new System.Drawing.Size(100, 20);
             this.cbdesign3.TabIndex = 32;
             // 
             // cbdesign2
             // 
-            this.cbdesign2.Location = new System.Drawing.Point(289, 237);
-            this.cbdesign2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbdesign2.Location = new System.Drawing.Point(217, 193);
             this.cbdesign2.Name = "cbdesign2";
-            this.cbdesign2.Size = new System.Drawing.Size(132, 22);
+            this.cbdesign2.Size = new System.Drawing.Size(100, 20);
             this.cbdesign2.TabIndex = 31;
             // 
             // cbdesign1
             // 
-            this.cbdesign1.Location = new System.Drawing.Point(289, 153);
-            this.cbdesign1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbdesign1.Location = new System.Drawing.Point(217, 124);
             this.cbdesign1.Name = "cbdesign1";
-            this.cbdesign1.Size = new System.Drawing.Size(132, 22);
+            this.cbdesign1.Size = new System.Drawing.Size(100, 20);
             this.cbdesign1.TabIndex = 30;
             // 
             // cbmaterial4
             // 
-            this.cbmaterial4.Location = new System.Drawing.Point(102, 402);
-            this.cbmaterial4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbmaterial4.Location = new System.Drawing.Point(76, 327);
             this.cbmaterial4.Name = "cbmaterial4";
-            this.cbmaterial4.Size = new System.Drawing.Size(132, 22);
+            this.cbmaterial4.Size = new System.Drawing.Size(100, 20);
             this.cbmaterial4.TabIndex = 29;
             // 
             // cbmaterial3
             // 
-            this.cbmaterial3.Location = new System.Drawing.Point(102, 314);
-            this.cbmaterial3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbmaterial3.Location = new System.Drawing.Point(76, 255);
             this.cbmaterial3.Name = "cbmaterial3";
-            this.cbmaterial3.Size = new System.Drawing.Size(132, 22);
+            this.cbmaterial3.Size = new System.Drawing.Size(100, 20);
             this.cbmaterial3.TabIndex = 28;
             // 
             // cbmaterial2
             // 
-            this.cbmaterial2.Location = new System.Drawing.Point(102, 237);
-            this.cbmaterial2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbmaterial2.Location = new System.Drawing.Point(76, 193);
             this.cbmaterial2.Name = "cbmaterial2";
-            this.cbmaterial2.Size = new System.Drawing.Size(132, 22);
+            this.cbmaterial2.Size = new System.Drawing.Size(100, 20);
             this.cbmaterial2.TabIndex = 27;
             // 
             // cbmaterial1
             // 
-            this.cbmaterial1.Location = new System.Drawing.Point(102, 153);
-            this.cbmaterial1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbmaterial1.Location = new System.Drawing.Point(76, 124);
             this.cbmaterial1.Name = "cbmaterial1";
-            this.cbmaterial1.Size = new System.Drawing.Size(132, 22);
+            this.cbmaterial1.Size = new System.Drawing.Size(100, 20);
             this.cbmaterial1.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(749, 96);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(562, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
+            this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 25;
             this.label4.Text = "Quantity";
             // 
@@ -210,10 +236,9 @@ namespace DigiSort_Box.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(554, 97);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(416, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Color";
             // 
@@ -221,10 +246,9 @@ namespace DigiSort_Box.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(326, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(244, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 23;
             this.label2.Text = "Design";
             // 
@@ -232,19 +256,18 @@ namespace DigiSort_Box.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(137, 97);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(103, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 22;
             this.label1.Text = "Material";
             // 
             // RawMaterial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(993, 621);
+            this.ClientSize = new System.Drawing.Size(745, 505);
             this.Controls.Add(this.btnaddmore);
             this.Controls.Add(this.txtquan4);
             this.Controls.Add(this.txtquan3);
@@ -267,6 +290,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RawMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RawMaterial";
