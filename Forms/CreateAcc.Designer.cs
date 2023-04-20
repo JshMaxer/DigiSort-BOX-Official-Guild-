@@ -65,6 +65,7 @@ namespace DigiSort_Box
             this.txtretype.Name = "txtretype";
             this.txtretype.Size = new System.Drawing.Size(132, 22);
             this.txtretype.TabIndex = 5;
+            this.txtretype.UseSystemPasswordChar = true;
             // 
             // label6
             // 

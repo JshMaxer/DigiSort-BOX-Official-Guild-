@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace DigiSort_Box.Forms
 {
@@ -22,37 +15,49 @@ namespace DigiSort_Box.Forms
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            try
+            //preview account
+            if (txtusername.Text.Equals("Preview") || txtusername.Text.Equals("preview") && (txtpassword.Text.Equals("Admin") || txtpassword.Text.Equals("admin")))
             {
-                string searchQuery = "SELECT first_name, last_name, username, password FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand(searchQuery, connection);
-                MySqlDataReader row = (cmd.ExecuteReader());
+                MessageBox.Show("This account is for preview forms only. You cannot do anything on other forms you just previewing them.\nThis account is usually used only for Front-End Developer");
+                Forms.preview pv = new Forms.preview();
+                this.Close();
+                pv.Show();
 
-                if (row.HasRows)
+            }
+            else
+            {
+                try
                 {
-                    while (row.Read())
+                    string searchQuery = "SELECT first_name, last_name, username, password FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand(searchQuery, connection);
+                    MySqlDataReader row = (cmd.ExecuteReader());
+
+                    if (row.HasRows)
                     {
-                        string firstname = row["first_name"].ToString();
-                        string lastname = row["last_name"].ToString();
-                        MessageBox.Show("Account Succesfully Login \nHello " + firstname + " " + lastname);
-                        Forms.Dashboard dash = new Dashboard();
-                        dash.txtname.Text = firstname + " " + lastname;
-                        dash.Show();
-                        this.Close();
+                        while (row.Read())
+                        {
+                            string firstname = row["first_name"].ToString();
+                            string lastname = row["last_name"].ToString();
+                            MessageBox.Show("Account Succesfully Login \nHello " + firstname + " " + lastname);
+                            Forms.Dashboard dash = new Dashboard();
+                            dash.txtname.Text = firstname + " " + lastname;
+                            dash.Show();
+                            this.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password");
                     }
 
+                    connection.Close();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Invalid Username or Password");
+                    MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
                 }
-
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
             }
         }
 

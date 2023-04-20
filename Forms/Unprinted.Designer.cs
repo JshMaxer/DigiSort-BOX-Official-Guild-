@@ -60,6 +60,7 @@ namespace DigiSort_Box.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbothercolor
@@ -70,21 +71,20 @@ namespace DigiSort_Box.Forms
             "",
             "Purple",
             "White",
-            "Nude",
+            "Brown",
             "Gray",
-            "Maroon",
-            "Black",
-            "Brown"});
+            "Black"});
             this.cbothercolor.Location = new System.Drawing.Point(79, 393);
-            this.cbothercolor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbothercolor.Margin = new System.Windows.Forms.Padding(4);
             this.cbothercolor.Name = "cbothercolor";
             this.cbothercolor.Size = new System.Drawing.Size(113, 24);
             this.cbothercolor.TabIndex = 58;
+            this.cbothercolor.SelectedIndexChanged += new System.EventHandler(this.cbothercolor_SelectedIndexChanged);
             // 
             // btnaddmore
             // 
             this.btnaddmore.Location = new System.Drawing.Point(709, 505);
-            this.btnaddmore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnaddmore.Margin = new System.Windows.Forms.Padding(4);
             this.btnaddmore.Name = "btnaddmore";
             this.btnaddmore.Size = new System.Drawing.Size(197, 58);
             this.btnaddmore.TabIndex = 56;
@@ -95,7 +95,7 @@ namespace DigiSort_Box.Forms
             // txtgreenquan
             // 
             this.txtgreenquan.Location = new System.Drawing.Point(729, 292);
-            this.txtgreenquan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtgreenquan.Margin = new System.Windows.Forms.Padding(4);
             this.txtgreenquan.Name = "txtgreenquan";
             this.txtgreenquan.Size = new System.Drawing.Size(132, 22);
             this.txtgreenquan.TabIndex = 55;
@@ -103,7 +103,7 @@ namespace DigiSort_Box.Forms
             // txtyellowquan
             // 
             this.txtyellowquan.Location = new System.Drawing.Point(729, 247);
-            this.txtyellowquan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtyellowquan.Margin = new System.Windows.Forms.Padding(4);
             this.txtyellowquan.Name = "txtyellowquan";
             this.txtyellowquan.Size = new System.Drawing.Size(132, 22);
             this.txtyellowquan.TabIndex = 54;
@@ -111,7 +111,7 @@ namespace DigiSort_Box.Forms
             // txtorangequan
             // 
             this.txtorangequan.Location = new System.Drawing.Point(729, 199);
-            this.txtorangequan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtorangequan.Margin = new System.Windows.Forms.Padding(4);
             this.txtorangequan.Name = "txtorangequan";
             this.txtorangequan.Size = new System.Drawing.Size(132, 22);
             this.txtorangequan.TabIndex = 53;
@@ -119,7 +119,7 @@ namespace DigiSort_Box.Forms
             // txtotherquan
             // 
             this.txtotherquan.Location = new System.Drawing.Point(728, 394);
-            this.txtotherquan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtotherquan.Margin = new System.Windows.Forms.Padding(4);
             this.txtotherquan.Name = "txtotherquan";
             this.txtotherquan.Size = new System.Drawing.Size(132, 22);
             this.txtotherquan.TabIndex = 52;
@@ -127,7 +127,7 @@ namespace DigiSort_Box.Forms
             // txtbluequan
             // 
             this.txtbluequan.Location = new System.Drawing.Point(729, 334);
-            this.txtbluequan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbluequan.Margin = new System.Windows.Forms.Padding(4);
             this.txtbluequan.Name = "txtbluequan";
             this.txtbluequan.Size = new System.Drawing.Size(132, 22);
             this.txtbluequan.TabIndex = 51;
@@ -135,7 +135,7 @@ namespace DigiSort_Box.Forms
             // txtredquan
             // 
             this.txtredquan.Location = new System.Drawing.Point(729, 158);
-            this.txtredquan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtredquan.Margin = new System.Windows.Forms.Padding(4);
             this.txtredquan.Name = "txtredquan";
             this.txtredquan.Size = new System.Drawing.Size(132, 22);
             this.txtredquan.TabIndex = 50;
@@ -166,7 +166,7 @@ namespace DigiSort_Box.Forms
             "4XL",
             "5XL"});
             this.cbothersize.Location = new System.Drawing.Point(494, 393);
-            this.cbothersize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbothersize.Margin = new System.Windows.Forms.Padding(4);
             this.cbothersize.Name = "cbothersize";
             this.cbothersize.Size = new System.Drawing.Size(160, 24);
             this.cbothersize.TabIndex = 48;
@@ -186,7 +186,7 @@ namespace DigiSort_Box.Forms
             "4XL",
             "5XL"});
             this.cbbluesize.Location = new System.Drawing.Point(494, 334);
-            this.cbbluesize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbluesize.Margin = new System.Windows.Forms.Padding(4);
             this.cbbluesize.Name = "cbbluesize";
             this.cbbluesize.Size = new System.Drawing.Size(160, 24);
             this.cbbluesize.TabIndex = 47;
@@ -206,7 +206,7 @@ namespace DigiSort_Box.Forms
             "4XL",
             "5XL"});
             this.cbgreensize.Location = new System.Drawing.Point(494, 290);
-            this.cbgreensize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbgreensize.Margin = new System.Windows.Forms.Padding(4);
             this.cbgreensize.Name = "cbgreensize";
             this.cbgreensize.Size = new System.Drawing.Size(160, 24);
             this.cbgreensize.TabIndex = 46;
@@ -226,7 +226,7 @@ namespace DigiSort_Box.Forms
             "4XL",
             "5XL"});
             this.cbyellowsize.Location = new System.Drawing.Point(494, 246);
-            this.cbyellowsize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbyellowsize.Margin = new System.Windows.Forms.Padding(4);
             this.cbyellowsize.Name = "cbyellowsize";
             this.cbyellowsize.Size = new System.Drawing.Size(160, 24);
             this.cbyellowsize.TabIndex = 45;
@@ -246,7 +246,7 @@ namespace DigiSort_Box.Forms
             "4XL",
             "5XL"});
             this.cborangesize.Location = new System.Drawing.Point(494, 198);
-            this.cborangesize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cborangesize.Margin = new System.Windows.Forms.Padding(4);
             this.cborangesize.Name = "cborangesize";
             this.cborangesize.Size = new System.Drawing.Size(160, 24);
             this.cborangesize.TabIndex = 44;
@@ -266,7 +266,7 @@ namespace DigiSort_Box.Forms
             "4XL",
             "5XL"});
             this.cbredsize.Location = new System.Drawing.Point(494, 158);
-            this.cbredsize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbredsize.Margin = new System.Windows.Forms.Padding(4);
             this.cbredsize.Name = "cbredsize";
             this.cbredsize.Size = new System.Drawing.Size(160, 24);
             this.cbredsize.TabIndex = 43;
@@ -286,12 +286,8 @@ namespace DigiSort_Box.Forms
             // 
             this.cbotheshade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbotheshade.FormattingEnabled = true;
-            this.cbotheshade.Items.AddRange(new object[] {
-            "",
-            "Light",
-            "Dark"});
             this.cbotheshade.Location = new System.Drawing.Point(265, 393);
-            this.cbotheshade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbotheshade.Margin = new System.Windows.Forms.Padding(4);
             this.cbotheshade.Name = "cbotheshade";
             this.cbotheshade.Size = new System.Drawing.Size(160, 24);
             this.cbotheshade.TabIndex = 41;
@@ -308,7 +304,7 @@ namespace DigiSort_Box.Forms
             "Navy",
             "Carolina"});
             this.cbblueshade.Location = new System.Drawing.Point(265, 334);
-            this.cbblueshade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbblueshade.Margin = new System.Windows.Forms.Padding(4);
             this.cbblueshade.Name = "cbblueshade";
             this.cbblueshade.Size = new System.Drawing.Size(160, 24);
             this.cbblueshade.TabIndex = 40;
@@ -325,7 +321,7 @@ namespace DigiSort_Box.Forms
             "Evergreen",
             "Emerald"});
             this.cbgreenshade.Location = new System.Drawing.Point(265, 290);
-            this.cbgreenshade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbgreenshade.Margin = new System.Windows.Forms.Padding(4);
             this.cbgreenshade.Name = "cbgreenshade";
             this.cbgreenshade.Size = new System.Drawing.Size(160, 24);
             this.cbgreenshade.TabIndex = 39;
@@ -342,7 +338,7 @@ namespace DigiSort_Box.Forms
             "Marigold",
             "Royal"});
             this.cbyellowshade.Location = new System.Drawing.Point(265, 246);
-            this.cbyellowshade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbyellowshade.Margin = new System.Windows.Forms.Padding(4);
             this.cbyellowshade.Name = "cbyellowshade";
             this.cbyellowshade.Size = new System.Drawing.Size(160, 24);
             this.cbyellowshade.TabIndex = 38;
@@ -359,7 +355,7 @@ namespace DigiSort_Box.Forms
             "Neon",
             "Fire"});
             this.cborangeshade.Location = new System.Drawing.Point(265, 198);
-            this.cborangeshade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cborangeshade.Margin = new System.Windows.Forms.Padding(4);
             this.cborangeshade.Name = "cborangeshade";
             this.cborangeshade.Size = new System.Drawing.Size(160, 24);
             this.cborangeshade.TabIndex = 37;
@@ -385,7 +381,7 @@ namespace DigiSort_Box.Forms
             "Cardinal",
             "Cherry"});
             this.cbredshade.Location = new System.Drawing.Point(265, 158);
-            this.cbredshade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbredshade.Margin = new System.Windows.Forms.Padding(4);
             this.cbredshade.Name = "cbredshade";
             this.cbredshade.Size = new System.Drawing.Size(160, 24);
             this.cbredshade.TabIndex = 35;
@@ -472,12 +468,26 @@ namespace DigiSort_Box.Forms
             this.label1.TabIndex = 27;
             this.label1.Text = "Color";
             // 
+            // btnback
+            // 
+            this.btnback.BackColor = System.Drawing.Color.Gray;
+            this.btnback.ForeColor = System.Drawing.Color.White;
+            this.btnback.Location = new System.Drawing.Point(12, 12);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(78, 34);
+            this.btnback.TabIndex = 59;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Visible = false;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
             // Unprinted
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(993, 622);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.cbothercolor);
             this.Controls.Add(this.btnaddmore);
             this.Controls.Add(this.txtgreenquan);
@@ -522,7 +532,6 @@ namespace DigiSort_Box.Forms
         #endregion
 
         private System.Windows.Forms.ComboBox cbothercolor;
-        private System.Windows.Forms.Button btnaddmore;
         private System.Windows.Forms.TextBox txtgreenquan;
         private System.Windows.Forms.TextBox txtyellowquan;
         private System.Windows.Forms.TextBox txtorangequan;
@@ -552,5 +561,7 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnaddmore;
+        public System.Windows.Forms.Button btnback;
     }
 }

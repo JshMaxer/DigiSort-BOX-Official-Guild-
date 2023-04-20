@@ -57,6 +57,7 @@ namespace DigiSort_Box.Forms
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(156, 22);
             this.txtpassword.TabIndex = 2;
+            this.txtpassword.UseSystemPasswordChar = true;
             // 
             // txtusername
             // 
