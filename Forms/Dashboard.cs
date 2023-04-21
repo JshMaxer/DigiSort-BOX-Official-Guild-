@@ -112,5 +112,13 @@ namespace DigiSort_Box.Forms
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Forms.useraccount user = new useraccount();
+            user.txtusername.Text = txtname.Text;
+            user.ShowDialog();
+
+        }
     }
 }

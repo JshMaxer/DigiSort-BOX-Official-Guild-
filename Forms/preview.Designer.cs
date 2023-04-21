@@ -32,14 +32,14 @@ namespace DigiSort_Box.Forms
             this.btnraw = new System.Windows.Forms.Button();
             this.btnunprint = new System.Windows.Forms.Button();
             this.btnready = new System.Windows.Forms.Button();
-            this.btnback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnraw
             // 
-            this.btnraw.Location = new System.Drawing.Point(12, 44);
+            this.btnraw.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.btnraw.Location = new System.Drawing.Point(9, 10);
             this.btnraw.Name = "btnraw";
-            this.btnraw.Size = new System.Drawing.Size(178, 52);
+            this.btnraw.Size = new System.Drawing.Size(200, 55);
             this.btnraw.TabIndex = 0;
             this.btnraw.Text = "Raw Material";
             this.btnraw.UseVisualStyleBackColor = true;
@@ -47,9 +47,10 @@ namespace DigiSort_Box.Forms
             // 
             // btnunprint
             // 
-            this.btnunprint.Location = new System.Drawing.Point(12, 102);
+            this.btnunprint.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.btnunprint.Location = new System.Drawing.Point(9, 71);
             this.btnunprint.Name = "btnunprint";
-            this.btnunprint.Size = new System.Drawing.Size(178, 52);
+            this.btnunprint.Size = new System.Drawing.Size(200, 55);
             this.btnunprint.TabIndex = 0;
             this.btnunprint.Text = "Unprited Shirts";
             this.btnunprint.UseVisualStyleBackColor = true;
@@ -57,42 +58,33 @@ namespace DigiSort_Box.Forms
             // 
             // btnready
             // 
-            this.btnready.Location = new System.Drawing.Point(12, 160);
+            this.btnready.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.btnready.Location = new System.Drawing.Point(9, 133);
             this.btnready.Name = "btnready";
-            this.btnready.Size = new System.Drawing.Size(178, 52);
+            this.btnready.Size = new System.Drawing.Size(200, 55);
             this.btnready.TabIndex = 0;
             this.btnready.Text = "Ready to sell Items";
             this.btnready.UseVisualStyleBackColor = true;
             this.btnready.Click += new System.EventHandler(this.btnready_Click);
             // 
-            // btnback
-            // 
-            this.btnback.BackColor = System.Drawing.Color.Gray;
-            this.btnback.ForeColor = System.Drawing.Color.White;
-            this.btnback.Location = new System.Drawing.Point(66, 4);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(78, 34);
-            this.btnback.TabIndex = 0;
-            this.btnback.Text = "Back";
-            this.btnback.UseVisualStyleBackColor = false;
-            this.btnback.Click += new System.EventHandler(this.button1_Click);
-            // 
             // preview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(204, 217);
+            this.ClientSize = new System.Drawing.Size(220, 199);
             this.Controls.Add(this.btnready);
             this.Controls.Add(this.btnunprint);
-            this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnraw);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "preview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Preview Account";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.preview_FormClosed);
+            this.Load += new System.EventHandler(this.preview_Load);
             this.ResumeLayout(false);
 
         }
@@ -102,6 +94,5 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Button btnraw;
         private System.Windows.Forms.Button btnunprint;
         private System.Windows.Forms.Button btnready;
-        private System.Windows.Forms.Button btnback;
     }
 }

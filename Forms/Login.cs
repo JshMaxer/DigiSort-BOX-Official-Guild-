@@ -39,9 +39,10 @@ namespace DigiSort_Box.Forms
                         {
                             string firstname = row["first_name"].ToString();
                             string lastname = row["last_name"].ToString();
+                            string username = row["username"].ToString();
                             MessageBox.Show("Account Succesfully Login \nHello " + firstname + " " + lastname);
                             Forms.Dashboard dash = new Dashboard();
-                            dash.txtname.Text = firstname + " " + lastname;
+                            dash.txtname.Text = username;
                             dash.Show();
                             this.Close();
                         }

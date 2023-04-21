@@ -44,11 +44,15 @@ namespace DigiSort_Box.Forms
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void preview_FormClosed(object sender, FormClosedEventArgs e)
         {
             Forms.DigiSortBox dg = new Forms.DigiSortBox();
-            this.Close();
             dg.Show();
+        }
+
+        private void preview_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

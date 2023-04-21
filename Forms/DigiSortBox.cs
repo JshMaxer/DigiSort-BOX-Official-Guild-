@@ -33,6 +33,16 @@ namespace DigiSort_Box.Forms
 
         private void DigiSortBox_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnback_Click_1(object sender, EventArgs e)
+        {
             Environment.Exit(0);
         }
     }
