@@ -62,7 +62,7 @@ namespace DigiSort_Box.Forms
             // 
             // btndeleteready
             // 
-            this.btndeleteready.Location = new System.Drawing.Point(870, 256);
+            this.btndeleteready.Location = new System.Drawing.Point(870, 336);
             this.btndeleteready.Margin = new System.Windows.Forms.Padding(4);
             this.btndeleteready.Name = "btndeleteready";
             this.btndeleteready.Size = new System.Drawing.Size(100, 28);
@@ -73,7 +73,7 @@ namespace DigiSort_Box.Forms
             // 
             // btnupdateready
             // 
-            this.btnupdateready.Location = new System.Drawing.Point(870, 220);
+            this.btnupdateready.Location = new System.Drawing.Point(870, 300);
             this.btnupdateready.Margin = new System.Windows.Forms.Padding(4);
             this.btnupdateready.Name = "btnupdateready";
             this.btnupdateready.Size = new System.Drawing.Size(100, 28);
@@ -84,7 +84,7 @@ namespace DigiSort_Box.Forms
             // 
             // txtsearchready
             // 
-            this.txtsearchready.Location = new System.Drawing.Point(852, 190);
+            this.txtsearchready.Location = new System.Drawing.Point(852, 270);
             this.txtsearchready.Margin = new System.Windows.Forms.Padding(4);
             this.txtsearchready.Name = "txtsearchready";
             this.txtsearchready.Size = new System.Drawing.Size(132, 22);
@@ -195,7 +195,7 @@ namespace DigiSort_Box.Forms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(854, 169);
+            this.label5.Location = new System.Drawing.Point(854, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 17);
             this.label5.TabIndex = 32;
