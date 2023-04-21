@@ -54,10 +54,10 @@ namespace DigiSort_Box.Forms
             // 
             this.btnprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnprint.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnprint.Location = new System.Drawing.Point(566, 424);
+            this.btnprint.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.btnprint.Location = new System.Drawing.Point(566, 431);
             this.btnprint.Name = "btnprint";
-            this.btnprint.Size = new System.Drawing.Size(136, 50);
+            this.btnprint.Size = new System.Drawing.Size(104, 43);
             this.btnprint.TabIndex = 28;
             this.btnprint.Text = "Print";
             this.btnprint.UseVisualStyleBackColor = false;
@@ -66,6 +66,7 @@ namespace DigiSort_Box.Forms
             // 
             this.btndeleteready.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btndeleteready.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeleteready.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.btndeleteready.Location = new System.Drawing.Point(652, 273);
             this.btndeleteready.Name = "btndeleteready";
             this.btndeleteready.Size = new System.Drawing.Size(75, 23);
@@ -78,6 +79,7 @@ namespace DigiSort_Box.Forms
             // 
             this.btnupdateready.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnupdateready.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnupdateready.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.btnupdateready.Location = new System.Drawing.Point(652, 244);
             this.btnupdateready.Name = "btnupdateready";
             this.btnupdateready.Size = new System.Drawing.Size(75, 23);
@@ -108,6 +110,7 @@ namespace DigiSort_Box.Forms
             // 
             this.btndeleteraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btndeleteraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeleteraw.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.btndeleteraw.Location = new System.Drawing.Point(340, 461);
             this.btndeleteraw.Name = "btndeleteraw";
             this.btndeleteraw.Size = new System.Drawing.Size(75, 23);
@@ -119,6 +122,7 @@ namespace DigiSort_Box.Forms
             // 
             this.btnupdateraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnupdateraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnupdateraw.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.btnupdateraw.Location = new System.Drawing.Point(340, 431);
             this.btnupdateraw.Name = "btnupdateraw";
             this.btnupdateraw.Size = new System.Drawing.Size(75, 23);
@@ -148,6 +152,7 @@ namespace DigiSort_Box.Forms
             // 
             this.btndeleteunprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btndeleteunprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeleteunprint.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.btndeleteunprint.Location = new System.Drawing.Point(340, 97);
             this.btndeleteunprint.Name = "btndeleteunprint";
             this.btndeleteunprint.Size = new System.Drawing.Size(75, 23);
@@ -159,7 +164,7 @@ namespace DigiSort_Box.Forms
             // 
             this.btnupdateunprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnupdateunprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnupdateunprint.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdateunprint.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.btnupdateunprint.Location = new System.Drawing.Point(340, 67);
             this.btnupdateunprint.Name = "btnupdateunprint";
             this.btnupdateunprint.Size = new System.Drawing.Size(75, 23);

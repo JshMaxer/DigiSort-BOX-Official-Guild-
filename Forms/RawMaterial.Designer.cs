@@ -57,10 +57,10 @@ namespace DigiSort_Box.Forms
             // 
             this.btnaddmore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnaddmore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnaddmore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddmore.Location = new System.Drawing.Point(532, 410);
+            this.btnaddmore.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddmore.Location = new System.Drawing.Point(554, 415);
             this.btnaddmore.Name = "btnaddmore";
-            this.btnaddmore.Size = new System.Drawing.Size(148, 47);
+            this.btnaddmore.Size = new System.Drawing.Size(126, 42);
             this.btnaddmore.TabIndex = 42;
             this.btnaddmore.Text = "Add";
             this.btnaddmore.UseVisualStyleBackColor = false;
