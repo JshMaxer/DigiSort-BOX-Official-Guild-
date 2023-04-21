@@ -75,15 +75,7 @@ namespace DigiSort_Box.Forms
             
         }
 
-        private void txtlogout_MouseHover(object sender, EventArgs e)
-        {
-            txtlogout.ForeColor = Color.Blue;
-        }
-
-        private void txtlogout_MouseLeave(object sender, EventArgs e)
-        {
-            txtlogout.ForeColor = Color.Black;
-        }
+       
 
         private void btndash_Click(object sender, EventArgs e)
         {
@@ -99,6 +91,26 @@ namespace DigiSort_Box.Forms
             Forms.maindashboard maindash = new Forms.maindashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainpanel.Controls.Add(maindash);
             maindash.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Forms.DigiSortBox digi = new Forms.DigiSortBox();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Logging out?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                digi.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
+        }
+
+        private void mainpanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -70,70 +70,65 @@ namespace DigiSort_Box.Forms
             // 
             // btnaddmore
             // 
-            this.btnaddmore.Location = new System.Drawing.Point(709, 505);
-            this.btnaddmore.Margin = new System.Windows.Forms.Padding(4);
+            this.btnaddmore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
+            this.btnaddmore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddmore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddmore.Location = new System.Drawing.Point(532, 410);
             this.btnaddmore.Name = "btnaddmore";
-            this.btnaddmore.Size = new System.Drawing.Size(197, 58);
+            this.btnaddmore.Size = new System.Drawing.Size(148, 47);
             this.btnaddmore.TabIndex = 65;
             this.btnaddmore.Text = "Add";
-            this.btnaddmore.UseVisualStyleBackColor = true;
+            this.btnaddmore.UseVisualStyleBackColor = false;
             this.btnaddmore.Click += new System.EventHandler(this.btnaddmore_Click);
             // 
             // txtquan6
             // 
-            this.txtquan6.Location = new System.Drawing.Point(777, 458);
-            this.txtquan6.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan6.Location = new System.Drawing.Point(583, 372);
             this.txtquan6.Name = "txtquan6";
-            this.txtquan6.Size = new System.Drawing.Size(132, 22);
+            this.txtquan6.Size = new System.Drawing.Size(100, 20);
             this.txtquan6.TabIndex = 64;
             // 
             // txtquan5
             // 
-            this.txtquan5.Location = new System.Drawing.Point(777, 391);
-            this.txtquan5.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan5.Location = new System.Drawing.Point(583, 318);
             this.txtquan5.Name = "txtquan5";
-            this.txtquan5.Size = new System.Drawing.Size(132, 22);
+            this.txtquan5.Size = new System.Drawing.Size(100, 20);
             this.txtquan5.TabIndex = 63;
             // 
             // txtquan4
             // 
-            this.txtquan4.Location = new System.Drawing.Point(777, 322);
-            this.txtquan4.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan4.Location = new System.Drawing.Point(583, 262);
             this.txtquan4.Name = "txtquan4";
-            this.txtquan4.Size = new System.Drawing.Size(132, 22);
+            this.txtquan4.Size = new System.Drawing.Size(100, 20);
             this.txtquan4.TabIndex = 62;
             // 
             // txtquan3
             // 
-            this.txtquan3.Location = new System.Drawing.Point(777, 257);
-            this.txtquan3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan3.Location = new System.Drawing.Point(583, 209);
             this.txtquan3.Name = "txtquan3";
-            this.txtquan3.Size = new System.Drawing.Size(132, 22);
+            this.txtquan3.Size = new System.Drawing.Size(100, 20);
             this.txtquan3.TabIndex = 61;
             // 
             // txtquan2
             // 
-            this.txtquan2.Location = new System.Drawing.Point(777, 194);
-            this.txtquan2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan2.Location = new System.Drawing.Point(583, 158);
             this.txtquan2.Name = "txtquan2";
-            this.txtquan2.Size = new System.Drawing.Size(132, 22);
+            this.txtquan2.Size = new System.Drawing.Size(100, 20);
             this.txtquan2.TabIndex = 60;
             // 
             // txtquan1
             // 
-            this.txtquan1.Location = new System.Drawing.Point(777, 130);
-            this.txtquan1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquan1.Location = new System.Drawing.Point(583, 106);
             this.txtquan1.Name = "txtquan1";
-            this.txtquan1.Size = new System.Drawing.Size(132, 22);
+            this.txtquan1.Size = new System.Drawing.Size(100, 20);
             this.txtquan1.TabIndex = 59;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(819, 82);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(614, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 58;
             this.label4.Text = "Quantity";
             // 
@@ -151,10 +146,9 @@ namespace DigiSort_Box.Forms
             "3XL",
             "4XL",
             "5XL"});
-            this.cbsize6.Location = new System.Drawing.Point(592, 457);
-            this.cbsize6.Margin = new System.Windows.Forms.Padding(4);
+            this.cbsize6.Location = new System.Drawing.Point(444, 371);
             this.cbsize6.Name = "cbsize6";
-            this.cbsize6.Size = new System.Drawing.Size(160, 24);
+            this.cbsize6.Size = new System.Drawing.Size(121, 21);
             this.cbsize6.TabIndex = 57;
             // 
             // cbsize5
@@ -171,10 +165,9 @@ namespace DigiSort_Box.Forms
             "3XL",
             "4XL",
             "5XL"});
-            this.cbsize5.Location = new System.Drawing.Point(592, 391);
-            this.cbsize5.Margin = new System.Windows.Forms.Padding(4);
+            this.cbsize5.Location = new System.Drawing.Point(444, 318);
             this.cbsize5.Name = "cbsize5";
-            this.cbsize5.Size = new System.Drawing.Size(160, 24);
+            this.cbsize5.Size = new System.Drawing.Size(121, 21);
             this.cbsize5.TabIndex = 56;
             // 
             // cbsize4
@@ -191,10 +184,9 @@ namespace DigiSort_Box.Forms
             "3XL",
             "4XL",
             "5XL"});
-            this.cbsize4.Location = new System.Drawing.Point(592, 321);
-            this.cbsize4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbsize4.Location = new System.Drawing.Point(444, 261);
             this.cbsize4.Name = "cbsize4";
-            this.cbsize4.Size = new System.Drawing.Size(160, 24);
+            this.cbsize4.Size = new System.Drawing.Size(121, 21);
             this.cbsize4.TabIndex = 55;
             // 
             // cbsize3
@@ -211,10 +203,9 @@ namespace DigiSort_Box.Forms
             "3XL",
             "4XL",
             "5XL"});
-            this.cbsize3.Location = new System.Drawing.Point(592, 256);
-            this.cbsize3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbsize3.Location = new System.Drawing.Point(444, 208);
             this.cbsize3.Name = "cbsize3";
-            this.cbsize3.Size = new System.Drawing.Size(160, 24);
+            this.cbsize3.Size = new System.Drawing.Size(121, 21);
             this.cbsize3.TabIndex = 54;
             // 
             // cbsize2
@@ -231,10 +222,9 @@ namespace DigiSort_Box.Forms
             "3XL",
             "4XL",
             "5XL"});
-            this.cbsize2.Location = new System.Drawing.Point(592, 193);
-            this.cbsize2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbsize2.Location = new System.Drawing.Point(444, 157);
             this.cbsize2.Name = "cbsize2";
-            this.cbsize2.Size = new System.Drawing.Size(160, 24);
+            this.cbsize2.Size = new System.Drawing.Size(121, 21);
             this.cbsize2.TabIndex = 53;
             // 
             // cbsize1
@@ -251,19 +241,17 @@ namespace DigiSort_Box.Forms
             "3XL",
             "4XL",
             "5XL"});
-            this.cbsize1.Location = new System.Drawing.Point(592, 130);
-            this.cbsize1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbsize1.Location = new System.Drawing.Point(444, 106);
             this.cbsize1.Name = "cbsize1";
-            this.cbsize1.Size = new System.Drawing.Size(160, 24);
+            this.cbsize1.Size = new System.Drawing.Size(121, 21);
             this.cbsize1.TabIndex = 52;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(643, 82);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(482, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
+            this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 51;
             this.label3.Text = "Size";
             // 
@@ -271,10 +259,9 @@ namespace DigiSort_Box.Forms
             // 
             this.cbshade6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbshade6.FormattingEnabled = true;
-            this.cbshade6.Location = new System.Drawing.Point(413, 457);
-            this.cbshade6.Margin = new System.Windows.Forms.Padding(4);
+            this.cbshade6.Location = new System.Drawing.Point(310, 371);
             this.cbshade6.Name = "cbshade6";
-            this.cbshade6.Size = new System.Drawing.Size(160, 24);
+            this.cbshade6.Size = new System.Drawing.Size(121, 21);
             this.cbshade6.TabIndex = 49;
             // 
             // cbcolor6
@@ -293,10 +280,9 @@ namespace DigiSort_Box.Forms
             "Brown",
             "Gray",
             "Black"});
-            this.cbcolor6.Location = new System.Drawing.Point(227, 457);
-            this.cbcolor6.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor6.Location = new System.Drawing.Point(170, 371);
             this.cbcolor6.Name = "cbcolor6";
-            this.cbcolor6.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor6.Size = new System.Drawing.Size(121, 21);
             this.cbcolor6.TabIndex = 50;
             this.cbcolor6.SelectedIndexChanged += new System.EventHandler(this.cbcolor6_SelectedIndexChanged);
             // 
@@ -304,10 +290,9 @@ namespace DigiSort_Box.Forms
             // 
             this.cbshade5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbshade5.FormattingEnabled = true;
-            this.cbshade5.Location = new System.Drawing.Point(413, 391);
-            this.cbshade5.Margin = new System.Windows.Forms.Padding(4);
+            this.cbshade5.Location = new System.Drawing.Point(310, 318);
             this.cbshade5.Name = "cbshade5";
-            this.cbshade5.Size = new System.Drawing.Size(160, 24);
+            this.cbshade5.Size = new System.Drawing.Size(121, 21);
             this.cbshade5.TabIndex = 48;
             // 
             // cbcolor5
@@ -326,10 +311,9 @@ namespace DigiSort_Box.Forms
             "Brown",
             "Gray",
             "Black"});
-            this.cbcolor5.Location = new System.Drawing.Point(227, 391);
-            this.cbcolor5.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor5.Location = new System.Drawing.Point(170, 318);
             this.cbcolor5.Name = "cbcolor5";
-            this.cbcolor5.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor5.Size = new System.Drawing.Size(121, 21);
             this.cbcolor5.TabIndex = 47;
             this.cbcolor5.SelectedIndexChanged += new System.EventHandler(this.cbcolor5_SelectedIndexChanged);
             // 
@@ -337,10 +321,9 @@ namespace DigiSort_Box.Forms
             // 
             this.cbshade4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbshade4.FormattingEnabled = true;
-            this.cbshade4.Location = new System.Drawing.Point(413, 321);
-            this.cbshade4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbshade4.Location = new System.Drawing.Point(310, 261);
             this.cbshade4.Name = "cbshade4";
-            this.cbshade4.Size = new System.Drawing.Size(160, 24);
+            this.cbshade4.Size = new System.Drawing.Size(121, 21);
             this.cbshade4.TabIndex = 46;
             // 
             // cbcolor4
@@ -359,10 +342,9 @@ namespace DigiSort_Box.Forms
             "Brown",
             "Gray",
             "Black"});
-            this.cbcolor4.Location = new System.Drawing.Point(227, 321);
-            this.cbcolor4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor4.Location = new System.Drawing.Point(170, 261);
             this.cbcolor4.Name = "cbcolor4";
-            this.cbcolor4.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor4.Size = new System.Drawing.Size(121, 21);
             this.cbcolor4.TabIndex = 45;
             this.cbcolor4.SelectedIndexChanged += new System.EventHandler(this.cbcolor4_SelectedIndexChanged);
             // 
@@ -370,10 +352,9 @@ namespace DigiSort_Box.Forms
             // 
             this.cbshade3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbshade3.FormattingEnabled = true;
-            this.cbshade3.Location = new System.Drawing.Point(413, 256);
-            this.cbshade3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbshade3.Location = new System.Drawing.Point(310, 208);
             this.cbshade3.Name = "cbshade3";
-            this.cbshade3.Size = new System.Drawing.Size(160, 24);
+            this.cbshade3.Size = new System.Drawing.Size(121, 21);
             this.cbshade3.TabIndex = 44;
             // 
             // cbcolor3
@@ -392,10 +373,9 @@ namespace DigiSort_Box.Forms
             "Brown",
             "Gray",
             "Black"});
-            this.cbcolor3.Location = new System.Drawing.Point(227, 256);
-            this.cbcolor3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor3.Location = new System.Drawing.Point(170, 208);
             this.cbcolor3.Name = "cbcolor3";
-            this.cbcolor3.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor3.Size = new System.Drawing.Size(121, 21);
             this.cbcolor3.TabIndex = 43;
             this.cbcolor3.SelectedIndexChanged += new System.EventHandler(this.cbcolor3_SelectedIndexChanged);
             // 
@@ -403,10 +383,9 @@ namespace DigiSort_Box.Forms
             // 
             this.cbshade2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbshade2.FormattingEnabled = true;
-            this.cbshade2.Location = new System.Drawing.Point(413, 193);
-            this.cbshade2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbshade2.Location = new System.Drawing.Point(310, 157);
             this.cbshade2.Name = "cbshade2";
-            this.cbshade2.Size = new System.Drawing.Size(160, 24);
+            this.cbshade2.Size = new System.Drawing.Size(121, 21);
             this.cbshade2.TabIndex = 42;
             // 
             // cbcolor2
@@ -425,10 +404,9 @@ namespace DigiSort_Box.Forms
             "Brown",
             "Gray",
             "Black"});
-            this.cbcolor2.Location = new System.Drawing.Point(227, 193);
-            this.cbcolor2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor2.Location = new System.Drawing.Point(170, 157);
             this.cbcolor2.Name = "cbcolor2";
-            this.cbcolor2.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor2.Size = new System.Drawing.Size(121, 21);
             this.cbcolor2.TabIndex = 41;
             this.cbcolor2.SelectedIndexChanged += new System.EventHandler(this.cbcolor2_SelectedIndexChanged);
             // 
@@ -436,19 +414,17 @@ namespace DigiSort_Box.Forms
             // 
             this.cbshade1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbshade1.FormattingEnabled = true;
-            this.cbshade1.Location = new System.Drawing.Point(413, 130);
-            this.cbshade1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbshade1.Location = new System.Drawing.Point(310, 106);
             this.cbshade1.Name = "cbshade1";
-            this.cbshade1.Size = new System.Drawing.Size(160, 24);
+            this.cbshade1.Size = new System.Drawing.Size(121, 21);
             this.cbshade1.TabIndex = 40;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(473, 81);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(355, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 38;
             this.label5.Text = "Shade";
             // 
@@ -468,79 +444,70 @@ namespace DigiSort_Box.Forms
             "Brown",
             "Gray",
             "Black"});
-            this.cbcolor1.Location = new System.Drawing.Point(227, 130);
-            this.cbcolor1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbcolor1.Location = new System.Drawing.Point(170, 106);
             this.cbcolor1.Name = "cbcolor1";
-            this.cbcolor1.Size = new System.Drawing.Size(160, 24);
+            this.cbcolor1.Size = new System.Drawing.Size(121, 21);
             this.cbcolor1.TabIndex = 39;
             this.cbcolor1.SelectedIndexChanged += new System.EventHandler(this.cbcolor1_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(285, 81);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(214, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 17);
+            this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 37;
             this.label2.Text = "Color";
             // 
             // txtproduct6
             // 
-            this.txtproduct6.Location = new System.Drawing.Point(71, 458);
-            this.txtproduct6.Margin = new System.Windows.Forms.Padding(4);
+            this.txtproduct6.Location = new System.Drawing.Point(53, 372);
             this.txtproduct6.Name = "txtproduct6";
-            this.txtproduct6.Size = new System.Drawing.Size(132, 22);
+            this.txtproduct6.Size = new System.Drawing.Size(100, 20);
             this.txtproduct6.TabIndex = 36;
             // 
             // txtproduct5
             // 
-            this.txtproduct5.Location = new System.Drawing.Point(71, 391);
-            this.txtproduct5.Margin = new System.Windows.Forms.Padding(4);
+            this.txtproduct5.Location = new System.Drawing.Point(53, 318);
             this.txtproduct5.Name = "txtproduct5";
-            this.txtproduct5.Size = new System.Drawing.Size(132, 22);
+            this.txtproduct5.Size = new System.Drawing.Size(100, 20);
             this.txtproduct5.TabIndex = 35;
             // 
             // txtproduct4
             // 
-            this.txtproduct4.Location = new System.Drawing.Point(71, 322);
-            this.txtproduct4.Margin = new System.Windows.Forms.Padding(4);
+            this.txtproduct4.Location = new System.Drawing.Point(53, 262);
             this.txtproduct4.Name = "txtproduct4";
-            this.txtproduct4.Size = new System.Drawing.Size(132, 22);
+            this.txtproduct4.Size = new System.Drawing.Size(100, 20);
             this.txtproduct4.TabIndex = 34;
             // 
             // txtproduct3
             // 
-            this.txtproduct3.Location = new System.Drawing.Point(71, 257);
-            this.txtproduct3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtproduct3.Location = new System.Drawing.Point(53, 209);
             this.txtproduct3.Name = "txtproduct3";
-            this.txtproduct3.Size = new System.Drawing.Size(132, 22);
+            this.txtproduct3.Size = new System.Drawing.Size(100, 20);
             this.txtproduct3.TabIndex = 33;
             // 
             // txtproduct2
             // 
-            this.txtproduct2.Location = new System.Drawing.Point(71, 194);
-            this.txtproduct2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtproduct2.Location = new System.Drawing.Point(53, 158);
             this.txtproduct2.Name = "txtproduct2";
-            this.txtproduct2.Size = new System.Drawing.Size(132, 22);
+            this.txtproduct2.Size = new System.Drawing.Size(100, 20);
             this.txtproduct2.TabIndex = 32;
             // 
             // txtproduct1
             // 
-            this.txtproduct1.Location = new System.Drawing.Point(71, 130);
-            this.txtproduct1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtproduct1.Location = new System.Drawing.Point(53, 106);
             this.txtproduct1.Name = "txtproduct1";
-            this.txtproduct1.Size = new System.Drawing.Size(132, 22);
+            this.txtproduct1.Size = new System.Drawing.Size(100, 20);
             this.txtproduct1.TabIndex = 31;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(87, 82);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(65, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 30;
             this.label1.Text = "Product Name";
             // 
@@ -548,9 +515,10 @@ namespace DigiSort_Box.Forms
             // 
             this.btnback.BackColor = System.Drawing.Color.Gray;
             this.btnback.ForeColor = System.Drawing.Color.White;
-            this.btnback.Location = new System.Drawing.Point(12, 12);
+            this.btnback.Location = new System.Drawing.Point(9, 10);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(78, 34);
+            this.btnback.Size = new System.Drawing.Size(58, 28);
             this.btnback.TabIndex = 66;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = false;
@@ -559,10 +527,10 @@ namespace DigiSort_Box.Forms
             // 
             // ReadytoSell
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(993, 622);
+            this.ClientSize = new System.Drawing.Size(745, 505);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnaddmore);
             this.Controls.Add(this.txtquan6);
@@ -601,7 +569,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.txtproduct1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReadytoSell";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReadytoSell";
