@@ -32,7 +32,7 @@ namespace DigiSort_Box.Forms
             unprint.btnaddmore.Enabled = false;
             unprint.btnback.Visible = true;
             unprint.Show();
-            this.Close();
+            this.Visible = false;
         }
 
         private void btnready_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace DigiSort_Box.Forms
             ready.btnaddmore.Enabled = false;
             ready.btnback.Visible = true;
             ready.Show();
-            this.Close();
+            this.Visible = false;
         }
 
         private void preview_FormClosed(object sender, FormClosedEventArgs e)
@@ -53,6 +53,11 @@ namespace DigiSort_Box.Forms
         private void preview_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
