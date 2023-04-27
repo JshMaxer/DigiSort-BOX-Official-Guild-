@@ -516,7 +516,7 @@ namespace DigiSort_Box.Forms
             this.btnback.BackColor = System.Drawing.Color.Gray;
             this.btnback.ForeColor = System.Drawing.Color.White;
             this.btnback.Location = new System.Drawing.Point(9, 10);
-            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(58, 28);
             this.btnback.TabIndex = 66;
@@ -569,7 +569,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.txtproduct1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReadytoSell";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReadytoSell";
