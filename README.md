@@ -79,7 +79,7 @@ quantity                       | int(255)        | No              |            
 
 # Database #
 #### Guide to import database ####
-'''
+```
 1. Create local database on xampp/MySQL
     1. Name it **digisortbox**
 2. Click import on upper tab >6 tab
@@ -88,7 +88,7 @@ quantity                       | int(255)        | No              |            
 5. Scroll down then click import
 
 * You should see the tables after you imported.
-'''
+```
 # Database File # 
 [Digisort Box File](https://github.com/JshMaxer/DigiSort-BOX-Official-Guild-/files/11342549/digisortbox.sql.gz)
 
