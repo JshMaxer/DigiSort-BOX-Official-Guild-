@@ -75,3 +75,17 @@ color                          | varchar(255)    | No              | PRI        
 shade                          | varchar(255)    | No              |                | NULL               |                  |
 size                           | varchar(255)    | No              |                | NULL               |                  |
 quantity                       | int(255)        | No              |                | NULL               |                  |
+
+
+# Database File #
+#### Guide to import database ####
+'''
+1. Create localdatabase on xampp/MySQL
+    1. Name it **digisortbox**
+2. Click import on upper tab >6 tab
+3. Click chooose file
+4. Select the zip file
+5. Scroll down then click import
+
+* You should see the tables after you imported.
+'''
