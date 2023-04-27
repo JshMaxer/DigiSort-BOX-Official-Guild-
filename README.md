@@ -80,6 +80,7 @@ quantity                       | int(255)        | No              |            
 # Database File #
 #### Guide to import database ####
 '''
+
 1. Create localdatabase on xampp/MySQL
     1. Name it **digisortbox**
 2. Click import on upper tab >6 tab
