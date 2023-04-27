@@ -41,3 +41,12 @@ account                        |
 raw_material                   |
 ready_to_sell_items            |
 unprinted_shirts               |
+
+### Tables Description: account ###
+***Field***                    | ***Type***      | ***NULL***      | ***Key***      | ***Default***      | ***Extra***      |
+------------------------------ |-----------------|-----------------|----------------|--------------------|------------------|
+username                       | varchar(255)    | No              | PRI            | NULL               |                  |
+first_name                     | varchar(255)    | No              |                | NULL               |                  |
+last_name                      | varchar(255)    | No              |                | NULL               |                  |
+email                          | varchar(255)    | No              |                | NULL               |                  |
+password                       | varchar(255)    | No              |                | NULL               |                  |
