@@ -105,17 +105,23 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\delete.Designer.cs">
+      <DependentUpon>delete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DigiSortBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DigiSortBox.Designer.cs">
       <DependentUpon>DigiSortBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Update_Delete.cs">
+    <Compile Include="Forms\Update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Update_Delete.Designer.cs">
-      <DependentUpon>Update_Delete.cs</DependentUpon>
+    <Compile Include="Forms\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainDashboard.cs">
       <SubType>Form</SubType>
@@ -173,11 +179,17 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\delete.resx">
+      <DependentUpon>delete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DigiSortBox.resx">
       <DependentUpon>DigiSortBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Update_Delete.resx">
-      <DependentUpon>Update_Delete.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Update.en.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainDashboard.resx">
       <DependentUpon>MainDashboard.cs</DependentUpon>

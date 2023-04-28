@@ -35,6 +35,8 @@ namespace DigiSort_Box.Forms
 
         private void raw()
         {
+            connection.Close();
+            connection.Open();
             //show raw
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandText = "SELECT * FROM raw_material";
@@ -46,6 +48,8 @@ namespace DigiSort_Box.Forms
 
         private void unprint()
         {
+            connection.Close();
+            connection.Open();
             //unprinted shirts
             MySqlCommand unprint = connection.CreateCommand();
             unprint.CommandText = "SELECT * FROM unprinted_shirts";
@@ -57,6 +61,8 @@ namespace DigiSort_Box.Forms
 
         private void ready()
         {
+            connection.Close();
+            connection.Open();
             //ready
             MySqlCommand unprint = connection.CreateCommand();
             unprint.CommandText = "SELECT * FROM ready_to_sell_items";
@@ -64,16 +70,6 @@ namespace DigiSort_Box.Forms
             DataTable dtRecords = new DataTable();
             dtRecords.Load(sdr);
             dgready.DataSource = dtRecords;
-        }
-
-        private void btndeleteready_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnupdateready_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtunprinted_TextChanged(object sender, EventArgs e)
@@ -141,6 +137,25 @@ namespace DigiSort_Box.Forms
                 adp.Fill(tbl);
                 dgrawmaterial.DataSource = tbl;
             }
+        }
+
+        private void btupdate_Click(object sender, EventArgs e)
+        {
+            Forms.update up = new Forms.update();
+            up.ShowDialog();
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            Forms.delete de = new Forms.delete();
+            de.ShowDialog();
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            raw();
+            unprint();
+            ready();
         }
     }
 }

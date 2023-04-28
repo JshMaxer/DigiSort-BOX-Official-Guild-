@@ -117,4 +117,76 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="cbtable.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 10.2pt</value>
+  </data>
+  <data name="cbtable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 61</value>
+  </data>
+  <data name="cbtable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>393, 28</value>
+  </data>
+  <data name="dgtable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 97</value>
+  </data>
+  <data name="txt2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 10.2pt</value>
+  </data>
+  <data name="txt2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 355</value>
+  </data>
+  <data name="txt3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 10.2pt</value>
+  </data>
+  <data name="txt3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 400</value>
+  </data>
+  <data name="txt4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 10.2pt</value>
+  </data>
+  <data name="txt4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 444</value>
+  </data>
+  <data name="txt1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 10.2pt</value>
+  </data>
+  <data name="txt1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 311</value>
+  </data>
+  <data name="txt5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 10.2pt</value>
+  </data>
+  <data name="txt5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 493</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txt5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnupdate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnupdate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt, style=Bold</value>
+  </data>
+  <data name="btnupdate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnupdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 57</value>
+  </data>
+  <data name="btnupdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
 </root>
