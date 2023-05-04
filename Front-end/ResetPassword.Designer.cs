@@ -45,8 +45,9 @@ namespace DigiSort_Box.Front_end
             this.panel1.Controls.Add(this.btnback);
             this.panel1.Controls.Add(this.Reset);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 45);
+            this.panel1.Size = new System.Drawing.Size(429, 55);
             this.panel1.TabIndex = 10;
             // 
             // btnback
@@ -54,9 +55,10 @@ namespace DigiSort_Box.Front_end
             this.btnback.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.btnback.ForeColor = System.Drawing.Color.Gray;
             this.btnback.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnback.Location = new System.Drawing.Point(278, 8);
+            this.btnback.Location = new System.Drawing.Point(371, 10);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(29, 24);
+            this.btnback.Size = new System.Drawing.Size(39, 30);
             this.btnback.TabIndex = 6;
             this.btnback.Text = "X";
             this.btnback.UseVisualStyleBackColor = true;
@@ -66,20 +68,22 @@ namespace DigiSort_Box.Front_end
             this.Reset.AutoSize = true;
             this.Reset.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Reset.Location = new System.Drawing.Point(21, 15);
+            this.Reset.Location = new System.Drawing.Point(28, 18);
+            this.Reset.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(132, 17);
+            this.Reset.Size = new System.Drawing.Size(160, 20);
             this.Reset.TabIndex = 0;
             this.Reset.Text = "Reset Password";
             // 
             // txt1
             // 
             this.txt1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.Location = new System.Drawing.Point(8, 104);
+            this.txt1.Location = new System.Drawing.Point(13, 74);
+            this.txt1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt1.Multiline = true;
             this.txt1.Name = "txt1";
             this.txt1.ReadOnly = true;
-            this.txt1.Size = new System.Drawing.Size(298, 34);
+            this.txt1.Size = new System.Drawing.Size(396, 41);
             this.txt1.TabIndex = 17;
             this.txt1.Text = "Email";
             this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -87,11 +91,12 @@ namespace DigiSort_Box.Front_end
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(8, 154);
+            this.textBox1.Location = new System.Drawing.Point(13, 136);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(298, 34);
+            this.textBox1.Size = new System.Drawing.Size(396, 41);
             this.textBox1.TabIndex = 18;
             this.textBox1.Text = "New Password";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -99,11 +104,12 @@ namespace DigiSort_Box.Front_end
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(8, 205);
+            this.textBox2.Location = new System.Drawing.Point(13, 198);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(298, 34);
+            this.textBox2.Size = new System.Drawing.Size(396, 41);
             this.textBox2.TabIndex = 19;
             this.textBox2.Text = "Reset Password";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -114,24 +120,26 @@ namespace DigiSort_Box.Front_end
             this.btnProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProceed.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnProceed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnProceed.Location = new System.Drawing.Point(92, 353);
+            this.btnProceed.Location = new System.Drawing.Point(127, 247);
+            this.btnProceed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProceed.Name = "btnProceed";
-            this.btnProceed.Size = new System.Drawing.Size(134, 46);
+            this.btnProceed.Size = new System.Drawing.Size(179, 57);
             this.btnProceed.TabIndex = 20;
             this.btnProceed.Text = "Proceed";
             this.btnProceed.UseVisualStyleBackColor = false;
             // 
             // Damage_Items
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 461);
+            this.ClientSize = new System.Drawing.Size(424, 339);
             this.Controls.Add(this.btnProceed);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Damage_Items";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Damage Items";
