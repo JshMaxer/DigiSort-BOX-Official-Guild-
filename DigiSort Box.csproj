@@ -125,23 +125,35 @@
     <Compile Include="Front-end\CreateAcc.Designer.cs">
       <DependentUpon>CreateAcc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front-end\Dashboard.cs">
+    <Compile Include="Front-end\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front-end\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <Compile Include="Front-end\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front-end\delete.cs">
+    <Compile Include="Front-end\Delete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front-end\delete.Designer.cs">
-      <DependentUpon>delete.cs</DependentUpon>
+    <Compile Include="Front-end\Delete.Designer.cs">
+      <DependentUpon>Delete.cs</DependentUpon>
     </Compile>
     <Compile Include="Front-end\DigiSortBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Front-end\DigiSortBox.Designer.cs">
       <DependentUpon>DigiSortBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-end\DamagedItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-end\DamagedItems.Designer.cs">
+      <DependentUpon>DamagedItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-end\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-end\ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Front-end\Update.cs">
       <SubType>Form</SubType>
@@ -155,11 +167,11 @@
     <Compile Include="Front-end\MainDashboard.Designer.cs">
       <DependentUpon>MainDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Front-end\Inventory.cs">
+    <Compile Include="Front-end\InventoryBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Front-end\Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <Compile Include="Front-end\InventoryBoard.Designer.cs">
+      <DependentUpon>InventoryBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Front-end\Login.cs">
       <SubType>Form</SubType>
@@ -202,14 +214,20 @@
     <EmbeddedResource Include="Front-end\CreateAcc.resx">
       <DependentUpon>CreateAcc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front-end\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Front-end\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front-end\delete.resx">
-      <DependentUpon>delete.cs</DependentUpon>
+    <EmbeddedResource Include="Front-end\Delete.resx">
+      <DependentUpon>Delete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\DigiSortBox.resx">
       <DependentUpon>DigiSortBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-end\DamagedItems.resx">
+      <DependentUpon>DamagedItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-end\ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\Update.en.resx">
       <DependentUpon>Update.cs</DependentUpon>
@@ -220,8 +238,8 @@
     <EmbeddedResource Include="Front-end\MainDashboard.resx">
       <DependentUpon>MainDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Front-end\Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <EmbeddedResource Include="Front-end\InventoryBoard.resx">
+      <DependentUpon>InventoryBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

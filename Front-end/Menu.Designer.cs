@@ -41,6 +41,7 @@ namespace DigiSort_Box.Forms
             this.btnlogout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtname = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +51,7 @@ namespace DigiSort_Box.Forms
             this.btnready.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnready.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnready.ForeColor = System.Drawing.Color.White;
-            this.btnready.Location = new System.Drawing.Point(12, 244);
+            this.btnready.Location = new System.Drawing.Point(12, 212);
             this.btnready.Name = "btnready";
             this.btnready.Size = new System.Drawing.Size(93, 84);
             this.btnready.TabIndex = 6;
@@ -63,7 +64,7 @@ namespace DigiSort_Box.Forms
             this.btnraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnraw.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnraw.ForeColor = System.Drawing.Color.White;
-            this.btnraw.Location = new System.Drawing.Point(12, 334);
+            this.btnraw.Location = new System.Drawing.Point(12, 297);
             this.btnraw.Name = "btnraw";
             this.btnraw.Size = new System.Drawing.Size(93, 84);
             this.btnraw.TabIndex = 5;
@@ -76,7 +77,7 @@ namespace DigiSort_Box.Forms
             this.btnunprinted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnunprinted.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnunprinted.ForeColor = System.Drawing.Color.White;
-            this.btnunprinted.Location = new System.Drawing.Point(12, 154);
+            this.btnunprinted.Location = new System.Drawing.Point(12, 128);
             this.btnunprinted.Name = "btnunprinted";
             this.btnunprinted.Size = new System.Drawing.Size(93, 84);
             this.btnunprinted.TabIndex = 4;
@@ -89,7 +90,7 @@ namespace DigiSort_Box.Forms
             this.btninventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btninventory.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btninventory.ForeColor = System.Drawing.Color.White;
-            this.btninventory.Location = new System.Drawing.Point(12, 425);
+            this.btninventory.Location = new System.Drawing.Point(12, 465);
             this.btninventory.Name = "btninventory";
             this.btninventory.Size = new System.Drawing.Size(93, 84);
             this.btninventory.TabIndex = 5;
@@ -102,7 +103,7 @@ namespace DigiSort_Box.Forms
             this.btndash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btndash.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndash.ForeColor = System.Drawing.Color.White;
-            this.btndash.Location = new System.Drawing.Point(12, 64);
+            this.btndash.Location = new System.Drawing.Point(12, 44);
             this.btndash.Name = "btndash";
             this.btndash.Size = new System.Drawing.Size(93, 84);
             this.btndash.TabIndex = 4;
@@ -113,7 +114,7 @@ namespace DigiSort_Box.Forms
             // mainpanel
             // 
             this.mainpanel.Location = new System.Drawing.Point(110, 49);
-            this.mainpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainpanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(747, 497);
             this.mainpanel.TabIndex = 8;
@@ -128,7 +129,7 @@ namespace DigiSort_Box.Forms
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtname);
             this.panel1.Location = new System.Drawing.Point(-11, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(882, 41);
             this.panel1.TabIndex = 9;
@@ -137,7 +138,7 @@ namespace DigiSort_Box.Forms
             // 
             this.pictureBox1.Image = global::DigiSort_Box.Properties.Resources._1;
             this.pictureBox1.Location = new System.Drawing.Point(839, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,10 +190,22 @@ namespace DigiSort_Box.Forms
             this.txtname.Location = new System.Drawing.Point(20, 15);
             this.txtname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(45, 17);
+            this.txtname.Size = new System.Drawing.Size(43, 17);
             this.txtname.TabIndex = 0;
-            this.txtname.Text = "Name";
+            this.txtname.Text = "Menu";
             this.txtname.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
+            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(12, 381);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 84);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Inventory";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
@@ -200,6 +213,7 @@ namespace DigiSort_Box.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(868, 554);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.btnready);
@@ -208,7 +222,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.btndash);
             this.Controls.Add(this.btnunprinted);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
@@ -233,5 +247,6 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Button btnuseraccount;
         public System.Windows.Forms.Label txtname;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
