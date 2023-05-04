@@ -120,5 +120,10 @@ namespace DigiSort_Box.Forms
             user.ShowDialog();
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
