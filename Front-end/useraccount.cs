@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,19 +32,11 @@ namespace DigiSort_Box.Forms
 
         private void useraccount_Load(object sender, EventArgs e)
         {
-            connection.Open();
-            string account = "SELECT username, first_name, last_name, email, password FROM account WHERE username = '" + txtusername.Text + "'";
-            MySqlCommand cmd = new MySqlCommand(account, connection);
-            MySqlDataReader read = cmd.ExecuteReader();
+            //insert code here
 
-            if(read.Read())
-            {
-                txtusername.Text = read["username"].ToString();
-                txtfirstname.Text = read["first_name"].ToString();
-                txtlastname.Text = read["last_name"].ToString();
-                txtemail.Text = read["email"].ToString();
-                txtpassword.Text = read["password"].ToString();
-            }
+            Database.useraccount acc = new Database.useraccount();
+            acc.user(txtusername, txtfirstname, txtlastname, txtemail, txtpassword);
+
         }
 
         private void btnback_Click(object sender, EventArgs e)
