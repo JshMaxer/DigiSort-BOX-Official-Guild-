@@ -29,150 +29,126 @@ namespace DigiSort_Box.Front_end
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnlogout = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtname = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.btnaddmore = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvitems = new System.Windows.Forms.DataGridView();
+            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.txtissue = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtquantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbtable = new Guna.UI2.WinForms.Guna2ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvitems)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnlogout);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtname);
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 41);
-            this.panel1.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DigiSort_Box.Properties.Resources._1;
-            this.pictureBox1.Location = new System.Drawing.Point(839, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.btnlogout.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.Location = new System.Drawing.Point(630, 8);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(0, 0);
-            this.btnlogout.TabIndex = 1;
-            this.btnlogout.Text = "Log out";
-            this.btnlogout.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(732, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 29);
-            this.label1.TabIndex = 0;
-            // 
-            // txtname
-            // 
-            this.txtname.AutoSize = true;
-            this.txtname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtname.Location = new System.Drawing.Point(10, 12);
-            this.txtname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(106, 17);
-            this.txtname.TabIndex = 0;
-            this.txtname.Text = "Damaged Items";
-            this.txtname.Visible = false;
             // 
             // btnaddmore
             // 
             this.btnaddmore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             this.btnaddmore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddmore.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddmore.Location = new System.Drawing.Point(312, 442);
+            this.btnaddmore.Location = new System.Drawing.Point(416, 557);
+            this.btnaddmore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnaddmore.Name = "btnaddmore";
-            this.btnaddmore.Size = new System.Drawing.Size(126, 42);
+            this.btnaddmore.Size = new System.Drawing.Size(168, 52);
             this.btnaddmore.TabIndex = 43;
             this.btnaddmore.Text = "Add";
             this.btnaddmore.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // dgvitems
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(203, 409);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(347, 27);
-            this.textBox1.TabIndex = 44;
+            this.dgvitems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvitems.Location = new System.Drawing.Point(146, 71);
+            this.dgvitems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvitems.Name = "dgvitems";
+            this.dgvitems.RowHeadersWidth = 51;
+            this.dgvitems.Size = new System.Drawing.Size(695, 386);
+            this.dgvitems.TabIndex = 46;
             // 
-            // comboBox1
+            // smoothedge
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(203, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(347, 26);
-            this.comboBox1.TabIndex = 45;
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
             // 
-            // dataGridView1
+            // txtissue
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(121, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(521, 314);
-            this.dataGridView1.TabIndex = 46;
+            this.txtissue.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtissue.DefaultText = "";
+            this.txtissue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtissue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtissue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtissue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtissue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtissue.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtissue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtissue.Location = new System.Drawing.Point(256, 465);
+            this.txtissue.Name = "txtissue";
+            this.txtissue.PasswordChar = '\0';
+            this.txtissue.PlaceholderText = "ISSUE";
+            this.txtissue.SelectedText = "";
+            this.txtissue.Size = new System.Drawing.Size(461, 34);
+            this.txtissue.TabIndex = 47;
+            this.txtissue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtquantity
+            // 
+            this.txtquantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtquantity.DefaultText = "";
+            this.txtquantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtquantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtquantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtquantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtquantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtquantity.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtquantity.Location = new System.Drawing.Point(436, 505);
+            this.txtquantity.Name = "txtquantity";
+            this.txtquantity.PasswordChar = '\0';
+            this.txtquantity.PlaceholderText = "QUANTITY";
+            this.txtquantity.SelectedText = "";
+            this.txtquantity.Size = new System.Drawing.Size(117, 31);
+            this.txtquantity.TabIndex = 47;
+            this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbtable
+            // 
+            this.cbtable.BackColor = System.Drawing.Color.Transparent;
+            this.cbtable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbtable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbtable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbtable.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbtable.ItemHeight = 30;
+            this.cbtable.Location = new System.Drawing.Point(256, 12);
+            this.cbtable.Name = "cbtable";
+            this.cbtable.Size = new System.Drawing.Size(461, 36);
+            this.cbtable.TabIndex = 48;
             // 
             // Damaged_Items
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(745, 505);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(993, 622);
+            this.Controls.Add(this.cbtable);
+            this.Controls.Add(this.txtquantity);
+            this.Controls.Add(this.txtissue);
+            this.Controls.Add(this.dgvitems);
             this.Controls.Add(this.btnaddmore);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Damaged_Items";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Damaged Items";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvitems)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnlogout;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label txtname;
         public System.Windows.Forms.Button btnaddmore;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvitems;
+        private Guna.UI2.WinForms.Guna2Elipse smoothedge;
+        private Guna.UI2.WinForms.Guna2TextBox txtquantity;
+        private Guna.UI2.WinForms.Guna2TextBox txtissue;
+        private Guna.UI2.WinForms.Guna2ComboBox cbtable;
     }
 }

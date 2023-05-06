@@ -29,6 +29,7 @@ namespace DigiSort_Box
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btncreate = new System.Windows.Forms.Button();
             this.txtretype = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +47,8 @@ namespace DigiSort_Box
             this.btnback = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +79,7 @@ namespace DigiSort_Box
             this.label6.Location = new System.Drawing.Point(623, 424);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 17);
+            this.label6.Size = new System.Drawing.Size(116, 16);
             this.label6.TabIndex = 26;
             this.label6.Text = "Retype password:";
             // 
@@ -86,7 +89,7 @@ namespace DigiSort_Box
             this.label5.Location = new System.Drawing.Point(627, 371);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 25;
             this.label5.Text = "Password:";
             // 
@@ -96,7 +99,7 @@ namespace DigiSort_Box
             this.label4.Location = new System.Drawing.Point(627, 313);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 24;
             this.label4.Text = "Email:";
             // 
@@ -106,7 +109,7 @@ namespace DigiSort_Box
             this.label3.Location = new System.Drawing.Point(627, 254);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 23;
             this.label3.Text = "Username:";
             // 
@@ -117,7 +120,7 @@ namespace DigiSort_Box
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 22;
             this.label2.Text = "Lastname:";
             // 
@@ -127,7 +130,7 @@ namespace DigiSort_Box
             this.label1.Location = new System.Drawing.Point(627, 140);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 17);
+            this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 21;
             this.label1.Text = "Firstname:";
             // 
@@ -214,6 +217,17 @@ namespace DigiSort_Box
             this.label7.TabIndex = 8;
             this.label7.Text = "Create Account";
             // 
+            // smoothedge
+            // 
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
+            // 
+            // dragcotrol
+            // 
+            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
+            this.dragcotrol.TargetControl = this.panel1;
+            this.dragcotrol.UseTransparentDrag = true;
+            // 
             // CreateAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -266,6 +280,8 @@ namespace DigiSort_Box
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2Elipse smoothedge;
+        private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
     }
 }
 

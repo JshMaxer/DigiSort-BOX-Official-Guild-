@@ -44,6 +44,7 @@ namespace DigiSort_Box.Forms
             this.btnupdate = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.lbltxt1 = new System.Windows.Forms.Label();
+            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtable)).BeginInit();
             this.SuspendLayout();
@@ -135,6 +136,11 @@ namespace DigiSort_Box.Forms
             resources.ApplyResources(this.lbltxt1, "lbltxt1");
             this.lbltxt1.Name = "lbltxt1";
             // 
+            // smoothedge
+            // 
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
+            // 
             // update
             // 
             resources.ApplyResources(this, "$this");
@@ -175,5 +181,6 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label lbltxt1;
+        private Guna.UI2.WinForms.Guna2Elipse smoothedge;
     }
 }

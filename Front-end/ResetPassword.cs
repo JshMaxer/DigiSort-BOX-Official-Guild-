@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DigiSort_Box.Front_end
 {
-    public partial class Damage_Items : Form
+    public partial class reset_password : Form
     {
-        public Damage_Items()
+        public reset_password()
         {
             InitializeComponent();
         }

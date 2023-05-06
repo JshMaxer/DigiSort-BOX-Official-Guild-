@@ -29,6 +29,7 @@ namespace DigiSort_Box.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnlogin = new System.Windows.Forms.Button();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.txtusername = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@ namespace DigiSort_Box.Forms
             this.btnback = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +79,7 @@ namespace DigiSort_Box.Forms
             this.label2.Location = new System.Drawing.Point(328, 541);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "Password:";
             // 
@@ -86,7 +89,7 @@ namespace DigiSort_Box.Forms
             this.label1.Location = new System.Drawing.Point(324, 504);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Username:";
             // 
@@ -134,6 +137,17 @@ namespace DigiSort_Box.Forms
             this.label3.TabIndex = 7;
             this.label3.Text = "Login";
             // 
+            // smoothedge
+            // 
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
+            // 
+            // dragcotrol
+            // 
+            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
+            this.dragcotrol.TargetControl = this.panel1;
+            this.dragcotrol.UseTransparentDrag = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -170,5 +184,7 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Elipse smoothedge;
+        private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
     }
 }

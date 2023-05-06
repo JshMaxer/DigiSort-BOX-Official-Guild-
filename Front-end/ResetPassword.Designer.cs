@@ -1,7 +1,7 @@
 ﻿
 namespace DigiSort_Box.Front_end
 {
-    partial class Damage_Items
+    partial class reset_password
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace DigiSort_Box.Front_end
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnback = new System.Windows.Forms.Button();
             this.Reset = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@ namespace DigiSort_Box.Front_end
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnProceed = new System.Windows.Forms.Button();
+            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +48,7 @@ namespace DigiSort_Box.Front_end
             this.panel1.Controls.Add(this.btnback);
             this.panel1.Controls.Add(this.Reset);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(429, 55);
             this.panel1.TabIndex = 10;
@@ -56,7 +59,7 @@ namespace DigiSort_Box.Front_end
             this.btnback.ForeColor = System.Drawing.Color.Gray;
             this.btnback.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnback.Location = new System.Drawing.Point(371, 10);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(39, 30);
             this.btnback.TabIndex = 6;
@@ -79,7 +82,7 @@ namespace DigiSort_Box.Front_end
             // 
             this.txt1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt1.Location = new System.Drawing.Point(13, 74);
-            this.txt1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt1.Margin = new System.Windows.Forms.Padding(4);
             this.txt1.Multiline = true;
             this.txt1.Name = "txt1";
             this.txt1.ReadOnly = true;
@@ -92,7 +95,7 @@ namespace DigiSort_Box.Front_end
             // 
             this.textBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(13, 136);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -105,7 +108,7 @@ namespace DigiSort_Box.Front_end
             // 
             this.textBox2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(13, 198);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -121,14 +124,25 @@ namespace DigiSort_Box.Front_end
             this.btnProceed.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnProceed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnProceed.Location = new System.Drawing.Point(127, 247);
-            this.btnProceed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProceed.Margin = new System.Windows.Forms.Padding(4);
             this.btnProceed.Name = "btnProceed";
             this.btnProceed.Size = new System.Drawing.Size(179, 57);
             this.btnProceed.TabIndex = 20;
             this.btnProceed.Text = "Proceed";
             this.btnProceed.UseVisualStyleBackColor = false;
             // 
-            // Damage_Items
+            // smoothedge
+            // 
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
+            // 
+            // dragcotrol
+            // 
+            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
+            this.dragcotrol.TargetControl = this.panel1;
+            this.dragcotrol.UseTransparentDrag = true;
+            // 
+            // reset_password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,10 +153,10 @@ namespace DigiSort_Box.Front_end
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Damage_Items";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "reset_password";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Damage Items";
+            this.Text = "Reset Password";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -159,5 +173,7 @@ namespace DigiSort_Box.Front_end
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnProceed;
+        private Guna.UI2.WinForms.Guna2Elipse smoothedge;
+        private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
     }
 }

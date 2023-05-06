@@ -29,6 +29,7 @@ namespace DigiSort_Box.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtfirstname = new System.Windows.Forms.TextBox();
@@ -40,8 +41,9 @@ namespace DigiSort_Box.Forms
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnback = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnback = new System.Windows.Forms.Button();
+            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@ namespace DigiSort_Box.Forms
             this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(106, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,7 +85,7 @@ namespace DigiSort_Box.Forms
             this.label3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(103, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 17);
+            this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "First Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,7 +107,7 @@ namespace DigiSort_Box.Forms
             this.label4.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(104, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 17);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 2;
             this.label4.Text = "Last Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,7 +129,7 @@ namespace DigiSort_Box.Forms
             this.label5.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(124, 208);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 2;
             this.label5.Text = "Email";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,7 +151,7 @@ namespace DigiSort_Box.Forms
             this.label6.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(106, 252);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 17);
+            this.label6.Size = new System.Drawing.Size(77, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "Password";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,6 +168,16 @@ namespace DigiSort_Box.Forms
             this.panel1.Size = new System.Drawing.Size(305, 45);
             this.panel1.TabIndex = 10;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(15, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "User Account";
+            // 
             // btnback
             // 
             this.btnback.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,15 +191,10 @@ namespace DigiSort_Box.Forms
             this.btnback.UseVisualStyleBackColor = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
-            // label1
+            // smoothedge
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(15, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "User Account";
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
             // 
             // useraccount
             // 
@@ -235,5 +242,6 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Elipse smoothedge;
     }
 }

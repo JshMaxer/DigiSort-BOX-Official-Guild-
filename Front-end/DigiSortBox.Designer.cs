@@ -29,13 +29,16 @@ namespace DigiSort_Box.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btncreate = new System.Windows.Forms.Button();
             this.btnlog = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnback = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -88,15 +91,18 @@ namespace DigiSort_Box.Forms
             this.panel1.Size = new System.Drawing.Size(999, 50);
             this.panel1.TabIndex = 10;
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DigiSortBox";
+            this.button1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.Location = new System.Drawing.Point(904, 13);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(36, 29);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "-";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnback_Click);
             // 
             // btnback
             // 
@@ -111,18 +117,26 @@ namespace DigiSort_Box.Forms
             this.btnback.UseVisualStyleBackColor = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click_1);
             // 
-            // button1
+            // label1
             // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(904, 13);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 29);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnback_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "DigiSortBox";
+            // 
+            // smoothedge
+            // 
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
+            // 
+            // dragcotrol
+            // 
+            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
+            this.dragcotrol.TargetControl = this.panel1;
+            this.dragcotrol.UseTransparentDrag = true;
             // 
             // DigiSortBox
             // 
@@ -156,5 +170,7 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2Elipse smoothedge;
+        private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
     }
 }
