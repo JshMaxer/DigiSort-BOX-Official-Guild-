@@ -90,17 +90,7 @@ namespace DigiSort_Box.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Forms.DigiSortBox digi = new Forms.DigiSortBox();
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Logging out?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-                digi.Show();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do nothing
-            }
+           
         }
 
         private void mainpanel_Paint(object sender, PaintEventArgs e)
@@ -110,9 +100,7 @@ namespace DigiSort_Box.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Forms.useraccount user = new useraccount();
-            user.txtusername.Text = txtname.Text;
-            user.ShowDialog();
+            
 
         }
 
@@ -223,6 +211,38 @@ namespace DigiSort_Box.Forms
             Forms.Inventory inv = new Forms.Inventory() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainpanel.Controls.Add(inv);
             inv.Show();
+        }
+
+        private void btnnlogout_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnuseraccount_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            Forms.DigiSortBox digi = new Forms.DigiSortBox();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Logging out?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                digi.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
+        }
+
+        private void btuseraccount_Click(object sender, EventArgs e)
+        {
+            Forms.useraccount user = new useraccount();
+            user.txtusername.Text = txtname.Text;
+            user.ShowDialog();
         }
     }
 }

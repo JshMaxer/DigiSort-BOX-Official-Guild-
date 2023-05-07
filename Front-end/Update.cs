@@ -13,11 +13,6 @@ namespace DigiSort_Box.Forms
             InitializeComponent();
         }
 
-        private void btnback_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         void clear()
         {
             txt1.Text = "";
@@ -127,92 +122,105 @@ namespace DigiSort_Box.Forms
         private void btnupdate_Click(object sender, EventArgs e)
         {
 
-            if (cbtable.SelectedItem.Equals("Raw Materials"))
-            {
-                connection.Close();
-                connection.Open();
-                //update query
-                string updateQuery = "UPDATE raw_material SET material = '" + txt1.Text + "', design = '" + txt2.Text + "', color = '" + txt3.Text + "', quantity ='" + txt4.Text + "' WHERE material = '" + lbltxt1.Text + "'";
-                MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
-                try
-                {
-                    if (command.ExecuteNonQuery() == 1)
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data updated", ToolTipIcon.Info);
-                        raw();
-                    }
-                    else
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not updated", ToolTipIcon.Info);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                connection.Close();
-            }
-            else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
-            {
-                connection.Close();
-                connection.Open();
-                //update query
-                string updateQuery = "UPDATE ready_to_sell_items SET product_name = '" + txt1.Text + "', color = '" + txt2.Text + "', shade = '" + txt3.Text + "', size ='" + txt4.Text + "', quantity ='" + txt5.Text + "' WHERE product_name = '" + lbltxt1.Text + "'";
-                MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                try
-                {
-                    if (command.ExecuteNonQuery() == 1)
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data updated", ToolTipIcon.Info);
-                        ready();
-                    }
-                    else
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not updated", ToolTipIcon.Info);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                connection.Close();
-            }
-            else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
-            {
-                connection.Close();
-                connection.Open();
-                //update query
-                string updateQuery = "UPDATE unprinted_shirts SET color = '" + txt1.Text + "', shade = '" + txt2.Text + "', size = '" + txt3.Text + "', quantity ='" + txt4.Text + "' WHERE color = '" + lbltxt1.Text + "'";
-                MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                try
-                {
-                    if (command.ExecuteNonQuery() == 1)
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data updated", ToolTipIcon.Info);
-                        unprint();
-                    }
-                    else
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not updated", ToolTipIcon.Info);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                connection.Close();
-            }
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void exitform_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnupdate_Click_1(object sender, EventArgs e)
+        {
+            if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals(""))
+            {
+                MessageBox.Show("Field is blank!");
+            }
+            else
+            {
+                if (cbtable.SelectedItem.Equals("Raw Materials"))
+                {
+                    connection.Close();
+                    connection.Open();
+                    //update query
+                    string updateQuery = "UPDATE raw_material SET material = '" + txt1.Text + "', design = '" + txt2.Text + "', color = '" + txt3.Text + "', quantity ='" + txt4.Text + "' WHERE material = '" + lbltxt1.Text + "'";
+                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                    try
+                    {
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data updated", ToolTipIcon.Info);
+                            raw();
+                        }
+                        else
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not updated", ToolTipIcon.Info);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    connection.Close();
+                }
+                else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
+                {
+                    connection.Close();
+                    connection.Open();
+                    //update query
+                    string updateQuery = "UPDATE ready_to_sell_items SET product_name = '" + txt1.Text + "', color = '" + txt2.Text + "', shade = '" + txt3.Text + "', size ='" + txt4.Text + "', quantity ='" + txt5.Text + "' WHERE product_name = '" + lbltxt1.Text + "'";
+                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                    try
+                    {
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data updated", ToolTipIcon.Info);
+                            ready();
+                        }
+                        else
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not updated", ToolTipIcon.Info);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    connection.Close();
+                }
+                else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
+                {
+                    connection.Close();
+                    connection.Open();
+                    //update query
+                    string updateQuery = "UPDATE unprinted_shirts SET color = '" + txt1.Text + "', shade = '" + txt2.Text + "', size = '" + txt3.Text + "', quantity ='" + txt4.Text + "' WHERE color = '" + lbltxt1.Text + "'";
+                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                    try
+                    {
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data updated", ToolTipIcon.Info);
+                            unprint();
+                        }
+                        else
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not updated", ToolTipIcon.Info);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    connection.Close();
+                }
+            }
 
         }
     }

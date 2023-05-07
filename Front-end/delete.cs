@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 
 namespace DigiSort_Box.Forms
@@ -27,7 +21,7 @@ namespace DigiSort_Box.Forms
             txt4.Text = "";
             txt5.Text = "";
         }
-        
+
         private void btnback_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -129,90 +123,109 @@ namespace DigiSort_Box.Forms
 
         private void btndelete_Click(object sender, EventArgs e)
         {
-            if (cbtable.SelectedItem.Equals("Raw Materials"))
+
+        }
+
+        private void exitform_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btndelete_Click_1(object sender, EventArgs e)
+        {
+            if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals(""))
             {
-                connection.Close();
-                connection.Open();
-                //update query
-                string updateQuery = "DELETE FROM raw_material WHERE material = '" + txt1.Text + "'";
-                MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                try
-                {
-                    if (command.ExecuteNonQuery() == 1)
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
-                        raw();
-                        clear();
-                    }
-                    else
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                connection.Close();
+                MessageBox.Show("Field is blank!");
             }
-            else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
+            else
             {
-                connection.Close();
-                connection.Open();
-                //delete query
-                string updateQuery = "DELETE FROM ready_to_sell_items WHERE product_name = '" + txt1.Text + "'";
-                MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                try
+                if (cbtable.SelectedItem.Equals("Raw Materials"))
                 {
-                    if (command.ExecuteNonQuery() == 1)
+                    connection.Close();
+                    connection.Open();
+                    //update query
+                    string updateQuery = "DELETE FROM raw_material WHERE material = '" + txt1.Text + "'";
+                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                    try
                     {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
-                        ready();
-                        clear();
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
+                            raw();
+                            clear();
+                        }
+                        else
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
+                        MessageBox.Show(ex.Message);
                     }
+
+                    connection.Close();
                 }
-                catch (Exception ex)
+                else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
                 {
-                    MessageBox.Show(ex.Message);
+                    connection.Close();
+                    connection.Open();
+                    //delete query
+                    string updateQuery = "DELETE FROM ready_to_sell_items WHERE product_name = '" + txt1.Text + "'";
+                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                    try
+                    {
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
+                            ready();
+                            clear();
+                        }
+                        else
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    connection.Close();
+                }
+                else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
+                {
+                    connection.Close();
+                    connection.Open();
+                    //update query
+                    string updateQuery = "DELETE FROM unprinted_shirts WHERE color = '" + txt1.Text + "'";
+                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                    try
+                    {
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
+                            unprint();
+                            clear();
+                        }
+                        else
+                        {
+                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    connection.Close();
                 }
 
-                connection.Close();
             }
-            else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
-            {
-                connection.Close();
-                connection.Open();
-                //update query
-                string updateQuery = "DELETE FROM unprinted_shirts WHERE color = '" + txt1.Text + "'";
-                MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
-                try
-                {
-                    if (command.ExecuteNonQuery() == 1)
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
-                        unprint();
-                        clear();
-                    }
-                    else
-                    {
-                        notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                connection.Close();
-            }
         }
     }
 }

@@ -32,22 +32,20 @@ namespace DigiSort_Box.Forms
             this.components = new System.ComponentModel.Container();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnuseraccount = new System.Windows.Forms.Button();
-            this.btnlogout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtname = new System.Windows.Forms.Label();
-            this.btdashboard = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnunprintedshirts = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnrawmaterials = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnreadytosell = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btninvent = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btndamageitems = new Guna.UI2.WinForms.Guna2ImageButton();
             this.info = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btndamageitems = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btninvent = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnreadytosell = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnrawmaterials = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnunprintedshirts = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btdashboard = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btuseraccount = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnlogout = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainpanel
@@ -61,45 +59,16 @@ namespace DigiSort_Box.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel1.Controls.Add(this.btnuseraccount);
-            this.panel1.Controls.Add(this.btnlogout);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtname);
+            this.panel1.Controls.Add(this.btnlogout);
+            this.panel1.Controls.Add(this.btuseraccount);
             this.panel1.Location = new System.Drawing.Point(-15, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1176, 50);
             this.panel1.TabIndex = 9;
-            // 
-            // btnuseraccount
-            // 
-            this.btnuseraccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.btnuseraccount.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnuseraccount.ForeColor = System.Drawing.Color.Transparent;
-            this.btnuseraccount.Location = new System.Drawing.Point(948, 10);
-            this.btnuseraccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnuseraccount.Name = "btnuseraccount";
-            this.btnuseraccount.Size = new System.Drawing.Size(161, 28);
-            this.btnuseraccount.TabIndex = 2;
-            this.btnuseraccount.Text = "User Account";
-            this.btnuseraccount.UseVisualStyleBackColor = false;
-            this.btnuseraccount.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.btnlogout.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.Location = new System.Drawing.Point(840, 10);
-            this.btnlogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(100, 28);
-            this.btnlogout.TabIndex = 1;
-            this.btnlogout.Text = "Log out";
-            this.btnlogout.UseVisualStyleBackColor = false;
-            this.btnlogout.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -123,95 +92,23 @@ namespace DigiSort_Box.Forms
             this.txtname.Text = "Menu";
             this.txtname.Visible = false;
             // 
-            // btdashboard
+            // info
             // 
-            this.btdashboard.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btdashboard.HoverState.Image = global::DigiSort_Box.Properties.Resources.dashboard__1_;
-            this.btdashboard.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btdashboard.Image = global::DigiSort_Box.Properties.Resources.dashboard;
-            this.btdashboard.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btdashboard.ImageRotate = 0F;
-            this.btdashboard.ImageSize = new System.Drawing.Size(45, 45);
-            this.btdashboard.Location = new System.Drawing.Point(35, 75);
-            this.btdashboard.Name = "btdashboard";
-            this.btdashboard.PressedState.Image = global::DigiSort_Box.Properties.Resources.dashboard__1_;
-            this.btdashboard.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btdashboard.Size = new System.Drawing.Size(59, 55);
-            this.btdashboard.TabIndex = 0;
-            this.info.SetToolTip(this.btdashboard, "Dashboard");
-            this.btdashboard.Click += new System.EventHandler(this.btdashboard_Click);
+            this.info.AllowLinksHandling = true;
+            this.info.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info.MaximumSize = new System.Drawing.Size(0, 0);
+            this.info.ToolTipTitle = "Guide";
             // 
-            // btnunprintedshirts
+            // dragcotrol
             // 
-            this.btnunprintedshirts.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnunprintedshirts.HoverState.Image = global::DigiSort_Box.Properties.Resources.cloth__1_;
-            this.btnunprintedshirts.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnunprintedshirts.Image = global::DigiSort_Box.Properties.Resources.cloth;
-            this.btnunprintedshirts.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnunprintedshirts.ImageRotate = 0F;
-            this.btnunprintedshirts.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnunprintedshirts.Location = new System.Drawing.Point(16, 172);
-            this.btnunprintedshirts.Name = "btnunprintedshirts";
-            this.btnunprintedshirts.PressedState.Image = global::DigiSort_Box.Properties.Resources.cloth__1_;
-            this.btnunprintedshirts.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnunprintedshirts.Size = new System.Drawing.Size(96, 78);
-            this.btnunprintedshirts.TabIndex = 0;
-            this.info.SetToolTip(this.btnunprintedshirts, "Unprinted Shirts");
-            this.btnunprintedshirts.Click += new System.EventHandler(this.btnunprintedshirts_Click);
+            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
+            this.dragcotrol.TargetControl = this.panel1;
+            this.dragcotrol.UseTransparentDrag = true;
             // 
-            // btnrawmaterials
+            // smoothedge
             // 
-            this.btnrawmaterials.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnrawmaterials.HoverState.Image = global::DigiSort_Box.Properties.Resources.raw_materials__1_;
-            this.btnrawmaterials.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnrawmaterials.Image = global::DigiSort_Box.Properties.Resources.raw_materials;
-            this.btnrawmaterials.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnrawmaterials.ImageRotate = 0F;
-            this.btnrawmaterials.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnrawmaterials.Location = new System.Drawing.Point(16, 272);
-            this.btnrawmaterials.Name = "btnrawmaterials";
-            this.btnrawmaterials.PressedState.Image = global::DigiSort_Box.Properties.Resources.raw_materials__1_;
-            this.btnrawmaterials.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnrawmaterials.Size = new System.Drawing.Size(96, 78);
-            this.btnrawmaterials.TabIndex = 0;
-            this.info.SetToolTip(this.btnrawmaterials, "Raw Meterials");
-            this.btnrawmaterials.Click += new System.EventHandler(this.btnrawmaterials_Click);
-            // 
-            // btnreadytosell
-            // 
-            this.btnreadytosell.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnreadytosell.HoverState.Image = global::DigiSort_Box.Properties.Resources.trade__1_;
-            this.btnreadytosell.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnreadytosell.Image = global::DigiSort_Box.Properties.Resources.trade;
-            this.btnreadytosell.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnreadytosell.ImageRotate = 0F;
-            this.btnreadytosell.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnreadytosell.Location = new System.Drawing.Point(16, 373);
-            this.btnreadytosell.Name = "btnreadytosell";
-            this.btnreadytosell.PressedState.Image = global::DigiSort_Box.Properties.Resources.trade__1_;
-            this.btnreadytosell.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnreadytosell.Size = new System.Drawing.Size(96, 78);
-            this.btnreadytosell.TabIndex = 0;
-            this.info.SetToolTip(this.btnreadytosell, "Ready to sell Items");
-            this.btnreadytosell.Click += new System.EventHandler(this.btnreadytosell_Click);
-            // 
-            // btninvent
-            // 
-            this.btninvent.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btninvent.HoverState.Image = global::DigiSort_Box.Properties.Resources.inventory__1_;
-            this.btninvent.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btninvent.Image = global::DigiSort_Box.Properties.Resources.inventory;
-            this.btninvent.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btninvent.ImageRotate = 0F;
-            this.btninvent.ImageSize = new System.Drawing.Size(45, 45);
-            this.btninvent.Location = new System.Drawing.Point(16, 577);
-            this.btninvent.Name = "btninvent";
-            this.btninvent.PressedState.Image = global::DigiSort_Box.Properties.Resources.inventory__1_;
-            this.btninvent.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btninvent.Size = new System.Drawing.Size(96, 78);
-            this.btninvent.TabIndex = 0;
-            this.info.SetToolTip(this.btninvent, "Inventory");
-            this.btninvent.Click += new System.EventHandler(this.btninvent_Click);
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
             // 
             // btndamageitems
             // 
@@ -231,35 +128,131 @@ namespace DigiSort_Box.Forms
             this.info.SetToolTip(this.btndamageitems, "Damage Items");
             this.btndamageitems.Click += new System.EventHandler(this.btndamageitems_Click);
             // 
-            // info
+            // btninvent
             // 
-            this.info.AllowLinksHandling = true;
-            this.info.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info.MaximumSize = new System.Drawing.Size(0, 0);
-            this.info.ToolTipTitle = "Guide";
+            this.btninvent.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btninvent.HoverState.Image = global::DigiSort_Box.Properties.Resources.inventory__1_;
+            this.btninvent.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btninvent.Image = global::DigiSort_Box.Properties.Resources.inventory;
+            this.btninvent.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btninvent.ImageRotate = 0F;
+            this.btninvent.ImageSize = new System.Drawing.Size(45, 45);
+            this.btninvent.Location = new System.Drawing.Point(16, 577);
+            this.btninvent.Name = "btninvent";
+            this.btninvent.PressedState.Image = global::DigiSort_Box.Properties.Resources.inventory__1_;
+            this.btninvent.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btninvent.Size = new System.Drawing.Size(96, 78);
+            this.btninvent.TabIndex = 0;
+            this.info.SetToolTip(this.btninvent, "Inventory");
+            this.btninvent.Click += new System.EventHandler(this.btninvent_Click);
             // 
-            // dragcotrol
+            // btnreadytosell
             // 
-            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
-            this.dragcotrol.TargetControl = this.panel1;
-            this.dragcotrol.UseTransparentDrag = true;
+            this.btnreadytosell.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnreadytosell.HoverState.Image = global::DigiSort_Box.Properties.Resources.trade__1_;
+            this.btnreadytosell.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnreadytosell.Image = global::DigiSort_Box.Properties.Resources.trade;
+            this.btnreadytosell.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnreadytosell.ImageRotate = 0F;
+            this.btnreadytosell.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnreadytosell.Location = new System.Drawing.Point(16, 373);
+            this.btnreadytosell.Name = "btnreadytosell";
+            this.btnreadytosell.PressedState.Image = global::DigiSort_Box.Properties.Resources.trade__1_;
+            this.btnreadytosell.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnreadytosell.Size = new System.Drawing.Size(96, 78);
+            this.btnreadytosell.TabIndex = 0;
+            this.info.SetToolTip(this.btnreadytosell, "Ready to sell Items");
+            this.btnreadytosell.Click += new System.EventHandler(this.btnreadytosell_Click);
             // 
-            // smoothedge
+            // btnrawmaterials
             // 
-            this.smoothedge.BorderRadius = 12;
-            this.smoothedge.TargetControl = this;
+            this.btnrawmaterials.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnrawmaterials.HoverState.Image = global::DigiSort_Box.Properties.Resources.raw_materials__1_;
+            this.btnrawmaterials.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnrawmaterials.Image = global::DigiSort_Box.Properties.Resources.raw_materials;
+            this.btnrawmaterials.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnrawmaterials.ImageRotate = 0F;
+            this.btnrawmaterials.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnrawmaterials.Location = new System.Drawing.Point(16, 272);
+            this.btnrawmaterials.Name = "btnrawmaterials";
+            this.btnrawmaterials.PressedState.Image = global::DigiSort_Box.Properties.Resources.raw_materials__1_;
+            this.btnrawmaterials.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnrawmaterials.Size = new System.Drawing.Size(96, 78);
+            this.btnrawmaterials.TabIndex = 0;
+            this.info.SetToolTip(this.btnrawmaterials, "Raw Meterials");
+            this.btnrawmaterials.Click += new System.EventHandler(this.btnrawmaterials_Click);
             // 
-            // guna2CirclePictureBox1
+            // btnunprintedshirts
             // 
-            this.guna2CirclePictureBox1.Image = global::DigiSort_Box.Properties.Resources._1;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1126, 7);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(39, 36);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.btnunprintedshirts.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnunprintedshirts.HoverState.Image = global::DigiSort_Box.Properties.Resources.cloth__1_;
+            this.btnunprintedshirts.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnunprintedshirts.Image = global::DigiSort_Box.Properties.Resources.cloth;
+            this.btnunprintedshirts.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnunprintedshirts.ImageRotate = 0F;
+            this.btnunprintedshirts.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnunprintedshirts.Location = new System.Drawing.Point(16, 172);
+            this.btnunprintedshirts.Name = "btnunprintedshirts";
+            this.btnunprintedshirts.PressedState.Image = global::DigiSort_Box.Properties.Resources.cloth__1_;
+            this.btnunprintedshirts.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnunprintedshirts.Size = new System.Drawing.Size(96, 78);
+            this.btnunprintedshirts.TabIndex = 0;
+            this.info.SetToolTip(this.btnunprintedshirts, "Unprinted Shirts");
+            this.btnunprintedshirts.Click += new System.EventHandler(this.btnunprintedshirts_Click);
+            // 
+            // btdashboard
+            // 
+            this.btdashboard.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btdashboard.HoverState.Image = global::DigiSort_Box.Properties.Resources.dashboard__1_;
+            this.btdashboard.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btdashboard.Image = global::DigiSort_Box.Properties.Resources.dashboard;
+            this.btdashboard.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btdashboard.ImageRotate = 0F;
+            this.btdashboard.ImageSize = new System.Drawing.Size(45, 45);
+            this.btdashboard.Location = new System.Drawing.Point(35, 75);
+            this.btdashboard.Name = "btdashboard";
+            this.btdashboard.PressedState.Image = global::DigiSort_Box.Properties.Resources.dashboard__1_;
+            this.btdashboard.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btdashboard.Size = new System.Drawing.Size(59, 55);
+            this.btdashboard.TabIndex = 0;
+            this.info.SetToolTip(this.btdashboard, "Dashboard");
+            this.btdashboard.Click += new System.EventHandler(this.btdashboard_Click);
+            // 
+            // btuseraccount
+            // 
+            this.btuseraccount.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btuseraccount.HoverState.Image = global::DigiSort_Box.Properties.Resources.account;
+            this.btuseraccount.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btuseraccount.Image = global::DigiSort_Box.Properties.Resources.user;
+            this.btuseraccount.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btuseraccount.ImageRotate = 0F;
+            this.btuseraccount.ImageSize = new System.Drawing.Size(20, 20);
+            this.btuseraccount.Location = new System.Drawing.Point(1119, 8);
+            this.btuseraccount.Name = "btuseraccount";
+            this.btuseraccount.PressedState.Image = global::DigiSort_Box.Properties.Resources.account;
+            this.btuseraccount.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btuseraccount.Size = new System.Drawing.Size(43, 36);
+            this.btuseraccount.TabIndex = 0;
+            this.info.SetToolTip(this.btuseraccount, "User Account");
+            this.btuseraccount.Click += new System.EventHandler(this.btuseraccount_Click);
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnlogout.HoverState.Image = global::DigiSort_Box.Properties.Resources.logout__1_;
+            this.btnlogout.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnlogout.Image = global::DigiSort_Box.Properties.Resources.logout;
+            this.btnlogout.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnlogout.ImageRotate = 0F;
+            this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnlogout.Location = new System.Drawing.Point(1070, 8);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.PressedState.Image = global::DigiSort_Box.Properties.Resources.logout__1_;
+            this.btnlogout.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnlogout.Size = new System.Drawing.Size(43, 36);
+            this.btnlogout.TabIndex = 0;
+            this.info.SetToolTip(this.btnlogout, "Log out");
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // Dashboard
             // 
@@ -283,7 +276,6 @@ namespace DigiSort_Box.Forms
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,8 +284,6 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnlogout;
-        private System.Windows.Forms.Button btnuseraccount;
         public System.Windows.Forms.Label txtname;
         private Guna.UI2.WinForms.Guna2ImageButton btdashboard;
         private Guna.UI2.WinForms.Guna2ImageButton btnunprintedshirts;
@@ -304,6 +294,7 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2HtmlToolTip info;
         private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2ImageButton btuseraccount;
+        private Guna.UI2.WinForms.Guna2ImageButton btnlogout;
     }
 }

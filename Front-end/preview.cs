@@ -20,7 +20,7 @@ namespace DigiSort_Box.Forms
         private void btnraw_Click(object sender, EventArgs e)
         {
             Forms.RawMaterial raw = new Forms.RawMaterial();
-            raw.btnaddmore.Enabled = false;
+            raw.btnadd.Enabled = false;
             raw.btnback.Visible = true;
             raw.Show();
             this.Visible = false;
@@ -29,7 +29,7 @@ namespace DigiSort_Box.Forms
         private void btnunprint_Click(object sender, EventArgs e)
         {
             Forms.Unprinted unprint = new Forms.Unprinted();
-            unprint.btnaddmore.Enabled = false;
+            unprint.btnadd.Enabled = false;
             unprint.btnback.Visible = true;
             unprint.Show();
             this.Visible = false;
@@ -38,7 +38,7 @@ namespace DigiSort_Box.Forms
         private void btnready_Click(object sender, EventArgs e)
         {
             Forms.ReadytoSell ready = new Forms.ReadytoSell();
-            ready.btnaddmore.Enabled = false;
+            ready.btnadd.Enabled = false;
             ready.btnback.Visible = true;
             ready.Show();
             this.Visible = false;

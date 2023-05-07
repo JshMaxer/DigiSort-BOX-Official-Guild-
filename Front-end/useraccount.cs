@@ -39,7 +39,7 @@ namespace DigiSort_Box.Forms
 
         }
 
-        private void btnback_Click(object sender, EventArgs e)
+        private void exitform_Click(object sender, EventArgs e)
         {
             this.Close();
         }

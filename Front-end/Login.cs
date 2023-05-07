@@ -13,7 +13,14 @@ namespace DigiSort_Box.Forms
             InitializeComponent();
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Forms.DigiSortBox dsb = new Forms.DigiSortBox();
+            dsb.Show();
+            this.Close();
+        }
+
+        private void btnsignin_Click(object sender, EventArgs e)
         {
             //preview account
             if (txtusername.Text.Equals("Preview") || txtusername.Text.Equals("preview") && (txtpassword.Text.Equals("Admin") || txtpassword.Text.Equals("admin")))
@@ -60,13 +67,6 @@ namespace DigiSort_Box.Forms
                     MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
                 }
             }
-        }
-
-        private void btnback_Click(object sender, EventArgs e)
-        {
-            Forms.DigiSortBox dsb = new Forms.DigiSortBox();
-            dsb.Show();
-            this.Close();
         }
     }
 }

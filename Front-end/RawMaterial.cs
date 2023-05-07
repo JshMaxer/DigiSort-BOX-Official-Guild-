@@ -17,7 +17,14 @@ namespace DigiSort_Box.Forms
             InitializeComponent();
         }
 
-        private void btnaddmore_Click(object sender, EventArgs e)
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Forms.preview pv = new Forms.preview();
+            this.Close();
+            pv.Visible = true;
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
         {
             cbmaterial1.Text = null;
             cbmaterial2.Text = null;
@@ -38,13 +45,6 @@ namespace DigiSort_Box.Forms
             txtquan2.Text = null;
             txtquan3.Text = null;
             txtquan4.Text = null;
-        }
-
-        private void btnback_Click(object sender, EventArgs e)
-        {
-            Forms.preview pv = new Forms.preview();
-            this.Close();
-            pv.Visible = true;
         }
     }
 }

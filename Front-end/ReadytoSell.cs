@@ -17,48 +17,6 @@ namespace DigiSort_Box.Forms
             InitializeComponent();
         }
 
-        private void btnaddmore_Click(object sender, EventArgs e)
-        {
-            txtproduct1.Text = null;
-            txtproduct2.Text = null;
-            txtproduct3.Text = null;
-            txtproduct4.Text = null;
-            txtproduct5.Text = null;
-            txtproduct6.Text = null;
-
-            cbcolor1.SelectedIndex = 0;
-            cbshade1.Items.Clear();
-
-            cbcolor2.SelectedIndex = 0;
-            cbshade2.Items.Clear();
-
-            cbcolor3.SelectedIndex = 0;
-            cbshade3.Items.Clear();
-
-            cbcolor4.SelectedIndex = 0;
-            cbshade4.Items.Clear();
-
-            cbcolor5.SelectedIndex = 0;
-            cbshade5.Items.Clear();
-
-            cbcolor6.SelectedIndex = 0;
-            cbshade6.Items.Clear();
-
-            cbsize1.Text = null;
-            cbsize2.Text = null;
-            cbsize3.Text = null;
-            cbsize4.Text = null;
-            cbsize5.Text = null;
-            cbsize6.Text = null;
-
-            txtquan1.Text = null;
-            txtquan2.Text = null;
-            txtquan3.Text = null;
-            txtquan4.Text = null;
-            txtquan5.Text = null;
-            txtquan6.Text = null;
-        }
-
         private void cbcolor1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cbcolor1.SelectedIndex == 0)
@@ -862,6 +820,48 @@ namespace DigiSort_Box.Forms
             Forms.preview pv = new Forms.preview();
             this.Close();
             pv.Visible = true;
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtproduct1.Text = null;
+            txtproduct2.Text = null;
+            txtproduct3.Text = null;
+            txtproduct4.Text = null;
+            txtproduct5.Text = null;
+            txtproduct6.Text = null;
+
+            cbcolor1.SelectedIndex = 0;
+            cbshade1.Items.Clear();
+
+            cbcolor2.SelectedIndex = 0;
+            cbshade2.Items.Clear();
+
+            cbcolor3.SelectedIndex = 0;
+            cbshade3.Items.Clear();
+
+            cbcolor4.SelectedIndex = 0;
+            cbshade4.Items.Clear();
+
+            cbcolor5.SelectedIndex = 0;
+            cbshade5.Items.Clear();
+
+            cbcolor6.SelectedIndex = 0;
+            cbshade6.Items.Clear();
+
+            cbsize1.Text = null;
+            cbsize2.Text = null;
+            cbsize3.Text = null;
+            cbsize4.Text = null;
+            cbsize5.Text = null;
+            cbsize6.Text = null;
+
+            txtquan1.Text = null;
+            txtquan2.Text = null;
+            txtquan3.Text = null;
+            txtquan4.Text = null;
+            txtquan5.Text = null;
+            txtquan6.Text = null;
         }
     }
 }

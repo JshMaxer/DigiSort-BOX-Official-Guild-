@@ -42,8 +42,8 @@ namespace DigiSort_Box.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnback = new System.Windows.Forms.Button();
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +139,7 @@ namespace DigiSort_Box.Forms
             // 
             this.txtpassword.Location = new System.Drawing.Point(21, 272);
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '?';
             this.txtpassword.ReadOnly = true;
             this.txtpassword.Size = new System.Drawing.Size(256, 23);
             this.txtpassword.TabIndex = 0;
@@ -159,9 +160,9 @@ namespace DigiSort_Box.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.panel1.Controls.Add(this.exitform);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnback);
             this.panel1.Location = new System.Drawing.Point(-4, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -178,23 +179,22 @@ namespace DigiSort_Box.Forms
             this.label1.TabIndex = 7;
             this.label1.Text = "User Account";
             // 
-            // btnback
-            // 
-            this.btnback.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnback.ForeColor = System.Drawing.Color.Gray;
-            this.btnback.Location = new System.Drawing.Point(254, 9);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(36, 29);
-            this.btnback.TabIndex = 5;
-            this.btnback.Text = "X";
-            this.btnback.UseVisualStyleBackColor = true;
-            this.btnback.Click += new System.EventHandler(this.btnback_Click);
-            // 
             // smoothedge
             // 
             this.smoothedge.BorderRadius = 12;
             this.smoothedge.TargetControl = this;
+            // 
+            // exitform
+            // 
+            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitform.Animated = true;
+            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.exitform.IconColor = System.Drawing.Color.White;
+            this.exitform.Location = new System.Drawing.Point(247, 3);
+            this.exitform.Name = "exitform";
+            this.exitform.Size = new System.Drawing.Size(44, 38);
+            this.exitform.TabIndex = 12;
+            this.exitform.Click += new System.EventHandler(this.exitform_Click);
             // 
             // useraccount
             // 
@@ -240,8 +240,8 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.TextBox txtfirstname;
         public System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
+        private Guna.UI2.WinForms.Guna2ControlBox exitform;
     }
 }

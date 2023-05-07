@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace DigiSort_Box
@@ -10,26 +11,18 @@ namespace DigiSort_Box
             InitializeComponent();
         }
 
-        private void btncreate_Click(object sender, EventArgs e)
-        {
-            Database.CreateAcc Account = new Database.CreateAcc();
-            Account.createAcc(txtfirstname, txtfirstname, txtpassword, txtretype, txtusername, txtemail);
-
-            if (((Forms.Login)Application.OpenForms["Login"]).Visible == true)
-            {
-                this.Close();
-            }
-            else
-            {
-                //nothing
-            }
-        }
-
-        private void btnback_Click(object sender, EventArgs e)
+        private void btnback_Click_1(object sender, EventArgs e)
         {
             Forms.DigiSortBox dsb = new Forms.DigiSortBox();
             dsb.Show();
             this.Close();
+        }
+
+        private void btncreate_Click(object sender, EventArgs e)
+        {
+            Database.CreateAcc Account = new Database.CreateAcc();
+            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername, txtemail);
+
         }
     }
 }

@@ -17,31 +17,21 @@ namespace DigiSort_Box.Forms
             InitializeComponent();
         }
 
-        private void btnlog_Click(object sender, EventArgs e)
+        private void btnsignin_Click(object sender, EventArgs e)
         {
             Forms.Login log = new Forms.Login();
             log.Show();
             this.Visible = false;
         }
 
-        private void btncreate_Click(object sender, EventArgs e)
+        private void btncreateaccount_Click(object sender, EventArgs e)
         {
             CreateAcc create = new CreateAcc();
             create.Show();
             this.Visible = false;
         }
 
-        private void DigiSortBox_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
-
-        private void btnback_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnback_Click_1(object sender, EventArgs e)
+        private void exitform_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }

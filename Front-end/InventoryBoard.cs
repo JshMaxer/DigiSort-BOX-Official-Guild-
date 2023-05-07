@@ -72,7 +72,14 @@ namespace DigiSort_Box.Forms
             dgready.DataSource = dtRecords;
         }
 
-        private void txtunprinted_TextChanged(object sender, EventArgs e)
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            raw();
+            unprint();
+            ready();
+        }
+
+        private void txtunprinted_TextChanged_1(object sender, EventArgs e)
         {
             connection.Close();
             connection.Open();
@@ -92,14 +99,13 @@ namespace DigiSort_Box.Forms
                 adp.Fill(tbl);
                 dgunprinted.DataSource = tbl;
             }
-            
         }
 
-        private void txtsearchready_TextChanged(object sender, EventArgs e)
+        private void txtready_TextChanged(object sender, EventArgs e)
         {
             connection.Close();
             connection.Open();
-            if (txtsearchready.Text.Equals(""))
+            if (txtready.Text.Equals(""))
             {
                 string searchquery = "SELECT * FROM ready_to_sell_items";
                 MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
@@ -109,7 +115,7 @@ namespace DigiSort_Box.Forms
             }
             else
             {
-                string searchquery = "SELECT * FROM ready_to_sell_items WHERE product_name LIKE '" + txtsearchready.Text + "%'";
+                string searchquery = "SELECT * FROM ready_to_sell_items WHERE product_name LIKE '" + txtready.Text + "%'";
                 MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
                 DataTable tbl = new DataTable();
                 adp.Fill(tbl);
@@ -117,11 +123,11 @@ namespace DigiSort_Box.Forms
             }
         }
 
-        private void txtsearchraw_TextChanged(object sender, EventArgs e)
+        private void txtraw_TextChanged(object sender, EventArgs e)
         {
             connection.Close();
             connection.Open();
-            if (txtsearchraw.Text.Equals(""))
+            if (txtraw.Text.Equals(""))
             {
                 string searchquery = "SELECT * FROM raw_material";
                 MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
@@ -131,7 +137,7 @@ namespace DigiSort_Box.Forms
             }
             else
             {
-                string searchquery = "SELECT * FROM raw_material WHERE material LIKE '" + txtsearchraw.Text + "%'";
+                string searchquery = "SELECT * FROM raw_material WHERE material LIKE '" + txtraw.Text + "%'";
                 MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
                 DataTable tbl = new DataTable();
                 adp.Fill(tbl);
@@ -139,23 +145,16 @@ namespace DigiSort_Box.Forms
             }
         }
 
-        private void btupdate_Click(object sender, EventArgs e)
+        private void btnupdate_Click(object sender, EventArgs e)
         {
             Forms.update up = new Forms.update();
             up.ShowDialog();
         }
 
-        private void btndelete_Click(object sender, EventArgs e)
+        private void btndelete_Click_1(object sender, EventArgs e)
         {
             Forms.delete de = new Forms.delete();
             de.ShowDialog();
-        }
-
-        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            raw();
-            unprint();
-            ready();
         }
     }
 }
