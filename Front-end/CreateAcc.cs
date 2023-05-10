@@ -20,8 +20,9 @@ namespace DigiSort_Box
 
         private void btncreate_Click(object sender, EventArgs e)
         {
+            //database
             Database.CreateAcc Account = new Database.CreateAcc();
-            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername, txtemail);
+            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername);
 
         }
     }

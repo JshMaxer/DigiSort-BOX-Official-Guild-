@@ -31,40 +31,26 @@ namespace DigiSort_Box.Front_end
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnback = new System.Windows.Forms.Button();
             this.Reset = new System.Windows.Forms.Label();
-            this.txt1 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnProceed = new System.Windows.Forms.Button();
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtretype = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnproceed = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.btnback);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.panel1.Controls.Add(this.exitform);
             this.panel1.Controls.Add(this.Reset);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(429, 55);
             this.panel1.TabIndex = 10;
-            // 
-            // btnback
-            // 
-            this.btnback.Font = new System.Drawing.Font("Verdana", 7.8F);
-            this.btnback.ForeColor = System.Drawing.Color.Gray;
-            this.btnback.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnback.Location = new System.Drawing.Point(371, 10);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(39, 30);
-            this.btnback.TabIndex = 6;
-            this.btnback.Text = "X";
-            this.btnback.UseVisualStyleBackColor = true;
             // 
             // Reset
             // 
@@ -78,79 +64,116 @@ namespace DigiSort_Box.Front_end
             this.Reset.TabIndex = 0;
             this.Reset.Text = "Reset Password";
             // 
-            // txt1
-            // 
-            this.txt1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.Location = new System.Drawing.Point(13, 74);
-            this.txt1.Margin = new System.Windows.Forms.Padding(4);
-            this.txt1.Multiline = true;
-            this.txt1.Name = "txt1";
-            this.txt1.ReadOnly = true;
-            this.txt1.Size = new System.Drawing.Size(396, 41);
-            this.txt1.TabIndex = 17;
-            this.txt1.Text = "Email";
-            this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(13, 136);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(396, 41);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "New Password";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(13, 198);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(396, 41);
-            this.textBox2.TabIndex = 19;
-            this.textBox2.Text = "Reset Password";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnProceed
-            // 
-            this.btnProceed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
-            this.btnProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProceed.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnProceed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnProceed.Location = new System.Drawing.Point(127, 247);
-            this.btnProceed.Margin = new System.Windows.Forms.Padding(4);
-            this.btnProceed.Name = "btnProceed";
-            this.btnProceed.Size = new System.Drawing.Size(179, 57);
-            this.btnProceed.TabIndex = 20;
-            this.btnProceed.Text = "Proceed";
-            this.btnProceed.UseVisualStyleBackColor = false;
-            // 
             // smoothedge
             // 
             this.smoothedge.BorderRadius = 12;
             this.smoothedge.TargetControl = this;
             // 
-            // dragcotrol
+            // exitform
             // 
-            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
-            this.dragcotrol.TargetControl = this.panel1;
-            this.dragcotrol.UseTransparentDrag = true;
+            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitform.Animated = true;
+            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.exitform.IconColor = System.Drawing.Color.White;
+            this.exitform.Location = new System.Drawing.Point(369, 8);
+            this.exitform.Name = "exitform";
+            this.exitform.Size = new System.Drawing.Size(44, 38);
+            this.exitform.TabIndex = 12;
+            // 
+            // txtusername
+            // 
+            this.txtusername.BorderRadius = 8;
+            this.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtusername.DefaultText = "";
+            this.txtusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtusername.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtusername.Location = new System.Drawing.Point(13, 63);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.PasswordChar = '\0';
+            this.txtusername.PlaceholderText = "Username";
+            this.txtusername.SelectedText = "";
+            this.txtusername.Size = new System.Drawing.Size(399, 45);
+            this.txtusername.TabIndex = 21;
+            this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.BorderRadius = 8;
+            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpassword.DefaultText = "";
+            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Location = new System.Drawing.Point(12, 116);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.PlaceholderText = "Password";
+            this.txtpassword.SelectedText = "";
+            this.txtpassword.Size = new System.Drawing.Size(399, 45);
+            this.txtpassword.TabIndex = 21;
+            this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtretype
+            // 
+            this.txtretype.BorderRadius = 8;
+            this.txtretype.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtretype.DefaultText = "";
+            this.txtretype.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtretype.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtretype.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtretype.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtretype.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtretype.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.txtretype.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtretype.Location = new System.Drawing.Point(12, 169);
+            this.txtretype.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtretype.Name = "txtretype";
+            this.txtretype.PasswordChar = '●';
+            this.txtretype.PlaceholderText = "Re-type password";
+            this.txtretype.SelectedText = "";
+            this.txtretype.Size = new System.Drawing.Size(399, 45);
+            this.txtretype.TabIndex = 21;
+            this.txtretype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtretype.UseSystemPasswordChar = true;
+            // 
+            // btnproceed
+            // 
+            this.btnproceed.Animated = true;
+            this.btnproceed.BorderRadius = 12;
+            this.btnproceed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnproceed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnproceed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnproceed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnproceed.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.btnproceed.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnproceed.ForeColor = System.Drawing.Color.White;
+            this.btnproceed.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
+            this.btnproceed.Location = new System.Drawing.Point(129, 221);
+            this.btnproceed.Name = "btnproceed";
+            this.btnproceed.Size = new System.Drawing.Size(165, 45);
+            this.btnproceed.TabIndex = 69;
+            this.btnproceed.Text = "Proceed";
             // 
             // reset_password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 339);
-            this.Controls.Add(this.btnProceed);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txt1);
+            this.ClientSize = new System.Drawing.Size(424, 283);
+            this.Controls.Add(this.btnproceed);
+            this.Controls.Add(this.txtretype);
+            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txtusername);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -160,20 +183,18 @@ namespace DigiSort_Box.Front_end
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Label Reset;
-        private System.Windows.Forms.TextBox txt1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btnProceed;
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
-        private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
+        private Guna.UI2.WinForms.Guna2ControlBox exitform;
+        private Guna.UI2.WinForms.Guna2TextBox txtretype;
+        private Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtusername;
+        public Guna.UI2.WinForms.Guna2Button btnproceed;
     }
 }

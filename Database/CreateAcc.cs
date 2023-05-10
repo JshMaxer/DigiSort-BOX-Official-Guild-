@@ -1,33 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Guna.UI2.WinForms;
+﻿using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
+using System;
+using System.Windows.Forms;
 
 namespace DigiSort_Box.Database
 {
-     class CreateAcc
+    class CreateAcc
     {
-        public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username, Guna2TextBox email)
+        public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username)
         {
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
 
             try
             {
-                if (firstname.Text.Equals("") || lastname.Text.Equals("") || paswword.Text.Equals("") || retype.Text.Equals("") || username.Text.Equals("") || email.Text.Equals(""))
+                if (firstname.Text.Equals("") || lastname.Text.Equals("") || paswword.Text.Equals("") || retype.Text.Equals("") || username.Text.Equals(""))
                 {
-                    MessageBox.Show("Field is blank!");
+                    MessageBox.Show("Form must be filled-out completely!");
                 }
                 else if (!retype.Text.Equals(paswword.Text))
                 {
-                    MessageBox.Show("Password not same");
+                    MessageBox.Show("Password do not match!");
                 }
                 else
                 {
-                    string InsertQuery = "INSERT INTO account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + email.Text + "', '" + paswword.Text + "')";
+                    string InsertQuery = "INSERT INTO account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "')";
                     connection.Open();
                     MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 
@@ -35,20 +31,20 @@ namespace DigiSort_Box.Database
                     {
                         if (cmd.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Account Created Succesful");
+                            MessageBox.Show("Account successfully created!");
                             Forms.Login log = new Forms.Login();
                             log.Show();
                             //Application.Exit();
-                            
+
                         }
                         else
                         {
-                            MessageBox.Show("Account Created UnSuccesful");
+                            MessageBox.Show("Account Unsuccessfully created!");
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Username is already used!");
                     }
 
                     connection.Close();

@@ -38,13 +38,13 @@ namespace DigiSort_Box
             this.txtfirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtlastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtemail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnback = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbaccount = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -54,6 +54,7 @@ namespace DigiSort_Box
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.cbaccount);
             this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2ShadowPanel1.Controls.Add(this.label3);
             this.guna2ShadowPanel1.Controls.Add(this.txtretype);
@@ -61,7 +62,6 @@ namespace DigiSort_Box
             this.guna2ShadowPanel1.Controls.Add(this.txtfirstname);
             this.guna2ShadowPanel1.Controls.Add(this.txtlastname);
             this.guna2ShadowPanel1.Controls.Add(this.txtusername);
-            this.guna2ShadowPanel1.Controls.Add(this.txtemail);
             this.guna2ShadowPanel1.Controls.Add(this.txtpassword);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(561, 66);
@@ -76,9 +76,9 @@ namespace DigiSort_Box
             // 
             this.guna2PictureBox2.Image = global::DigiSort_Box.Properties.Resources.add_user;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(142, 61);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(155, 53);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(128, 94);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(113, 74);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 53;
             this.guna2PictureBox2.TabStop = false;
@@ -149,7 +149,7 @@ namespace DigiSort_Box
             this.txtfirstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtfirstname.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtfirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtfirstname.Location = new System.Drawing.Point(32, 167);
+            this.txtfirstname.Location = new System.Drawing.Point(32, 213);
             this.txtfirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.PasswordChar = '\0';
@@ -172,7 +172,7 @@ namespace DigiSort_Box
             this.txtlastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtlastname.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtlastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtlastname.Location = new System.Drawing.Point(32, 213);
+            this.txtlastname.Location = new System.Drawing.Point(32, 259);
             this.txtlastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.PasswordChar = '\0';
@@ -195,7 +195,7 @@ namespace DigiSort_Box
             this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtusername.Location = new System.Drawing.Point(32, 259);
+            this.txtusername.Location = new System.Drawing.Point(32, 305);
             this.txtusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
@@ -204,29 +204,6 @@ namespace DigiSort_Box
             this.txtusername.Size = new System.Drawing.Size(359, 38);
             this.txtusername.TabIndex = 28;
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtemail
-            // 
-            this.txtemail.Animated = true;
-            this.txtemail.BorderRadius = 8;
-            this.txtemail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtemail.DefaultText = "";
-            this.txtemail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtemail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtemail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtemail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtemail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtemail.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.txtemail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtemail.Location = new System.Drawing.Point(32, 305);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.PasswordChar = '\0';
-            this.txtemail.PlaceholderText = "Email";
-            this.txtemail.SelectedText = "";
-            this.txtemail.Size = new System.Drawing.Size(359, 38);
-            this.txtemail.TabIndex = 28;
-            this.txtemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtpassword
             // 
@@ -294,6 +271,27 @@ namespace DigiSort_Box
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // cbaccount
+            // 
+            this.cbaccount.BackColor = System.Drawing.Color.Transparent;
+            this.cbaccount.BorderRadius = 8;
+            this.cbaccount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbaccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbaccount.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbaccount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbaccount.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.cbaccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbaccount.ItemHeight = 30;
+            this.cbaccount.Items.AddRange(new object[] {
+            "Top admin",
+            "Floor admin"});
+            this.cbaccount.Location = new System.Drawing.Point(32, 160);
+            this.cbaccount.Name = "cbaccount";
+            this.cbaccount.Size = new System.Drawing.Size(359, 36);
+            this.cbaccount.StartIndex = 0;
+            this.cbaccount.TabIndex = 54;
+            this.cbaccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // CreateAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -326,13 +324,13 @@ namespace DigiSort_Box
         private Guna.UI2.WinForms.Guna2TextBox txtfirstname;
         private Guna.UI2.WinForms.Guna2TextBox txtlastname;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private Guna.UI2.WinForms.Guna2TextBox txtemail;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
+        private Guna.UI2.WinForms.Guna2ComboBox cbaccount;
     }
 }
 

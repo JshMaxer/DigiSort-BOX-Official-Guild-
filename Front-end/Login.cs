@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DigiSort_Box.Front_end;
+using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
@@ -67,6 +68,22 @@ namespace DigiSort_Box.Forms
                     MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
                 }
             }
+        }
+
+        private void lblreset_Click(object sender, EventArgs e)
+        {
+            reset_password reset = new reset_password();
+            DialogResult dr = MessageBox.Show("Are you sure you want to reset password?", "DigiSortBox" , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if(dr == DialogResult.Yes)
+            {
+                reset.ShowDialog();
+            }
+            else
+            {
+                //ok.
+            }
+            
         }
     }
 }

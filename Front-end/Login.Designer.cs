@@ -44,7 +44,7 @@ namespace DigiSort_Box.Forms
             this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblreset = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -128,7 +128,7 @@ namespace DigiSort_Box.Forms
             this.guna2ShadowPanel1.Controls.Add(this.txtpassword);
             this.guna2ShadowPanel1.Controls.Add(this.txtusername);
             this.guna2ShadowPanel1.Controls.Add(this.label5);
-            this.guna2ShadowPanel1.Controls.Add(this.label4);
+            this.guna2ShadowPanel1.Controls.Add(this.lblreset);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(495, 78);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
@@ -142,9 +142,9 @@ namespace DigiSort_Box.Forms
             // 
             this.guna2PictureBox2.Image = global::DigiSort_Box.Properties.Resources.refer;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(164, 64);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(175, 53);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(128, 94);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(103, 86);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 51;
             this.guna2PictureBox2.TabStop = false;
@@ -237,18 +237,19 @@ namespace DigiSort_Box.Forms
             this.label5.TabIndex = 8;
             this.label5.Text = "or";
             // 
-            // label4
+            // lblreset
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.label4.Location = new System.Drawing.Point(161, 292);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Reset Password?";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblreset.AutoSize = true;
+            this.lblreset.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblreset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
+            this.lblreset.Location = new System.Drawing.Point(151, 292);
+            this.lblreset.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblreset.Name = "lblreset";
+            this.lblreset.Size = new System.Drawing.Size(150, 18);
+            this.lblreset.TabIndex = 3;
+            this.lblreset.Text = "Reset Password?";
+            this.lblreset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblreset.Click += new System.EventHandler(this.lblreset_Click);
             // 
             // guna2PictureBox1
             // 
@@ -297,7 +298,7 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblreset;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }

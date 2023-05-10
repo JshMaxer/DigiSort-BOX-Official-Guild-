@@ -34,17 +34,17 @@ namespace DigiSort_Box.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtname = new System.Windows.Forms.Label();
+            this.btnlogout = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btuseraccount = new Guna.UI2.WinForms.Guna2ImageButton();
             this.info = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btndamageitems = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btninvent = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnreadytosell = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnrawmaterials = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnunprintedshirts = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btdashboard = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btuseraccount = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnlogout = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,23 +92,48 @@ namespace DigiSort_Box.Forms
             this.txtname.Text = "Menu";
             this.txtname.Visible = false;
             // 
+            // btnlogout
+            // 
+            this.btnlogout.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnlogout.HoverState.Image = global::DigiSort_Box.Properties.Resources.logout__1_;
+            this.btnlogout.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnlogout.Image = global::DigiSort_Box.Properties.Resources.logout;
+            this.btnlogout.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnlogout.ImageRotate = 0F;
+            this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnlogout.Location = new System.Drawing.Point(1070, 8);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.PressedState.Image = global::DigiSort_Box.Properties.Resources.logout__1_;
+            this.btnlogout.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnlogout.Size = new System.Drawing.Size(43, 36);
+            this.btnlogout.TabIndex = 0;
+            this.info.SetToolTip(this.btnlogout, "Log out");
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            // 
+            // btuseraccount
+            // 
+            this.btuseraccount.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btuseraccount.HoverState.Image = global::DigiSort_Box.Properties.Resources.account;
+            this.btuseraccount.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btuseraccount.Image = global::DigiSort_Box.Properties.Resources.user;
+            this.btuseraccount.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btuseraccount.ImageRotate = 0F;
+            this.btuseraccount.ImageSize = new System.Drawing.Size(20, 20);
+            this.btuseraccount.Location = new System.Drawing.Point(1119, 8);
+            this.btuseraccount.Name = "btuseraccount";
+            this.btuseraccount.PressedState.Image = global::DigiSort_Box.Properties.Resources.account;
+            this.btuseraccount.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btuseraccount.Size = new System.Drawing.Size(43, 36);
+            this.btuseraccount.TabIndex = 0;
+            this.info.SetToolTip(this.btuseraccount, "User Account");
+            this.btuseraccount.Click += new System.EventHandler(this.btuseraccount_Click);
+            // 
             // info
             // 
             this.info.AllowLinksHandling = true;
             this.info.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info.MaximumSize = new System.Drawing.Size(0, 0);
             this.info.ToolTipTitle = "Guide";
-            // 
-            // dragcotrol
-            // 
-            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
-            this.dragcotrol.TargetControl = this.panel1;
-            this.dragcotrol.UseTransparentDrag = true;
-            // 
-            // smoothedge
-            // 
-            this.smoothedge.BorderRadius = 12;
-            this.smoothedge.TargetControl = this;
             // 
             // btndamageitems
             // 
@@ -218,41 +243,16 @@ namespace DigiSort_Box.Forms
             this.info.SetToolTip(this.btdashboard, "Dashboard");
             this.btdashboard.Click += new System.EventHandler(this.btdashboard_Click);
             // 
-            // btuseraccount
+            // dragcotrol
             // 
-            this.btuseraccount.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btuseraccount.HoverState.Image = global::DigiSort_Box.Properties.Resources.account;
-            this.btuseraccount.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btuseraccount.Image = global::DigiSort_Box.Properties.Resources.user;
-            this.btuseraccount.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btuseraccount.ImageRotate = 0F;
-            this.btuseraccount.ImageSize = new System.Drawing.Size(20, 20);
-            this.btuseraccount.Location = new System.Drawing.Point(1119, 8);
-            this.btuseraccount.Name = "btuseraccount";
-            this.btuseraccount.PressedState.Image = global::DigiSort_Box.Properties.Resources.account;
-            this.btuseraccount.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btuseraccount.Size = new System.Drawing.Size(43, 36);
-            this.btuseraccount.TabIndex = 0;
-            this.info.SetToolTip(this.btuseraccount, "User Account");
-            this.btuseraccount.Click += new System.EventHandler(this.btuseraccount_Click);
+            this.dragcotrol.DockIndicatorTransparencyValue = 0.6D;
+            this.dragcotrol.TargetControl = this.panel1;
+            this.dragcotrol.UseTransparentDrag = true;
             // 
-            // btnlogout
+            // smoothedge
             // 
-            this.btnlogout.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnlogout.HoverState.Image = global::DigiSort_Box.Properties.Resources.logout__1_;
-            this.btnlogout.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnlogout.Image = global::DigiSort_Box.Properties.Resources.logout;
-            this.btnlogout.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnlogout.ImageRotate = 0F;
-            this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnlogout.Location = new System.Drawing.Point(1070, 8);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.PressedState.Image = global::DigiSort_Box.Properties.Resources.logout__1_;
-            this.btnlogout.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnlogout.Size = new System.Drawing.Size(43, 36);
-            this.btnlogout.TabIndex = 0;
-            this.info.SetToolTip(this.btnlogout, "Log out");
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
             // 
             // Dashboard
             // 
