@@ -23,7 +23,7 @@ namespace DigiSort_Box.Database
                 }
                 else
                 {
-                    string InsertQuery = "INSERT INTO account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "')";
+                    string InsertQuery = "INSERT INTO floor_account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "')";
                     connection.Open();
                     MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 

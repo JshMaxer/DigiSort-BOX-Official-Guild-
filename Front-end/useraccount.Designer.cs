@@ -30,129 +30,64 @@ namespace DigiSort_Box.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtusername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtfirstname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtlastname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtemail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtpassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtfirstname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtlastname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtusername
-            // 
-            this.txtusername.Location = new System.Drawing.Point(21, 77);
-            this.txtusername.Name = "txtusername";
-            this.txtusername.ReadOnly = true;
-            this.txtusername.Size = new System.Drawing.Size(256, 23);
-            this.txtusername.TabIndex = 0;
-            this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtusername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 57);
+            this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(99, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(92, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtfirstname
-            // 
-            this.txtfirstname.Location = new System.Drawing.Point(21, 127);
-            this.txtfirstname.Name = "txtfirstname";
-            this.txtfirstname.ReadOnly = true;
-            this.txtfirstname.Size = new System.Drawing.Size(256, 23);
-            this.txtfirstname.TabIndex = 0;
-            this.txtfirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtfirstname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(103, 107);
+            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(96, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(98, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "First Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtlastname
-            // 
-            this.txtlastname.Location = new System.Drawing.Point(21, 176);
-            this.txtlastname.Name = "txtlastname";
-            this.txtlastname.ReadOnly = true;
-            this.txtlastname.Size = new System.Drawing.Size(256, 23);
-            this.txtlastname.TabIndex = 0;
-            this.txtlastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtlastname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(104, 156);
+            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(97, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 16);
+            this.label4.Size = new System.Drawing.Size(97, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Last Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtemail
-            // 
-            this.txtemail.Location = new System.Drawing.Point(21, 228);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.ReadOnly = true;
-            this.txtemail.Size = new System.Drawing.Size(256, 23);
-            this.txtemail.TabIndex = 0;
-            this.txtemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtemail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(124, 208);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Email";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txtpassword
-            // 
-            this.txtpassword.Location = new System.Drawing.Point(21, 272);
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '?';
-            this.txtpassword.ReadOnly = true;
-            this.txtpassword.Size = new System.Drawing.Size(256, 23);
-            this.txtpassword.TabIndex = 0;
-            this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtpassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(106, 252);
+            this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(101, 249);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.Size = new System.Drawing.Size(88, 18);
             this.label6.TabIndex = 2;
             this.label6.Text = "Password";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,6 +104,18 @@ namespace DigiSort_Box.Forms
             this.panel1.Size = new System.Drawing.Size(305, 45);
             this.panel1.TabIndex = 10;
             // 
+            // exitform
+            // 
+            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitform.Animated = true;
+            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.exitform.IconColor = System.Drawing.Color.White;
+            this.exitform.Location = new System.Drawing.Point(247, 3);
+            this.exitform.Name = "exitform";
+            this.exitform.Size = new System.Drawing.Size(44, 38);
+            this.exitform.TabIndex = 12;
+            this.exitform.Click += new System.EventHandler(this.exitform_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -184,35 +131,118 @@ namespace DigiSort_Box.Forms
             this.smoothedge.BorderRadius = 12;
             this.smoothedge.TargetControl = this;
             // 
-            // exitform
+            // txtusername
             // 
-            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitform.Animated = true;
-            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
-            this.exitform.IconColor = System.Drawing.Color.White;
-            this.exitform.Location = new System.Drawing.Point(247, 3);
-            this.exitform.Name = "exitform";
-            this.exitform.Size = new System.Drawing.Size(44, 38);
-            this.exitform.TabIndex = 12;
-            this.exitform.Click += new System.EventHandler(this.exitform_Click);
+            this.txtusername.Animated = true;
+            this.txtusername.BorderRadius = 8;
+            this.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtusername.DefaultText = "";
+            this.txtusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtusername.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
+            this.txtusername.ForeColor = System.Drawing.Color.Black;
+            this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtusername.Location = new System.Drawing.Point(8, 80);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.PasswordChar = '\0';
+            this.txtusername.PlaceholderText = "";
+            this.txtusername.ReadOnly = true;
+            this.txtusername.SelectedText = "";
+            this.txtusername.Size = new System.Drawing.Size(275, 38);
+            this.txtusername.TabIndex = 22;
+            this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtfirstname
+            // 
+            this.txtfirstname.Animated = true;
+            this.txtfirstname.BorderRadius = 8;
+            this.txtfirstname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtfirstname.DefaultText = "";
+            this.txtfirstname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtfirstname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtfirstname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtfirstname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtfirstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtfirstname.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
+            this.txtfirstname.ForeColor = System.Drawing.Color.Black;
+            this.txtfirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtfirstname.Location = new System.Drawing.Point(8, 144);
+            this.txtfirstname.Name = "txtfirstname";
+            this.txtfirstname.PasswordChar = '\0';
+            this.txtfirstname.PlaceholderText = "";
+            this.txtfirstname.ReadOnly = true;
+            this.txtfirstname.SelectedText = "";
+            this.txtfirstname.Size = new System.Drawing.Size(275, 38);
+            this.txtfirstname.TabIndex = 22;
+            this.txtfirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtlastname
+            // 
+            this.txtlastname.Animated = true;
+            this.txtlastname.BorderRadius = 8;
+            this.txtlastname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtlastname.DefaultText = "";
+            this.txtlastname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtlastname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtlastname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtlastname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtlastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtlastname.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
+            this.txtlastname.ForeColor = System.Drawing.Color.Black;
+            this.txtlastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtlastname.Location = new System.Drawing.Point(8, 208);
+            this.txtlastname.Name = "txtlastname";
+            this.txtlastname.PasswordChar = '\0';
+            this.txtlastname.PlaceholderText = "";
+            this.txtlastname.ReadOnly = true;
+            this.txtlastname.SelectedText = "";
+            this.txtlastname.Size = new System.Drawing.Size(275, 38);
+            this.txtlastname.TabIndex = 22;
+            this.txtlastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.Animated = true;
+            this.txtpassword.BorderRadius = 8;
+            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpassword.DefaultText = "";
+            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
+            this.txtpassword.ForeColor = System.Drawing.Color.Black;
+            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Location = new System.Drawing.Point(8, 272);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '●';
+            this.txtpassword.PlaceholderText = "";
+            this.txtpassword.ReadOnly = true;
+            this.txtpassword.SelectedText = "";
+            this.txtpassword.Size = new System.Drawing.Size(275, 38);
+            this.txtpassword.TabIndex = 22;
+            this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpassword.UseSystemPasswordChar = true;
             // 
             // useraccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(299, 322);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(299, 334);
             this.Controls.Add(this.txtpassword);
-            this.Controls.Add(this.txtemail);
             this.Controls.Add(this.txtlastname);
             this.Controls.Add(this.txtfirstname);
             this.Controls.Add(this.txtusername);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -231,17 +261,15 @@ namespace DigiSort_Box.Forms
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtlastname;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtemail;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtfirstname;
-        public System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
         private Guna.UI2.WinForms.Guna2ControlBox exitform;
+        public Guna.UI2.WinForms.Guna2TextBox txtusername;
+        public Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        public Guna.UI2.WinForms.Guna2TextBox txtlastname;
+        public Guna.UI2.WinForms.Guna2TextBox txtfirstname;
     }
 }

@@ -36,7 +36,7 @@ namespace DigiSort_Box.Forms
             {
                 try
                 {
-                    string searchQuery = "SELECT first_name, last_name, username, password FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                    string searchQuery = "SELECT first_name, last_name, username, password FROM floor_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
                     connection.Open();
                     MySqlCommand cmd = new MySqlCommand(searchQuery, connection);
                     MySqlDataReader row = (cmd.ExecuteReader());

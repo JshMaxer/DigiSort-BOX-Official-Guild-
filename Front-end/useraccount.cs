@@ -25,20 +25,13 @@ namespace DigiSort_Box.Forms
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void useraccount_Load(object sender, EventArgs e)
         {
             //insert code here
-
             Database.useraccount acc = new Database.useraccount();
-            acc.user(txtusername, txtfirstname, txtlastname, txtemail, txtpassword);
-
+            acc.user(txtusername, txtfirstname, txtlastname, txtpassword);
         }
-
+        
         private void exitform_Click(object sender, EventArgs e)
         {
             this.Close();
