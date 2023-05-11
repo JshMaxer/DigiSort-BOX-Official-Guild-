@@ -226,7 +226,7 @@ namespace DigiSort_Box.Forms
         private void btnlogout_Click(object sender, EventArgs e)
         {
             Forms.DigiSortBox digi = new Forms.DigiSortBox();
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out?", "Logging out?", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log-out?", "Logging out?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 this.Close();

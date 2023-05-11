@@ -16,5 +16,10 @@ namespace DigiSort_Box.Front_end
         {
             InitializeComponent();
         }
+
+        private void btnproceed_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

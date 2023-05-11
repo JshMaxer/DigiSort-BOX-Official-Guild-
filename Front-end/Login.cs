@@ -48,7 +48,7 @@ namespace DigiSort_Box.Forms
                             string firstname = row["first_name"].ToString();
                             string lastname = row["last_name"].ToString();
                             string username = row["username"].ToString();
-                            MessageBox.Show("Account Succesfully Login \nHello " + firstname + " " + lastname);
+                            MessageBox.Show("Log-in Succesful!\nHello " + firstname + " " + lastname);
                             Forms.Dashboard dash = new Dashboard();
                             dash.txtname.Text = username;
                             dash.Show();
@@ -58,7 +58,7 @@ namespace DigiSort_Box.Forms
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Username or Password");
+                        MessageBox.Show("Incorrect Log-in Credentials!");
                     }
 
                     connection.Close();
