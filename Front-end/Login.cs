@@ -36,8 +36,6 @@ namespace DigiSort_Box.Forms
                 Database.Login logss = new Database.Login();
                 logss.loginCODE(txtusername, txtpassword);
             }
-
-
         }
 
         private void lblreset_Click(object sender, EventArgs e)
