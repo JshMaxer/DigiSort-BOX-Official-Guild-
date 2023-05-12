@@ -41,9 +41,9 @@ namespace DigiSort_Box.Forms
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@ namespace DigiSort_Box.Forms
             this.txtusername.Location = new System.Drawing.Point(21, 77);
             this.txtusername.Name = "txtusername";
             this.txtusername.ReadOnly = true;
-            this.txtusername.Size = new System.Drawing.Size(256, 23);
+            this.txtusername.Size = new System.Drawing.Size(256, 20);
             this.txtusername.TabIndex = 0;
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtusername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -63,7 +63,7 @@ namespace DigiSort_Box.Forms
             this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(106, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -74,7 +74,7 @@ namespace DigiSort_Box.Forms
             this.txtfirstname.Location = new System.Drawing.Point(21, 127);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.ReadOnly = true;
-            this.txtfirstname.Size = new System.Drawing.Size(256, 23);
+            this.txtfirstname.Size = new System.Drawing.Size(256, 20);
             this.txtfirstname.TabIndex = 0;
             this.txtfirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtfirstname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -85,7 +85,7 @@ namespace DigiSort_Box.Forms
             this.label3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(103, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "First Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,7 +96,7 @@ namespace DigiSort_Box.Forms
             this.txtlastname.Location = new System.Drawing.Point(21, 176);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.ReadOnly = true;
-            this.txtlastname.Size = new System.Drawing.Size(256, 23);
+            this.txtlastname.Size = new System.Drawing.Size(256, 20);
             this.txtlastname.TabIndex = 0;
             this.txtlastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtlastname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -107,7 +107,7 @@ namespace DigiSort_Box.Forms
             this.label4.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(104, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 16);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Last Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,7 +118,7 @@ namespace DigiSort_Box.Forms
             this.txtemail.Location = new System.Drawing.Point(21, 228);
             this.txtemail.Name = "txtemail";
             this.txtemail.ReadOnly = true;
-            this.txtemail.Size = new System.Drawing.Size(256, 23);
+            this.txtemail.Size = new System.Drawing.Size(256, 20);
             this.txtemail.TabIndex = 0;
             this.txtemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtemail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -129,7 +129,7 @@ namespace DigiSort_Box.Forms
             this.label5.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(124, 208);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Email";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,9 +139,9 @@ namespace DigiSort_Box.Forms
             // 
             this.txtpassword.Location = new System.Drawing.Point(21, 272);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '?';
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.ReadOnly = true;
-            this.txtpassword.Size = new System.Drawing.Size(256, 23);
+            this.txtpassword.Size = new System.Drawing.Size(256, 20);
             this.txtpassword.TabIndex = 0;
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtpassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -152,7 +152,7 @@ namespace DigiSort_Box.Forms
             this.label6.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(106, 252);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 2;
             this.label6.Text = "Password";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,21 +169,6 @@ namespace DigiSort_Box.Forms
             this.panel1.Size = new System.Drawing.Size(305, 45);
             this.panel1.TabIndex = 10;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(15, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "User Account";
-            // 
-            // smoothedge
-            // 
-            this.smoothedge.BorderRadius = 12;
-            this.smoothedge.TargetControl = this;
-            // 
             // exitform
             // 
             this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -196,9 +181,24 @@ namespace DigiSort_Box.Forms
             this.exitform.TabIndex = 12;
             this.exitform.Click += new System.EventHandler(this.exitform_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(15, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "User Account";
+            // 
+            // smoothedge
+            // 
+            this.smoothedge.BorderRadius = 12;
+            this.smoothedge.TargetControl = this;
+            // 
             // useraccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(299, 322);

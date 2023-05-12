@@ -31,6 +31,7 @@ namespace DigiSort_Box
         {
             this.components = new System.ComponentModel.Container();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.cbaccount = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtretype = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,7 +45,6 @@ namespace DigiSort_Box
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbaccount = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,21 +64,45 @@ namespace DigiSort_Box
             this.guna2ShadowPanel1.Controls.Add(this.txtusername);
             this.guna2ShadowPanel1.Controls.Add(this.txtpassword);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(561, 66);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(421, 54);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 12;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowShift = 3;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(411, 528);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(308, 429);
             this.guna2ShadowPanel1.TabIndex = 34;
+            // 
+            // cbaccount
+            // 
+            this.cbaccount.BackColor = System.Drawing.Color.Transparent;
+            this.cbaccount.BorderRadius = 8;
+            this.cbaccount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbaccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbaccount.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbaccount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbaccount.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.cbaccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbaccount.ItemHeight = 30;
+            this.cbaccount.Items.AddRange(new object[] {
+            "Top admin",
+            "Floor admin"});
+            this.cbaccount.Location = new System.Drawing.Point(24, 130);
+            this.cbaccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbaccount.Name = "cbaccount";
+            this.cbaccount.Size = new System.Drawing.Size(270, 36);
+            this.cbaccount.StartIndex = 0;
+            this.cbaccount.TabIndex = 54;
+            this.cbaccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = global::DigiSort_Box.Properties.Resources.add_user;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(155, 53);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(116, 43);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(113, 74);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(85, 60);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 53;
             this.guna2PictureBox2.TabStop = false;
@@ -87,9 +111,10 @@ namespace DigiSort_Box
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 13);
+            this.label3.Location = new System.Drawing.Point(10, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 25);
+            this.label3.Size = new System.Drawing.Size(143, 18);
             this.label3.TabIndex = 52;
             this.label3.Text = "Create Account";
             // 
@@ -106,13 +131,12 @@ namespace DigiSort_Box
             this.txtretype.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtretype.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtretype.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtretype.Location = new System.Drawing.Point(32, 397);
-            this.txtretype.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtretype.Location = new System.Drawing.Point(24, 323);
             this.txtretype.Name = "txtretype";
             this.txtretype.PasswordChar = '●';
             this.txtretype.PlaceholderText = "Retype password";
             this.txtretype.SelectedText = "";
-            this.txtretype.Size = new System.Drawing.Size(359, 38);
+            this.txtretype.Size = new System.Drawing.Size(269, 31);
             this.txtretype.TabIndex = 33;
             this.txtretype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtretype.UseSystemPasswordChar = true;
@@ -129,9 +153,10 @@ namespace DigiSort_Box
             this.btncreate.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btncreate.ForeColor = System.Drawing.Color.White;
             this.btncreate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btncreate.Location = new System.Drawing.Point(99, 457);
+            this.btncreate.Location = new System.Drawing.Point(74, 371);
+            this.btncreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btncreate.Name = "btncreate";
-            this.btncreate.Size = new System.Drawing.Size(228, 45);
+            this.btncreate.Size = new System.Drawing.Size(171, 37);
             this.btncreate.TabIndex = 29;
             this.btncreate.Text = "Create Account";
             this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
@@ -149,13 +174,12 @@ namespace DigiSort_Box
             this.txtfirstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtfirstname.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtfirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtfirstname.Location = new System.Drawing.Point(32, 213);
-            this.txtfirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtfirstname.Location = new System.Drawing.Point(24, 173);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.PasswordChar = '\0';
             this.txtfirstname.PlaceholderText = "Fistname";
             this.txtfirstname.SelectedText = "";
-            this.txtfirstname.Size = new System.Drawing.Size(359, 38);
+            this.txtfirstname.Size = new System.Drawing.Size(269, 31);
             this.txtfirstname.TabIndex = 28;
             this.txtfirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -172,13 +196,12 @@ namespace DigiSort_Box
             this.txtlastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtlastname.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtlastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtlastname.Location = new System.Drawing.Point(32, 259);
-            this.txtlastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtlastname.Location = new System.Drawing.Point(24, 210);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.PasswordChar = '\0';
             this.txtlastname.PlaceholderText = "Lastname";
             this.txtlastname.SelectedText = "";
-            this.txtlastname.Size = new System.Drawing.Size(359, 38);
+            this.txtlastname.Size = new System.Drawing.Size(269, 31);
             this.txtlastname.TabIndex = 28;
             this.txtlastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -195,13 +218,12 @@ namespace DigiSort_Box
             this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtusername.Location = new System.Drawing.Point(32, 305);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtusername.Location = new System.Drawing.Point(24, 248);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderText = "Username";
             this.txtusername.SelectedText = "";
-            this.txtusername.Size = new System.Drawing.Size(359, 38);
+            this.txtusername.Size = new System.Drawing.Size(269, 31);
             this.txtusername.TabIndex = 28;
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -218,22 +240,20 @@ namespace DigiSort_Box
             this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(32, 351);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpassword.Location = new System.Drawing.Point(24, 285);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.PasswordChar = '●';
             this.txtpassword.PlaceholderText = "Password";
             this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(359, 38);
+            this.txtpassword.Size = new System.Drawing.Size(269, 31);
             this.txtpassword.TabIndex = 28;
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnback
             // 
-            this.btnback.Location = new System.Drawing.Point(6, 10);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4);
+            this.btnback.Location = new System.Drawing.Point(4, 8);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(36, 29);
+            this.btnback.Size = new System.Drawing.Size(27, 24);
             this.btnback.TabIndex = 7;
             this.btnback.Text = "<";
             this.btnback.UseVisualStyleBackColor = true;
@@ -244,9 +264,9 @@ namespace DigiSort_Box
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
             this.panel1.Controls.Add(this.btnback);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(996, 50);
+            this.panel1.Size = new System.Drawing.Size(747, 41);
             this.panel1.TabIndex = 32;
             // 
             // smoothedge
@@ -263,45 +283,24 @@ namespace DigiSort_Box
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DigiSort_Box.Properties.Resources._1;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 70);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 57);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(505, 514);
+            this.pictureBox1.Size = new System.Drawing.Size(379, 418);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // cbaccount
-            // 
-            this.cbaccount.BackColor = System.Drawing.Color.Transparent;
-            this.cbaccount.BorderRadius = 8;
-            this.cbaccount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbaccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbaccount.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbaccount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbaccount.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.cbaccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cbaccount.ItemHeight = 30;
-            this.cbaccount.Items.AddRange(new object[] {
-            "Top admin",
-            "Floor admin"});
-            this.cbaccount.Location = new System.Drawing.Point(32, 160);
-            this.cbaccount.Name = "cbaccount";
-            this.cbaccount.Size = new System.Drawing.Size(359, 36);
-            this.cbaccount.StartIndex = 0;
-            this.cbaccount.TabIndex = 54;
-            this.cbaccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // CreateAcc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(993, 621);
+            this.ClientSize = new System.Drawing.Size(745, 505);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CreateAcc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "       ";

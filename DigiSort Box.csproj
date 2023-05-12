@@ -105,6 +105,7 @@
     <Compile Include="Back-end\Inventory.cs" />
     <Compile Include="Back-end\Login.cs" />
     <Compile Include="Back-end\MainDashboard.cs" />
+    <Compile Include="Back-end\Menu.cs" />
     <Compile Include="Back-end\preview.cs" />
     <Compile Include="Back-end\RawMaterial.cs" />
     <Compile Include="Back-end\ReadyToSell.cs" />
