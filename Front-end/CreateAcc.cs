@@ -22,7 +22,7 @@ namespace DigiSort_Box
         {
             //database
             Database.CreateAcc Account = new Database.CreateAcc();
-            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername);
+            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername, cbaccount);
 
         }
     }

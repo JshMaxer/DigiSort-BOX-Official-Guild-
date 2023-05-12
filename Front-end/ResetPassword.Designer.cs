@@ -31,9 +31,9 @@ namespace DigiSort_Box.Front_end
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Reset = new System.Windows.Forms.Label();
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtretype = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,6 +52,17 @@ namespace DigiSort_Box.Front_end
             this.panel1.Size = new System.Drawing.Size(429, 55);
             this.panel1.TabIndex = 10;
             // 
+            // exitform
+            // 
+            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitform.Animated = true;
+            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.exitform.IconColor = System.Drawing.Color.White;
+            this.exitform.Location = new System.Drawing.Point(369, 8);
+            this.exitform.Name = "exitform";
+            this.exitform.Size = new System.Drawing.Size(44, 38);
+            this.exitform.TabIndex = 12;
+            // 
             // Reset
             // 
             this.Reset.AutoSize = true;
@@ -68,17 +79,6 @@ namespace DigiSort_Box.Front_end
             // 
             this.smoothedge.BorderRadius = 12;
             this.smoothedge.TargetControl = this;
-            // 
-            // exitform
-            // 
-            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitform.Animated = true;
-            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
-            this.exitform.IconColor = System.Drawing.Color.White;
-            this.exitform.Location = new System.Drawing.Point(369, 8);
-            this.exitform.Name = "exitform";
-            this.exitform.Size = new System.Drawing.Size(44, 38);
-            this.exitform.TabIndex = 12;
             // 
             // txtusername
             // 
@@ -164,6 +164,7 @@ namespace DigiSort_Box.Front_end
             this.btnproceed.Size = new System.Drawing.Size(165, 45);
             this.btnproceed.TabIndex = 69;
             this.btnproceed.Text = "Proceed";
+            this.btnproceed.Click += new System.EventHandler(this.btnproceed_Click);
             // 
             // reset_password
             // 

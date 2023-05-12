@@ -7,7 +7,7 @@ namespace DigiSort_Box.Database
 {
     class CreateAcc
     {
-        public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username)
+        public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username, Guna2ComboBox cbusertype)
         {
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
 
@@ -23,39 +23,74 @@ namespace DigiSort_Box.Database
                 }
                 else
                 {
-                    string InsertQuery = "INSERT INTO account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "')";
-                    connection.Open();
-                    MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
-
-                    try
+                    //Floor admin account
+                    if (cbusertype.SelectedItem.Equals("Floor admin"))
                     {
-                        if (cmd.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("Account successfully created!");
-                            Forms.Login log = new Forms.Login();
-                            log.Show();
-                            //Application.Exit();
+                        string InsertQuery = "INSERT INTO floor_account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "')";
+                        connection.Open();
+                        MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 
-                        }
-                        else
+                        try
                         {
-                            MessageBox.Show("Account Unsuccessfully created!");
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Account successfully created!");
+                                Forms.Login log = new Forms.Login();
+                                log.Show();
+                                //Application.Exit();
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Account Unsuccessfully created!");
+                            }
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Username is already used!");
+                        }
+
+                        connection.Close();
                     }
-                    catch (Exception ex)
+                    //Top admin
+                    else if (cbusertype.SelectedItem.Equals("Top admin"))
                     {
-                        MessageBox.Show("Username is already used!");
+                        string InsertQuery = "INSERT INTO top_account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "')";
+                        connection.Open();
+                        MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
+
+                        try
+                        {
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Account successfully created!");
+                                Forms.Login log = new Forms.Login();
+                                log.Show();
+                                //Application.Exit();
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Account Unsuccessfully created!");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Username is already used!");
+                        }
+
+                        connection.Close();
                     }
 
-                    connection.Close();
                 }
             }
+            //SQL
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
             }
-        }
 
+        }
 
     }
 }
