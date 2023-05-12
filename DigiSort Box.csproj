@@ -122,6 +122,7 @@
     <Compile Include="Database\preview.cs" />
     <Compile Include="Database\RawMaterial.cs" />
     <Compile Include="Database\ReadyToSell.cs" />
+    <Compile Include="Database\Reset_Password.cs" />
     <Compile Include="Database\Unprinted.cs" />
     <Compile Include="Database\Update.cs" />
     <Compile Include="Database\useraccount.cs" />
@@ -345,6 +346,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hasbulla.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

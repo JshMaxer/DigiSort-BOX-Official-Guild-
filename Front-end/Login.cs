@@ -24,6 +24,8 @@ namespace DigiSort_Box.Forms
 
         private void btnsignin_Click(object sender, EventArgs e)
         {
+            //DATABASE -------------------------------------------------------------------
+
             //preview account - change restriction
             if (txtusername.Text.Equals("Preview") || txtusername.Text.Equals("preview") && (txtpassword.Text.Equals("Admin") || txtpassword.Text.Equals("admin")))
             {
@@ -34,10 +36,7 @@ namespace DigiSort_Box.Forms
             }
             else
             {
-                /*
-                Database.Login logss = new Database.Login();
-                logss.loginCODE(txtusername, txtpassword);
-                */
+                //searching all the accounts on Top admin and Floor admin database
 
 
                 //search account for top admin account
@@ -63,21 +62,64 @@ namespace DigiSort_Box.Forms
                             dash.txtname.Text = usename;
                             dash.Show();
 
-                            //this.Close();
+                            this.Close();
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Incorrect Log-in Credentials!");
+                        MessageBox.Show("Incorrect Log-in Credentials!", "Top Admin");
                     }
 
                     connection.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
+                    MessageBox.Show(ex.Message);
                 }
+
+                connection.Close();
+
+
+                //search account for floor admin account
+                try
+                {
+                    string searchFloor = "SELECT first_name, last_name, username, password FROM floor_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                    connection.Close();
+                    connection.Open();
+                    MySqlCommand cmdfloor = new MySqlCommand(searchFloor, connection);
+                    MySqlDataReader rowfloor = (cmdfloor.ExecuteReader());
+
+                    if (rowfloor.HasRows)
+                    {
+                        while (rowfloor.Read())
+                        {
+                            string fname = rowfloor["first_name"].ToString();
+                            string lname = rowfloor["last_name"].ToString();
+                            string usename = rowfloor["username"].ToString();
+
+                            MessageBox.Show("Floor admin Log-in Succesful!\nHello " + fname + " " + lname);
+
+                            Forms.Dashboard dash = new Forms.Dashboard();
+                            dash.txtname.Text = usename;
+                            dash.Show();
+
+                            this.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Log-in Credentials!", "Floor Admin");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                connection.Close();
+                //end of database -------------------------------------------------------------------
             }
         }
 
