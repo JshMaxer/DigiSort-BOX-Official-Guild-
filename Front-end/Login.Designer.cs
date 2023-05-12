@@ -38,12 +38,8 @@ namespace DigiSort_Box.Forms
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btcreate = new Guna.UI2.WinForms.Guna2Button();
             this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblreset = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
@@ -121,21 +117,17 @@ namespace DigiSort_Box.Forms
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2ShadowPanel1.Controls.Add(this.label3);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2Separator2);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2Separator1);
-            this.guna2ShadowPanel1.Controls.Add(this.btcreate);
             this.guna2ShadowPanel1.Controls.Add(this.btnsignin);
             this.guna2ShadowPanel1.Controls.Add(this.txtpassword);
             this.guna2ShadowPanel1.Controls.Add(this.txtusername);
-            this.guna2ShadowPanel1.Controls.Add(this.label5);
             this.guna2ShadowPanel1.Controls.Add(this.lblreset);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(495, 78);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(495, 148);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 12;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowShift = 3;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(460, 503);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(460, 400);
             this.guna2ShadowPanel1.TabIndex = 49;
             // 
             // guna2PictureBox2
@@ -148,40 +140,6 @@ namespace DigiSort_Box.Forms
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 51;
             this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.Location = new System.Drawing.Point(258, 393);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(217, 10);
-            this.guna2Separator2.TabIndex = 50;
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Location = new System.Drawing.Point(1, 393);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(217, 10);
-            this.guna2Separator1.TabIndex = 50;
-            // 
-            // btcreate
-            // 
-            this.btcreate.Animated = true;
-            this.btcreate.BorderRadius = 20;
-            this.btcreate.BorderThickness = 1;
-            this.btcreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btcreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btcreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btcreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btcreate.FillColor = System.Drawing.Color.Transparent;
-            this.btcreate.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btcreate.ForeColor = System.Drawing.Color.Black;
-            this.btcreate.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btcreate.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btcreate.Location = new System.Drawing.Point(100, 425);
-            this.btcreate.Name = "btcreate";
-            this.btcreate.Size = new System.Drawing.Size(271, 45);
-            this.btcreate.TabIndex = 4;
-            this.btcreate.Text = "Create Account";
             // 
             // btnsignin
             // 
@@ -224,18 +182,6 @@ namespace DigiSort_Box.Forms
             this.txtpassword.TabIndex = 1;
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtpassword.UseSystemPasswordChar = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(231, 387);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "or";
             // 
             // lblreset
             // 
@@ -291,13 +237,9 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
         private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2Button btcreate;
         private Guna.UI2.WinForms.Guna2Button btnsignin;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblreset;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;

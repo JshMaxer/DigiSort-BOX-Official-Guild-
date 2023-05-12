@@ -254,9 +254,9 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
         private Guna.UI2.WinForms.Guna2ControlBox exitform;
-        private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private Guna.UI2.WinForms.Guna2TextBox txtpassword;
-        private Guna.UI2.WinForms.Guna2TextBox txtlastname;
-        private Guna.UI2.WinForms.Guna2TextBox txtfirstname;
+        public Guna.UI2.WinForms.Guna2TextBox txtusername;
+        public Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        public Guna.UI2.WinForms.Guna2TextBox txtlastname;
+        public Guna.UI2.WinForms.Guna2TextBox txtfirstname;
     }
 }
