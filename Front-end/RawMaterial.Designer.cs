@@ -29,257 +29,17 @@ namespace DigiSort_Box.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtquan4 = new System.Windows.Forms.TextBox();
-            this.txtquan3 = new System.Windows.Forms.TextBox();
-            this.txtquan2 = new System.Windows.Forms.TextBox();
-            this.txtquan1 = new System.Windows.Forms.TextBox();
-            this.cbcolor4 = new System.Windows.Forms.ComboBox();
-            this.cbcolor3 = new System.Windows.Forms.ComboBox();
-            this.cbcolor2 = new System.Windows.Forms.ComboBox();
-            this.cbcolor1 = new System.Windows.Forms.ComboBox();
-            this.cbdesign4 = new System.Windows.Forms.TextBox();
-            this.cbdesign3 = new System.Windows.Forms.TextBox();
-            this.cbdesign2 = new System.Windows.Forms.TextBox();
-            this.cbdesign1 = new System.Windows.Forms.TextBox();
-            this.cbmaterial4 = new System.Windows.Forms.TextBox();
-            this.cbmaterial3 = new System.Windows.Forms.TextBox();
-            this.cbmaterial2 = new System.Windows.Forms.TextBox();
-            this.cbmaterial1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnback = new System.Windows.Forms.Button();
             this.btnadd = new Guna.UI2.WinForms.Guna2Button();
+            this.txtquantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbcolor = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbdesign = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbmaterial = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // txtquan4
-            // 
-            this.txtquan4.Location = new System.Drawing.Point(721, 402);
-            this.txtquan4.Margin = new System.Windows.Forms.Padding(4);
-            this.txtquan4.Name = "txtquan4";
-            this.txtquan4.Size = new System.Drawing.Size(132, 22);
-            this.txtquan4.TabIndex = 41;
-            // 
-            // txtquan3
-            // 
-            this.txtquan3.Location = new System.Drawing.Point(721, 314);
-            this.txtquan3.Margin = new System.Windows.Forms.Padding(4);
-            this.txtquan3.Name = "txtquan3";
-            this.txtquan3.Size = new System.Drawing.Size(132, 22);
-            this.txtquan3.TabIndex = 40;
-            // 
-            // txtquan2
-            // 
-            this.txtquan2.Location = new System.Drawing.Point(721, 238);
-            this.txtquan2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtquan2.Name = "txtquan2";
-            this.txtquan2.Size = new System.Drawing.Size(132, 22);
-            this.txtquan2.TabIndex = 39;
-            // 
-            // txtquan1
-            // 
-            this.txtquan1.Location = new System.Drawing.Point(721, 153);
-            this.txtquan1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtquan1.Name = "txtquan1";
-            this.txtquan1.Size = new System.Drawing.Size(132, 22);
-            this.txtquan1.TabIndex = 38;
-            // 
-            // cbcolor4
-            // 
-            this.cbcolor4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbcolor4.FormattingEnabled = true;
-            this.cbcolor4.Items.AddRange(new object[] {
-            "",
-            "Red ",
-            "Orange",
-            "Yellow",
-            "Green",
-            "Blue",
-            "Purple",
-            "White",
-            "Brown",
-            "Gray",
-            "Black"});
-            this.cbcolor4.Location = new System.Drawing.Point(493, 401);
-            this.cbcolor4.Margin = new System.Windows.Forms.Padding(4);
-            this.cbcolor4.Name = "cbcolor4";
-            this.cbcolor4.Size = new System.Drawing.Size(160, 24);
-            this.cbcolor4.TabIndex = 37;
-            // 
-            // cbcolor3
-            // 
-            this.cbcolor3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbcolor3.FormattingEnabled = true;
-            this.cbcolor3.Items.AddRange(new object[] {
-            "",
-            "Red ",
-            "Orange",
-            "Yellow",
-            "Green",
-            "Blue",
-            "Purple",
-            "White",
-            "Brown",
-            "Gray",
-            "Black"});
-            this.cbcolor3.Location = new System.Drawing.Point(493, 313);
-            this.cbcolor3.Margin = new System.Windows.Forms.Padding(4);
-            this.cbcolor3.Name = "cbcolor3";
-            this.cbcolor3.Size = new System.Drawing.Size(160, 24);
-            this.cbcolor3.TabIndex = 36;
-            // 
-            // cbcolor2
-            // 
-            this.cbcolor2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbcolor2.FormattingEnabled = true;
-            this.cbcolor2.Items.AddRange(new object[] {
-            "",
-            "Red ",
-            "Orange",
-            "Yellow",
-            "Green",
-            "Blue",
-            "Purple",
-            "White",
-            "Brown",
-            "Gray",
-            "Black"});
-            this.cbcolor2.Location = new System.Drawing.Point(493, 236);
-            this.cbcolor2.Margin = new System.Windows.Forms.Padding(4);
-            this.cbcolor2.Name = "cbcolor2";
-            this.cbcolor2.Size = new System.Drawing.Size(160, 24);
-            this.cbcolor2.TabIndex = 35;
-            // 
-            // cbcolor1
-            // 
-            this.cbcolor1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbcolor1.FormattingEnabled = true;
-            this.cbcolor1.Items.AddRange(new object[] {
-            "",
-            "Red ",
-            "Orange",
-            "Yellow",
-            "Green",
-            "Blue",
-            "Purple",
-            "White",
-            "Brown",
-            "Gray",
-            "Black"});
-            this.cbcolor1.Location = new System.Drawing.Point(493, 153);
-            this.cbcolor1.Margin = new System.Windows.Forms.Padding(4);
-            this.cbcolor1.Name = "cbcolor1";
-            this.cbcolor1.Size = new System.Drawing.Size(160, 24);
-            this.cbcolor1.TabIndex = 34;
-            // 
-            // cbdesign4
-            // 
-            this.cbdesign4.Location = new System.Drawing.Point(289, 402);
-            this.cbdesign4.Margin = new System.Windows.Forms.Padding(4);
-            this.cbdesign4.Name = "cbdesign4";
-            this.cbdesign4.Size = new System.Drawing.Size(132, 22);
-            this.cbdesign4.TabIndex = 33;
-            // 
-            // cbdesign3
-            // 
-            this.cbdesign3.Location = new System.Drawing.Point(289, 314);
-            this.cbdesign3.Margin = new System.Windows.Forms.Padding(4);
-            this.cbdesign3.Name = "cbdesign3";
-            this.cbdesign3.Size = new System.Drawing.Size(132, 22);
-            this.cbdesign3.TabIndex = 32;
-            // 
-            // cbdesign2
-            // 
-            this.cbdesign2.Location = new System.Drawing.Point(289, 238);
-            this.cbdesign2.Margin = new System.Windows.Forms.Padding(4);
-            this.cbdesign2.Name = "cbdesign2";
-            this.cbdesign2.Size = new System.Drawing.Size(132, 22);
-            this.cbdesign2.TabIndex = 31;
-            // 
-            // cbdesign1
-            // 
-            this.cbdesign1.Location = new System.Drawing.Point(289, 153);
-            this.cbdesign1.Margin = new System.Windows.Forms.Padding(4);
-            this.cbdesign1.Name = "cbdesign1";
-            this.cbdesign1.Size = new System.Drawing.Size(132, 22);
-            this.cbdesign1.TabIndex = 30;
-            // 
-            // cbmaterial4
-            // 
-            this.cbmaterial4.Location = new System.Drawing.Point(101, 402);
-            this.cbmaterial4.Margin = new System.Windows.Forms.Padding(4);
-            this.cbmaterial4.Name = "cbmaterial4";
-            this.cbmaterial4.Size = new System.Drawing.Size(132, 22);
-            this.cbmaterial4.TabIndex = 29;
-            // 
-            // cbmaterial3
-            // 
-            this.cbmaterial3.Location = new System.Drawing.Point(101, 314);
-            this.cbmaterial3.Margin = new System.Windows.Forms.Padding(4);
-            this.cbmaterial3.Name = "cbmaterial3";
-            this.cbmaterial3.Size = new System.Drawing.Size(132, 22);
-            this.cbmaterial3.TabIndex = 28;
-            // 
-            // cbmaterial2
-            // 
-            this.cbmaterial2.Location = new System.Drawing.Point(101, 238);
-            this.cbmaterial2.Margin = new System.Windows.Forms.Padding(4);
-            this.cbmaterial2.Name = "cbmaterial2";
-            this.cbmaterial2.Size = new System.Drawing.Size(132, 22);
-            this.cbmaterial2.TabIndex = 27;
-            // 
-            // cbmaterial1
-            // 
-            this.cbmaterial1.Location = new System.Drawing.Point(101, 153);
-            this.cbmaterial1.Margin = new System.Windows.Forms.Padding(4);
-            this.cbmaterial1.Name = "cbmaterial1";
-            this.cbmaterial1.Size = new System.Drawing.Size(132, 22);
-            this.cbmaterial1.TabIndex = 26;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(749, 96);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 16);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Quantity";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(555, 97);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Color";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(325, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 16);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Design";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(137, 97);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Material";
             // 
             // btnback
             // 
@@ -314,34 +74,177 @@ namespace DigiSort_Box.Forms
             this.btnadd.Text = "Add";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
+            // txtquantity
+            // 
+            this.txtquantity.Animated = true;
+            this.txtquantity.BorderColor = System.Drawing.Color.Black;
+            this.txtquantity.BorderRadius = 8;
+            this.txtquantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtquantity.DefaultText = "";
+            this.txtquantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtquantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtquantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtquantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtquantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtquantity.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtquantity.Location = new System.Drawing.Point(318, 385);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(5);
+            this.txtquantity.MaxLength = 4;
+            this.txtquantity.Name = "txtquantity";
+            this.txtquantity.PasswordChar = '\0';
+            this.txtquantity.PlaceholderText = "";
+            this.txtquantity.SelectedText = "";
+            this.txtquantity.Size = new System.Drawing.Size(359, 36);
+            this.txtquantity.TabIndex = 79;
+            this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbcolor
+            // 
+            this.cbcolor.BackColor = System.Drawing.Color.Transparent;
+            this.cbcolor.BorderColor = System.Drawing.Color.Black;
+            this.cbcolor.BorderRadius = 8;
+            this.cbcolor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbcolor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbcolor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbcolor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbcolor.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.cbcolor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbcolor.ItemHeight = 30;
+            this.cbcolor.Items.AddRange(new object[] {
+            "",
+            "Red",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Purple",
+            "White",
+            "Brown",
+            "Gray",
+            "Black"});
+            this.cbcolor.Location = new System.Drawing.Point(318, 303);
+            this.cbcolor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbcolor.Name = "cbcolor";
+            this.cbcolor.Size = new System.Drawing.Size(359, 36);
+            this.cbcolor.StartIndex = 0;
+            this.cbcolor.TabIndex = 76;
+            this.cbcolor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbdesign
+            // 
+            this.cbdesign.BackColor = System.Drawing.Color.Transparent;
+            this.cbdesign.BorderColor = System.Drawing.Color.Black;
+            this.cbdesign.BorderRadius = 8;
+            this.cbdesign.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbdesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbdesign.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbdesign.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbdesign.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.cbdesign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbdesign.ItemHeight = 30;
+            this.cbdesign.Items.AddRange(new object[] {
+            "",
+            "SpyXFamily",
+            "Naruto",
+            "OnePiece",
+            "Black Clover",
+            "Kimetsu no Yaiba",
+            "Bleach",
+            "Boku no tige"});
+            this.cbdesign.Location = new System.Drawing.Point(318, 212);
+            this.cbdesign.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbdesign.Name = "cbdesign";
+            this.cbdesign.Size = new System.Drawing.Size(359, 36);
+            this.cbdesign.TabIndex = 77;
+            this.cbdesign.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbmaterial
+            // 
+            this.cbmaterial.BackColor = System.Drawing.Color.Transparent;
+            this.cbmaterial.BorderColor = System.Drawing.Color.Black;
+            this.cbmaterial.BorderRadius = 8;
+            this.cbmaterial.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbmaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmaterial.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbmaterial.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbmaterial.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.cbmaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbmaterial.ItemHeight = 30;
+            this.cbmaterial.Items.AddRange(new object[] {
+            "",
+            "Vinyl",
+            "Sticker paper",
+            "Laminating film",
+            "DTP."});
+            this.cbmaterial.Location = new System.Drawing.Point(318, 132);
+            this.cbmaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbmaterial.Name = "cbmaterial";
+            this.cbmaterial.Size = new System.Drawing.Size(359, 36);
+            this.cbmaterial.StartIndex = 0;
+            this.cbmaterial.TabIndex = 78;
+            this.cbmaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(452, 360);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 20);
+            this.label10.TabIndex = 75;
+            this.label10.Text = "Quantity";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(468, 281);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 20);
+            this.label9.TabIndex = 74;
+            this.label9.Text = "Color";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(460, 190);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 20);
+            this.label7.TabIndex = 73;
+            this.label7.Text = "Design";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(454, 110);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 72;
+            this.label5.Text = "Material";
+            // 
             // RawMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(993, 622);
+            this.Controls.Add(this.txtquantity);
+            this.Controls.Add(this.cbcolor);
+            this.Controls.Add(this.cbdesign);
+            this.Controls.Add(this.cbmaterial);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnback);
-            this.Controls.Add(this.txtquan4);
-            this.Controls.Add(this.txtquan3);
-            this.Controls.Add(this.txtquan2);
-            this.Controls.Add(this.txtquan1);
-            this.Controls.Add(this.cbcolor4);
-            this.Controls.Add(this.cbcolor3);
-            this.Controls.Add(this.cbcolor2);
-            this.Controls.Add(this.cbcolor1);
-            this.Controls.Add(this.cbdesign4);
-            this.Controls.Add(this.cbdesign3);
-            this.Controls.Add(this.cbdesign2);
-            this.Controls.Add(this.cbdesign1);
-            this.Controls.Add(this.cbmaterial4);
-            this.Controls.Add(this.cbmaterial3);
-            this.Controls.Add(this.cbmaterial2);
-            this.Controls.Add(this.cbmaterial1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RawMaterial";
@@ -353,27 +256,15 @@ namespace DigiSort_Box.Forms
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtquan4;
-        private System.Windows.Forms.TextBox txtquan3;
-        private System.Windows.Forms.TextBox txtquan2;
-        private System.Windows.Forms.TextBox txtquan1;
-        private System.Windows.Forms.ComboBox cbcolor4;
-        private System.Windows.Forms.ComboBox cbcolor3;
-        private System.Windows.Forms.ComboBox cbcolor2;
-        private System.Windows.Forms.ComboBox cbcolor1;
-        private System.Windows.Forms.TextBox cbdesign4;
-        private System.Windows.Forms.TextBox cbdesign3;
-        private System.Windows.Forms.TextBox cbdesign2;
-        private System.Windows.Forms.TextBox cbdesign1;
-        private System.Windows.Forms.TextBox cbmaterial4;
-        private System.Windows.Forms.TextBox cbmaterial3;
-        private System.Windows.Forms.TextBox cbmaterial2;
-        private System.Windows.Forms.TextBox cbmaterial1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnback;
         public Guna.UI2.WinForms.Guna2Button btnadd;
+        private Guna.UI2.WinForms.Guna2TextBox txtquantity;
+        private Guna.UI2.WinForms.Guna2ComboBox cbcolor;
+        private Guna.UI2.WinForms.Guna2ComboBox cbdesign;
+        private Guna.UI2.WinForms.Guna2ComboBox cbmaterial;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
     }
 }

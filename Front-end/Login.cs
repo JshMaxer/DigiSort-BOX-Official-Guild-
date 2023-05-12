@@ -2,7 +2,6 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DigiSort_Box.Forms
 {
@@ -26,99 +25,107 @@ namespace DigiSort_Box.Forms
         {
             //DATABASE -------------------------------------------------------------------
 
-            //preview account - change restriction
-            if (txtusername.Text.Equals("Preview") || txtusername.Text.Equals("preview") && (txtpassword.Text.Equals("Admin") || txtpassword.Text.Equals("admin")))
+            if (txtusername.Text.Equals("") || txtpassword.Text.Equals(""))
             {
-                MessageBox.Show("This account is for preview forms only. You cannot do anything on other forms you just previewing them.\nThis account is usually used only for Front-End Developer");
-                Forms.preview pv = new Forms.preview();
-                this.Close();
-                pv.Show();
+                MessageBox.Show("Log-in Form must be filled-out completely!");
             }
             else
             {
-                //searching all the accounts on Top admin and Floor admin database
-
-
-                //search account for top admin account
-                try
+                //preview account - change restriction
+                if (txtusername.Text.Equals("Preview") || txtusername.Text.Equals("preview") && (txtpassword.Text.Equals("Admin") || txtpassword.Text.Equals("admin")))
                 {
-                    string searchTop = "SELECT firstname, lastname, username, password FROM top_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
-                    connection.Close();
-                    connection.Open();
-                    MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
-                    MySqlDataReader rowtop = (cmdtop.ExecuteReader());
+                    MessageBox.Show("This account is for preview forms only. You cannot do anything on other forms you just previewing them.\nThis account is usually used only for Front-End Developer");
+                    Forms.preview pv = new Forms.preview();
+                    this.Close();
+                    pv.Show();
+                }
+                else
+                {
+                    //searching all the accounts on Top admin and Floor admin database
 
-                    if (rowtop.HasRows)
+
+                    //search account for top admin account
+                    if (cbaccount.SelectedItem.Equals("Top admin"))
                     {
-                        while (rowtop.Read())
+                        try
                         {
-                            string fname = rowtop["firstname"].ToString();
-                            string lname = rowtop["lastname"].ToString();
-                            string usename = rowtop["username"].ToString();
+                            string searchTop = "SELECT firstname, lastname, username, password FROM top_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                            connection.Close();
+                            connection.Open();
+                            MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
+                            MySqlDataReader rowtop = (cmdtop.ExecuteReader());
 
-                            MessageBox.Show("Top admin Log-in Succesful!\nHello " + fname + " " + lname);
+                            if (rowtop.HasRows)
+                            {
+                                while (rowtop.Read())
+                                {
+                                    string fname = rowtop["firstname"].ToString();
+                                    string lname = rowtop["lastname"].ToString();
+                                    string usename = rowtop["username"].ToString();
 
-                            Forms.Dashboard dash = new Forms.Dashboard();
-                            dash.txtname.Text = usename;
-                            dash.Show();
+                                    MessageBox.Show("Log-in Succesful!\nHello " + fname + " " + lname);
 
-                            this.Close();
+                                    Forms.Dashboard dash = new Forms.Dashboard();
+                                    dash.txtname.Text = usename;
+                                    dash.Show();
+
+                                    this.Close();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect Log-in Credentials!");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
                         }
 
+                        connection.Close();
+
                     }
-                    else
+                    else if (cbaccount.SelectedItem.Equals("Floor admin"))
                     {
-                        MessageBox.Show("Incorrect Log-in Credentials!", "Top Admin");
-                    }
-
-                    connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                connection.Close();
-
-
-                //search account for floor admin account
-                try
-                {
-                    string searchFloor = "SELECT first_name, last_name, username, password FROM floor_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
-                    connection.Close();
-                    connection.Open();
-                    MySqlCommand cmdfloor = new MySqlCommand(searchFloor, connection);
-                    MySqlDataReader rowfloor = (cmdfloor.ExecuteReader());
-
-                    if (rowfloor.HasRows)
-                    {
-                        while (rowfloor.Read())
+                        //search account for floor admin account
+                        try
                         {
-                            string fname = rowfloor["first_name"].ToString();
-                            string lname = rowfloor["last_name"].ToString();
-                            string usename = rowfloor["username"].ToString();
+                            string searchFloor = "SELECT first_name, last_name, username, password FROM floor_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                            connection.Close();
+                            connection.Open();
+                            MySqlCommand cmdfloor = new MySqlCommand(searchFloor, connection);
+                            MySqlDataReader rowfloor = (cmdfloor.ExecuteReader());
 
-                            MessageBox.Show("Floor admin Log-in Succesful!\nHello " + fname + " " + lname);
+                            if (rowfloor.HasRows)
+                            {
+                                while (rowfloor.Read())
+                                {
+                                    string fname = rowfloor["first_name"].ToString();
+                                    string lname = rowfloor["last_name"].ToString();
+                                    string usename = rowfloor["username"].ToString();
 
-                            Forms.Dashboard dash = new Forms.Dashboard();
-                            dash.txtname.Text = usename;
-                            dash.Show();
+                                    MessageBox.Show("Log-in Succesful!\nHello " + fname + " " + lname);
 
-                            this.Close();
+                                    Forms.Dashboard dash = new Forms.Dashboard();
+                                    dash.txtname.Text = usename;
+                                    dash.Show();
+
+                                    this.Close();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect Log-in Credentials!");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
                         }
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Incorrect Log-in Credentials!", "Floor Admin");
+                        connection.Close();
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                connection.Close();
                 //end of database -------------------------------------------------------------------
             }
         }
