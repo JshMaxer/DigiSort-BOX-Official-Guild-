@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DigiSort_Box.Forms
 {
@@ -33,8 +34,50 @@ namespace DigiSort_Box.Forms
             }
             else
             {
+                /*
                 Database.Login logss = new Database.Login();
                 logss.loginCODE(txtusername, txtpassword);
+                */
+
+
+                //search account for top admin account
+                try
+                {
+                    string searchTop = "SELECT firstname, lastname, username, password FROM top_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                    connection.Close();
+                    connection.Open();
+                    MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
+                    MySqlDataReader rowtop = (cmdtop.ExecuteReader());
+
+                    if (rowtop.HasRows)
+                    {
+                        while (rowtop.Read())
+                        {
+                            string fname = rowtop["firstname"].ToString();
+                            string lname = rowtop["lastname"].ToString();
+                            string usename = rowtop["username"].ToString();
+
+                            MessageBox.Show("Top admin Log-in Succesful!\nHello " + fname + " " + lname);
+
+                            Forms.Dashboard dash = new Forms.Dashboard();
+                            dash.txtname.Text = usename;
+                            dash.Show();
+
+                            //this.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Log-in Credentials!");
+                    }
+
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
+                }
             }
         }
 

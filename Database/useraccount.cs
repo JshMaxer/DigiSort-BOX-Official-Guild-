@@ -15,18 +15,39 @@ namespace DigiSort_Box.Database
         {
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
 
+            //top account
+            connection.Close();
             connection.Open();
-            string account = "SELECT username, first_name, last_name, password FROM floor_account WHERE username = '" + username.Text + "'";
-            MySqlCommand cmd = new MySqlCommand(account, connection);
-            MySqlDataReader read = cmd.ExecuteReader();
+            string accounttop = "SELECT username, firstname, lastname, password FROM top_account WHERE username = '" + username.Text + "'";
+            MySqlCommand cmdtop = new MySqlCommand(accounttop, connection);
+            MySqlDataReader readtop = cmdtop.ExecuteReader();
 
-            if (read.Read())
+            if (readtop.Read())
             {
-                username.Text = read["username"].ToString();
-                firstname.Text = read["first_name"].ToString();
-                lastname.Text = read["last_name"].ToString();
-                password.Text = read["password"].ToString();
+                username.Text = readtop["username"].ToString();
+                firstname.Text = readtop["firstname"].ToString();
+                lastname.Text = readtop["lastname"].ToString();
+                password.Text = readtop["password"].ToString();
             }
+
+
+            //floor account
+            connection.Close();
+            connection.Open();
+            string accountfloor = "SELECT username, first_name, last_name, password FROM floor_account WHERE username = '" + username.Text + "'";
+            MySqlCommand cmdfloor = new MySqlCommand(accountfloor, connection);
+            MySqlDataReader readfloor = cmdfloor.ExecuteReader();
+
+            if (readfloor.Read())
+            {
+                username.Text = readfloor["username"].ToString();
+                firstname.Text = readfloor["first_name"].ToString();
+                lastname.Text = readfloor["last_name"].ToString();
+                password.Text = readfloor["password"].ToString();
+            }
+
+
+            
         }
 
     }

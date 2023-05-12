@@ -147,6 +147,7 @@ namespace DigiSort_Box.Forms
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderText = "";
+            this.txtusername.ReadOnly = true;
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(259, 38);
             this.txtusername.TabIndex = 11;
@@ -168,6 +169,7 @@ namespace DigiSort_Box.Forms
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.PasswordChar = '\0';
             this.txtfirstname.PlaceholderText = "";
+            this.txtfirstname.ReadOnly = true;
             this.txtfirstname.SelectedText = "";
             this.txtfirstname.Size = new System.Drawing.Size(259, 38);
             this.txtfirstname.TabIndex = 11;
@@ -189,6 +191,7 @@ namespace DigiSort_Box.Forms
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.PasswordChar = '\0';
             this.txtlastname.PlaceholderText = "";
+            this.txtlastname.ReadOnly = true;
             this.txtlastname.SelectedText = "";
             this.txtlastname.Size = new System.Drawing.Size(259, 38);
             this.txtlastname.TabIndex = 11;
@@ -208,12 +211,14 @@ namespace DigiSort_Box.Forms
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Location = new System.Drawing.Point(12, 291);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.PasswordChar = '●';
             this.txtpassword.PlaceholderText = "";
+            this.txtpassword.ReadOnly = true;
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(259, 38);
             this.txtpassword.TabIndex = 11;
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpassword.UseSystemPasswordChar = true;
             // 
             // useraccount
             // 
