@@ -40,9 +40,7 @@ namespace DigiSort_Box.Forms
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblreset = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.cbaccount = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -103,7 +101,7 @@ namespace DigiSort_Box.Forms
             this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtusername.Location = new System.Drawing.Point(19, 213);
+            this.txtusername.Location = new System.Drawing.Point(19, 173);
             this.txtusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
@@ -116,20 +114,18 @@ namespace DigiSort_Box.Forms
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.cbaccount);
             this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2ShadowPanel1.Controls.Add(this.label3);
             this.guna2ShadowPanel1.Controls.Add(this.btnsignin);
             this.guna2ShadowPanel1.Controls.Add(this.txtpassword);
             this.guna2ShadowPanel1.Controls.Add(this.txtusername);
-            this.guna2ShadowPanel1.Controls.Add(this.lblreset);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(495, 85);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(495, 159);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 12;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowShift = 3;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(460, 463);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(460, 346);
             this.guna2ShadowPanel1.TabIndex = 49;
             // 
             // guna2PictureBox2
@@ -155,7 +151,7 @@ namespace DigiSort_Box.Forms
             this.btnsignin.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnsignin.ForeColor = System.Drawing.Color.White;
             this.btnsignin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnsignin.Location = new System.Drawing.Point(19, 371);
+            this.btnsignin.Location = new System.Drawing.Point(19, 280);
             this.btnsignin.Name = "btnsignin";
             this.btnsignin.Size = new System.Drawing.Size(423, 45);
             this.btnsignin.TabIndex = 2;
@@ -174,7 +170,7 @@ namespace DigiSort_Box.Forms
             this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(19, 266);
+            this.txtpassword.Location = new System.Drawing.Point(19, 226);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '●';
@@ -184,20 +180,6 @@ namespace DigiSort_Box.Forms
             this.txtpassword.TabIndex = 1;
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtpassword.UseSystemPasswordChar = true;
-            // 
-            // lblreset
-            // 
-            this.lblreset.AutoSize = true;
-            this.lblreset.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblreset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.lblreset.Location = new System.Drawing.Point(149, 331);
-            this.lblreset.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblreset.Name = "lblreset";
-            this.lblreset.Size = new System.Drawing.Size(150, 18);
-            this.lblreset.TabIndex = 3;
-            this.lblreset.Text = "Reset Password?";
-            this.lblreset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblreset.Click += new System.EventHandler(this.lblreset_Click);
             // 
             // guna2PictureBox1
             // 
@@ -209,28 +191,6 @@ namespace DigiSort_Box.Forms
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 51;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // cbaccount
-            // 
-            this.cbaccount.BackColor = System.Drawing.Color.Transparent;
-            this.cbaccount.BorderRadius = 8;
-            this.cbaccount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbaccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbaccount.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbaccount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbaccount.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.cbaccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cbaccount.ItemHeight = 30;
-            this.cbaccount.Items.AddRange(new object[] {
-            "Top admin",
-            "Floor admin"});
-            this.cbaccount.Location = new System.Drawing.Point(19, 156);
-            this.cbaccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbaccount.Name = "cbaccount";
-            this.cbaccount.Size = new System.Drawing.Size(412, 36);
-            this.cbaccount.StartIndex = 0;
-            this.cbaccount.TabIndex = 55;
-            this.cbaccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Login
             // 
@@ -264,9 +224,7 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2Button btnsignin;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private System.Windows.Forms.Label lblreset;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox cbaccount;
     }
 }

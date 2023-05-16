@@ -26,7 +26,7 @@ namespace DigiSort_Box.Database
                     //Floor admin account
                     if (cbusertype.SelectedItem.Equals("Floor admin"))
                     {
-                        string InsertQuery = "INSERT INTO floor_account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "')";
+                        string InsertQuery = "INSERT INTO account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Floor_Admin" + "')";
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 
@@ -55,7 +55,7 @@ namespace DigiSort_Box.Database
                     //Top admin
                     else if (cbusertype.SelectedItem.Equals("Top admin"))
                     {
-                        string InsertQuery = "INSERT INTO top_account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "')";
+                        string InsertQuery = "INSERT INTO account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Top_Admin" + "')";
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 

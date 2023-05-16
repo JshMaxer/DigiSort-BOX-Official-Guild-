@@ -29,12 +29,28 @@ namespace DigiSort_Box.Forms
         {
             //insert code here
             Database.useraccount acc = new Database.useraccount();
-            acc.user(txtusername, txtfirstname, txtlastname, txtpassword);
+            acc.user(txtusername, txtfirstname, txtlastname, txtposition);
         }
         
         private void exitform_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnsignin_Click(object sender, EventArgs e)
+        {
+            Front_end.reset_password reset = new Front_end.reset_password();
+            DialogResult dr = MessageBox.Show("Are you sure you want to reset password?", "DigiSortBox", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                reset.lblusername.Text = txtusername.Text;
+                reset.ShowDialog();
+            }
+            else
+            {
+                //ok.
+            }
         }
     }
 }

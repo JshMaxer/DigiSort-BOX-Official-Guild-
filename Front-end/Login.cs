@@ -42,108 +42,47 @@ namespace DigiSort_Box.Forms
                 else
                 {
                     //searching all the accounts on Top admin and Floor admin database
-
-
-                    //search account for top admin account
-                    if (cbaccount.SelectedItem.Equals("Top admin"))
+                    try
                     {
-                        try
-                        {
-                            string searchTop = "SELECT firstname, lastname, username, password FROM top_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
-                            connection.Close();
-                            connection.Open();
-                            MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
-                            MySqlDataReader rowtop = (cmdtop.ExecuteReader());
-
-                            if (rowtop.HasRows)
-                            {
-                                while (rowtop.Read())
-                                {
-                                    string fname = rowtop["firstname"].ToString();
-                                    string lname = rowtop["lastname"].ToString();
-                                    string usename = rowtop["username"].ToString();
-
-                                    MessageBox.Show("Log-in Succesful!\nHello " + fname + " " + lname);
-
-                                    Forms.Dashboard dash = new Forms.Dashboard();
-                                    dash.txtname.Text = usename;
-                                    dash.Show();
-
-                                    this.Close();
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Incorrect Log-in Credentials!");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-
+                        string searchTop = "SELECT first_name, last_name, username, password, position FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
                         connection.Close();
+                        connection.Open();
+                        MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
+                        MySqlDataReader rowtop = (cmdtop.ExecuteReader());
 
+                        if (rowtop.HasRows)
+                        {
+                            while (rowtop.Read())
+                            {
+                                string fname = rowtop["first_name"].ToString();
+                                string lname = rowtop["last_name"].ToString();
+                                string usename = rowtop["username"].ToString();
+                                string pos = rowtop["position"].ToString();
+
+                                MessageBox.Show("Log-in Succesful!\nHello " + fname + " " + lname, pos);
+
+                                Forms.Dashboard dash = new Forms.Dashboard();
+                                dash.txtname.Text = usename;
+                                dash.Show();
+
+                                this.Close();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incorrect Log-in Credentials!");
+                        }
                     }
-                    else if (cbaccount.SelectedItem.Equals("Floor admin"))
+                    catch (Exception ex)
                     {
-                        //search account for floor admin account
-                        try
-                        {
-                            string searchFloor = "SELECT first_name, last_name, username, password FROM floor_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
-                            connection.Close();
-                            connection.Open();
-                            MySqlCommand cmdfloor = new MySqlCommand(searchFloor, connection);
-                            MySqlDataReader rowfloor = (cmdfloor.ExecuteReader());
-
-                            if (rowfloor.HasRows)
-                            {
-                                while (rowfloor.Read())
-                                {
-                                    string fname = rowfloor["first_name"].ToString();
-                                    string lname = rowfloor["last_name"].ToString();
-                                    string usename = rowfloor["username"].ToString();
-
-                                    MessageBox.Show("Log-in Succesful!\nHello " + fname + " " + lname);
-
-                                    Forms.Dashboard dash = new Forms.Dashboard();
-                                    dash.txtname.Text = usename;
-                                    dash.Show();
-
-                                    this.Close();
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Incorrect Log-in Credentials!");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-
-                        connection.Close();
+                        MessageBox.Show(ex.Message);
                     }
+
+                    connection.Close();
+
+                }
                 }
                 //end of database -------------------------------------------------------------------
             }
         }
-
-        private void lblreset_Click(object sender, EventArgs e)
-        {
-            reset_password reset = new reset_password();
-            DialogResult dr = MessageBox.Show("Are you sure you want to reset password?", "DigiSortBox", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dr == DialogResult.Yes)
-            {
-                reset.ShowDialog();
-            }
-            else
-            {
-                //ok.
-            }
-
-        }
     }
-}
