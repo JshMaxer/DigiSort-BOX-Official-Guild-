@@ -81,16 +81,8 @@ namespace DigiSort_Box.Forms
                     }
 
                     connection.Close();
-
-            if (dr == DialogResult.Yes)
-            {
-                reset.ShowDialog();
+                }
             }
-            else
-            {
-                //ok.
-            }
-
         }
     }
 }

@@ -73,12 +73,24 @@ namespace DigiSort_Box.Forms
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            /*if ()
-            {
+            /*if (user == superadmin)   {
 
-                btnrawmaterials.Enabled = user.Type != "Superadmin";
+                btnrawmaterials.Enabled = true;
+                btnunprintedshirts.Enabled = true;
+                btnreadytosell.Enabled = true;
+                btndamageitems.Enabled = true;
+                btninvent.Enabled = true;
+            }
+            else if (user == topadmin)  {
+                
+                btndamageitems.Enabled = false;
+                btnrawmaterials.Enabled = false;
                 btnunprintedshirts.Enabled = false;
                 btnreadytosell.Enabled = false;
+                btninvent.Enabled = false;
+            }
+            else    {
+
                 btninvent.Enabled = false;
             }*/
 
