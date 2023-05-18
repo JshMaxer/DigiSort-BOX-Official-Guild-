@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigiSort_Box.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,6 +73,15 @@ namespace DigiSort_Box.Forms
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            /*if ()
+            {
+
+                btnrawmaterials.Enabled = user.Type != "Superadmin";
+                btnunprintedshirts.Enabled = false;
+                btnreadytosell.Enabled = false;
+                btninvent.Enabled = false;
+            }*/
+
             //checked image
             btdashboard.Image = Properties.Resources.dashboard__1_;
 

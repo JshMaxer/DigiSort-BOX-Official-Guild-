@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static DigiSort_Box.Back_end.Login;
 
 namespace DigiSort_Box.Forms
 {
@@ -95,6 +96,10 @@ namespace DigiSort_Box.Forms
                 //ok.
             }
 
+        }
+        static void Main() {
+
+            Login login = new Login();
         }
     }
 }
