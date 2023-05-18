@@ -25,67 +25,62 @@ namespace DigiSort_Box.Forms
 
         private void btnsignin_Click(object sender, EventArgs e)
         {
-            //preview account - change restriction
-            if (txtusername.Text.Equals("Preview") || txtusername.Text.Equals("preview") && (txtpassword.Text.Equals("Admin") || txtpassword.Text.Equals("admin")))
+            //DATABASE -------------------------------------------------------------------
+
+            if (txtusername.Text.Equals("") || txtpassword.Text.Equals(""))
             {
-                MessageBox.Show("This account is for preview forms only. You cannot do anything on other forms you just previewing them.\nThis account is usually used only for Front-End Developer");
-                Forms.preview pv = new Forms.preview();
-                this.Close();
-                pv.Show();
+                MessageBox.Show("Log-in Form must be filled-out completely!");
             }
             else
             {
-                /*
-                Database.Login logss = new Database.Login();
-                logss.loginCODE(txtusername, txtpassword);
-                */
-
-
-                //search account for top admin account
-                try
+                //preview account - change restriction
+                if (txtusername.Text.Equals("Preview") || txtusername.Text.Equals("preview") && (txtpassword.Text.Equals("Admin") || txtpassword.Text.Equals("admin")))
                 {
-                    string searchTop = "SELECT firstname, lastname, username, password FROM top_account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
-                    connection.Close();
-                    connection.Open();
-                    MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
-                    MySqlDataReader rowtop = (cmdtop.ExecuteReader());
-
-                    if (rowtop.HasRows)
+                    MessageBox.Show("This account is for preview forms only. You cannot do anything on other forms you just previewing them.\nThis account is usually used only for Front-End Developer");
+                    Forms.preview pv = new Forms.preview();
+                    this.Close();
+                    pv.Show();
+                }
+                else
+                {
+                    //searching all the accounts on Top admin and Floor admin database
+                    try
                     {
-                        while (rowtop.Read())
+                        string searchTop = "SELECT first_name, last_name, username, password, position FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                        connection.Close();
+                        connection.Open();
+                        MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
+                        MySqlDataReader rowtop = (cmdtop.ExecuteReader());
+
+                        if (rowtop.HasRows)
                         {
-                            string fname = rowtop["firstname"].ToString();
-                            string lname = rowtop["lastname"].ToString();
-                            string usename = rowtop["username"].ToString();
+                            while (rowtop.Read())
+                            {
+                                string fname = rowtop["first_name"].ToString();
+                                string lname = rowtop["last_name"].ToString();
+                                string usename = rowtop["username"].ToString();
+                                string pos = rowtop["position"].ToString();
 
-                            MessageBox.Show("Top admin Log-in Succesful!\nHello " + fname + " " + lname);
+                                MessageBox.Show("Log-in Succesful!\nHello " + fname + " " + lname, pos);
 
-                            Forms.Dashboard dash = new Forms.Dashboard();
-                            dash.txtname.Text = usename;
-                            dash.Show();
+                                Forms.Dashboard dash = new Forms.Dashboard();
+                                dash.txtname.Text = usename;
+                                dash.Show();
 
-                            //this.Close();
+                                this.Close();
+                            }
                         }
-
+                        else
+                        {
+                            MessageBox.Show("Incorrect Log-in Credentials!");
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Incorrect Log-in Credentials!");
+                        MessageBox.Show(ex.Message);
                     }
 
                     connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
-                }
-            }
-        }
-
-        private void lblreset_Click(object sender, EventArgs e)
-        {
-            reset_password reset = new reset_password();
-            DialogResult dr = MessageBox.Show("Are you sure you want to reset password?", "DigiSortBox", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dr == DialogResult.Yes)
             {
@@ -96,10 +91,6 @@ namespace DigiSort_Box.Forms
                 //ok.
             }
 
-        }
-        static void Main() {
-
-            Login login = new Login();
         }
     }
 }

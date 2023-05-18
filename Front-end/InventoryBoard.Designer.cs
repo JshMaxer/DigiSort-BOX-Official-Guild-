@@ -213,6 +213,7 @@ namespace DigiSort_Box.Forms
             // 
             // btnprint
             // 
+            this.btnprint.Animated = true;
             this.btnprint.BorderRadius = 12;
             this.btnprint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnprint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -224,6 +225,8 @@ namespace DigiSort_Box.Forms
             this.btnprint.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnprint.ForeColor = System.Drawing.Color.White;
             this.btnprint.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.btnprint.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.btnprint.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btnprint.Location = new System.Drawing.Point(699, 557);
             this.btnprint.Name = "btnprint";
             this.btnprint.Size = new System.Drawing.Size(139, 53);

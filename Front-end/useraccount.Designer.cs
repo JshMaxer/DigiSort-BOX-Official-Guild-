@@ -33,7 +33,6 @@ namespace DigiSort_Box.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +40,9 @@ namespace DigiSort_Box.Forms
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtfirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtlastname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtposition = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,18 +81,6 @@ namespace DigiSort_Box.Forms
             this.label4.Text = "Last Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(105, 272);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 16);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Password";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
@@ -187,7 +176,7 @@ namespace DigiSort_Box.Forms
             this.txtlastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtlastname.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
             this.txtlastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtlastname.Location = new System.Drawing.Point(12, 225);
+            this.txtlastname.Location = new System.Drawing.Point(14, 225);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.PasswordChar = '\0';
             this.txtlastname.PlaceholderText = "";
@@ -197,41 +186,72 @@ namespace DigiSort_Box.Forms
             this.txtlastname.TabIndex = 11;
             this.txtlastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtpassword
+            // btnsignin
             // 
-            this.txtpassword.BorderRadius = 8;
-            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpassword.DefaultText = "";
-            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
-            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(12, 291);
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '●';
-            this.txtpassword.PlaceholderText = "";
-            this.txtpassword.ReadOnly = true;
-            this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(259, 38);
-            this.txtpassword.TabIndex = 11;
-            this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtpassword.UseSystemPasswordChar = true;
+            this.btnsignin.Animated = true;
+            this.btnsignin.BorderRadius = 20;
+            this.btnsignin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnsignin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnsignin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnsignin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnsignin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.btnsignin.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnsignin.ForeColor = System.Drawing.Color.White;
+            this.btnsignin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
+            this.btnsignin.Location = new System.Drawing.Point(68, 349);
+            this.btnsignin.Name = "btnsignin";
+            this.btnsignin.Size = new System.Drawing.Size(151, 45);
+            this.btnsignin.TabIndex = 12;
+            this.btnsignin.Text = "Reset Password";
+            this.btnsignin.Click += new System.EventHandler(this.btnsignin_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(111, 272);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Position";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtposition
+            // 
+            this.txtposition.BorderRadius = 8;
+            this.txtposition.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtposition.DefaultText = "";
+            this.txtposition.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtposition.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtposition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtposition.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtposition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtposition.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
+            this.txtposition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtposition.Location = new System.Drawing.Point(14, 294);
+            this.txtposition.Name = "txtposition";
+            this.txtposition.PasswordChar = '\0';
+            this.txtposition.PlaceholderText = "";
+            this.txtposition.ReadOnly = true;
+            this.txtposition.SelectedText = "";
+            this.txtposition.Size = new System.Drawing.Size(259, 38);
+            this.txtposition.TabIndex = 11;
+            this.txtposition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // useraccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(283, 344);
-            this.Controls.Add(this.txtpassword);
+            this.ClientSize = new System.Drawing.Size(283, 417);
+            this.Controls.Add(this.btnsignin);
+            this.Controls.Add(this.txtposition);
             this.Controls.Add(this.txtlastname);
             this.Controls.Add(this.txtfirstname);
             this.Controls.Add(this.txtusername);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -254,14 +274,15 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
         private Guna.UI2.WinForms.Guna2ControlBox exitform;
         public Guna.UI2.WinForms.Guna2TextBox txtusername;
-        public Guna.UI2.WinForms.Guna2TextBox txtpassword;
         public Guna.UI2.WinForms.Guna2TextBox txtlastname;
         public Guna.UI2.WinForms.Guna2TextBox txtfirstname;
+        private Guna.UI2.WinForms.Guna2Button btnsignin;
+        public Guna.UI2.WinForms.Guna2TextBox txtposition;
+        private System.Windows.Forms.Label label5;
     }
 }

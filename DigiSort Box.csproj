@@ -122,6 +122,7 @@
     <Compile Include="Database\preview.cs" />
     <Compile Include="Database\RawMaterial.cs" />
     <Compile Include="Database\ReadyToSell.cs" />
+    <Compile Include="Database\Reset_Password.cs" />
     <Compile Include="Database\Unprinted.cs" />
     <Compile Include="Database\Update.cs" />
     <Compile Include="Database\useraccount.cs" />
@@ -160,6 +161,12 @@
     </Compile>
     <Compile Include="Front-end\ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-end\Reset_super.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-end\Reset_super.Designer.cs">
+      <DependentUpon>Reset_super.cs</DependentUpon>
     </Compile>
     <Compile Include="Front-end\Update.cs">
       <SubType>Form</SubType>
@@ -234,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\ResetPassword.resx">
       <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-end\Reset_super.resx">
+      <DependentUpon>Reset_super.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\Update.en.resx">
       <DependentUpon>Update.cs</DependentUpon>
@@ -346,6 +356,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hasbulla.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -40,7 +40,6 @@ namespace DigiSort_Box.Forms
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblreset = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -119,15 +118,13 @@ namespace DigiSort_Box.Forms
             this.guna2ShadowPanel1.Controls.Add(this.btnsignin);
             this.guna2ShadowPanel1.Controls.Add(this.txtpassword);
             this.guna2ShadowPanel1.Controls.Add(this.txtusername);
-            this.guna2ShadowPanel1.Controls.Add(this.lblreset);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(371, 120);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(495, 148);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 12;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowShift = 3;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(345, 325);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(460, 400);
             this.guna2ShadowPanel1.TabIndex = 49;
             // 
             // guna2PictureBox2
@@ -154,8 +151,7 @@ namespace DigiSort_Box.Forms
             this.btnsignin.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnsignin.ForeColor = System.Drawing.Color.White;
             this.btnsignin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnsignin.Location = new System.Drawing.Point(15, 269);
-            this.btnsignin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsignin.Location = new System.Drawing.Point(20, 331);
             this.btnsignin.Name = "btnsignin";
             this.btnsignin.Size = new System.Drawing.Size(317, 37);
             this.btnsignin.TabIndex = 2;
@@ -174,7 +170,8 @@ namespace DigiSort_Box.Forms
             this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(15, 187);
+            this.txtpassword.Location = new System.Drawing.Point(20, 230);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '●';
             this.txtpassword.PlaceholderText = "Password";
@@ -189,9 +186,10 @@ namespace DigiSort_Box.Forms
             this.lblreset.AutoSize = true;
             this.lblreset.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblreset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.lblreset.Location = new System.Drawing.Point(113, 237);
+            this.lblreset.Location = new System.Drawing.Point(151, 292);
+            this.lblreset.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblreset.Name = "lblreset";
-            this.lblreset.Size = new System.Drawing.Size(120, 14);
+            this.lblreset.Size = new System.Drawing.Size(150, 18);
             this.lblreset.TabIndex = 3;
             this.lblreset.Text = "Reset Password?";
             this.lblreset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,7 +240,6 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2Button btnsignin;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private System.Windows.Forms.Label lblreset;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
