@@ -32,5 +32,138 @@ namespace DigiSort_Box.Forms
             cbsize.Items.Clear();
             txtquantity.Text = null;
         }
+
+        private void cbcolor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbcolor.SelectedItem.Equals(""))
+            {
+                cbshade.Items.Clear();
+            }
+            else if (cbcolor.SelectedItem.Equals("Purple"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Lavender");
+                cbshade.Items.Add("Lilac");
+                cbshade.Items.Add("Mauve");
+                cbshade.Items.Add("Plum");
+                cbshade.Items.Add("Grape");
+                cbshade.Items.Add("Violet");
+                cbshade.Items.Add("Amethyst");
+                cbshade.Items.Add("Eggplant");
+                cbshade.Items.Add("Magenta");
+                cbshade.Items.Add("Mulberry");
+            }
+            else if (cbcolor.SelectedItem.Equals("White"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Snow");
+                cbshade.Items.Add("Ivory");
+                cbshade.Items.Add("Pearl");
+                cbshade.Items.Add("Creamy");
+                cbshade.Items.Add("Off-white");
+                cbshade.Items.Add("Eggshell");
+                cbshade.Items.Add("Pure white");
+                cbshade.Items.Add("Antique ");
+                cbshade.Items.Add("Linen");
+                cbshade.Items.Add("Champagne ");
+            }
+            else if (cbcolor.SelectedItem.Equals("Brown"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Beige");
+                cbshade.Items.Add("Tan");
+                cbshade.Items.Add("Taupe");
+                cbshade.Items.Add("Caramel");
+                cbshade.Items.Add("Chestnut");
+                cbshade.Items.Add("Coffee");
+                cbshade.Items.Add("Mahogany");
+                cbshade.Items.Add("Rust");
+                cbshade.Items.Add("Sienna");
+                cbshade.Items.Add("Umber");
+            }
+            else if (cbcolor.SelectedItem.Equals("Gray"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Silver");
+                cbshade.Items.Add("Rain");
+                cbshade.Items.Add("Blue Gray");
+                cbshade.Items.Add("Dark");
+                cbshade.Items.Add("Medium");
+                cbshade.Items.Add("Light slate");
+                cbshade.Items.Add("Battleship");
+                cbshade.Items.Add("Cool");
+                cbshade.Items.Add("Gray-blue");
+                cbshade.Items.Add("Gray-green");
+            }
+            else if (cbcolor.SelectedItem.Equals("Black"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Jet");
+                cbshade.Items.Add("Onyx");
+                cbshade.Items.Add("Midnight");
+                cbshade.Items.Add("Ebony");
+                cbshade.Items.Add("Licorice");
+                cbshade.Items.Add("Charcoal");
+                cbshade.Items.Add("Coal");
+                cbshade.Items.Add("Raven");
+                cbshade.Items.Add("Pitch");
+                cbshade.Items.Add("Ink");
+            }
+            else if (cbcolor.SelectedItem.Equals("Red"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Scarlet");
+                cbshade.Items.Add("Crimson");
+                cbshade.Items.Add("Magenta");
+                cbshade.Items.Add("Cardinal");
+                cbshade.Items.Add("Cherry");
+            }
+            else if (cbcolor.SelectedItem.Equals("Orange"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Tangerine ");
+                cbshade.Items.Add("Rust");
+                cbshade.Items.Add("Bronze");
+                cbshade.Items.Add("Neon");
+                cbshade.Items.Add("Fire");
+            }
+            else if (cbcolor.SelectedItem.Equals("Yellow"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Mustard");
+                cbshade.Items.Add("Corn");
+                cbshade.Items.Add("Pineapple");
+                cbshade.Items.Add("Marigold");
+                cbshade.Items.Add("Royal");
+            }
+            else if (cbcolor.SelectedItem.Equals("Green"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Moss");
+                cbshade.Items.Add("Pine");
+                cbshade.Items.Add("Military");
+                cbshade.Items.Add("Evergreen");
+                cbshade.Items.Add("Emerald");
+            }
+            else if (cbcolor.SelectedItem.Equals("Blue"))
+            {
+                cbshade.Items.Clear();
+                cbshade.Items.Add("");
+                cbshade.Items.Add("Sky");
+                cbshade.Items.Add("Iris");
+                cbshade.Items.Add("Royal");
+                cbshade.Items.Add("Navy");
+                cbshade.Items.Add("Carolina");
+            }
+        }
     }
 }

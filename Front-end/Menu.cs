@@ -17,26 +17,6 @@ namespace DigiSort_Box.Forms
             InitializeComponent();
         }
 
-        private void btnunprinted_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnraw_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnready_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btninventory_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
@@ -63,13 +43,6 @@ namespace DigiSort_Box.Forms
             
         }
 
-       
-
-        private void btndash_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Dashboard_Load(object sender, EventArgs e)
         {
             //checked image
@@ -86,22 +59,6 @@ namespace DigiSort_Box.Forms
             Forms.maindashboard maindash = new Forms.maindashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainpanel.Controls.Add(maindash);
             maindash.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void mainpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            
-
         }
 
         private void btdashboard_Click(object sender, EventArgs e)
@@ -211,16 +168,9 @@ namespace DigiSort_Box.Forms
             Forms.Inventory inv = new Forms.Inventory() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainpanel.Controls.Add(inv);
             inv.Show();
-        }
+            //username
+            inv.txtusername.Text = txtname.Text;
 
-        private void btnnlogout_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnuseraccount_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnlogout_Click(object sender, EventArgs e)

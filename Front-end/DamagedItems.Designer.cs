@@ -34,8 +34,8 @@ namespace DigiSort_Box.Front_end
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.txtissue = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtquantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbtable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnadd = new Guna.UI2.WinForms.Guna2Button();
+            this.cbtable = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvitems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,21 +103,6 @@ namespace DigiSort_Box.Front_end
             this.txtquantity.TabIndex = 47;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // cbtable
-            // 
-            this.cbtable.BackColor = System.Drawing.Color.Transparent;
-            this.cbtable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbtable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbtable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbtable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbtable.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbtable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbtable.ItemHeight = 30;
-            this.cbtable.Location = new System.Drawing.Point(256, 12);
-            this.cbtable.Name = "cbtable";
-            this.cbtable.Size = new System.Drawing.Size(461, 36);
-            this.cbtable.TabIndex = 48;
-            // 
             // btnadd
             // 
             this.btnadd.Animated = true;
@@ -136,14 +121,38 @@ namespace DigiSort_Box.Front_end
             this.btnadd.TabIndex = 69;
             this.btnadd.Text = "Add";
             // 
+            // cbtable
+            // 
+            this.cbtable.BackColor = System.Drawing.Color.Transparent;
+            this.cbtable.BorderColor = System.Drawing.Color.Black;
+            this.cbtable.BorderRadius = 8;
+            this.cbtable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbtable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbtable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbtable.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.cbtable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbtable.ItemHeight = 30;
+            this.cbtable.Items.AddRange(new object[] {
+            "Raw Materials",
+            "Ready to Sell Items",
+            "Unprinted Shirts"});
+            this.cbtable.Location = new System.Drawing.Point(214, 11);
+            this.cbtable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbtable.Name = "cbtable";
+            this.cbtable.Size = new System.Drawing.Size(558, 36);
+            this.cbtable.StartIndex = 0;
+            this.cbtable.TabIndex = 79;
+            this.cbtable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Damaged_Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(993, 622);
-            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.cbtable);
+            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.txtquantity);
             this.Controls.Add(this.txtissue);
             this.Controls.Add(this.dgvitems);
@@ -162,7 +171,7 @@ namespace DigiSort_Box.Front_end
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
         private Guna.UI2.WinForms.Guna2TextBox txtquantity;
         private Guna.UI2.WinForms.Guna2TextBox txtissue;
-        private Guna.UI2.WinForms.Guna2ComboBox cbtable;
         public Guna.UI2.WinForms.Guna2Button btnadd;
+        private Guna.UI2.WinForms.Guna2ComboBox cbtable;
     }
 }

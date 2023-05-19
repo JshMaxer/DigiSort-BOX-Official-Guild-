@@ -148,12 +148,14 @@ namespace DigiSort_Box.Forms
         private void btnupdate_Click(object sender, EventArgs e)
         {
             Forms.update up = new Forms.update();
+            up.txtusername.Text = txtusername.Text;
             up.ShowDialog();
         }
 
         private void btndelete_Click_1(object sender, EventArgs e)
         {
             Forms.delete de = new Forms.delete();
+            de.txtusername.Text = txtusername.Text;
             de.ShowDialog();
         }
     }

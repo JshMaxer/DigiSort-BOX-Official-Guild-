@@ -44,7 +44,7 @@ namespace DigiSort_Box.Forms
                     //searching all the accounts on Top admin and Floor admin database
                     try
                     {
-                        string searchTop = "SELECT first_name, last_name, username, password, position FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                        string searchTop = "SELECT first_name, last_name, username, password, position, activation FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
                         connection.Close();
                         connection.Open();
                         MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
@@ -58,14 +58,23 @@ namespace DigiSort_Box.Forms
                                 string lname = rowtop["last_name"].ToString();
                                 string usename = rowtop["username"].ToString();
                                 string pos = rowtop["position"].ToString();
+                                string active = rowtop["activation"].ToString();
 
-                                MessageBox.Show("Log-in Succesful!\nHello " + fname + " " + lname, pos);
+                                if(active.Equals("InActive"))
+                                {
+                                    MessageBox.Show("Sorry, the account you're trying is Inactive.", "Log-in Denied");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Log-in Succesful!\nHello " + fname + " " + lname, pos);
 
-                                Forms.Dashboard dash = new Forms.Dashboard();
-                                dash.txtname.Text = usename;
-                                dash.Show();
+                                    Forms.Dashboard dash = new Forms.Dashboard();
+                                    dash.txtname.Text = usename;
+                                    dash.Show();
 
-                                this.Close();
+                                    this.Close();
+                                }
+                                
                             }
                         }
                         else

@@ -60,6 +60,75 @@ namespace DigiSort_Box.Forms
             dgtable.DataSource = dtRecords;
         }
 
+        void history_raw()
+        {
+            //date
+            DateTime dateTimeVariable = DateTime.Now;
+            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+            connection.Close();
+            connection.Open();
+            string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Raw Material" + "', '" + date + "')";
+            MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                //MessageBox.Show("Logs");
+            }
+            else
+            {
+                //MessageBox.Show("Meow");
+            }
+
+            connection.Close();
+        }
+
+        void history_unprint()
+        {
+            //date
+            DateTime dateTimeVariable = DateTime.Now;
+            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+            connection.Close();
+            connection.Open();
+            string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Unprinted Shirts" + "', '" + date + "')";
+            MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                //MessageBox.Show("Logs");
+            }
+            else
+            {
+                //MessageBox.Show("Meow");
+            }
+
+            connection.Close();
+        }
+
+        void history_ready()
+        {
+            //date
+            DateTime dateTimeVariable = DateTime.Now;
+            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+            connection.Close();
+            connection.Open();
+            string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Ready to sell items" + "', '" + date + "')";
+            MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                //MessageBox.Show("Logs");
+            }
+            else
+            {
+                //MessageBox.Show("Meow");
+            }
+
+            connection.Close();
+        }
+
         private void cbtable_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbtable.SelectedItem.Equals("Raw Materials"))
@@ -121,11 +190,6 @@ namespace DigiSort_Box.Forms
             }
         }
 
-        private void btndelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void exitform_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -151,13 +215,17 @@ namespace DigiSort_Box.Forms
                     {
                         if (command.ExecuteNonQuery() == 1)
                         {
-                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
+                            MessageBox.Show("Data deleted", "Successful");
                             raw();
+
+                            //history
+                            history_raw();
+
                             clear();
                         }
                         else
                         {
-                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
+                            MessageBox.Show("Data not-deleted", "Successful");
                         }
                     }
                     catch (Exception ex)
@@ -179,13 +247,17 @@ namespace DigiSort_Box.Forms
                     {
                         if (command.ExecuteNonQuery() == 1)
                         {
-                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
+                            MessageBox.Show("Data deleted", "Successful");
                             ready();
+
+                            //history
+                            history_ready();
+
                             clear();
                         }
                         else
                         {
-                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
+                            MessageBox.Show("Data not-deleted", "Successful");
                         }
                     }
                     catch (Exception ex)
@@ -207,13 +279,17 @@ namespace DigiSort_Box.Forms
                     {
                         if (command.ExecuteNonQuery() == 1)
                         {
-                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data deleted", ToolTipIcon.Info);
+                            MessageBox.Show("Data deleted", "Successful");
                             unprint();
+
+                            //history
+                            history_unprint();
+
                             clear();
                         }
                         else
                         {
-                            notifyIcon1.ShowBalloonTip(500, "DIGISORT BOX", "Data not deleted", ToolTipIcon.Info);
+                            MessageBox.Show("Data not-deleted", "Successful");
                         }
                     }
                     catch (Exception ex)

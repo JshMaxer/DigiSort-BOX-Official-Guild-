@@ -128,7 +128,7 @@ namespace DigiSort_Box.Forms
             this.cbcolor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbcolor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbcolor.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.cbcolor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbcolor.ForeColor = System.Drawing.Color.Black;
             this.cbcolor.ItemHeight = 30;
             this.cbcolor.Items.AddRange(new object[] {
             "",
@@ -161,7 +161,7 @@ namespace DigiSort_Box.Forms
             this.cbshade.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbshade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbshade.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.cbshade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbshade.ForeColor = System.Drawing.Color.Black;
             this.cbshade.ItemHeight = 30;
             this.cbshade.Location = new System.Drawing.Point(318, 212);
             this.cbshade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -180,7 +180,7 @@ namespace DigiSort_Box.Forms
             this.cbsize.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbsize.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbsize.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.cbsize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbsize.ForeColor = System.Drawing.Color.Black;
             this.cbsize.ItemHeight = 30;
             this.cbsize.Items.AddRange(new object[] {
             "",
@@ -213,6 +213,7 @@ namespace DigiSort_Box.Forms
             this.txtquantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtquantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtquantity.Font = new System.Drawing.Font("Verdana", 10.2F);
+            this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtquantity.Location = new System.Drawing.Point(318, 385);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(5);

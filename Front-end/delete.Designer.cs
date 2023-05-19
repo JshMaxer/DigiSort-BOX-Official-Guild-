@@ -30,9 +30,10 @@ namespace DigiSort_Box.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(delete));
             this.cbtable = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtusername = new System.Windows.Forms.Label();
+            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt5 = new System.Windows.Forms.TextBox();
             this.txt1 = new System.Windows.Forms.TextBox();
@@ -40,9 +41,7 @@ namespace DigiSort_Box.Forms
             this.txt3 = new System.Windows.Forms.TextBox();
             this.txt2 = new System.Windows.Forms.TextBox();
             this.dgtable = new System.Windows.Forms.DataGridView();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btndelete = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtable)).BeginInit();
@@ -67,6 +66,7 @@ namespace DigiSort_Box.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.panel1.Controls.Add(this.txtusername);
             this.panel1.Controls.Add(this.exitform);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-15, -4);
@@ -74,6 +74,27 @@ namespace DigiSort_Box.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(469, 55);
             this.panel1.TabIndex = 9;
+            // 
+            // txtusername
+            // 
+            this.txtusername.AutoSize = true;
+            this.txtusername.Location = new System.Drawing.Point(292, 22);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.Size = new System.Drawing.Size(0, 16);
+            this.txtusername.TabIndex = 74;
+            this.txtusername.Visible = false;
+            // 
+            // exitform
+            // 
+            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitform.Animated = true;
+            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.exitform.IconColor = System.Drawing.Color.White;
+            this.exitform.Location = new System.Drawing.Point(398, 10);
+            this.exitform.Name = "exitform";
+            this.exitform.Size = new System.Drawing.Size(44, 38);
+            this.exitform.TabIndex = 13;
+            this.exitform.Click += new System.EventHandler(this.exitform_Click);
             // 
             // label1
             // 
@@ -162,28 +183,10 @@ namespace DigiSort_Box.Forms
             this.dgtable.TabIndex = 11;
             this.dgtable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtable_CellClick);
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
             // smoothedge
             // 
             this.smoothedge.BorderRadius = 12;
             this.smoothedge.TargetControl = this;
-            // 
-            // exitform
-            // 
-            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitform.Animated = true;
-            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
-            this.exitform.IconColor = System.Drawing.Color.White;
-            this.exitform.Location = new System.Drawing.Point(398, 10);
-            this.exitform.Name = "exitform";
-            this.exitform.Size = new System.Drawing.Size(44, 38);
-            this.exitform.TabIndex = 13;
-            this.exitform.Click += new System.EventHandler(this.exitform_Click);
             // 
             // btndelete
             // 
@@ -197,7 +200,7 @@ namespace DigiSort_Box.Forms
             this.btndelete.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btndelete.ForeColor = System.Drawing.Color.White;
             this.btndelete.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btndelete.Location = new System.Drawing.Point(127, 546);
+            this.btndelete.Location = new System.Drawing.Point(135, 546);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(176, 57);
             this.btndelete.TabIndex = 70;
@@ -242,9 +245,9 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.TextBox txt3;
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.DataGridView dgtable;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
         private Guna.UI2.WinForms.Guna2ControlBox exitform;
         private Guna.UI2.WinForms.Guna2Button btndelete;
+        public System.Windows.Forms.Label txtusername;
     }
 }

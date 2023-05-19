@@ -55,7 +55,7 @@ namespace DigiSort_Box.Forms
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(1014, 612);
             this.mainpanel.TabIndex = 8;
-            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
+            //this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
             // panel1
             // 
