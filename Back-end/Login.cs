@@ -12,7 +12,7 @@ namespace DigiSort_Box.Back_end
         Login login = new Login();
 
         string username = "admin";
-        int password = 1234;
+        int password = 123;
         }
     }
 }
