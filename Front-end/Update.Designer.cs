@@ -124,6 +124,7 @@ namespace DigiSort_Box.Forms
             this.dgtable.AllowUserToAddRows = false;
             this.dgtable.AllowUserToDeleteRows = false;
             this.dgtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgtable.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             resources.ApplyResources(this.dgtable, "dgtable");
             this.dgtable.Name = "dgtable";
             this.dgtable.ReadOnly = true;
@@ -134,12 +135,14 @@ namespace DigiSort_Box.Forms
             resources.ApplyResources(this.cb1, "cb1");
             this.cb1.FormattingEnabled = true;
             this.cb1.Name = "cb1";
+            this.cb1.SelectedIndexChanged += new System.EventHandler(this.cb1_SelectedIndexChanged);
             // 
             // cb2
             // 
             resources.ApplyResources(this.cb2, "cb2");
             this.cb2.FormattingEnabled = true;
             this.cb2.Name = "cb2";
+            this.cb2.SelectedIndexChanged += new System.EventHandler(this.cb2_SelectedIndexChanged);
             // 
             // cb3
             // 
