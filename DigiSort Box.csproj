@@ -132,6 +132,12 @@
     <Compile Include="Front-end\CreateAcc.Designer.cs">
       <DependentUpon>CreateAcc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Front-end\History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-end\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
     <Compile Include="Front-end\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Front-end\CreateAcc.resx">
       <DependentUpon>CreateAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-end\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

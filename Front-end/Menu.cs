@@ -216,5 +216,10 @@ namespace DigiSort_Box.Forms
             user.txtusername.Text = txtname.Text;
             user.ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
