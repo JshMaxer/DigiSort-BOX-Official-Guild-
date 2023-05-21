@@ -414,6 +414,7 @@ namespace DigiSort_Box.Forms
                     cb1.Items.Add("Gray");
                     cb1.Items.Add("Black");
                     cb1.Text = dgvRow.Cells[0].Value.ToString();
+                    lbltxt1.Text = cb1.Text;
 
                     //shade
                     cb2.Text = dgvRow.Cells[1].Value.ToString();
