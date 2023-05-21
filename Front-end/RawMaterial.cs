@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Forms
@@ -26,10 +19,67 @@ namespace DigiSort_Box.Forms
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            //database
+            Database.RawMaterial rm = new Database.RawMaterial();
+            rm.raw(cbmaterial, cbdesign, cbcolor, txtquantity, btnadd);
+
+            //clear
             cbmaterial.SelectedIndex = 0;
             cbdesign.SelectedIndex = 0;
             cbcolor.SelectedIndex = 0;
             txtquantity.Text = null;
+        }
+
+        private void txtquantity_TextChanged(object sender, EventArgs e)
+        {
+            //disable
+            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void cbmaterial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //disable
+            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void cbdesign_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //disable
+            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void cbcolor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //disable
+            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
         }
     }
 }

@@ -52,7 +52,6 @@ namespace DigiSort_Box.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
-            this.panel1.Controls.Add(this.txtusername);
             this.panel1.Controls.Add(this.exitform);
             this.panel1.Controls.Add(this.label1);
             resources.ApplyResources(this.panel1, "panel1");
@@ -161,6 +160,7 @@ namespace DigiSort_Box.Forms
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.txtusername);
             this.Controls.Add(this.cb4);
             this.Controls.Add(this.cb3);
             this.Controls.Add(this.cb2);

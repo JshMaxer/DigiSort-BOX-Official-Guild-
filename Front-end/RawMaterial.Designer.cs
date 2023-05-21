@@ -63,6 +63,7 @@ namespace DigiSort_Box.Forms
             this.btnadd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnadd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnadd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnadd.Enabled = false;
             this.btnadd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
             this.btnadd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnadd.ForeColor = System.Drawing.Color.White;
@@ -89,9 +90,9 @@ namespace DigiSort_Box.Forms
             this.txtquantity.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtquantity.Location = new System.Drawing.Point(318, 385);
+            this.txtquantity.Location = new System.Drawing.Point(326, 442);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(5);
-            this.txtquantity.MaxLength = 4;
+            this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
             this.txtquantity.PlaceholderText = "";
@@ -99,6 +100,7 @@ namespace DigiSort_Box.Forms
             this.txtquantity.Size = new System.Drawing.Size(359, 36);
             this.txtquantity.TabIndex = 79;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
             // 
             // cbcolor
             // 
@@ -124,13 +126,14 @@ namespace DigiSort_Box.Forms
             "Brown",
             "Gray",
             "Black"});
-            this.cbcolor.Location = new System.Drawing.Point(318, 303);
+            this.cbcolor.Location = new System.Drawing.Point(326, 342);
             this.cbcolor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbcolor.Name = "cbcolor";
             this.cbcolor.Size = new System.Drawing.Size(359, 36);
             this.cbcolor.StartIndex = 0;
             this.cbcolor.TabIndex = 76;
             this.cbcolor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cbcolor.SelectedIndexChanged += new System.EventHandler(this.cbcolor_SelectedIndexChanged);
             // 
             // cbdesign
             // 
@@ -153,12 +156,13 @@ namespace DigiSort_Box.Forms
             "Kimetsu no Yaiba",
             "Bleach",
             "Boku no tige"});
-            this.cbdesign.Location = new System.Drawing.Point(318, 212);
+            this.cbdesign.Location = new System.Drawing.Point(326, 242);
             this.cbdesign.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbdesign.Name = "cbdesign";
             this.cbdesign.Size = new System.Drawing.Size(359, 36);
             this.cbdesign.TabIndex = 77;
             this.cbdesign.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cbdesign.SelectedIndexChanged += new System.EventHandler(this.cbdesign_SelectedIndexChanged);
             // 
             // cbmaterial
             // 
@@ -178,19 +182,20 @@ namespace DigiSort_Box.Forms
             "Sticker paper",
             "Laminating film",
             "DTP."});
-            this.cbmaterial.Location = new System.Drawing.Point(318, 132);
+            this.cbmaterial.Location = new System.Drawing.Point(326, 142);
             this.cbmaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbmaterial.Name = "cbmaterial";
             this.cbmaterial.Size = new System.Drawing.Size(359, 36);
             this.cbmaterial.StartIndex = 0;
             this.cbmaterial.TabIndex = 78;
             this.cbmaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cbmaterial.SelectedIndexChanged += new System.EventHandler(this.cbmaterial_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(452, 360);
+            this.label10.Location = new System.Drawing.Point(462, 400);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(91, 20);
@@ -201,7 +206,7 @@ namespace DigiSort_Box.Forms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(468, 281);
+            this.label9.Location = new System.Drawing.Point(476, 300);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 20);
@@ -212,7 +217,7 @@ namespace DigiSort_Box.Forms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(460, 190);
+            this.label7.Location = new System.Drawing.Point(468, 200);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 20);
@@ -223,7 +228,7 @@ namespace DigiSort_Box.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(454, 110);
+            this.label5.Location = new System.Drawing.Point(462, 100);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 20);

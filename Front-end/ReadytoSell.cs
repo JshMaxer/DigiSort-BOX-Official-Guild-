@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Forms
@@ -26,16 +19,33 @@ namespace DigiSort_Box.Forms
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            cbproduct.Text = null;
+            //database
+            Database.ReadyToSell ready = new Database.ReadyToSell();
+            ready.ready(cbproduct, cbcolor, cbshade, cbsize, txtquantity);
+
+            //clear
+            cbproduct.SelectedIndex = 0;
             cbshade.SelectedIndex = 0;
-            cbcolor.Text = null;
-            cbsize.Items.Clear();
+            cbcolor.SelectedIndex = 0;
+            cbsize.SelectedIndex = 0;
             txtquantity.Text = null;
+            btnadd.Enabled = false;
+            
         }
 
         private void cbcolor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbcolor.SelectedItem.Equals(""))
+            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+
+
+            if (cbcolor.SelectedIndex == 0)
             {
                 cbshade.Items.Clear();
             }
@@ -163,6 +173,54 @@ namespace DigiSort_Box.Forms
                 cbshade.Items.Add("Royal");
                 cbshade.Items.Add("Navy");
                 cbshade.Items.Add("Carolina");
+            }
+        }
+
+        private void cbproduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void cbshade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void cbsize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void txtquantity_TextChanged(object sender, EventArgs e)
+        {
+            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
             }
         }
     }

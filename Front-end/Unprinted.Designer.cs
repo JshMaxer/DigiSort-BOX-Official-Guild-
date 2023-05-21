@@ -107,6 +107,7 @@ namespace DigiSort_Box.Forms
             this.btnadd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnadd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnadd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnadd.Enabled = false;
             this.btnadd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
             this.btnadd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnadd.ForeColor = System.Drawing.Color.White;
@@ -169,6 +170,7 @@ namespace DigiSort_Box.Forms
             this.cbshade.Size = new System.Drawing.Size(359, 36);
             this.cbshade.TabIndex = 70;
             this.cbshade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cbshade.SelectedIndexChanged += new System.EventHandler(this.cbshade_SelectedIndexChanged);
             // 
             // cbsize
             // 
@@ -199,6 +201,7 @@ namespace DigiSort_Box.Forms
             this.cbsize.StartIndex = 0;
             this.cbsize.TabIndex = 70;
             this.cbsize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cbsize.SelectedIndexChanged += new System.EventHandler(this.cbsize_SelectedIndexChanged);
             // 
             // txtquantity
             // 
@@ -225,6 +228,7 @@ namespace DigiSort_Box.Forms
             this.txtquantity.Size = new System.Drawing.Size(359, 36);
             this.txtquantity.TabIndex = 71;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
             // 
             // Unprinted
             // 

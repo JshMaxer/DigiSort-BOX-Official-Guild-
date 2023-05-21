@@ -116,6 +116,7 @@
     <Compile Include="Database\Dashboard.cs" />
     <Compile Include="Database\delete.cs" />
     <Compile Include="Database\DigiSortBox.cs" />
+    <Compile Include="Database\History.cs" />
     <Compile Include="Database\Inventory.cs" />
     <Compile Include="Database\Login.cs" />
     <Compile Include="Database\MainDashboard.cs" />

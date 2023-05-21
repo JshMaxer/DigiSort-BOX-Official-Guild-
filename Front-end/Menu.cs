@@ -221,5 +221,11 @@ namespace DigiSort_Box.Forms
         {
 
         }
+
+        private void btnactivity_Click(object sender, EventArgs e)
+        {
+            Front_end.History his = new Front_end.History();
+            his.ShowDialog();
+        }
     }
 }

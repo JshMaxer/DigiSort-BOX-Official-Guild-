@@ -30,8 +30,8 @@ namespace DigiSort_Box.Forms
         void raw()
         {
             //show raw
-            MySqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "SELECT * FROM raw_material";
+            string raw = "SELECT * FROM raw_material";
+            MySqlCommand cmd = new MySqlCommand(raw, connection);
             MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable dtRecords = new DataTable();
             dtRecords.Load(sdr);
@@ -41,9 +41,9 @@ namespace DigiSort_Box.Forms
         void ready()
         {
             //show ready to sell items
-            MySqlCommand unprint = connection.CreateCommand();
-            unprint.CommandText = "SELECT * FROM ready_to_sell_items";
-            MySqlDataReader sdr = unprint.ExecuteReader();
+            string ready = "SELECT * FROM ready_to_sell_items";
+            MySqlCommand cmd = new MySqlCommand(ready, connection);
+            MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable dtRecords = new DataTable();
             dtRecords.Load(sdr);
             dgtable.DataSource = dtRecords;
@@ -52,9 +52,9 @@ namespace DigiSort_Box.Forms
         void unprint()
         {
             //show unprinted shirts
-            MySqlCommand unprint = connection.CreateCommand();
-            unprint.CommandText = "SELECT * FROM unprinted_shirts";
-            MySqlDataReader sdr = unprint.ExecuteReader();
+            string unprint = "SELECT * FROM unprinted_shirts";
+            MySqlCommand cmd = new MySqlCommand(unprint, connection);
+            MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable dtRecords = new DataTable();
             dtRecords.Load(sdr);
             dgtable.DataSource = dtRecords;
@@ -197,7 +197,8 @@ namespace DigiSort_Box.Forms
 
         private void btndelete_Click_1(object sender, EventArgs e)
         {
-            if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals(""))
+            //field is blank
+            if (cbtable.Text.Equals("") && (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals("") || txt5.Text.Equals("")))
             {
                 MessageBox.Show("Field is blank!");
             }
@@ -205,96 +206,120 @@ namespace DigiSort_Box.Forms
             {
                 if (cbtable.SelectedItem.Equals("Raw Materials"))
                 {
-                    connection.Close();
-                    connection.Open();
-                    //update query
-                    string updateQuery = "DELETE FROM raw_material WHERE material = '" + txt1.Text + "'";
-                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                    try
+                    //field is blank
+                    if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals(""))
                     {
-                        if (command.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("Data deleted", "Successful");
-                            raw();
-
-                            //history
-                            history_raw();
-
-                            clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data not-deleted", "Successful");
-                        }
+                        MessageBox.Show("Field is blank!");
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message);
+                        connection.Close();
+                        connection.Open();
+                        //update query
+                        string deleteQuery = "DELETE FROM raw_material WHERE material = '" + txt1.Text + "' AND design = '" + txt2.Text + "' AND color = '" + txt3.Text + "'";
+                        MySqlCommand command = new MySqlCommand(deleteQuery, connection);
+
+                        try
+                        {
+                            if (command.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Data deleted", "Successful");
+                                raw();
+
+                                //history
+                                history_raw();
+
+                                clear();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data not-deleted", "UnSuccessful");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
 
                     connection.Close();
                 }
                 else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
                 {
-                    connection.Close();
-                    connection.Open();
-                    //delete query
-                    string updateQuery = "DELETE FROM ready_to_sell_items WHERE product_name = '" + txt1.Text + "'";
-                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                    try
+                    //field is blank
+                    if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals("") || txt5.Text.Equals(""))
                     {
-                        if (command.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("Data deleted", "Successful");
-                            ready();
-
-                            //history
-                            history_ready();
-
-                            clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data not-deleted", "Successful");
-                        }
+                        MessageBox.Show("Field is blank!");
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message);
+                        connection.Close();
+                        connection.Open();
+                        //delete query
+                        string updateQuery = "DELETE FROM ready_to_sell_items WHERE product_name = '" + txt1.Text + "' AND color = '" + txt2.Text + "' AND shade = '" + txt3.Text + "' AND size = '" + txt4.Text + "'";
+                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                        try
+                        {
+                            if (command.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Data deleted", "Successful");
+                                ready();
+
+                                //history
+                                history_ready();
+
+                                clear();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data not-deleted", "UnSuccessful");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
 
                     connection.Close();
                 }
                 else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
                 {
-                    connection.Close();
-                    connection.Open();
-                    //update query
-                    string updateQuery = "DELETE FROM unprinted_shirts WHERE color = '" + txt1.Text + "'";
-                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                    try
+                    //field is blank
+                    if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals(""))
                     {
-                        if (command.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("Data deleted", "Successful");
-                            unprint();
-
-                            //history
-                            history_unprint();
-
-                            clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data not-deleted", "Successful");
-                        }
+                        MessageBox.Show("Field is blank!");
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message);
+                        connection.Close();
+                        connection.Open();
+                        //update query
+                        string updateQuery = "DELETE FROM unprinted_shirts WHERE color = '" + txt1.Text + "' AND shade = '" + txt2.Text + "' AND size = '" + txt3.Text + "'";
+                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                        try
+                        {
+                            if (command.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Data deleted", "Successful");
+                                unprint();
+
+                                //history
+                                history_unprint();
+
+                                clear();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data not-deleted", "UnSuccessful");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
 
                     connection.Close();

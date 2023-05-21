@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Forms
@@ -135,122 +136,132 @@ namespace DigiSort_Box.Forms
 
         private void btnupdate_Click_1(object sender, EventArgs e)
         {
-            if (cbtable.SelectedItem.Equals("Raw Materials")) //Raw Materials
+            //field is blank
+            if (cbtable.Text.Equals("") && (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || txt5.Text.Equals("")))
             {
-
-                //blank field
-                if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || txt5.Text.Equals(""))
-                {
-                    MessageBox.Show("Field is blank!");
-                }
-                else
-                {
-                    connection.Close();
-                    connection.Open();
-                    //update query
-                    string updateQuery = "UPDATE raw_material SET material = '" + cb1.Text + "', design = '" + cb2.Text + "', color = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE material = '" + lbltxt1.Text + "'";
-                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                    try
-                    {
-                        if (command.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("Data updated", "Successful");
-                            raw();
-
-                            //history
-                            history_raw();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data not-updated", "UnSuccessful");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-
-                connection.Close();
+                MessageBox.Show("Field is blank!");
             }
-            else if (cbtable.SelectedItem.Equals("Ready to Sell Items")) //Ready to sell items
+            else
             {
 
-                //blank field
-                if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || txt5.Text.Equals(""))
+                if (cbtable.SelectedItem.Equals("Raw Materials")) //Raw Materials
                 {
-                    MessageBox.Show("Field is blank!");
-                }
-                else
-                {
+
+                    //field is blank
+                    if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || txt5.Text.Equals(""))
+                    {
+                        MessageBox.Show("Field is blank!");
+                    }
+                    else
+                    {
+                        connection.Close();
+                        connection.Open();
+                        //update query
+                        string updateQuery = "UPDATE raw_material SET material = '" + cb1.Text + "', design = '" + cb2.Text + "', color = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE material = '" + lbltxt1.Text + "'";
+                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                        try
+                        {
+                            if (command.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Data updated", "Successful");
+                                raw();
+
+                                //history
+                                history_raw();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data not-updated", "UnSuccessful");
+                                MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+
                     connection.Close();
-                    connection.Open();
-                    //update query
-                    string updateQuery = "UPDATE ready_to_sell_items SET product_name = '" + cb1.Text + "', color = '" + cb2.Text + "', shade = '" + cb3.Text + "', size ='" + cb4.Text + "', quantity ='" + txt5.Text + "' WHERE product_name = '" + lbltxt1.Text + "'";
-                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
+                }
+                else if (cbtable.SelectedItem.Equals("Ready to Sell Items")) //Ready to sell items
+                {
 
-                    try
+                    //field is blank
+                    if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || txt5.Text.Equals(""))
                     {
-                        if (command.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("Data updated", "Successful");
-                            ready();
+                        MessageBox.Show("Field is blank!");
+                    }
+                    else
+                    {
+                        connection.Close();
+                        connection.Open();
+                        //update query
+                        string updateQuery = "UPDATE ready_to_sell_items SET product_name = '" + cb1.Text + "', color = '" + cb2.Text + "', shade = '" + cb3.Text + "', size ='" + cb4.Text + "', quantity ='" + txt5.Text + "' WHERE product_name = '" + lbltxt1.Text + "'";
+                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
-                            //history
-                            history_ready();
-                        }
-                        else
+                        try
                         {
-                            MessageBox.Show("Data not-updated", "UnSuccessful");
+                            if (command.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Data updated", "Successful");
+                                ready();
+
+                                //history
+                                history_ready();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data not-updated", "UnSuccessful");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
 
-                connection.Close();
-            }
-            else if (cbtable.SelectedItem.Equals("Unprinted Shirts")) //Unprinted Shirts
-            {
-
-                //blank field
-                if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || txt5.Text.Equals(""))
-                {
-                    MessageBox.Show("Field is blank!");
-                }
-                else
-                {
                     connection.Close();
-                    connection.Open();
-                    //update query
-                    string updateQuery = "UPDATE unprinted_shirts SET color = '" + cb1.Text + "', shade = '" + cb2.Text + "', size = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE color = '" + lbltxt1.Text + "'";
-                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                    try
-                    {
-                        if (command.ExecuteNonQuery() == 1)
-                        {
-                            MessageBox.Show("Data updated", "Successful");
-                            unprint();
-
-                            //history
-                            history_unprint();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data not-updated", "UnSuccessful");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-
                 }
-                connection.Close();
+                else if (cbtable.SelectedItem.Equals("Unprinted Shirts")) //Unprinted Shirts
+                {
+
+                    //field is blank
+                    if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || txt5.Text.Equals(""))
+                    {
+                        MessageBox.Show("Field is blank!");
+                    }
+                    else
+                    {
+                        connection.Close();
+                        connection.Open();
+                        //update query
+                        string updateQuery = "UPDATE unprinted_shirts SET color = '" + cb1.Text + "', shade = '" + cb2.Text + "', size = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE color = '" + lbltxt1.Text + "'";
+                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
+
+                        try
+                        {
+                            if (command.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Data updated", "Successful");
+                                unprint();
+
+                                //history
+                                history_unprint();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data not-updated", "UnSuccessful");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+
+                    }
+                    connection.Close();
+                }
             }
         }
 

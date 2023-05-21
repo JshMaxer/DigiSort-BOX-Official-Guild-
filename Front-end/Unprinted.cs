@@ -32,6 +32,11 @@ namespace DigiSort_Box.Forms
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            //database
+            Database.Unprinted un = new Database.Unprinted();
+            un.unprint(cbcolor, cbshade, cbsize, txtquantity);
+
+            //clear
             cbcolor.SelectedIndex = 0;
             cbshade.Text = null;
             cbsize.SelectedIndex = 0;
@@ -40,7 +45,16 @@ namespace DigiSort_Box.Forms
 
         private void cbcolor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbcolor.SelectedItem.Equals(""))
+            if (cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+
+            if (cbcolor.SelectedIndex == 0)
             {
                 cbshade.Items.Clear();
             }
@@ -168,6 +182,42 @@ namespace DigiSort_Box.Forms
                 cbshade.Items.Add("Royal");
                 cbshade.Items.Add("Navy");
                 cbshade.Items.Add("Carolina");
+            }
+        }
+
+        private void cbshade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void cbsize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void txtquantity_TextChanged(object sender, EventArgs e)
+        {
+            if (cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
             }
         }
     }
