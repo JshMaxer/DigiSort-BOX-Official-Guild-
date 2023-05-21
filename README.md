@@ -90,6 +90,5 @@ quantity                       | int(255)        | No              |            
 * You should see the tables after you imported.
 
 # Database File # 
-[DigiSortBox DB](https://github.com/JshMaxer/DigiSort-BOX-Official-Guild-/files/11452043/digisortbox.sql.gz)
-
+[5/21/2023](https://github.com/JshMaxer/DigiSort-BOX-Official-Guild-/files/11523645/digisortbox.sql_2.gz)
 
