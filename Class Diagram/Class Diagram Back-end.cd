@@ -1,2 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DigiSort_Box.Back_end.CreateAcc">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\CreateAcc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.Dashboard">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\Dashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.delete">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\delete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.DigiSortBox">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\DigiSortBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.Inventory">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.Login">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.MainDashboard">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\MainDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.Menu">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.preview">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\preview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.RawMaterial">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\RawMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.ReadyToSell">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\ReadyToSell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.Unprinted">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\Unprinted.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.Update">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\Update.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DigiSort_Box.Back_end.useraccount">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Back-end\useraccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
