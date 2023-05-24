@@ -14,6 +14,7 @@ namespace DigiSort_Box.Forms
     public partial class maindashboard : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
+
         public maindashboard()
         {
             InitializeComponent();

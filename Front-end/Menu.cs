@@ -1,4 +1,6 @@
 ﻿using DigiSort_Box.Database;
+using DigiSort_Box.Mowdel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +15,12 @@ namespace DigiSort_Box.Forms
 {
     public partial class Dashboard : Form
     {
-        public Dashboard()
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
+        private Lageen model = new Lageen();
+
+        public Dashboard(Lageen lageen)
         {
+            model = lageen;
             InitializeComponent();
         }
 
@@ -46,26 +52,43 @@ namespace DigiSort_Box.Forms
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            /*if (user == superadmin)   {
 
-                btnrawmaterials.Enabled = true;
-                btnunprintedshirts.Enabled = true;
-                btnreadytosell.Enabled = true;
-                btndamageitems.Enabled = true;
-                btninvent.Enabled = true;
-            }
-            else if (user == topadmin)  {
-                
-                btndamageitems.Enabled = false;
-                btnrawmaterials.Enabled = false;
-                btnunprintedshirts.Enabled = false;
-                btnreadytosell.Enabled = false;
-                btninvent.Enabled = false;
-            }
-            else    {
+            try
+            {
 
-                btninvent.Enabled = false;
-            }*/
+                if (model != null)
+                {
+                    switch (model.Position) {
+
+                        case "Top_Admin":
+                            btndamageitems.Visible = false;
+                            btnrawmaterials.Visible = false;
+                            btnunprintedshirts.Visible = false;
+                            btnreadytosell.Visible = false;
+                            btninvent.Visible = true;
+                            btndeact.Visible = false;
+                            btnactivity.Visible = false;
+                            break;
+                        case "Floor_Admin":
+                            btnrawmaterials.Visible = true;
+                            btnunprintedshirts.Visible = true;
+                            btnreadytosell.Visible = true;
+                            btndamageitems.Visible = true;
+                            btninvent.Visible = false;
+                            btndeact.Visible = false;
+                            btnactivity.Visible = false;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            
 
             //checked image
             btdashboard.Image = Properties.Resources.dashboard__1_;
