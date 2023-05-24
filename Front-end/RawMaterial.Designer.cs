@@ -101,6 +101,7 @@ namespace DigiSort_Box.Forms
             this.txtquantity.TabIndex = 79;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
+            this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
             // 
             // cbcolor
             // 

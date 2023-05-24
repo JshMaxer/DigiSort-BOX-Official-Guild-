@@ -220,7 +220,7 @@ namespace DigiSort_Box.Forms
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtquantity.Location = new System.Drawing.Point(318, 385);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(5);
-            this.txtquantity.MaxLength = 4;
+            this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
             this.txtquantity.PlaceholderText = "";
@@ -229,6 +229,7 @@ namespace DigiSort_Box.Forms
             this.txtquantity.TabIndex = 71;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
+            this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
             // 
             // Unprinted
             // 

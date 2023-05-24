@@ -4,5 +4,8 @@
     {
         public const string username = "superadmin";
         public const string password = "1234";
+
+        public const string prevusername = "preview";
+        public const string prevpassword = "admin";
     }
 }

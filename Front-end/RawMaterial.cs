@@ -81,5 +81,10 @@ namespace DigiSort_Box.Forms
                 btnadd.Enabled = true;
             }
         }
+
+        private void txtquantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsNumber(e.KeyChar);
+        }
     }
 }

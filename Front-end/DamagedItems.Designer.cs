@@ -94,7 +94,7 @@ namespace DigiSort_Box.Front_end
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtquantity.Location = new System.Drawing.Point(428, 505);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
-            this.txtquantity.MaxLength = 4;
+            this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
             this.txtquantity.PlaceholderText = "QUANTITY";
@@ -102,6 +102,7 @@ namespace DigiSort_Box.Front_end
             this.txtquantity.Size = new System.Drawing.Size(117, 31);
             this.txtquantity.TabIndex = 47;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
             // 
             // btnadd
             // 

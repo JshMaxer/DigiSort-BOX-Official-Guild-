@@ -26,7 +26,7 @@ namespace DigiSort_Box.Database
                     //Floor admin account
                     if (cbusertype.SelectedItem.Equals("Floor admin"))
                     {
-                        string InsertQuery = "INSERT INTO account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Floor_Admin" + "', '" + "Active" + "')";
+                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Floor_Admin" + "', '" + "Active" + "')";
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 
@@ -47,6 +47,7 @@ namespace DigiSort_Box.Database
                         }
                         catch (Exception ex)
                         {
+                            MessageBox.Show(ex.Message);
                             MessageBox.Show("Username is already used!");
                         }
 
@@ -55,7 +56,7 @@ namespace DigiSort_Box.Database
                     //Top admin
                     else if (cbusertype.SelectedItem.Equals("Top admin"))
                     {
-                        string InsertQuery = "INSERT INTO account VALUES ('" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Top_Admin" + "', '" + "Active" + "')";
+                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Top_Admin" + "', '" + "Active" + "')";
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 

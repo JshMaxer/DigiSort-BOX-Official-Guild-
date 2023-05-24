@@ -16,5 +16,10 @@ namespace DigiSort_Box.Front_end
         {
             InitializeComponent();
         }
+
+        private void txtquantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsNumber(e.KeyChar);
+        }
     }
 }

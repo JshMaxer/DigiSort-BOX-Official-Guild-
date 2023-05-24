@@ -1,11 +1,8 @@
-﻿using DigiSort_Box.Front_end;
+﻿using DigiSort_Box.Back_end;
+using DigiSort_Box.Mowdel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using static DigiSort_Box.Back_end.Constants;
-using DigiSort_Box.Mowdel;
-using DigiSort_Box.Back_end;
 
 namespace DigiSort_Box.Forms
 {
@@ -22,11 +19,12 @@ namespace DigiSort_Box.Forms
             dsb.Show();
             this.Close();
         }
-        private void Activity(Lageen lageen)
+
+        void Activity(Lageen lageen)
         {
             if (lageen.Activation.Equals("InActive"))
             {
-                MessageBox.Show("Sorry, the account you're trying is Inactive.", "Log-in Denied");
+                MessageBox.Show("Sorry, the account you're trying to log is Inactive.", "Log-in Denied");
             }
             else
             {
@@ -38,6 +36,7 @@ namespace DigiSort_Box.Forms
 
                 this.Close();
             }
+
         }
         private void btnsignin_Click(object sender, EventArgs e)
         {
@@ -49,33 +48,33 @@ namespace DigiSort_Box.Forms
             else
             {
                 //preview account - change restriction
-                if (txtusername.Text.Equals("Preview") || txtusername.Text.Equals("preview") && (txtpassword.Text.Equals("Admin") || txtpassword.Text.Equals("admin")))
+                if (txtusername.Text.Equals(Constants.prevusername) && (txtpassword.Text.Equals(Constants.prevpassword)))
                 {
-                    MessageBox.Show("This account is for preview forms only. You cannot do anything on other forms you just previewing them.\nThis account is usually used only for Front-End Developer");
+                    MessageBox.Show("This account is for preview forms only. You cannot do anything on other forms you just previewing them.\nThis account is usually used only for Front-End Developer", "Front_End");
                     Forms.preview pv = new Forms.preview();
                     this.Close();
                     pv.Show();
                 }
                 else
                 {
-                    //searching all the accounts on Top admin and Floor admin database
-                    try
+
+                    //super admin log
+                    Lageen lageen = new Lageen();
+                    if (txtusername.Text.Equals(Constants.username) && txtpassword.Text.Equals(Constants.password))
                     {
-                        Lageen lageen = new Lageen();
-                        if (txtusername.Text.Equals(Constants.username))
-                        {
-                            if (txtpassword.Text.Equals(Constants.password))
-                            {
-                                Activity(lageen);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Incorrect Log-in Credentials!");
-                            }
-                            lageen.Username = Constants.username;
-                            lageen.Password = Constants.password;
-                        }
-                        else
+                        MessageBox.Show("Log-in Succesful!\nHello Super admin!", "Super_admin");
+
+                        Forms.Dashboard dash = new Forms.Dashboard(lageen);
+                        dash.txtname.Text = "SUPER ADMIN";
+                        dash.Show();
+
+                        this.Close();
+                    }
+                    else
+                    {
+
+                        //searching all the accounts on Top admin and Floor admin database
+                        try
                         {
                             string searchTop = "SELECT ID, first_name, last_name, username, password, position, activation FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
                             connection.Close();
@@ -93,21 +92,22 @@ namespace DigiSort_Box.Forms
                                     lageen.Firstname = rowtop["first_name"].ToString();
                                     lageen.Lastname = rowtop["last_name"].ToString();
                                     lageen.Password = rowtop["password"].ToString();
-                                    lageen.Activation = Convert.ToInt32(rowtop["activation"]);
+                                    lageen.Activation = rowtop["activation"].ToString();
+                                    Activity(lageen);
                                 }
-                                Activity(lageen);
                             }
                             else
                             {
                                 MessageBox.Show("Incorrect Log-in Credentials!");
                             }
                         }
+
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        connection.Close();
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    connection.Close();
                 }
             }
         }
