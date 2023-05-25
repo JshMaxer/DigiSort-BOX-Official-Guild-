@@ -22,12 +22,6 @@ namespace DigiSort_Box.Forms
             //database
             Database.RawMaterial rm = new Database.RawMaterial();
             rm.raw(cbmaterial, cbdesign, cbcolor, txtquantity, btnadd);
-
-            //clear
-            cbmaterial.SelectedIndex = 0;
-            cbdesign.SelectedIndex = 0;
-            cbcolor.SelectedIndex = 0;
-            txtquantity.Text = null;
         }
 
         private void txtquantity_TextChanged(object sender, EventArgs e)

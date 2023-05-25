@@ -35,12 +35,6 @@ namespace DigiSort_Box.Forms
             //database
             Database.Unprinted un = new Database.Unprinted();
             un.unprint(cbcolor, cbshade, cbsize, txtquantity);
-
-            //clear
-            cbcolor.SelectedIndex = 0;
-            cbshade.Text = null;
-            cbsize.SelectedIndex = 0;
-            txtquantity.Text = null;
         }
 
         private void cbcolor_SelectedIndexChanged(object sender, EventArgs e)
@@ -211,6 +205,7 @@ namespace DigiSort_Box.Forms
 
         private void txtquantity_TextChanged(object sender, EventArgs e)
         {
+
             if (cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;

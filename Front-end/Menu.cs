@@ -250,5 +250,11 @@ namespace DigiSort_Box.Forms
             Front_end.History his = new Front_end.History();
             his.ShowDialog();
         }
+
+        private void btndeact_Click(object sender, EventArgs e)
+        {
+            Front_end.Account_Management am = new Front_end.Account_Management();
+            am.ShowDialog();
+        }
     }
 }

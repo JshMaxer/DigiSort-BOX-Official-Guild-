@@ -37,8 +37,7 @@ namespace DigiSort_Box.Database
                                 MessageBox.Show("Account successfully created!");
                                 Forms.Login log = new Forms.Login();
                                 log.Show();
-                                //Application.Exit();
-
+                            
                             }
                             else
                             {

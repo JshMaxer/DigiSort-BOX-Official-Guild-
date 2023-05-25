@@ -23,13 +23,7 @@ namespace DigiSort_Box.Forms
             Database.ReadyToSell ready = new Database.ReadyToSell();
             ready.ready(cbproduct, cbcolor, cbshade, cbsize, txtquantity);
 
-            //clear
-            cbproduct.SelectedIndex = 0;
-            cbshade.SelectedIndex = 0;
-            cbcolor.SelectedIndex = 0;
-            cbsize.SelectedIndex = 0;
-            txtquantity.Text = null;
-            btnadd.Enabled = false;
+            
             
         }
 

@@ -9,6 +9,15 @@ namespace DigiSort_Box.Database
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
 
+        void clear(Guna2ComboBox material, Guna2ComboBox design, Guna2ComboBox color, Guna2TextBox quantity)
+        {
+            //clear
+            material.SelectedIndex = 0;
+            design.Text = null;
+            color.SelectedIndex = 0;
+            quantity.Text = null;
+        }
+
         void insert(Guna2ComboBox material, Guna2ComboBox design, Guna2ComboBox color, Guna2TextBox quantity, Guna2Button add)
         {
             //insert query
@@ -22,6 +31,7 @@ namespace DigiSort_Box.Database
                 if (command.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Data added");
+                    clear(material, design, color, quantity);
                 }
                 else
                 {
@@ -47,13 +57,25 @@ namespace DigiSort_Box.Database
 
             try
             {
-                if (com.ExecuteNonQuery() == 1)
+
+                //quantity
+                int quan = int.Parse(quantity.Text);
+
+                if (quan <= 0)
                 {
-                    MessageBox.Show("Data updated");
+                    MessageBox.Show("Quantity must not be equal to 0!");
                 }
                 else
                 {
-                    insert(material, design, color, quantity, add);
+                    if (com.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Data updated");
+                        clear(material, design, color, quantity);
+                    }
+                    else
+                    {
+                        insert(material, design, color, quantity, add);
+                    }
                 }
             }
             catch (Exception exs)

@@ -73,12 +73,7 @@ namespace DigiSort_Box.Forms
             dtReady.Load(sdr);
             dgready.DataSource = dtReady;
         }
-        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            raw();
-            unprint();
-            ready();
-        }
+
         private void txtunprinted_TextChanged_1(object sender, EventArgs e)
         {
             connection.Close();

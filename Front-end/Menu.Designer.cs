@@ -54,10 +54,10 @@ namespace DigiSort_Box.Forms
             // 
             // mainpanel
             // 
-            this.mainpanel.Location = new System.Drawing.Point(97, 49);
-            this.mainpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainpanel.Location = new System.Drawing.Point(129, 60);
+            this.mainpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(760, 497);
+            this.mainpanel.Size = new System.Drawing.Size(1013, 612);
             this.mainpanel.TabIndex = 8;
             // 
             // panel1
@@ -69,10 +69,10 @@ namespace DigiSort_Box.Forms
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnlogout);
             this.panel1.Controls.Add(this.btuseraccount);
-            this.panel1.Location = new System.Drawing.Point(-11, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(-15, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 41);
+            this.panel1.Size = new System.Drawing.Size(1176, 50);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -81,9 +81,10 @@ namespace DigiSort_Box.Forms
             this.txtname.AutoSize = true;
             this.txtname.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtname.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtname.Location = new System.Drawing.Point(20, 12);
+            this.txtname.Location = new System.Drawing.Point(27, 15);
+            this.txtname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(50, 17);
+            this.txtname.Size = new System.Drawing.Size(60, 20);
             this.txtname.TabIndex = 2;
             this.txtname.Text = "Menu";
             this.txtname.Visible = false;
@@ -100,11 +101,13 @@ namespace DigiSort_Box.Forms
             this.btndeact.FillColor2 = System.Drawing.Color.FloralWhite;
             this.btndeact.Font = new System.Drawing.Font("Verdana", 9F);
             this.btndeact.ForeColor = System.Drawing.Color.Black;
-            this.btndeact.Location = new System.Drawing.Point(509, 7);
+            this.btndeact.Location = new System.Drawing.Point(679, 9);
+            this.btndeact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btndeact.Name = "btndeact";
-            this.btndeact.Size = new System.Drawing.Size(176, 27);
+            this.btndeact.Size = new System.Drawing.Size(235, 33);
             this.btndeact.TabIndex = 1;
-            this.btndeact.Text = "Account Deactivation";
+            this.btndeact.Text = "Account Management";
+            this.btndeact.Click += new System.EventHandler(this.btndeact_Click);
             // 
             // btnactivity
             // 
@@ -118,9 +121,10 @@ namespace DigiSort_Box.Forms
             this.btnactivity.FillColor2 = System.Drawing.Color.FloralWhite;
             this.btnactivity.Font = new System.Drawing.Font("Verdana", 9F);
             this.btnactivity.ForeColor = System.Drawing.Color.Black;
-            this.btnactivity.Location = new System.Drawing.Point(691, 7);
+            this.btnactivity.Location = new System.Drawing.Point(921, 9);
+            this.btnactivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnactivity.Name = "btnactivity";
-            this.btnactivity.Size = new System.Drawing.Size(106, 27);
+            this.btnactivity.Size = new System.Drawing.Size(141, 33);
             this.btnactivity.TabIndex = 0;
             this.btnactivity.Text = "Activity Logs";
             this.btnactivity.Click += new System.EventHandler(this.btnactivity_Click);
@@ -130,10 +134,9 @@ namespace DigiSort_Box.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(732, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(976, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 29);
+            this.label1.Size = new System.Drawing.Size(0, 36);
             this.label1.TabIndex = 0;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -146,12 +149,12 @@ namespace DigiSort_Box.Forms
             this.btnlogout.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnlogout.ImageRotate = 0F;
             this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnlogout.Location = new System.Drawing.Point(802, 6);
-            this.btnlogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlogout.Location = new System.Drawing.Point(1069, 7);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.PressedState.Image = global::DigiSort_Box.Properties.Resources.logout__1_;
             this.btnlogout.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnlogout.Size = new System.Drawing.Size(32, 29);
+            this.btnlogout.Size = new System.Drawing.Size(43, 36);
             this.btnlogout.TabIndex = 0;
             this.info.SetToolTip(this.btnlogout, "Log out");
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
@@ -165,12 +168,12 @@ namespace DigiSort_Box.Forms
             this.btuseraccount.ImageOffset = new System.Drawing.Point(0, 0);
             this.btuseraccount.ImageRotate = 0F;
             this.btuseraccount.ImageSize = new System.Drawing.Size(20, 20);
-            this.btuseraccount.Location = new System.Drawing.Point(839, 6);
-            this.btuseraccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btuseraccount.Location = new System.Drawing.Point(1119, 7);
+            this.btuseraccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btuseraccount.Name = "btuseraccount";
             this.btuseraccount.PressedState.Image = global::DigiSort_Box.Properties.Resources.account;
             this.btuseraccount.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btuseraccount.Size = new System.Drawing.Size(32, 29);
+            this.btuseraccount.Size = new System.Drawing.Size(43, 36);
             this.btuseraccount.TabIndex = 0;
             this.info.SetToolTip(this.btuseraccount, "User Account");
             this.btuseraccount.Click += new System.EventHandler(this.btuseraccount_Click);
@@ -191,12 +194,12 @@ namespace DigiSort_Box.Forms
             this.btndamageitems.ImageOffset = new System.Drawing.Point(0, 0);
             this.btndamageitems.ImageRotate = 0F;
             this.btndamageitems.ImageSize = new System.Drawing.Size(45, 45);
-            this.btndamageitems.Location = new System.Drawing.Point(5, 337);
-            this.btndamageitems.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
+            this.btndamageitems.Location = new System.Drawing.Point(7, 414);
+            this.btndamageitems.Margin = new System.Windows.Forms.Padding(7, 6, 7, 18);
             this.btndamageitems.Name = "btndamageitems";
             this.btndamageitems.PressedState.Image = global::DigiSort_Box.Properties.Resources.package__1_;
             this.btndamageitems.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btndamageitems.Size = new System.Drawing.Size(72, 63);
+            this.btndamageitems.Size = new System.Drawing.Size(96, 78);
             this.btndamageitems.TabIndex = 0;
             this.info.SetToolTip(this.btndamageitems, "Damage Items");
             this.btndamageitems.Click += new System.EventHandler(this.btndamageitems_Click);
@@ -210,12 +213,12 @@ namespace DigiSort_Box.Forms
             this.btninvent.ImageOffset = new System.Drawing.Point(0, 0);
             this.btninvent.ImageRotate = 0F;
             this.btninvent.ImageSize = new System.Drawing.Size(45, 45);
-            this.btninvent.Location = new System.Drawing.Point(5, 420);
-            this.btninvent.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
+            this.btninvent.Location = new System.Drawing.Point(7, 516);
+            this.btninvent.Margin = new System.Windows.Forms.Padding(7, 6, 7, 18);
             this.btninvent.Name = "btninvent";
             this.btninvent.PressedState.Image = global::DigiSort_Box.Properties.Resources.inventory__1_;
             this.btninvent.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btninvent.Size = new System.Drawing.Size(72, 63);
+            this.btninvent.Size = new System.Drawing.Size(96, 78);
             this.btninvent.TabIndex = 0;
             this.info.SetToolTip(this.btninvent, "Inventory");
             this.btninvent.Click += new System.EventHandler(this.btninvent_Click);
@@ -229,12 +232,12 @@ namespace DigiSort_Box.Forms
             this.btnreadytosell.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnreadytosell.ImageRotate = 0F;
             this.btnreadytosell.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnreadytosell.Location = new System.Drawing.Point(5, 254);
-            this.btnreadytosell.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
+            this.btnreadytosell.Location = new System.Drawing.Point(7, 312);
+            this.btnreadytosell.Margin = new System.Windows.Forms.Padding(7, 6, 7, 18);
             this.btnreadytosell.Name = "btnreadytosell";
             this.btnreadytosell.PressedState.Image = global::DigiSort_Box.Properties.Resources.trade__1_;
             this.btnreadytosell.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnreadytosell.Size = new System.Drawing.Size(72, 63);
+            this.btnreadytosell.Size = new System.Drawing.Size(96, 78);
             this.btnreadytosell.TabIndex = 0;
             this.info.SetToolTip(this.btnreadytosell, "Ready to sell Items");
             this.btnreadytosell.Click += new System.EventHandler(this.btnreadytosell_Click);
@@ -248,12 +251,12 @@ namespace DigiSort_Box.Forms
             this.btnrawmaterials.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnrawmaterials.ImageRotate = 0F;
             this.btnrawmaterials.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnrawmaterials.Location = new System.Drawing.Point(5, 171);
-            this.btnrawmaterials.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
+            this.btnrawmaterials.Location = new System.Drawing.Point(7, 210);
+            this.btnrawmaterials.Margin = new System.Windows.Forms.Padding(7, 6, 7, 18);
             this.btnrawmaterials.Name = "btnrawmaterials";
             this.btnrawmaterials.PressedState.Image = global::DigiSort_Box.Properties.Resources.raw_materials__1_;
             this.btnrawmaterials.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnrawmaterials.Size = new System.Drawing.Size(72, 63);
+            this.btnrawmaterials.Size = new System.Drawing.Size(96, 78);
             this.btnrawmaterials.TabIndex = 0;
             this.info.SetToolTip(this.btnrawmaterials, "Raw Meterials");
             this.btnrawmaterials.Click += new System.EventHandler(this.btnrawmaterials_Click);
@@ -267,12 +270,12 @@ namespace DigiSort_Box.Forms
             this.btnunprintedshirts.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnunprintedshirts.ImageRotate = 0F;
             this.btnunprintedshirts.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnunprintedshirts.Location = new System.Drawing.Point(5, 88);
-            this.btnunprintedshirts.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
+            this.btnunprintedshirts.Location = new System.Drawing.Point(7, 108);
+            this.btnunprintedshirts.Margin = new System.Windows.Forms.Padding(7, 6, 7, 18);
             this.btnunprintedshirts.Name = "btnunprintedshirts";
             this.btnunprintedshirts.PressedState.Image = global::DigiSort_Box.Properties.Resources.cloth__1_;
             this.btnunprintedshirts.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnunprintedshirts.Size = new System.Drawing.Size(72, 63);
+            this.btnunprintedshirts.Size = new System.Drawing.Size(96, 78);
             this.btnunprintedshirts.TabIndex = 0;
             this.info.SetToolTip(this.btnunprintedshirts, "Unprinted Shirts");
             this.btnunprintedshirts.Click += new System.EventHandler(this.btnunprintedshirts_Click);
@@ -286,12 +289,12 @@ namespace DigiSort_Box.Forms
             this.btdashboard.ImageOffset = new System.Drawing.Point(0, 0);
             this.btdashboard.ImageRotate = 0F;
             this.btdashboard.ImageSize = new System.Drawing.Size(45, 45);
-            this.btdashboard.Location = new System.Drawing.Point(5, 5);
-            this.btdashboard.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
+            this.btdashboard.Location = new System.Drawing.Point(7, 6);
+            this.btdashboard.Margin = new System.Windows.Forms.Padding(7, 6, 7, 18);
             this.btdashboard.Name = "btdashboard";
             this.btdashboard.PressedState.Image = global::DigiSort_Box.Properties.Resources.dashboard__1_;
             this.btdashboard.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btdashboard.Size = new System.Drawing.Size(72, 63);
+            this.btdashboard.Size = new System.Drawing.Size(96, 78);
             this.btdashboard.TabIndex = 0;
             this.info.SetToolTip(this.btdashboard, "Dashboard");
             this.btdashboard.Click += new System.EventHandler(this.btdashboard_Click);
@@ -316,23 +319,24 @@ namespace DigiSort_Box.Forms
             this.flowLayoutPanel1.Controls.Add(this.btndamageitems);
             this.flowLayoutPanel1.Controls.Add(this.btninvent);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 49);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 60);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(80, 497);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(107, 612);
             this.flowLayoutPanel1.TabIndex = 10;
             this.flowLayoutPanel1.WrapContents = false;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(868, 554);
+            this.ClientSize = new System.Drawing.Size(1157, 682);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";

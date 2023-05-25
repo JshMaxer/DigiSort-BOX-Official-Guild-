@@ -24,6 +24,14 @@ namespace DigiSort_Box
             Database.CreateAcc Account = new Database.CreateAcc();
             Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername, cbaccount);
 
+            //Form close
+            Forms.Login log = new Forms.Login();
+            if (log != null)
+            {
+                this.Close();
+            }
+
         }
+       
     }
 }
