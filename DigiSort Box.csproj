@@ -377,5 +377,8 @@
   <ItemGroup>
     <None Include="Resources\hasbulla.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
