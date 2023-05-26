@@ -91,18 +91,22 @@ namespace DigiSort_Box.Forms
             // 
             // btndeact
             // 
+            this.btndeact.Animated = true;
+            this.btndeact.AnimatedGIF = true;
             this.btndeact.BorderRadius = 8;
             this.btndeact.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btndeact.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btndeact.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btndeact.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btndeact.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndeact.FillColor = System.Drawing.Color.Lavender;
-            this.btndeact.FillColor2 = System.Drawing.Color.FloralWhite;
+            this.btndeact.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btndeact.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
             this.btndeact.Font = new System.Drawing.Font("Verdana", 9F);
             this.btndeact.ForeColor = System.Drawing.Color.Black;
+            this.btndeact.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.btndeact.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btndeact.Location = new System.Drawing.Point(679, 9);
-            this.btndeact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btndeact.Margin = new System.Windows.Forms.Padding(4);
             this.btndeact.Name = "btndeact";
             this.btndeact.Size = new System.Drawing.Size(235, 33);
             this.btndeact.TabIndex = 1;
@@ -111,18 +115,22 @@ namespace DigiSort_Box.Forms
             // 
             // btnactivity
             // 
+            this.btnactivity.Animated = true;
+            this.btnactivity.AnimatedGIF = true;
             this.btnactivity.BorderRadius = 8;
             this.btnactivity.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnactivity.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnactivity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnactivity.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnactivity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnactivity.FillColor = System.Drawing.Color.Lavender;
-            this.btnactivity.FillColor2 = System.Drawing.Color.FloralWhite;
+            this.btnactivity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnactivity.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
             this.btnactivity.Font = new System.Drawing.Font("Verdana", 9F);
             this.btnactivity.ForeColor = System.Drawing.Color.Black;
+            this.btnactivity.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.btnactivity.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btnactivity.Location = new System.Drawing.Point(921, 9);
-            this.btnactivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnactivity.Margin = new System.Windows.Forms.Padding(4);
             this.btnactivity.Name = "btnactivity";
             this.btnactivity.Size = new System.Drawing.Size(141, 33);
             this.btnactivity.TabIndex = 0;
@@ -320,7 +328,7 @@ namespace DigiSort_Box.Forms
             this.flowLayoutPanel1.Controls.Add(this.btninvent);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 60);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(107, 612);
             this.flowLayoutPanel1.TabIndex = 10;

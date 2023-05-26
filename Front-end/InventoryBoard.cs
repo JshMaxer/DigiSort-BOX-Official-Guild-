@@ -270,11 +270,11 @@ namespace DigiSort_Box.Forms
                 pdfDoc.Close();
                 MessageBox.Show("The file is now ready for printing. \nYour file is saved on C:\\Users\\YourComputerName\\Documents");
             }
-            catch (DocumentException de)
+            catch (DocumentException)
             {
             }
             // System.Web.HttpContext.Current.Response.Write(de.Message)
-            catch (IOException ioEx)
+            catch (IOException)
             {
             }
             // System.Web.HttpContext.Current.Response.Write(ioEx.Message)

@@ -1,5 +1,5 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using DigiSort_Box.Mowdel;
+using System;
 using System.Windows.Forms;
 
 namespace DigiSort_Box
@@ -22,16 +22,22 @@ namespace DigiSort_Box
         {
             //database
             Database.CreateAcc Account = new Database.CreateAcc();
-            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername, cbaccount);
+            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername, cbaccount, lblstatus);
 
-            //Form close
-            Forms.Login log = new Forms.Login();
-            if (log != null)
+            if(lblstatus.Text.Equals("success"))
             {
-                this.Close();
+                //Form close
+                Forms.Login log = new Forms.Login();
+                if (log != null)
+                {
+                    this.Close();
+                }
             }
-
+            else
+            {
+                //ok
+            }
+            
         }
-       
     }
 }

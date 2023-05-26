@@ -36,18 +36,26 @@ namespace DigiSort_Box.Front_end
             this.txtquantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnadd = new Guna.UI2.WinForms.Guna2Button();
             this.cbtable = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvitems)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvitems
             // 
+            this.dgvitems.AllowUserToAddRows = false;
+            this.dgvitems.AllowUserToDeleteRows = false;
             this.dgvitems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvitems.Location = new System.Drawing.Point(146, 71);
             this.dgvitems.Margin = new System.Windows.Forms.Padding(4);
             this.dgvitems.Name = "dgvitems";
+            this.dgvitems.ReadOnly = true;
             this.dgvitems.RowHeadersWidth = 51;
             this.dgvitems.Size = new System.Drawing.Size(695, 386);
             this.dgvitems.TabIndex = 46;
+            this.dgvitems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvitems_CellClick);
             // 
             // smoothedge
             // 
@@ -57,6 +65,8 @@ namespace DigiSort_Box.Front_end
             // txtissue
             // 
             this.txtissue.Animated = true;
+            this.txtissue.AutoScroll = true;
+            this.txtissue.BorderColor = System.Drawing.Color.Black;
             this.txtissue.BorderRadius = 8;
             this.txtissue.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtissue.DefaultText = "";
@@ -65,22 +75,24 @@ namespace DigiSort_Box.Front_end
             this.txtissue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtissue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtissue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtissue.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtissue.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.txtissue.ForeColor = System.Drawing.Color.Black;
             this.txtissue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtissue.Location = new System.Drawing.Point(256, 465);
+            this.txtissue.Location = new System.Drawing.Point(158, 465);
             this.txtissue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtissue.MaxLength = 255;
+            this.txtissue.Multiline = true;
             this.txtissue.Name = "txtissue";
             this.txtissue.PasswordChar = '\0';
-            this.txtissue.PlaceholderText = "ISSUE";
+            this.txtissue.PlaceholderText = "(ISSUE) This item is damage...";
             this.txtissue.SelectedText = "";
-            this.txtissue.Size = new System.Drawing.Size(461, 34);
+            this.txtissue.Size = new System.Drawing.Size(671, 99);
             this.txtissue.TabIndex = 47;
-            this.txtissue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtquantity
             // 
             this.txtquantity.Animated = true;
+            this.txtquantity.BorderColor = System.Drawing.Color.Black;
             this.txtquantity.BorderRadius = 8;
             this.txtquantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtquantity.DefaultText = "";
@@ -92,7 +104,7 @@ namespace DigiSort_Box.Front_end
             this.txtquantity.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtquantity.Location = new System.Drawing.Point(428, 505);
+            this.txtquantity.Location = new System.Drawing.Point(435, 572);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
@@ -116,11 +128,12 @@ namespace DigiSort_Box.Front_end
             this.btnadd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnadd.ForeColor = System.Drawing.Color.White;
             this.btnadd.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnadd.Location = new System.Drawing.Point(402, 557);
+            this.btnadd.Location = new System.Drawing.Point(844, 572);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(168, 52);
+            this.btnadd.Size = new System.Drawing.Size(137, 38);
             this.btnadd.TabIndex = 69;
             this.btnadd.Text = "Add";
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // cbtable
             // 
@@ -132,7 +145,7 @@ namespace DigiSort_Box.Front_end
             this.cbtable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbtable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbtable.Font = new System.Drawing.Font("Verdana", 10.2F);
-            this.cbtable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbtable.ForeColor = System.Drawing.Color.Black;
             this.cbtable.ItemHeight = 30;
             this.cbtable.Items.AddRange(new object[] {
             "Raw Materials",
@@ -145,6 +158,43 @@ namespace DigiSort_Box.Front_end
             this.cbtable.StartIndex = 0;
             this.cbtable.TabIndex = 79;
             this.cbtable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cbtable.SelectedIndexChanged += new System.EventHandler(this.cbtable_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(969, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 80;
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(969, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.TabIndex = 80;
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(969, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 16);
+            this.label3.TabIndex = 80;
+            this.label3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(969, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 16);
+            this.label4.TabIndex = 80;
+            this.label4.Visible = false;
             // 
             // Damaged_Items
             // 
@@ -152,6 +202,10 @@ namespace DigiSort_Box.Front_end
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(993, 622);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbtable);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.txtquantity);
@@ -162,8 +216,10 @@ namespace DigiSort_Box.Front_end
             this.Name = "Damaged_Items";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Damaged Items";
+            this.Load += new System.EventHandler(this.Damaged_Items_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvitems)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -174,5 +230,9 @@ namespace DigiSort_Box.Front_end
         private Guna.UI2.WinForms.Guna2TextBox txtissue;
         public Guna.UI2.WinForms.Guna2Button btnadd;
         private Guna.UI2.WinForms.Guna2ComboBox cbtable;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

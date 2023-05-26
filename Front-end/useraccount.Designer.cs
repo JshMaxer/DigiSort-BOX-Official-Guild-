@@ -40,7 +40,7 @@ namespace DigiSort_Box.Forms
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtfirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtlastname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
+            this.btnreset = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtposition = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
@@ -186,24 +186,24 @@ namespace DigiSort_Box.Forms
             this.txtlastname.TabIndex = 11;
             this.txtlastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnsignin
+            // btnreset
             // 
-            this.btnsignin.Animated = true;
-            this.btnsignin.BorderRadius = 20;
-            this.btnsignin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnsignin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnsignin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnsignin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnsignin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
-            this.btnsignin.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnsignin.ForeColor = System.Drawing.Color.White;
-            this.btnsignin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnsignin.Location = new System.Drawing.Point(68, 349);
-            this.btnsignin.Name = "btnsignin";
-            this.btnsignin.Size = new System.Drawing.Size(151, 45);
-            this.btnsignin.TabIndex = 12;
-            this.btnsignin.Text = "Reset Password";
-            this.btnsignin.Click += new System.EventHandler(this.btnsignin_Click);
+            this.btnreset.Animated = true;
+            this.btnreset.BorderRadius = 20;
+            this.btnreset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnreset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnreset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnreset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnreset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.btnreset.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnreset.ForeColor = System.Drawing.Color.White;
+            this.btnreset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
+            this.btnreset.Location = new System.Drawing.Point(68, 349);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(151, 45);
+            this.btnreset.TabIndex = 12;
+            this.btnreset.Text = "Reset Password";
+            this.btnreset.Click += new System.EventHandler(this.btnsignin_Click);
             // 
             // label5
             // 
@@ -245,7 +245,7 @@ namespace DigiSort_Box.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(283, 417);
-            this.Controls.Add(this.btnsignin);
+            this.Controls.Add(this.btnreset);
             this.Controls.Add(this.txtposition);
             this.Controls.Add(this.txtlastname);
             this.Controls.Add(this.txtfirstname);
@@ -281,7 +281,7 @@ namespace DigiSort_Box.Forms
         public Guna.UI2.WinForms.Guna2TextBox txtusername;
         public Guna.UI2.WinForms.Guna2TextBox txtlastname;
         public Guna.UI2.WinForms.Guna2TextBox txtfirstname;
-        private Guna.UI2.WinForms.Guna2Button btnsignin;
+        private Guna.UI2.WinForms.Guna2Button btnreset;
         public Guna.UI2.WinForms.Guna2TextBox txtposition;
         private System.Windows.Forms.Label label5;
     }

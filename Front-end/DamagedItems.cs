@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DigiSort_Box.Model;
+using System;
 using System.Windows.Forms;
+
 
 namespace DigiSort_Box.Front_end
 {
     public partial class Damaged_Items : Form
     {
+
         public Damaged_Items()
         {
             InitializeComponent();
@@ -20,6 +16,56 @@ namespace DigiSort_Box.Front_end
         private void txtquantity_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsNumber(e.KeyChar);
+        }
+
+
+
+        private void cbtable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Database
+            Database.Damage dmg = new Database.Damage();
+            dmg.tbl(dgvitems, cbtable);
+        }
+
+        private void Damaged_Items_Load(object sender, EventArgs e)
+        {
+            //Database
+            Database.Damage dmg = new Database.Damage();
+            dmg.tbl(dgvitems, cbtable);
+        }
+
+        private void dgvitems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Items itm = new Items();
+
+            if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
+            {
+                if (e.RowIndex != -1)
+                {
+                    DataGridViewRow dgvRow = dgvitems.Rows[e.RowIndex];
+                    label1.Text = dgvRow.Cells[0].Value.ToString(); // product name
+                    label2.Text = dgvRow.Cells[1].Value.ToString(); // color
+                    label3.Text = dgvRow.Cells[2].Value.ToString(); // shade
+                    label4.Text = dgvRow.Cells[3].Value.ToString(); // size
+                }
+            }
+            else
+            {
+                //click cell to show
+                if (e.RowIndex != -1)
+                {
+                    DataGridViewRow dgvRow = dgvitems.Rows[e.RowIndex];
+                    label1.Text = dgvRow.Cells[0].Value.ToString();
+                    label2.Text = dgvRow.Cells[1].Value.ToString();
+                    label3.Text = dgvRow.Cells[2].Value.ToString();
+                }
+            }
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            Database.Damage dmg = new Database.Damage();
+            dmg.issue(txtissue, txtquantity, cbtable, label1, label2, label3, label4);
         }
     }
 }

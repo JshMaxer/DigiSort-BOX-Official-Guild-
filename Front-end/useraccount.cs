@@ -27,9 +27,10 @@ namespace DigiSort_Box.Forms
 
         private void useraccount_Load(object sender, EventArgs e)
         {
-            //insert code here
+            //Database
             Database.useraccount acc = new Database.useraccount();
             acc.user(txtusername, txtfirstname, txtlastname, txtposition);
+            acc.disreset(txtusername, btnreset);
         }
         
         private void exitform_Click(object sender, EventArgs e)

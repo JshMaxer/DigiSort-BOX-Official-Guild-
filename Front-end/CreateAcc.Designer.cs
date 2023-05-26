@@ -45,6 +45,7 @@ namespace DigiSort_Box
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblstatus = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -131,7 +132,7 @@ namespace DigiSort_Box
             this.txtretype.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtretype.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtretype.Location = new System.Drawing.Point(32, 398);
-            this.txtretype.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtretype.Margin = new System.Windows.Forms.Padding(5);
             this.txtretype.Name = "txtretype";
             this.txtretype.PasswordChar = '●';
             this.txtretype.PlaceholderText = "Retype password";
@@ -175,7 +176,7 @@ namespace DigiSort_Box
             this.txtfirstname.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtfirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtfirstname.Location = new System.Drawing.Point(32, 213);
-            this.txtfirstname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtfirstname.Margin = new System.Windows.Forms.Padding(5);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.PasswordChar = '\0';
             this.txtfirstname.PlaceholderText = "Fistname";
@@ -198,7 +199,7 @@ namespace DigiSort_Box
             this.txtlastname.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtlastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtlastname.Location = new System.Drawing.Point(32, 258);
-            this.txtlastname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtlastname.Margin = new System.Windows.Forms.Padding(5);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.PasswordChar = '\0';
             this.txtlastname.PlaceholderText = "Lastname";
@@ -221,7 +222,7 @@ namespace DigiSort_Box
             this.txtusername.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Location = new System.Drawing.Point(32, 305);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(5);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderText = "Username";
@@ -244,7 +245,7 @@ namespace DigiSort_Box
             this.txtpassword.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Location = new System.Drawing.Point(32, 351);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '●';
             this.txtpassword.PlaceholderText = "Password";
@@ -256,7 +257,7 @@ namespace DigiSort_Box
             // btnback
             // 
             this.btnback.Location = new System.Drawing.Point(5, 10);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(36, 30);
             this.btnback.TabIndex = 7;
@@ -268,6 +269,7 @@ namespace DigiSort_Box
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
             this.panel1.Controls.Add(this.btnback);
+            this.panel1.Controls.Add(this.lblstatus);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -289,12 +291,22 @@ namespace DigiSort_Box
             // 
             this.pictureBox1.Image = global::DigiSort_Box.Properties.Resources._1;
             this.pictureBox1.Location = new System.Drawing.Point(35, 70);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(505, 514);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblstatus
+            // 
+            this.lblstatus.AutoSize = true;
+            this.lblstatus.Font = new System.Drawing.Font("Calibri Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstatus.Location = new System.Drawing.Point(955, 10);
+            this.lblstatus.Name = "lblstatus";
+            this.lblstatus.Size = new System.Drawing.Size(0, 15);
+            this.lblstatus.TabIndex = 52;
+            this.lblstatus.Visible = false;
             // 
             // CreateAcc
             // 
@@ -314,6 +326,7 @@ namespace DigiSort_Box
             this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -336,6 +349,7 @@ namespace DigiSort_Box
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2DragControl dragcotrol;
         private Guna.UI2.WinForms.Guna2ComboBox cbaccount;
+        private System.Windows.Forms.Label lblstatus;
     }
 }
 

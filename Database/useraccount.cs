@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DigiSort_Box.Mowdel;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 
@@ -11,6 +12,7 @@ namespace DigiSort_Box.Database
 {
      class useraccount
     {
+        Lageen lageen = new Lageen();
         public void user(Guna2TextBox username, Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox position)
         {
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
@@ -29,6 +31,18 @@ namespace DigiSort_Box.Database
                 lastname.Text = readtop["last_name"].ToString();
                 position.Text = readtop["position"].ToString();
             }       
+        }
+
+        public void disreset(Guna2TextBox txtuser,Guna2Button btnreset)
+        {
+            if(txtuser.Text.Equals("DIGI"))
+            {
+                btnreset.Visible = false;
+            }
+            else
+            {
+                btnreset.Visible = true;
+            }
         }
 
     }

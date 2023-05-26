@@ -117,6 +117,7 @@
     <Compile Include="Back-end\useraccount.cs" />
     <Compile Include="Database\Account_Management.cs" />
     <Compile Include="Database\CreateAcc.cs" />
+    <Compile Include="Database\Damage.cs" />
     <Compile Include="Database\Dashboard.cs" />
     <Compile Include="Database\delete.cs" />
     <Compile Include="Database\DigiSortBox.cs" />
@@ -233,7 +234,8 @@
     <Compile Include="Front-end\useraccount.Designer.cs">
       <DependentUpon>useraccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mowdel\Lageen.cs" />
+    <Compile Include="Model\Items.cs" />
+    <Compile Include="Model\Lageen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Front-end\CreateAcc.resx">

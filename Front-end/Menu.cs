@@ -1,14 +1,6 @@
-﻿using DigiSort_Box.Database;
-using DigiSort_Box.Mowdel;
+﻿using DigiSort_Box.Mowdel;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Forms
@@ -47,7 +39,7 @@ namespace DigiSort_Box.Forms
             {
                 //do nothing
             }
-            
+
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -58,7 +50,8 @@ namespace DigiSort_Box.Forms
 
                 if (model != null)
                 {
-                    switch (model.Position) {
+                    switch (model.Position)
+                    {
 
                         case "Top_Admin":
                             btndamageitems.Visible = false;
@@ -87,8 +80,8 @@ namespace DigiSort_Box.Forms
             {
                 MessageBox.Show(ex.Message);
             }
-            
-            
+
+
 
             //checked image
             btdashboard.Image = Properties.Resources.dashboard__1_;
@@ -128,7 +121,7 @@ namespace DigiSort_Box.Forms
         {
             //checked image
             btnunprintedshirts.Image = Properties.Resources.cloth__1_;
-            
+
 
             //disable other image color
             btnrawmaterials.Image = Properties.Resources.raw_materials;
@@ -165,7 +158,7 @@ namespace DigiSort_Box.Forms
         {
             //checked image
             btnreadytosell.Image = Properties.Resources.trade__1_;
-            
+
             //disable other image color
             btnunprintedshirts.Image = Properties.Resources.cloth;
             btdashboard.Image = Properties.Resources.dashboard;
@@ -236,7 +229,18 @@ namespace DigiSort_Box.Forms
         private void btuseraccount_Click(object sender, EventArgs e)
         {
             Forms.useraccount user = new useraccount();
-            user.txtusername.Text = txtname.Text;
+            if (txtname.Text.Equals("SUPER ADMIN"))
+            {
+                user.txtusername.Text = "DIGI";
+                user.txtfirstname.Text = "SORT";
+                user.txtlastname.Text = "BOX";
+                user.txtposition.Text = txtname.Text;
+            }
+            else
+            {
+                user.txtusername.Text = txtname.Text;
+            }
+
             user.ShowDialog();
         }
 

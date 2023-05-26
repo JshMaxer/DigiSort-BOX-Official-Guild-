@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using DigiSort_Box.Mowdel;
+using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
@@ -7,8 +8,9 @@ namespace DigiSort_Box.Database
 {
     class CreateAcc
     {
-        public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username, Guna2ComboBox cbusertype)
+        public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username, Guna2ComboBox cbusertype, System.Windows.Forms.Label lbl)
         {
+            Lageen lageen = new Lageen();
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
 
             try
@@ -16,10 +18,12 @@ namespace DigiSort_Box.Database
                 if (firstname.Text.Equals("") || lastname.Text.Equals("") || paswword.Text.Equals("") || retype.Text.Equals("") || username.Text.Equals(""))
                 {
                     MessageBox.Show("Form must be filled-out completely!");
+                    lbl.Text = "filled";
                 }
                 else if (!retype.Text.Equals(paswword.Text))
                 {
                     MessageBox.Show("Password do not match!");
+                    lbl.Text = "dontmatch";
                 }
                 else
                 {
@@ -37,7 +41,7 @@ namespace DigiSort_Box.Database
                                 MessageBox.Show("Account successfully created!");
                                 Forms.Login log = new Forms.Login();
                                 log.Show();
-                            
+                                lbl.Text = "success";
                             }
                             else
                             {
@@ -48,6 +52,7 @@ namespace DigiSort_Box.Database
                         {
                             MessageBox.Show(ex.Message);
                             MessageBox.Show("Username is already used!");
+                            lbl.Text = "already";
                         }
 
                         connection.Close();
@@ -65,8 +70,8 @@ namespace DigiSort_Box.Database
                             {
                                 MessageBox.Show("Account successfully created!");
                                 Forms.Login log = new Forms.Login();
-                                log.Show();
-                                //Application.Exit();
+                                log.Show(); 
+                                lbl.Text = "success";
 
                             }
                             else
@@ -74,9 +79,10 @@ namespace DigiSort_Box.Database
                                 MessageBox.Show("Account Unsuccessfully created!");
                             }
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
                             MessageBox.Show("Username is already used!");
+                            lbl.Text = "already";
                         }
 
                         connection.Close();
