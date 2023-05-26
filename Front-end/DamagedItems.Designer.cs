@@ -48,12 +48,11 @@ namespace DigiSort_Box.Front_end
             this.dgvitems.AllowUserToAddRows = false;
             this.dgvitems.AllowUserToDeleteRows = false;
             this.dgvitems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvitems.Location = new System.Drawing.Point(146, 71);
-            this.dgvitems.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvitems.Location = new System.Drawing.Point(110, 58);
             this.dgvitems.Name = "dgvitems";
             this.dgvitems.ReadOnly = true;
             this.dgvitems.RowHeadersWidth = 51;
-            this.dgvitems.Size = new System.Drawing.Size(695, 386);
+            this.dgvitems.Size = new System.Drawing.Size(521, 314);
             this.dgvitems.TabIndex = 46;
             this.dgvitems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvitems_CellClick);
             // 
@@ -78,15 +77,14 @@ namespace DigiSort_Box.Front_end
             this.txtissue.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.txtissue.ForeColor = System.Drawing.Color.Black;
             this.txtissue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtissue.Location = new System.Drawing.Point(158, 465);
-            this.txtissue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtissue.Location = new System.Drawing.Point(118, 378);
             this.txtissue.MaxLength = 255;
             this.txtissue.Multiline = true;
             this.txtissue.Name = "txtissue";
             this.txtissue.PasswordChar = '\0';
             this.txtissue.PlaceholderText = "(ISSUE) This item is damage...";
             this.txtissue.SelectedText = "";
-            this.txtissue.Size = new System.Drawing.Size(671, 99);
+            this.txtissue.Size = new System.Drawing.Size(503, 80);
             this.txtissue.TabIndex = 47;
             // 
             // txtquantity
@@ -104,14 +102,13 @@ namespace DigiSort_Box.Front_end
             this.txtquantity.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtquantity.Location = new System.Drawing.Point(435, 572);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtquantity.Location = new System.Drawing.Point(326, 465);
             this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
             this.txtquantity.PlaceholderText = "QUANTITY";
             this.txtquantity.SelectedText = "";
-            this.txtquantity.Size = new System.Drawing.Size(117, 31);
+            this.txtquantity.Size = new System.Drawing.Size(88, 25);
             this.txtquantity.TabIndex = 47;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
@@ -128,9 +125,10 @@ namespace DigiSort_Box.Front_end
             this.btnadd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnadd.ForeColor = System.Drawing.Color.White;
             this.btnadd.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnadd.Location = new System.Drawing.Point(844, 572);
+            this.btnadd.Location = new System.Drawing.Point(633, 465);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(137, 38);
+            this.btnadd.Size = new System.Drawing.Size(103, 31);
             this.btnadd.TabIndex = 69;
             this.btnadd.Text = "Add";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
@@ -151,10 +149,10 @@ namespace DigiSort_Box.Front_end
             "Raw Materials",
             "Ready to Sell Items",
             "Unprinted Shirts"});
-            this.cbtable.Location = new System.Drawing.Point(214, 11);
-            this.cbtable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbtable.Location = new System.Drawing.Point(160, 9);
+            this.cbtable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbtable.Name = "cbtable";
-            this.cbtable.Size = new System.Drawing.Size(558, 36);
+            this.cbtable.Size = new System.Drawing.Size(420, 36);
             this.cbtable.StartIndex = 0;
             this.cbtable.TabIndex = 79;
             this.cbtable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -163,45 +161,49 @@ namespace DigiSort_Box.Front_end
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(969, 15);
+            this.label1.Location = new System.Drawing.Point(727, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 80;
             this.label1.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(969, 15);
+            this.label2.Location = new System.Drawing.Point(727, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 80;
             this.label2.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(969, 15);
+            this.label3.Location = new System.Drawing.Point(727, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 16);
+            this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 80;
             this.label3.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(969, 15);
+            this.label4.Location = new System.Drawing.Point(727, 12);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 16);
+            this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 80;
             this.label4.Visible = false;
             // 
             // Damaged_Items
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(993, 622);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
+            this.ClientSize = new System.Drawing.Size(745, 505);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -212,7 +214,6 @@ namespace DigiSort_Box.Front_end
             this.Controls.Add(this.txtissue);
             this.Controls.Add(this.dgvitems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Damaged_Items";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Damaged Items";

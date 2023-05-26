@@ -260,5 +260,10 @@ namespace DigiSort_Box.Forms
             Front_end.Account_Management am = new Front_end.Account_Management();
             am.ShowDialog();
         }
+
+        private void mainpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

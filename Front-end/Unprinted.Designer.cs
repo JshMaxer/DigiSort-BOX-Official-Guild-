@@ -45,10 +45,9 @@ namespace DigiSort_Box.Forms
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(452, 360);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(339, 292);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 20);
+            this.label10.Size = new System.Drawing.Size(74, 17);
             this.label10.TabIndex = 49;
             this.label10.Text = "Quantity";
             // 
@@ -56,10 +55,9 @@ namespace DigiSort_Box.Forms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(473, 281);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(355, 228);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 20);
+            this.label9.Size = new System.Drawing.Size(39, 17);
             this.label9.TabIndex = 42;
             this.label9.Text = "Size";
             // 
@@ -67,10 +65,9 @@ namespace DigiSort_Box.Forms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(464, 190);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(348, 154);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 20);
+            this.label7.Size = new System.Drawing.Size(56, 17);
             this.label7.TabIndex = 34;
             this.label7.Text = "Shade";
             // 
@@ -78,10 +75,9 @@ namespace DigiSort_Box.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(468, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(351, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 27;
             this.label1.Text = "Color";
             // 
@@ -89,10 +85,10 @@ namespace DigiSort_Box.Forms
             // 
             this.btnback.BackColor = System.Drawing.Color.Gray;
             this.btnback.ForeColor = System.Drawing.Color.White;
-            this.btnback.Location = new System.Drawing.Point(12, 12);
-            this.btnback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnback.Location = new System.Drawing.Point(9, 10);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(77, 34);
+            this.btnback.Size = new System.Drawing.Size(58, 28);
             this.btnback.TabIndex = 59;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = false;
@@ -112,9 +108,10 @@ namespace DigiSort_Box.Forms
             this.btnadd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnadd.ForeColor = System.Drawing.Color.White;
             this.btnadd.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnadd.Location = new System.Drawing.Point(774, 540);
+            this.btnadd.Location = new System.Drawing.Point(580, 439);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(165, 45);
+            this.btnadd.Size = new System.Drawing.Size(124, 37);
             this.btnadd.TabIndex = 69;
             this.btnadd.Text = "Add";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
@@ -143,10 +140,10 @@ namespace DigiSort_Box.Forms
             "Brown",
             "Gray",
             "Black"});
-            this.cbcolor.Location = new System.Drawing.Point(318, 132);
-            this.cbcolor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbcolor.Location = new System.Drawing.Point(238, 107);
+            this.cbcolor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbcolor.Name = "cbcolor";
-            this.cbcolor.Size = new System.Drawing.Size(359, 36);
+            this.cbcolor.Size = new System.Drawing.Size(270, 36);
             this.cbcolor.StartIndex = 0;
             this.cbcolor.TabIndex = 70;
             this.cbcolor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -164,10 +161,10 @@ namespace DigiSort_Box.Forms
             this.cbshade.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.cbshade.ForeColor = System.Drawing.Color.Black;
             this.cbshade.ItemHeight = 30;
-            this.cbshade.Location = new System.Drawing.Point(318, 212);
-            this.cbshade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbshade.Location = new System.Drawing.Point(238, 172);
+            this.cbshade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbshade.Name = "cbshade";
-            this.cbshade.Size = new System.Drawing.Size(359, 36);
+            this.cbshade.Size = new System.Drawing.Size(270, 36);
             this.cbshade.TabIndex = 70;
             this.cbshade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cbshade.SelectedIndexChanged += new System.EventHandler(this.cbshade_SelectedIndexChanged);
@@ -194,10 +191,10 @@ namespace DigiSort_Box.Forms
             "3XL",
             "4XL",
             "5XL"});
-            this.cbsize.Location = new System.Drawing.Point(318, 303);
-            this.cbsize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbsize.Location = new System.Drawing.Point(238, 246);
+            this.cbsize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbsize.Name = "cbsize";
-            this.cbsize.Size = new System.Drawing.Size(359, 36);
+            this.cbsize.Size = new System.Drawing.Size(270, 36);
             this.cbsize.StartIndex = 0;
             this.cbsize.TabIndex = 70;
             this.cbsize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -218,14 +215,14 @@ namespace DigiSort_Box.Forms
             this.txtquantity.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtquantity.Location = new System.Drawing.Point(318, 385);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(5);
+            this.txtquantity.Location = new System.Drawing.Point(238, 313);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
             this.txtquantity.PlaceholderText = "";
             this.txtquantity.SelectedText = "";
-            this.txtquantity.Size = new System.Drawing.Size(359, 36);
+            this.txtquantity.Size = new System.Drawing.Size(269, 29);
             this.txtquantity.TabIndex = 71;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
@@ -233,10 +230,10 @@ namespace DigiSort_Box.Forms
             // 
             // Unprinted
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(993, 622);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
+            this.ClientSize = new System.Drawing.Size(745, 505);
             this.Controls.Add(this.txtquantity);
             this.Controls.Add(this.cbsize);
             this.Controls.Add(this.cbshade);
@@ -248,7 +245,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Unprinted";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Unprinted";
