@@ -31,7 +31,7 @@
 * Could-have monthly view reports and track the numerous counts of items.
 * Won’t-have requirements might include integration with social media platforms.
 
-## Database ##
+# Database #
 ### Guide to import database ###
 
 1. Create local database on xampp/MySQL
@@ -43,5 +43,5 @@
 
 * You should see the tables after you imported.
 
-# Database File # 
+## Database File ## 
 [UpdatedDB - 5/28/23](https://github.com/JshMaxer/DigiSort-BOX-Official-Guild-/files/11583580/digisortbox.sql.gz)
