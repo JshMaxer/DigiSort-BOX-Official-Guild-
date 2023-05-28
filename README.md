@@ -31,52 +31,6 @@
 * Could-have monthly view reports and track the numerous counts of items.
 * Won’t-have requirements might include integration with social media platforms.
 
-## **Database**
-
-### Name of the database: ***digisortbox***
-
-Tables in ***digisortbox***    |
------------------------------- |
-account                        |
-raw_material                   |
-ready_to_sell_items            |
-unprinted_shirts               |
-
-### Tables Description: account ###
-***Field***                    | ***Type***      | ***NULL***      | ***Key***      | ***Default***      | ***Extra***      |
------------------------------- |-----------------|-----------------|----------------|--------------------|------------------|
-username                       | varchar(255)    | No              | PRI            | NULL               |                  |
-first_name                     | varchar(255)    | No              |                | NULL               |                  |
-last_name                      | varchar(255)    | No              |                | NULL               |                  |
-email                          | varchar(255)    | No              |                | NULL               |                  |
-password                       | varchar(255)    | No              |                | NULL               |                  |
-
-### Tables Description: raw_material ###
-***Field***                    | ***Type***      | ***NULL***      | ***Key***      | ***Default***      | ***Extra***      |
------------------------------- |-----------------|-----------------|----------------|--------------------|------------------|
-material                       | varchar(255)    | No              | PRI            | NULL               |                  |
-design                         | varchar(255)    | No              |                | NULL               |                  |
-color                          | varchar(255)    | No              |                | NULL               |                  |
-quantity                       | int(255)        | No              |                | NULL               |                  |
-
-### Tables Description: ready_to_sell_items ###
-***Field***                    | ***Type***      | ***NULL***      | ***Key***      | ***Default***      | ***Extra***      |
------------------------------- |-----------------|-----------------|----------------|--------------------|------------------|
-product_name                   | varchar(255)    | No              | PRI            | NULL               |                  |
-color                          | varchar(255)    | No              | MUL            | NULL               |                  |
-shade                          | varchar(255)    | No              |                | NULL               |                  |
-size                           | varchar(255)    | No              |                | NULL               |                  |
-quantity                       | int(255)        | No              |                | NULL               |                  |
-
-### Tables Description: unprinted_shirts; ###
-***Field***                    | ***Type***      | ***NULL***      | ***Key***      | ***Default***      | ***Extra***      |
------------------------------- |-----------------|-----------------|----------------|--------------------|------------------|
-color                          | varchar(255)    | No              | PRI            | NULL               |                  |
-shade                          | varchar(255)    | No              |                | NULL               |                  |
-size                           | varchar(255)    | No              |                | NULL               |                  |
-quantity                       | int(255)        | No              |                | NULL               |                  |
-
-
 # Database #
 #### Guide to import database ####
 
