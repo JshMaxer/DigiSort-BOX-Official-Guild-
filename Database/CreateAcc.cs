@@ -27,10 +27,13 @@ namespace DigiSort_Box.Database
                 }
                 else
                 {
+                    DateTime dateTimeVariable = DateTime.Now;
+                    string date = dateTimeVariable.ToString("yyyy-MM-dd");
+
                     //Floor admin account
                     if (cbusertype.SelectedItem.Equals("Floor admin"))
                     {
-                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Floor_Admin" + "', '" + "Active" + "')";
+                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Floor_Admin" + "', '" + "Active" + "', '" + date + "')";
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 
@@ -60,7 +63,7 @@ namespace DigiSort_Box.Database
                     //Top admin
                     else if (cbusertype.SelectedItem.Equals("Top admin"))
                     {
-                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Top_Admin" + "', '" + "Active" + "')";
+                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Top_Admin" + "', '" + "Active" + "', '" + date + "')";
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 

@@ -32,9 +32,9 @@ namespace DigiSort_Box.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(update));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtusername = new System.Windows.Forms.Label();
             this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtusername = new System.Windows.Forms.Label();
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnupdate = new Guna.UI2.WinForms.Guna2Button();
             this.lbltxt1 = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@ namespace DigiSort_Box.Forms
             this.cb2 = new System.Windows.Forms.ComboBox();
             this.cb3 = new System.Windows.Forms.ComboBox();
             this.cb4 = new System.Windows.Forms.ComboBox();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtable)).BeginInit();
             this.SuspendLayout();
@@ -56,11 +57,6 @@ namespace DigiSort_Box.Forms
             this.panel1.Controls.Add(this.label1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
-            // txtusername
-            // 
-            resources.ApplyResources(this.txtusername, "txtusername");
-            this.txtusername.Name = "txtusername";
             // 
             // exitform
             // 
@@ -75,6 +71,11 @@ namespace DigiSort_Box.Forms
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            // 
+            // txtusername
+            // 
+            resources.ApplyResources(this.txtusername, "txtusername");
+            this.txtusername.Name = "txtusername";
             // 
             // smoothedge
             // 
@@ -155,11 +156,18 @@ namespace DigiSort_Box.Forms
             this.cb4.FormattingEnabled = true;
             this.cb4.Name = "cb4";
             // 
+            // txtid
+            // 
+            resources.ApplyResources(this.txtid, "txtid");
+            this.txtid.Name = "txtid";
+            this.txtid.ReadOnly = true;
+            // 
             // update
             // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.txtid);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.cb4);
             this.Controls.Add(this.cb3);
@@ -197,5 +205,6 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.ComboBox cb3;
         private System.Windows.Forms.ComboBox cb2;
         private System.Windows.Forms.ComboBox cb1;
+        private System.Windows.Forms.TextBox txtid;
     }
 }

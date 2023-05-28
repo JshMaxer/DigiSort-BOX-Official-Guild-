@@ -23,7 +23,7 @@ namespace DigiSort_Box.Database
         void insert(Guna2ComboBox product, Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
         {
             //insert query
-            string InsertQuery = "INSERT INTO ready_to_sell_items VALUES ('" + product.SelectedItem.ToString() + "', '" + color.SelectedItem.ToString() + "', '" + shade.SelectedItem.ToString() + "', '" + size.SelectedItem.ToString() + "', " + quantity.Text + ")";
+            string InsertQuery = "INSERT INTO ready_to_sell_items VALUES ('0', '" + product.SelectedItem.ToString() + "', '" + color.SelectedItem.ToString() + "', '" + shade.SelectedItem.ToString() + "', '" + size.SelectedItem.ToString() + "', '" + quantity.Text + "')";
             connection.Close();
             connection.Open();
             MySqlCommand command = new MySqlCommand(InsertQuery, connection);

@@ -29,7 +29,7 @@ namespace DigiSort_Box.Forms
         void raw()
         {
             //show raw
-            string query = "SELECT * FROM raw_material"; ;
+            string query = "SELECT * FROM raw_material";
             MySqlCommand cmd = new MySqlCommand(query, connection);
             MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable dtRecords = new DataTable();
@@ -180,7 +180,7 @@ namespace DigiSort_Box.Forms
                         connection.Close();
                         connection.Open();
                         //update query
-                        string updateQuery = "UPDATE raw_material SET material = '" + cb1.Text + "', design = '" + cb2.Text + "', color = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE material = '" + lbltxt1.Text + "'";
+                        string updateQuery = "UPDATE raw_material SET material = '" + cb1.Text + "', design = '" + cb2.Text + "', color = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE id = '" + txtid.Text + "'";
                         MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
                         try
@@ -220,7 +220,7 @@ namespace DigiSort_Box.Forms
                         connection.Close();
                         connection.Open();
                         //update query
-                        string updateQuery = "UPDATE ready_to_sell_items SET product_name = '" + cb1.Text + "', color = '" + cb2.Text + "', shade = '" + cb3.Text + "', size ='" + cb4.Text + "', quantity ='" + txt5.Text + "' WHERE product_name = '" + lbltxt1.Text + "'";
+                        string updateQuery = "UPDATE ready_to_sell_items SET product_name = '" + cb1.Text + "', color = '" + cb2.Text + "', shade = '" + cb3.Text + "', size ='" + cb4.Text + "', quantity ='" + txt5.Text + "' WHERE id = '" + txtid.Text + "'";
                         MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
                         try
@@ -260,7 +260,7 @@ namespace DigiSort_Box.Forms
                         connection.Close();
                         connection.Open();
                         //update query
-                        string updateQuery = "UPDATE unprinted_shirts SET color = '" + cb1.Text + "', shade = '" + cb2.Text + "', size = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE color = '" + lbltxt1.Text + "'";
+                        string updateQuery = "UPDATE unprinted_shirts SET color = '" + cb1.Text + "', shade = '" + cb2.Text + "', size = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE id = '" + txtid.Text + "'";
                         MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
                         try
@@ -330,6 +330,10 @@ namespace DigiSort_Box.Forms
 
                     //Add items on combobox
 
+                    //Id
+                    txtid.Text = "";
+                    txtid.Text = dgvRow.Cells[0].Value.ToString();
+
                     //Product name
                     cb1.Items.Clear();
                     cb1.Items.Add("SpyXFamily");
@@ -339,7 +343,7 @@ namespace DigiSort_Box.Forms
                     cb1.Items.Add("Kimetsu no Yaiba");
                     cb1.Items.Add("Bleach");
                     cb1.Items.Add("Boku no tige");
-                    cb1.Text = dgvRow.Cells[0].Value.ToString();
+                    cb1.Text = dgvRow.Cells[1].Value.ToString();
                     lbltxt1.Text = cb1.Text;
 
                     //Color
@@ -354,10 +358,10 @@ namespace DigiSort_Box.Forms
                     cb2.Items.Add("Brown");
                     cb2.Items.Add("Gray");
                     cb2.Items.Add("Black");
-                    cb2.Text = dgvRow.Cells[1].Value.ToString();
+                    cb2.Text = dgvRow.Cells[2].Value.ToString();
 
                     //shade
-                    cb3.Text = dgvRow.Cells[2].Value.ToString();
+                    cb3.Text = dgvRow.Cells[3].Value.ToString();
 
                     //size
                     cb4.Visible = true;
@@ -370,10 +374,10 @@ namespace DigiSort_Box.Forms
                     cb4.Items.Add("3XL");
                     cb4.Items.Add("4XL");
                     cb4.Items.Add("5XL");
-                    cb4.Text = dgvRow.Cells[3].Value.ToString();
+                    cb4.Text = dgvRow.Cells[4].Value.ToString();
 
                     //Quantity
-                    txt5.Text = dgvRow.Cells[4].Value.ToString();
+                    txt5.Text = dgvRow.Cells[5].Value.ToString();
                     txt5.Visible = true;
 
                 }
@@ -386,13 +390,17 @@ namespace DigiSort_Box.Forms
 
                     //Add items on combobox
 
+                    //Id
+                    txtid.Text = "";
+                    txtid.Text = dgvRow.Cells[0].Value.ToString();
+
                     //Materials
                     cb1.Items.Clear();
                     cb1.Items.Add("Vinyl");
                     cb1.Items.Add("Sticker paper");
                     cb1.Items.Add("Laminating film");
                     cb1.Items.Add("DTP.");
-                    cb1.Text = dgvRow.Cells[0].Value.ToString();
+                    cb1.Text = dgvRow.Cells[1].Value.ToString();
                     lbltxt1.Text = cb1.Text;
 
                     //Design
@@ -404,7 +412,7 @@ namespace DigiSort_Box.Forms
                     cb2.Items.Add("Kimetsu no Yaiba");
                     cb2.Items.Add("Bleach");
                     cb2.Items.Add("Boku no tige");
-                    cb2.Text = dgvRow.Cells[1].Value.ToString();
+                    cb2.Text = dgvRow.Cells[2].Value.ToString();
 
                     //Color
                     cb3.Items.Clear();
@@ -418,14 +426,14 @@ namespace DigiSort_Box.Forms
                     cb3.Items.Add("Brown");
                     cb3.Items.Add("Gray");
                     cb3.Items.Add("Black");
-                    cb3.Text = dgvRow.Cells[2].Value.ToString();
+                    cb3.Text = dgvRow.Cells[3].Value.ToString();
 
                     //visible
                     cb4.Items.Clear();
                     cb4.Visible = false;
 
                     //Quantity
-                    txt5.Text = dgvRow.Cells[3].Value.ToString();
+                    txt5.Text = dgvRow.Cells[4].Value.ToString();
                     txt5.Visible = true;
                 }
             }
@@ -436,6 +444,10 @@ namespace DigiSort_Box.Forms
                     DataGridViewRow dgvRow = dgtable.Rows[e.RowIndex];
 
                     //Add items on combobox
+
+                    //Id
+                    txtid.Text = "";
+                    txtid.Text = dgvRow.Cells[0].Value.ToString();
 
                     //Color
                     cb1.Items.Clear();
@@ -449,11 +461,11 @@ namespace DigiSort_Box.Forms
                     cb1.Items.Add("Brown");
                     cb1.Items.Add("Gray");
                     cb1.Items.Add("Black");
-                    cb1.Text = dgvRow.Cells[0].Value.ToString();
+                    cb1.Text = dgvRow.Cells[1].Value.ToString();
                     lbltxt1.Text = cb1.Text;
 
                     //shade
-                    cb2.Text = dgvRow.Cells[1].Value.ToString();
+                    cb2.Text = dgvRow.Cells[2].Value.ToString();
 
                     //size
                     cb3.Items.Clear();
@@ -465,14 +477,14 @@ namespace DigiSort_Box.Forms
                     cb3.Items.Add("3XL");
                     cb3.Items.Add("4XL");
                     cb3.Items.Add("5XL");
-                    cb3.Text = dgvRow.Cells[2].Value.ToString();
+                    cb3.Text = dgvRow.Cells[3].Value.ToString();
 
                     //visible
                     cb4.Items.Clear();
                     cb4.Visible = false;
 
                     //Quantity
-                    txt5.Text = dgvRow.Cells[3].Value.ToString();
+                    txt5.Text = dgvRow.Cells[4].Value.ToString();
                     txt5.Visible = true;
                 }
             }

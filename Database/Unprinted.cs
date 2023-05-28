@@ -21,7 +21,7 @@ namespace DigiSort_Box.Database
         void insert(Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
         {
             //insert query
-            string InsertQuery = "INSERT INTO unprinted_shirts VALUES ('" + color.SelectedItem.ToString() + "', '" + shade.SelectedItem.ToString() + "', '" + size.SelectedItem.ToString() + "', " + quantity.Text + ")";
+            string InsertQuery = "INSERT INTO unprinted_shirts VALUES ('0', '" + color.SelectedItem.ToString() + "', '" + shade.SelectedItem.ToString() + "', '" + size.SelectedItem.ToString() + "', " + quantity.Text + ")";
             connection.Close();
             connection.Open();
             MySqlCommand command = new MySqlCommand(InsertQuery, connection);

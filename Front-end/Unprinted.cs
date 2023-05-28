@@ -17,12 +17,6 @@ namespace DigiSort_Box.Forms
             InitializeComponent();
         }
 
-        private void cbothercolor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
         private void btnback_Click(object sender, EventArgs e)
         {
             Forms.preview pv = new Forms.preview();
