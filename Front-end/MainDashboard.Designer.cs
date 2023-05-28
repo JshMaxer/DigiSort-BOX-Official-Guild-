@@ -77,7 +77,7 @@ namespace DigiSort_Box.Forms
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Location = new System.Drawing.Point(116, 25);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(212, 112);
             this.guna2Panel1.TabIndex = 0;
@@ -108,7 +108,7 @@ namespace DigiSort_Box.Forms
             // 
             this.pictureBox1.Image = global::DigiSort_Box.Properties.Resources.group;
             this.pictureBox1.Location = new System.Drawing.Point(58, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,7 +125,7 @@ namespace DigiSort_Box.Forms
             this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.Location = new System.Drawing.Point(408, 25);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(212, 112);
             this.guna2Panel2.TabIndex = 0;
@@ -156,7 +156,7 @@ namespace DigiSort_Box.Forms
             // 
             this.pictureBox2.Image = global::DigiSort_Box.Properties.Resources.group;
             this.pictureBox2.Location = new System.Drawing.Point(58, 35);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(69, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -173,7 +173,7 @@ namespace DigiSort_Box.Forms
             this.guna2Panel3.Controls.Add(this.label5);
             this.guna2Panel3.Controls.Add(this.pictureBox3);
             this.guna2Panel3.Location = new System.Drawing.Point(104, 167);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(236, 124);
             this.guna2Panel3.TabIndex = 0;
@@ -205,7 +205,7 @@ namespace DigiSort_Box.Forms
             // 
             this.pictureBox3.Image = global::DigiSort_Box.Properties.Resources.cloth;
             this.pictureBox3.Location = new System.Drawing.Point(58, 48);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(69, 64);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,7 +222,7 @@ namespace DigiSort_Box.Forms
             this.guna2Panel4.Controls.Add(this.label7);
             this.guna2Panel4.Controls.Add(this.pictureBox4);
             this.guna2Panel4.Location = new System.Drawing.Point(396, 167);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(236, 124);
             this.guna2Panel4.TabIndex = 0;
@@ -254,7 +254,7 @@ namespace DigiSort_Box.Forms
             // 
             this.pictureBox4.Image = global::DigiSort_Box.Properties.Resources.raw_materials;
             this.pictureBox4.Location = new System.Drawing.Point(58, 48);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(69, 64);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -271,7 +271,7 @@ namespace DigiSort_Box.Forms
             this.guna2Panel5.Controls.Add(this.label9);
             this.guna2Panel5.Controls.Add(this.pictureBox5);
             this.guna2Panel5.Location = new System.Drawing.Point(104, 323);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(236, 124);
             this.guna2Panel5.TabIndex = 0;
@@ -303,7 +303,7 @@ namespace DigiSort_Box.Forms
             // 
             this.pictureBox5.Image = global::DigiSort_Box.Properties.Resources.trade;
             this.pictureBox5.Location = new System.Drawing.Point(58, 48);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(69, 64);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -320,7 +320,7 @@ namespace DigiSort_Box.Forms
             this.guna2Panel6.Controls.Add(this.label11);
             this.guna2Panel6.Controls.Add(this.pictureBox6);
             this.guna2Panel6.Location = new System.Drawing.Point(396, 323);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(236, 124);
             this.guna2Panel6.TabIndex = 0;
@@ -352,7 +352,7 @@ namespace DigiSort_Box.Forms
             // 
             this.pictureBox6.Image = global::DigiSort_Box.Properties.Resources.package;
             this.pictureBox6.Location = new System.Drawing.Point(58, 48);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(69, 64);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -363,7 +363,7 @@ namespace DigiSort_Box.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(729, 466);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel6);

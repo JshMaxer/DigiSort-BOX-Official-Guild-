@@ -46,7 +46,7 @@ namespace DigiSort_Box.Forms
             this.btnback.BackColor = System.Drawing.Color.Gray;
             this.btnback.ForeColor = System.Drawing.Color.White;
             this.btnback.Location = new System.Drawing.Point(9, 10);
-            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(58, 28);
             this.btnback.TabIndex = 67;
@@ -69,7 +69,7 @@ namespace DigiSort_Box.Forms
             this.btnadd.ForeColor = System.Drawing.Color.White;
             this.btnadd.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
             this.btnadd.Location = new System.Drawing.Point(580, 439);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(124, 37);
             this.btnadd.TabIndex = 68;
@@ -92,7 +92,7 @@ namespace DigiSort_Box.Forms
             this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtquantity.Location = new System.Drawing.Point(244, 359);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
@@ -129,7 +129,7 @@ namespace DigiSort_Box.Forms
             "Gray",
             "Black"});
             this.cbcolor.Location = new System.Drawing.Point(244, 278);
-            this.cbcolor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbcolor.Margin = new System.Windows.Forms.Padding(2);
             this.cbcolor.Name = "cbcolor";
             this.cbcolor.Size = new System.Drawing.Size(270, 36);
             this.cbcolor.StartIndex = 0;
@@ -159,7 +159,7 @@ namespace DigiSort_Box.Forms
             "Bleach",
             "Boku no tige"});
             this.cbdesign.Location = new System.Drawing.Point(244, 197);
-            this.cbdesign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbdesign.Margin = new System.Windows.Forms.Padding(2);
             this.cbdesign.Name = "cbdesign";
             this.cbdesign.Size = new System.Drawing.Size(270, 36);
             this.cbdesign.TabIndex = 77;
@@ -185,7 +185,7 @@ namespace DigiSort_Box.Forms
             "Laminating film",
             "DTP."});
             this.cbmaterial.Location = new System.Drawing.Point(244, 115);
-            this.cbmaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbmaterial.Margin = new System.Windows.Forms.Padding(2);
             this.cbmaterial.Name = "cbmaterial";
             this.cbmaterial.Size = new System.Drawing.Size(270, 36);
             this.cbmaterial.StartIndex = 0;
@@ -237,7 +237,7 @@ namespace DigiSort_Box.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(745, 505);
             this.Controls.Add(this.txtquantity);
             this.Controls.Add(this.cbcolor);
@@ -250,7 +250,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnback);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RawMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RawMaterial";

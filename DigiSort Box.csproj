@@ -54,6 +54,7 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.33\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
@@ -116,6 +117,7 @@
     <Compile Include="Back-end\Update.cs" />
     <Compile Include="Back-end\useraccount.cs" />
     <Compile Include="Database\Account_Management.cs" />
+    <Compile Include="Database\Concern.cs" />
     <Compile Include="Database\CreateAcc.cs" />
     <Compile Include="Database\Damage.cs" />
     <Compile Include="Database\Dashboard.cs" />
@@ -132,6 +134,13 @@
     <Compile Include="Database\Unprinted.cs" />
     <Compile Include="Database\Update.cs" />
     <Compile Include="Database\useraccount.cs" />
+    <Compile Include="Database\userreset.cs" />
+    <Compile Include="Front-end\Concern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-end\Concern.Designer.cs">
+      <DependentUpon>Concern.cs</DependentUpon>
+    </Compile>
     <Compile Include="Front-end\CreateAcc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,10 +243,19 @@
     <Compile Include="Front-end\useraccount.Designer.cs">
       <DependentUpon>useraccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Front-end\Userreset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-end\Userreset.Designer.cs">
+      <DependentUpon>Userreset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Items.cs" />
     <Compile Include="Model\Lageen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Front-end\Concern.resx">
+      <DependentUpon>Concern.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Front-end\CreateAcc.resx">
       <DependentUpon>CreateAcc.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\useraccount.resx">
       <DependentUpon>useraccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-end\Userreset.resx">
+      <DependentUpon>Userreset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -381,6 +402,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

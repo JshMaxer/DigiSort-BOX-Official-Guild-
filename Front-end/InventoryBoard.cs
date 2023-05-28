@@ -24,6 +24,9 @@ namespace DigiSort_Box.Forms
         DataTable dtRaw = new DataTable();
         DataTable dtUnprint = new DataTable();
         DataTable dtReady = new DataTable();
+        DataTable dtrawdamage = new DataTable();
+        DataTable dtunprintdamage = new DataTable();
+        DataTable dtreadydamage = new DataTable();
         public Inventory()
         {
             InitializeComponent();
@@ -37,6 +40,9 @@ namespace DigiSort_Box.Forms
             raw();
             unprint();
             ready();
+            rawdamage();
+            unprintdamage();
+            readydamage();
 
             connection.Close();
         }
@@ -72,6 +78,40 @@ namespace DigiSort_Box.Forms
             MySqlDataReader sdr = unprint.ExecuteReader();
             dtReady.Load(sdr);
             dgready.DataSource = dtReady;
+        }
+
+        private void rawdamage()
+        {
+            connection.Close();
+            connection.Open();
+            //ready
+            string rawdamage = "SELECT * FROM raw_material_damage_items";
+            MySqlCommand cmd = new MySqlCommand(rawdamage, connection);
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            dtrawdamage.Load(sdr);
+            dgrawdamage.DataSource = dtrawdamage;
+        }
+        private void readydamage()
+        {
+            connection.Close();
+            connection.Open();
+            //ready
+            string readydamage = "SELECT * FROM ready_to_sell_items_damage_items";
+            MySqlCommand cmd = new MySqlCommand(readydamage, connection);
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            dtreadydamage.Load(sdr);
+            dgreadydamage.DataSource = dtreadydamage;
+        }
+        private void unprintdamage()
+        {
+            connection.Close();
+            connection.Open();
+            //ready
+            string unprintdamage = "SELECT * FROM unprinted_shirts_damage_items";
+            MySqlCommand cmd = new MySqlCommand(unprintdamage, connection);
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            dtunprintdamage.Load(sdr);
+            dgunprinteddamage.DataSource = dtunprintdamage;
         }
 
         private void txtunprinted_TextChanged_1(object sender, EventArgs e)

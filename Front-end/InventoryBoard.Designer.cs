@@ -39,13 +39,31 @@ namespace DigiSort_Box.Forms
             this.btndelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnprint = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtusername = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgrawdamage = new System.Windows.Forms.DataGridView();
             this.txtdamage = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
+            this.tabraw = new System.Windows.Forms.TabPage();
+            this.tabready = new System.Windows.Forms.TabPage();
+            this.tabunprinted = new System.Windows.Forms.TabPage();
+            this.tabrawdamage = new System.Windows.Forms.TabPage();
+            this.tabreadydamage = new System.Windows.Forms.TabPage();
+            this.tabunprinteddamage = new System.Windows.Forms.TabPage();
+            this.dgreadydamage = new System.Windows.Forms.DataGridView();
+            this.dgunprinteddamage = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgready)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrawmaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgunprinted)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrawdamage)).BeginInit();
+            this.guna2TabControl1.SuspendLayout();
+            this.tabraw.SuspendLayout();
+            this.tabready.SuspendLayout();
+            this.tabunprinted.SuspendLayout();
+            this.tabrawdamage.SuspendLayout();
+            this.tabreadydamage.SuspendLayout();
+            this.tabunprinteddamage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgreadydamage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgunprinteddamage)).BeginInit();
             this.SuspendLayout();
             // 
             // dgready
@@ -54,11 +72,11 @@ namespace DigiSort_Box.Forms
             this.dgready.AllowUserToDeleteRows = false;
             this.dgready.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgready.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgready.Location = new System.Drawing.Point(321, 11);
+            this.dgready.Location = new System.Drawing.Point(6, 6);
             this.dgready.Name = "dgready";
             this.dgready.ReadOnly = true;
             this.dgready.RowHeadersWidth = 51;
-            this.dgready.Size = new System.Drawing.Size(304, 238);
+            this.dgready.Size = new System.Drawing.Size(426, 481);
             this.dgready.TabIndex = 23;
             // 
             // dgrawmaterial
@@ -67,11 +85,11 @@ namespace DigiSort_Box.Forms
             this.dgrawmaterial.AllowUserToDeleteRows = false;
             this.dgrawmaterial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgrawmaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrawmaterial.Location = new System.Drawing.Point(11, 255);
+            this.dgrawmaterial.Location = new System.Drawing.Point(6, 6);
             this.dgrawmaterial.Name = "dgrawmaterial";
             this.dgrawmaterial.ReadOnly = true;
             this.dgrawmaterial.RowHeadersWidth = 51;
-            this.dgrawmaterial.Size = new System.Drawing.Size(304, 238);
+            this.dgrawmaterial.Size = new System.Drawing.Size(426, 481);
             this.dgrawmaterial.TabIndex = 19;
             // 
             // dgunprinted
@@ -80,11 +98,11 @@ namespace DigiSort_Box.Forms
             this.dgunprinted.AllowUserToDeleteRows = false;
             this.dgunprinted.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgunprinted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgunprinted.Location = new System.Drawing.Point(11, 11);
+            this.dgunprinted.Location = new System.Drawing.Point(6, 6);
             this.dgunprinted.Name = "dgunprinted";
             this.dgunprinted.ReadOnly = true;
             this.dgunprinted.RowHeadersWidth = 51;
-            this.dgunprinted.Size = new System.Drawing.Size(304, 238);
+            this.dgunprinted.Size = new System.Drawing.Size(426, 481);
             this.dgunprinted.TabIndex = 16;
             // 
             // txtunprinted
@@ -101,8 +119,8 @@ namespace DigiSort_Box.Forms
             this.txtunprinted.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtunprinted.ForeColor = System.Drawing.Color.Black;
             this.txtunprinted.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtunprinted.Location = new System.Drawing.Point(632, 34);
-            this.txtunprinted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtunprinted.Location = new System.Drawing.Point(641, 34);
+            this.txtunprinted.Margin = new System.Windows.Forms.Padding(4);
             this.txtunprinted.MaxLength = 4;
             this.txtunprinted.Name = "txtunprinted";
             this.txtunprinted.PasswordChar = '\0';
@@ -127,7 +145,8 @@ namespace DigiSort_Box.Forms
             this.txtready.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtready.ForeColor = System.Drawing.Color.Black;
             this.txtready.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtready.Location = new System.Drawing.Point(632, 70);
+            this.txtready.Location = new System.Drawing.Point(641, 70);
+            this.txtready.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtready.MaxLength = 4;
             this.txtready.Name = "txtready";
             this.txtready.PasswordChar = '\0';
@@ -152,7 +171,8 @@ namespace DigiSort_Box.Forms
             this.txtraw.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtraw.ForeColor = System.Drawing.Color.Black;
             this.txtraw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtraw.Location = new System.Drawing.Point(632, 105);
+            this.txtraw.Location = new System.Drawing.Point(641, 105);
+            this.txtraw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtraw.MaxLength = 4;
             this.txtraw.Name = "txtraw";
             this.txtraw.PasswordChar = '\0';
@@ -175,8 +195,8 @@ namespace DigiSort_Box.Forms
             this.btnupdate.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnupdate.ForeColor = System.Drawing.Color.White;
             this.btnupdate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnupdate.Location = new System.Drawing.Point(632, 173);
-            this.btnupdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnupdate.Location = new System.Drawing.Point(641, 184);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(104, 43);
             this.btnupdate.TabIndex = 70;
@@ -195,8 +215,8 @@ namespace DigiSort_Box.Forms
             this.btndelete.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btndelete.ForeColor = System.Drawing.Color.White;
             this.btndelete.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btndelete.Location = new System.Drawing.Point(632, 221);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btndelete.Location = new System.Drawing.Point(641, 232);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(2);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(104, 43);
             this.btndelete.TabIndex = 71;
@@ -219,8 +239,8 @@ namespace DigiSort_Box.Forms
             this.btnprint.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.btnprint.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
             this.btnprint.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btnprint.Location = new System.Drawing.Point(632, 269);
-            this.btnprint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnprint.Location = new System.Drawing.Point(641, 280);
+            this.btnprint.Margin = new System.Windows.Forms.Padding(2);
             this.btnprint.Name = "btnprint";
             this.btnprint.Size = new System.Drawing.Size(104, 43);
             this.btnprint.TabIndex = 72;
@@ -237,18 +257,18 @@ namespace DigiSort_Box.Forms
             this.txtusername.TabIndex = 73;
             this.txtusername.Visible = false;
             // 
-            // dataGridView1
+            // dgrawdamage
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(321, 255);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(304, 238);
-            this.dataGridView1.TabIndex = 19;
+            this.dgrawdamage.AllowUserToAddRows = false;
+            this.dgrawdamage.AllowUserToDeleteRows = false;
+            this.dgrawdamage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgrawdamage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrawdamage.Location = new System.Drawing.Point(6, 6);
+            this.dgrawdamage.Name = "dgrawdamage";
+            this.dgrawdamage.ReadOnly = true;
+            this.dgrawdamage.RowHeadersWidth = 51;
+            this.dgrawdamage.Size = new System.Drawing.Size(426, 481);
+            this.dgrawdamage.TabIndex = 19;
             // 
             // txtdamage
             // 
@@ -264,7 +284,8 @@ namespace DigiSort_Box.Forms
             this.txtdamage.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdamage.ForeColor = System.Drawing.Color.Black;
             this.txtdamage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdamage.Location = new System.Drawing.Point(632, 140);
+            this.txtdamage.Location = new System.Drawing.Point(641, 140);
+            this.txtdamage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdamage.MaxLength = 4;
             this.txtdamage.Name = "txtdamage";
             this.txtdamage.PasswordChar = '\0';
@@ -280,18 +301,148 @@ namespace DigiSort_Box.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(659, 11);
+            this.label2.Location = new System.Drawing.Point(668, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 74;
             this.label2.Text = "Update";
             // 
+            // guna2TabControl1
+            // 
+            this.guna2TabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.guna2TabControl1.Controls.Add(this.tabraw);
+            this.guna2TabControl1.Controls.Add(this.tabready);
+            this.guna2TabControl1.Controls.Add(this.tabunprinted);
+            this.guna2TabControl1.Controls.Add(this.tabrawdamage);
+            this.guna2TabControl1.Controls.Add(this.tabreadydamage);
+            this.guna2TabControl1.Controls.Add(this.tabunprinteddamage);
+            this.guna2TabControl1.ItemSize = new System.Drawing.Size(180, 40);
+            this.guna2TabControl1.Location = new System.Drawing.Point(1, 2);
+            this.guna2TabControl1.Name = "guna2TabControl1";
+            this.guna2TabControl1.SelectedIndex = 0;
+            this.guna2TabControl1.Size = new System.Drawing.Size(626, 502);
+            this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.guna2TabControl1.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2TabControl1.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.guna2TabControl1.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.guna2TabControl1.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2TabControl1.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.guna2TabControl1.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.guna2TabControl1.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2TabControl1.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.guna2TabControl1.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.guna2TabControl1.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.guna2TabControl1.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
+            this.guna2TabControl1.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.guna2TabControl1.TabButtonSize = new System.Drawing.Size(180, 40);
+            this.guna2TabControl1.TabIndex = 75;
+            this.guna2TabControl1.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            // 
+            // tabraw
+            // 
+            this.tabraw.Controls.Add(this.dgrawmaterial);
+            this.tabraw.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabraw.Location = new System.Drawing.Point(184, 4);
+            this.tabraw.Name = "tabraw";
+            this.tabraw.Padding = new System.Windows.Forms.Padding(3);
+            this.tabraw.Size = new System.Drawing.Size(438, 494);
+            this.tabraw.TabIndex = 0;
+            this.tabraw.Text = "Raw Material";
+            this.tabraw.UseVisualStyleBackColor = true;
+            // 
+            // tabready
+            // 
+            this.tabready.Controls.Add(this.dgready);
+            this.tabready.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabready.Location = new System.Drawing.Point(184, 4);
+            this.tabready.Name = "tabready";
+            this.tabready.Padding = new System.Windows.Forms.Padding(3);
+            this.tabready.Size = new System.Drawing.Size(438, 494);
+            this.tabready.TabIndex = 1;
+            this.tabready.Text = "Ready to sell Items";
+            this.tabready.UseVisualStyleBackColor = true;
+            // 
+            // tabunprinted
+            // 
+            this.tabunprinted.Controls.Add(this.dgunprinted);
+            this.tabunprinted.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabunprinted.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabunprinted.Location = new System.Drawing.Point(184, 4);
+            this.tabunprinted.Name = "tabunprinted";
+            this.tabunprinted.Size = new System.Drawing.Size(438, 494);
+            this.tabunprinted.TabIndex = 2;
+            this.tabunprinted.Text = "Unprinted Shirts";
+            this.tabunprinted.UseVisualStyleBackColor = true;
+            // 
+            // tabrawdamage
+            // 
+            this.tabrawdamage.Controls.Add(this.dgrawdamage);
+            this.tabrawdamage.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabrawdamage.Location = new System.Drawing.Point(184, 4);
+            this.tabrawdamage.Name = "tabrawdamage";
+            this.tabrawdamage.Padding = new System.Windows.Forms.Padding(3);
+            this.tabrawdamage.Size = new System.Drawing.Size(438, 494);
+            this.tabrawdamage.TabIndex = 3;
+            this.tabrawdamage.Text = "Raw Material Damage Items";
+            this.tabrawdamage.UseVisualStyleBackColor = true;
+            // 
+            // tabreadydamage
+            // 
+            this.tabreadydamage.Controls.Add(this.dgreadydamage);
+            this.tabreadydamage.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabreadydamage.Location = new System.Drawing.Point(184, 4);
+            this.tabreadydamage.Name = "tabreadydamage";
+            this.tabreadydamage.Size = new System.Drawing.Size(438, 494);
+            this.tabreadydamage.TabIndex = 4;
+            this.tabreadydamage.Text = "Ready to sell Items Damage Items";
+            this.tabreadydamage.UseVisualStyleBackColor = true;
+            // 
+            // tabunprinteddamage
+            // 
+            this.tabunprinteddamage.Controls.Add(this.dgunprinteddamage);
+            this.tabunprinteddamage.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabunprinteddamage.Location = new System.Drawing.Point(184, 4);
+            this.tabunprinteddamage.Name = "tabunprinteddamage";
+            this.tabunprinteddamage.Size = new System.Drawing.Size(438, 494);
+            this.tabunprinteddamage.TabIndex = 5;
+            this.tabunprinteddamage.Text = "Unprinted Shirts Damage Items";
+            this.tabunprinteddamage.UseVisualStyleBackColor = true;
+            // 
+            // dgreadydamage
+            // 
+            this.dgreadydamage.AllowUserToAddRows = false;
+            this.dgreadydamage.AllowUserToDeleteRows = false;
+            this.dgreadydamage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgreadydamage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgreadydamage.Location = new System.Drawing.Point(6, 7);
+            this.dgreadydamage.Name = "dgreadydamage";
+            this.dgreadydamage.ReadOnly = true;
+            this.dgreadydamage.RowHeadersWidth = 51;
+            this.dgreadydamage.Size = new System.Drawing.Size(426, 481);
+            this.dgreadydamage.TabIndex = 20;
+            // 
+            // dgunprinteddamage
+            // 
+            this.dgunprinteddamage.AllowUserToAddRows = false;
+            this.dgunprinteddamage.AllowUserToDeleteRows = false;
+            this.dgunprinteddamage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgunprinteddamage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgunprinteddamage.Location = new System.Drawing.Point(6, 7);
+            this.dgunprinteddamage.Name = "dgunprinteddamage";
+            this.dgunprinteddamage.ReadOnly = true;
+            this.dgunprinteddamage.RowHeadersWidth = 51;
+            this.dgunprinteddamage.Size = new System.Drawing.Size(426, 481);
+            this.dgunprinteddamage.TabIndex = 21;
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(746, 505);
+            this.Controls.Add(this.guna2TabControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.btnprint);
@@ -301,12 +452,8 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.txtraw);
             this.Controls.Add(this.txtready);
             this.Controls.Add(this.txtunprinted);
-            this.Controls.Add(this.dgready);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dgrawmaterial);
-            this.Controls.Add(this.dgunprinted);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";
@@ -314,7 +461,16 @@ namespace DigiSort_Box.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dgready)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrawmaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgunprinted)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrawdamage)).EndInit();
+            this.guna2TabControl1.ResumeLayout(false);
+            this.tabraw.ResumeLayout(false);
+            this.tabready.ResumeLayout(false);
+            this.tabunprinted.ResumeLayout(false);
+            this.tabrawdamage.ResumeLayout(false);
+            this.tabreadydamage.ResumeLayout(false);
+            this.tabunprinteddamage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgreadydamage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgunprinteddamage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,9 +486,18 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2Button btnupdate;
         private Guna.UI2.WinForms.Guna2Button btndelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnprint;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgrawdamage;
         private Guna.UI2.WinForms.Guna2TextBox txtdamage;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label txtusername;
+        private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
+        private System.Windows.Forms.TabPage tabraw;
+        private System.Windows.Forms.TabPage tabready;
+        private System.Windows.Forms.TabPage tabunprinted;
+        private System.Windows.Forms.TabPage tabrawdamage;
+        private System.Windows.Forms.TabPage tabreadydamage;
+        private System.Windows.Forms.TabPage tabunprinteddamage;
+        private System.Windows.Forms.DataGridView dgreadydamage;
+        private System.Windows.Forms.DataGridView dgunprinteddamage;
     }
 }

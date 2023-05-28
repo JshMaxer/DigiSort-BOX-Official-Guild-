@@ -33,8 +33,8 @@ namespace DigiSort_Box.Forms
             this.btnunprint = new System.Windows.Forms.Button();
             this.btnready = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnback = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,27 +73,14 @@ namespace DigiSort_Box.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.panel1.Controls.Add(this.exitform);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnback);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(257, 45);
             this.panel1.TabIndex = 11;
-            // 
-            // btnback
-            // 
-            this.btnback.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnback.ForeColor = System.Drawing.Color.Gray;
-            this.btnback.Location = new System.Drawing.Point(203, 10);
-            this.btnback.Margin = new System.Windows.Forms.Padding(4);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(36, 29);
-            this.btnback.TabIndex = 5;
-            this.btnback.Text = "X";
-            this.btnback.UseVisualStyleBackColor = true;
-            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // label1
             // 
@@ -101,13 +88,26 @@ namespace DigiSort_Box.Forms
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 20);
+            this.label1.Size = new System.Drawing.Size(138, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Preview Account";
             // 
+            // exitform
+            // 
+            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitform.Animated = true;
+            this.exitform.FillColor = System.Drawing.Color.Transparent;
+            this.exitform.HoverState.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.exitform.IconColor = System.Drawing.Color.White;
+            this.exitform.Location = new System.Drawing.Point(201, 6);
+            this.exitform.Margin = new System.Windows.Forms.Padding(2);
+            this.exitform.Name = "exitform";
+            this.exitform.Size = new System.Drawing.Size(33, 31);
+            this.exitform.TabIndex = 14;
+            // 
             // preview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(243, 258);
@@ -136,7 +136,7 @@ namespace DigiSort_Box.Forms
         private System.Windows.Forms.Button btnunprint;
         private System.Windows.Forms.Button btnready;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ControlBox exitform;
     }
 }

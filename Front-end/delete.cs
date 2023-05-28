@@ -20,6 +20,7 @@ namespace DigiSort_Box.Forms
             txt3.Text = "";
             txt4.Text = "";
             txt5.Text = "";
+            txtid.Text = "";
         }
 
         private void btnback_Click(object sender, EventArgs e)
@@ -66,21 +67,29 @@ namespace DigiSort_Box.Forms
             DateTime dateTimeVariable = DateTime.Now;
             string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
 
-            connection.Close();
-            connection.Open();
-            string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Raw Material" + "', '" + date + "')";
-            MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-            if (cmd.ExecuteNonQuery() == 1)
+            try
             {
-                //MessageBox.Show("Logs");
+                connection.Close();
+                connection.Open();
+                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Raw Material" + "', '" + date + "')";
+                MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    //MessageBox.Show("Logs");
+                }
+                else
+                {
+                    //MessageBox.Show("Meow");
+                }
+
+                connection.Close();
             }
-            else
+            catch (Exception)
             {
-                //MessageBox.Show("Meow");
+                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            connection.Close();
         }
 
         void history_unprint()
@@ -89,21 +98,30 @@ namespace DigiSort_Box.Forms
             DateTime dateTimeVariable = DateTime.Now;
             string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
 
-            connection.Close();
-            connection.Open();
-            string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Unprinted Shirts" + "', '" + date + "')";
-            MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-            if (cmd.ExecuteNonQuery() == 1)
+            try
             {
-                //MessageBox.Show("Logs");
+                connection.Close();
+                connection.Open();
+                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Unprinted Shirts" + "', '" + date + "')";
+                MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    //MessageBox.Show("Logs");
+                }
+                else
+                {
+                    //MessageBox.Show("Meow");
+                }
+
+                connection.Close();
             }
-            else
+            catch (Exception)
             {
-                //MessageBox.Show("Meow");
+                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            connection.Close();
+
         }
 
         void history_ready()
@@ -112,21 +130,30 @@ namespace DigiSort_Box.Forms
             DateTime dateTimeVariable = DateTime.Now;
             string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
 
-            connection.Close();
-            connection.Open();
-            string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Ready to sell items" + "', '" + date + "')";
-            MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-            if (cmd.ExecuteNonQuery() == 1)
+            try
             {
-                //MessageBox.Show("Logs");
+                connection.Close();
+                connection.Open();
+                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Ready to sell items" + "', '" + date + "')";
+                MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    //MessageBox.Show("Logs");
+                }
+                else
+                {
+                    //MessageBox.Show("Meow");
+                }
+
+                connection.Close();
             }
-            else
+            catch (Exception)
             {
-                //MessageBox.Show("Meow");
+                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            connection.Close();
+
         }
 
         private void cbtable_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,11 +196,12 @@ namespace DigiSort_Box.Forms
                 if (e.RowIndex != -1)
                 {
                     DataGridViewRow dgvRow = dgtable.Rows[e.RowIndex];
-                    txt1.Text = dgvRow.Cells[0].Value.ToString();
-                    txt2.Text = dgvRow.Cells[1].Value.ToString();
-                    txt3.Text = dgvRow.Cells[2].Value.ToString();
-                    txt4.Text = dgvRow.Cells[3].Value.ToString();
-                    txt5.Text = dgvRow.Cells[4].Value.ToString();
+                    txtid.Text = dgvRow.Cells[0].Value.ToString();
+                    txt1.Text = dgvRow.Cells[1].Value.ToString();
+                    txt2.Text = dgvRow.Cells[2].Value.ToString();
+                    txt3.Text = dgvRow.Cells[3].Value.ToString();
+                    txt4.Text = dgvRow.Cells[4].Value.ToString();
+                    txt5.Text = dgvRow.Cells[5].Value.ToString();
                 }
             }
             else
@@ -182,10 +210,11 @@ namespace DigiSort_Box.Forms
                 if (e.RowIndex != -1)
                 {
                     DataGridViewRow dgvRow = dgtable.Rows[e.RowIndex];
-                    txt1.Text = dgvRow.Cells[0].Value.ToString();
-                    txt2.Text = dgvRow.Cells[1].Value.ToString();
-                    txt3.Text = dgvRow.Cells[2].Value.ToString();
-                    txt4.Text = dgvRow.Cells[3].Value.ToString();
+                    txtid.Text = dgvRow.Cells[0].Value.ToString();
+                    txt1.Text = dgvRow.Cells[1].Value.ToString();
+                    txt2.Text = dgvRow.Cells[2].Value.ToString();
+                    txt3.Text = dgvRow.Cells[3].Value.ToString();
+                    txt4.Text = dgvRow.Cells[4].Value.ToString();
                 }
             }
         }

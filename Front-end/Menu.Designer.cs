@@ -55,7 +55,7 @@ namespace DigiSort_Box.Forms
             // mainpanel
             // 
             this.mainpanel.Location = new System.Drawing.Point(97, 49);
-            this.mainpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainpanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(760, 497);
             this.mainpanel.TabIndex = 8;
@@ -63,7 +63,7 @@ namespace DigiSort_Box.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
             this.panel1.Controls.Add(this.txtname);
             this.panel1.Controls.Add(this.btndeact);
             this.panel1.Controls.Add(this.btnactivity);
@@ -71,7 +71,7 @@ namespace DigiSort_Box.Forms
             this.panel1.Controls.Add(this.btnlogout);
             this.panel1.Controls.Add(this.btuseraccount);
             this.panel1.Location = new System.Drawing.Point(-11, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(882, 41);
             this.panel1.TabIndex = 9;
@@ -100,11 +100,11 @@ namespace DigiSort_Box.Forms
             this.btndeact.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btndeact.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btndeact.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btndeact.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.btndeact.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
             this.btndeact.Font = new System.Drawing.Font("Verdana", 9F);
             this.btndeact.ForeColor = System.Drawing.Color.Black;
-            this.btndeact.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
-            this.btndeact.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btndeact.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btndeact.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
             this.btndeact.Location = new System.Drawing.Point(509, 7);
             this.btndeact.Name = "btndeact";
             this.btndeact.Size = new System.Drawing.Size(176, 27);
@@ -123,11 +123,11 @@ namespace DigiSort_Box.Forms
             this.btnactivity.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnactivity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnactivity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btnactivity.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
+            this.btnactivity.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
             this.btnactivity.Font = new System.Drawing.Font("Verdana", 9F);
             this.btnactivity.ForeColor = System.Drawing.Color.Black;
-            this.btnactivity.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
-            this.btnactivity.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnactivity.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnactivity.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
             this.btnactivity.Location = new System.Drawing.Point(691, 7);
             this.btnactivity.Name = "btnactivity";
             this.btnactivity.Size = new System.Drawing.Size(106, 27);
@@ -157,7 +157,7 @@ namespace DigiSort_Box.Forms
             this.btnlogout.ImageRotate = 0F;
             this.btnlogout.ImageSize = new System.Drawing.Size(20, 20);
             this.btnlogout.Location = new System.Drawing.Point(802, 6);
-            this.btnlogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.PressedState.Image = global::DigiSort_Box.Properties.Resources.logout__1_;
             this.btnlogout.PressedState.ImageSize = new System.Drawing.Size(30, 30);
@@ -176,7 +176,7 @@ namespace DigiSort_Box.Forms
             this.btuseraccount.ImageRotate = 0F;
             this.btuseraccount.ImageSize = new System.Drawing.Size(20, 20);
             this.btuseraccount.Location = new System.Drawing.Point(839, 6);
-            this.btuseraccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btuseraccount.Margin = new System.Windows.Forms.Padding(2);
             this.btuseraccount.Name = "btuseraccount";
             this.btuseraccount.PressedState.Image = global::DigiSort_Box.Properties.Resources.account;
             this.btuseraccount.PressedState.ImageSize = new System.Drawing.Size(30, 30);
@@ -190,10 +190,14 @@ namespace DigiSort_Box.Forms
             this.info.AllowLinksHandling = true;
             this.info.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info.MaximumSize = new System.Drawing.Size(0, 0);
-            this.info.ToolTipTitle = "Guide";
+            this.info.TitleFont = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.info.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.info.ToolTipTitle = "What\'s this?";
             // 
             // btndamageitems
             // 
+            this.btndamageitems.BackColor = System.Drawing.Color.Transparent;
             this.btndamageitems.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btndamageitems.HoverState.Image = global::DigiSort_Box.Properties.Resources.package__1_;
             this.btndamageitems.HoverState.ImageSize = new System.Drawing.Size(64, 64);
@@ -213,6 +217,7 @@ namespace DigiSort_Box.Forms
             // 
             // btninvent
             // 
+            this.btninvent.BackColor = System.Drawing.Color.Transparent;
             this.btninvent.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btninvent.HoverState.Image = global::DigiSort_Box.Properties.Resources.inventory__1_;
             this.btninvent.HoverState.ImageSize = new System.Drawing.Size(64, 64);
@@ -232,6 +237,7 @@ namespace DigiSort_Box.Forms
             // 
             // btnreadytosell
             // 
+            this.btnreadytosell.BackColor = System.Drawing.Color.Transparent;
             this.btnreadytosell.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnreadytosell.HoverState.Image = global::DigiSort_Box.Properties.Resources.trade__1_;
             this.btnreadytosell.HoverState.ImageSize = new System.Drawing.Size(64, 64);
@@ -251,6 +257,7 @@ namespace DigiSort_Box.Forms
             // 
             // btnrawmaterials
             // 
+            this.btnrawmaterials.BackColor = System.Drawing.Color.Transparent;
             this.btnrawmaterials.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnrawmaterials.HoverState.Image = global::DigiSort_Box.Properties.Resources.raw_materials__1_;
             this.btnrawmaterials.HoverState.ImageSize = new System.Drawing.Size(64, 64);
@@ -270,6 +277,7 @@ namespace DigiSort_Box.Forms
             // 
             // btnunprintedshirts
             // 
+            this.btnunprintedshirts.BackColor = System.Drawing.Color.Transparent;
             this.btnunprintedshirts.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnunprintedshirts.HoverState.Image = global::DigiSort_Box.Properties.Resources.cloth__1_;
             this.btnunprintedshirts.HoverState.ImageSize = new System.Drawing.Size(64, 64);
@@ -289,6 +297,7 @@ namespace DigiSort_Box.Forms
             // 
             // btdashboard
             // 
+            this.btdashboard.BackColor = System.Drawing.Color.Transparent;
             this.btdashboard.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btdashboard.HoverState.Image = global::DigiSort_Box.Properties.Resources.dashboard__1_;
             this.btdashboard.HoverState.ImageSize = new System.Drawing.Size(45, 45);
@@ -325,24 +334,22 @@ namespace DigiSort_Box.Forms
             this.flowLayoutPanel1.Controls.Add(this.btnreadytosell);
             this.flowLayoutPanel1.Controls.Add(this.btndamageitems);
             this.flowLayoutPanel1.Controls.Add(this.btninvent);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 49);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(80, 497);
-            this.flowLayoutPanel1.TabIndex = 10;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(868, 554);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";

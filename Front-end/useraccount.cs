@@ -30,7 +30,7 @@ namespace DigiSort_Box.Forms
             //Database
             Database.useraccount acc = new Database.useraccount();
             acc.user(txtusername, txtfirstname, txtlastname, txtposition);
-            acc.disreset(txtusername, btnreset);
+            acc.disreset(txtusername, btnreset, btnuserreset, btnconcern);
         }
         
         private void exitform_Click(object sender, EventArgs e)
@@ -52,6 +52,18 @@ namespace DigiSort_Box.Forms
             {
                 //ok.
             }
+        }
+
+        private void btnuserreset_Click(object sender, EventArgs e)
+        {
+            Front_end.Userreset user = new Front_end.Userreset();
+            user.ShowDialog();
+        }
+
+        private void btnconcern_Click(object sender, EventArgs e)
+        {
+            Front_end.Concern crn = new Front_end.Concern();
+            crn.ShowDialog();
         }
     }
 }

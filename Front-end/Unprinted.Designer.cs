@@ -86,7 +86,7 @@ namespace DigiSort_Box.Forms
             this.btnback.BackColor = System.Drawing.Color.Gray;
             this.btnback.ForeColor = System.Drawing.Color.White;
             this.btnback.Location = new System.Drawing.Point(9, 10);
-            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(58, 28);
             this.btnback.TabIndex = 59;
@@ -109,7 +109,7 @@ namespace DigiSort_Box.Forms
             this.btnadd.ForeColor = System.Drawing.Color.White;
             this.btnadd.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
             this.btnadd.Location = new System.Drawing.Point(580, 439);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(124, 37);
             this.btnadd.TabIndex = 69;
@@ -141,7 +141,7 @@ namespace DigiSort_Box.Forms
             "Gray",
             "Black"});
             this.cbcolor.Location = new System.Drawing.Point(238, 107);
-            this.cbcolor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbcolor.Margin = new System.Windows.Forms.Padding(2);
             this.cbcolor.Name = "cbcolor";
             this.cbcolor.Size = new System.Drawing.Size(270, 36);
             this.cbcolor.StartIndex = 0;
@@ -162,7 +162,7 @@ namespace DigiSort_Box.Forms
             this.cbshade.ForeColor = System.Drawing.Color.Black;
             this.cbshade.ItemHeight = 30;
             this.cbshade.Location = new System.Drawing.Point(238, 172);
-            this.cbshade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbshade.Margin = new System.Windows.Forms.Padding(2);
             this.cbshade.Name = "cbshade";
             this.cbshade.Size = new System.Drawing.Size(270, 36);
             this.cbshade.TabIndex = 70;
@@ -192,7 +192,7 @@ namespace DigiSort_Box.Forms
             "4XL",
             "5XL"});
             this.cbsize.Location = new System.Drawing.Point(238, 246);
-            this.cbsize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbsize.Margin = new System.Windows.Forms.Padding(2);
             this.cbsize.Name = "cbsize";
             this.cbsize.Size = new System.Drawing.Size(270, 36);
             this.cbsize.StartIndex = 0;
@@ -216,7 +216,7 @@ namespace DigiSort_Box.Forms
             this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtquantity.Location = new System.Drawing.Point(238, 313);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
@@ -232,7 +232,7 @@ namespace DigiSort_Box.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(745, 505);
             this.Controls.Add(this.txtquantity);
             this.Controls.Add(this.cbsize);
@@ -245,7 +245,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Unprinted";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Unprinted";

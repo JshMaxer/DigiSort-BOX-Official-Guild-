@@ -33,15 +33,19 @@ namespace DigiSort_Box.Database
             }       
         }
 
-        public void disreset(Guna2TextBox txtuser,Guna2Button btnreset)
+        public void disreset(Guna2TextBox txtuser,Guna2Button btnreset, Guna2Button btnuserreset, Guna2ImageButton btnconcern)
         {
             if(txtuser.Text.Equals("DIGI"))
             {
                 btnreset.Visible = false;
+                btnuserreset.Visible = true;
+                btnconcern.Visible = true;
             }
             else
             {
                 btnreset.Visible = true;
+                btnuserreset.Visible = false;
+                btnconcern.Visible = false;
             }
         }
 

@@ -43,6 +43,8 @@ namespace DigiSort_Box.Forms
             this.btnreset = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtposition = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnuserreset = new Guna.UI2.WinForms.Guna2Button();
+            this.btnconcern = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@ namespace DigiSort_Box.Forms
             this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(103, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,7 +66,7 @@ namespace DigiSort_Box.Forms
             this.label3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(100, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "First Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,7 +78,7 @@ namespace DigiSort_Box.Forms
             this.label4.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(101, 203);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 16);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Last Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,22 +86,23 @@ namespace DigiSort_Box.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
             this.panel1.Controls.Add(this.exitform);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-4, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 45);
+            this.panel1.Size = new System.Drawing.Size(287, 45);
             this.panel1.TabIndex = 10;
             // 
             // exitform
             // 
             this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.exitform.Animated = true;
-            this.exitform.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(103)))));
+            this.exitform.FillColor = System.Drawing.Color.Transparent;
+            this.exitform.HoverState.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.exitform.IconColor = System.Drawing.Color.White;
-            this.exitform.Location = new System.Drawing.Point(247, 3);
+            this.exitform.Location = new System.Drawing.Point(240, 4);
             this.exitform.Name = "exitform";
             this.exitform.Size = new System.Drawing.Size(44, 38);
             this.exitform.TabIndex = 12;
@@ -111,7 +114,7 @@ namespace DigiSort_Box.Forms
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(15, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "User Account";
             // 
@@ -133,6 +136,7 @@ namespace DigiSort_Box.Forms
             this.txtusername.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Location = new System.Drawing.Point(12, 83);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderText = "";
@@ -155,6 +159,7 @@ namespace DigiSort_Box.Forms
             this.txtfirstname.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
             this.txtfirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtfirstname.Location = new System.Drawing.Point(12, 156);
+            this.txtfirstname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.PasswordChar = '\0';
             this.txtfirstname.PlaceholderText = "";
@@ -177,6 +182,7 @@ namespace DigiSort_Box.Forms
             this.txtlastname.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
             this.txtlastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtlastname.Location = new System.Drawing.Point(14, 225);
+            this.txtlastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.PasswordChar = '\0';
             this.txtlastname.PlaceholderText = "";
@@ -211,7 +217,7 @@ namespace DigiSort_Box.Forms
             this.label5.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(111, 272);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Position";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -230,6 +236,7 @@ namespace DigiSort_Box.Forms
             this.txtposition.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
             this.txtposition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtposition.Location = new System.Drawing.Point(14, 294);
+            this.txtposition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtposition.Name = "txtposition";
             this.txtposition.PasswordChar = '\0';
             this.txtposition.PlaceholderText = "";
@@ -239,12 +246,52 @@ namespace DigiSort_Box.Forms
             this.txtposition.TabIndex = 11;
             this.txtposition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnuserreset
+            // 
+            this.btnuserreset.Animated = true;
+            this.btnuserreset.BorderRadius = 20;
+            this.btnuserreset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnuserreset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnuserreset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnuserreset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnuserreset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.btnuserreset.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnuserreset.ForeColor = System.Drawing.Color.White;
+            this.btnuserreset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
+            this.btnuserreset.Location = new System.Drawing.Point(68, 349);
+            this.btnuserreset.Name = "btnuserreset";
+            this.btnuserreset.Size = new System.Drawing.Size(151, 45);
+            this.btnuserreset.TabIndex = 13;
+            this.btnuserreset.Text = "Reset User Password";
+            this.btnuserreset.Visible = false;
+            this.btnuserreset.Click += new System.EventHandler(this.btnuserreset_Click);
+            // 
+            // btnconcern
+            // 
+            this.btnconcern.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnconcern.HoverState.Image = global::DigiSort_Box.Properties.Resources.bell__1_;
+            this.btnconcern.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnconcern.Image = global::DigiSort_Box.Properties.Resources.bell;
+            this.btnconcern.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnconcern.ImageRotate = 0F;
+            this.btnconcern.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnconcern.Location = new System.Drawing.Point(219, 352);
+            this.btnconcern.Name = "btnconcern";
+            this.btnconcern.PressedState.Image = global::DigiSort_Box.Properties.Resources.bell__1_;
+            this.btnconcern.PressedState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnconcern.Size = new System.Drawing.Size(52, 42);
+            this.btnconcern.TabIndex = 14;
+            this.btnconcern.Visible = false;
+            this.btnconcern.Click += new System.EventHandler(this.btnconcern_Click);
+            // 
             // useraccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(283, 417);
+            this.Controls.Add(this.btnconcern);
+            this.Controls.Add(this.btnuserreset);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.txtposition);
             this.Controls.Add(this.txtlastname);
@@ -260,6 +307,7 @@ namespace DigiSort_Box.Forms
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "useraccount";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "USER ACCOUNT";
             this.Load += new System.EventHandler(this.useraccount_Load);
@@ -284,5 +332,7 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2Button btnreset;
         public Guna.UI2.WinForms.Guna2TextBox txtposition;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button btnuserreset;
+        private Guna.UI2.WinForms.Guna2ImageButton btnconcern;
     }
 }

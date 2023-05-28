@@ -8,9 +8,9 @@ namespace DigiSort_Box.Database
 {
     class CreateAcc
     {
+
         public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username, Guna2ComboBox cbusertype, System.Windows.Forms.Label lbl)
         {
-            Lageen lageen = new Lageen();
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
 
             try
@@ -33,7 +33,7 @@ namespace DigiSort_Box.Database
                     //Floor admin account
                     if (cbusertype.SelectedItem.Equals("Floor admin"))
                     {
-                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Floor_Admin" + "', '" + "Active" + "', '" + date + "')";
+                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', MD5('" + paswword.Text + "'), '" + "Floor_Admin" + "', '" + "Active" + "', '" + date + "')";
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 
@@ -63,10 +63,10 @@ namespace DigiSort_Box.Database
                     //Top admin
                     else if (cbusertype.SelectedItem.Equals("Top admin"))
                     {
-                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', '" + paswword.Text + "', '" + "Top_Admin" + "', '" + "Active" + "', '" + date + "')";
+                        string InsertQuery = "INSERT INTO account VALUES ('0'" + ", '" + username.Text + "', '" + firstname.Text + "', '" + lastname.Text + "', MD5('" + paswword.Text + "'), '" + "Top_Admin" + "', '" + "Active" + "', '" + date + "')";
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
-
+                        
                         try
                         {
                             if (cmd.ExecuteNonQuery() == 1)
@@ -75,7 +75,6 @@ namespace DigiSort_Box.Database
                                 Forms.Login log = new Forms.Login();
                                 log.Show(); 
                                 lbl.Text = "success";
-
                             }
                             else
                             {

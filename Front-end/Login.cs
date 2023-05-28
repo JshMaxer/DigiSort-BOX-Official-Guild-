@@ -1,5 +1,5 @@
-﻿using DigiSort_Box.Back_end;
-using DigiSort_Box.Mowdel;
+﻿using DigiSort_Box.Mowdel;
+using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
@@ -48,7 +48,7 @@ namespace DigiSort_Box.Forms
             else
             {
                 //preview account - change restriction
-                if (txtusername.Text.Equals(Constants.prevusername) && (txtpassword.Text.Equals(Constants.prevpassword)))
+                if (txtusername.Text.Equals(Back_end.Constants.prevusername) && (txtpassword.Text.Equals(Back_end.Constants.prevpassword)))
                 {
                     MessageBox.Show("This account is for preview forms only. You cannot do anything on other forms you just previewing them.\nThis account is usually used only for Front-End Developer", "Front_End");
                     Forms.preview pv = new Forms.preview();
@@ -60,7 +60,7 @@ namespace DigiSort_Box.Forms
 
                     //super admin log
                     Lageen lageen = new Lageen();
-                    if (txtusername.Text.Equals(Constants.username) && txtpassword.Text.Equals(Constants.password))
+                    if (txtusername.Text.Equals(Back_end.Constants.username) && txtpassword.Text.Equals(Back_end.Constants.password))
                     {
                         MessageBox.Show("Log-in Succesful!\nHello Super admin!", "Super_admin");
 
@@ -76,7 +76,7 @@ namespace DigiSort_Box.Forms
                         //searching all the accounts on Top admin and Floor admin database
                         try
                         {
-                            string searchTop = "SELECT ID, first_name, last_name, username, password, position, activation FROM account WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
+                            string searchTop = "SELECT ID, first_name, last_name, username, password, position, activation FROM account WHERE username = '" + txtusername.Text + "' AND password = MD5('" + txtpassword.Text + "')";
                             connection.Close();
                             connection.Open();
                             MySqlCommand cmdtop = new MySqlCommand(searchTop, connection);
@@ -111,5 +111,57 @@ namespace DigiSort_Box.Forms
                 }
             }
         }
+
+        private void lblforgot_Click(object sender, EventArgs e)
+        {
+
+            DialogResult = MessageBox.Show("Contact the SUPER ADMIN for reset password?", "Forgot Password", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (DialogResult == DialogResult.Yes)
+            {
+                string input = Interaction.InputBox("Please enter username", "Username");
+
+                if (!string.IsNullOrEmpty(input))
+                {
+                    //search username
+                    string ad = "SELECT username FROM account where username = '" + input + "'";
+                    connection.Close();
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand(ad, connection);
+                    MySqlDataReader row = cmd.ExecuteReader();
+
+                    try
+                    {
+                        if (row.HasRows)
+                        {
+                            while (row.Read())
+                            {
+                                string user = row["username"].ToString();
+
+                                //contact
+                                row.Close();
+                                string InsertQuery = "INSERT INTO message_request VALUES ('" + user + "', 'Wants to reset password'" + ")";
+                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                                command.ExecuteNonQuery();
+
+                                MessageBox.Show(user + ", Your concern has been submitted");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Username not found");
+                        }
+
+                        connection.Close();
+                    }
+                     catch(Exception)
+                    {
+                        //Hide the error message
+                    }
+                }
+                //else
+            }
+        }
+
     }
 }

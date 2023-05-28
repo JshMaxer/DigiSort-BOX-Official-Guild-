@@ -10,7 +10,6 @@
         public string Password { get; set; }
         public string Position { get; set;}
         public string Activation { get; set; }
-
     }
 }
 

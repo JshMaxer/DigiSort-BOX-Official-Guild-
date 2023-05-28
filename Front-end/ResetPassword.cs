@@ -15,37 +15,28 @@ namespace DigiSort_Box.Front_end
 
         private void btnproceed_Click(object sender, EventArgs e)
         {
-            //DATABASE -------------------------------------------------------------------
-
-            //Account
-            connection.Open();
-            string updateuser = "UPDATE account SET password = '" + txtpassword.Text + "' WHERE username = '" + lblusername.Text + "'";
-            MySqlCommand command = new MySqlCommand(updateuser, connection);
-
-            try
-            {
-                if (command.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("Password successfully changed");
-                    txtpassword.Text = null;
-                    txtretype.Text = null;
-                }
-                else
-                {
-                    MessageBox.Show("Password Unsuccessfully changed");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            connection.Close();
-
-            //end of database -------------------------------------------------------------------
+            //DATABASE
+            Database.Reset_Password rst = new Database.Reset_Password();
+            rst.reset(lblusername, txtpassword, txtretype);
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtpassword.Text.Equals("") || txtretype.Text.Equals(""))
+            {
+                btnproceed.Enabled = false;
+            }
+            else if (!txtpassword.Text.Equals(txtretype.Text))
+            {
+                btnproceed.Enabled = false;
+            }
+            else
+            {
+                btnproceed.Enabled = true;
+            }
+        }
+
+        private void txtretype_TextChanged(object sender, EventArgs e)
         {
             if (txtpassword.Text.Equals("") || txtretype.Text.Equals(""))
             {
