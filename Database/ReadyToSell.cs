@@ -7,17 +7,6 @@ namespace DigiSort_Box.Database
 {
     class ReadyToSell
     {
-
-        void clear(Guna2ComboBox product, Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
-        {
-            //clear
-            product.SelectedIndex = 0;
-            shade.SelectedIndex = 0;
-            color.SelectedIndex = 0;
-            size.SelectedIndex = 0;
-            quantity.Text = null;
-        }
-
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
 
         void insert(Guna2ComboBox product, Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
@@ -33,7 +22,6 @@ namespace DigiSort_Box.Database
                 if (command.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Data added");
-                    clear(product, color, shade, size, quantity);
                 }
                 else
                 {
@@ -72,7 +60,6 @@ namespace DigiSort_Box.Database
                     if (com.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Data updated");
-                        clear(product, color, shade, size, quantity);
                     }
                     else
                     {
@@ -86,6 +73,23 @@ namespace DigiSort_Box.Database
             }
 
             connection.Close();
+        }
+
+        //increase the ready to sell and decrease to raw and unprint
+        public void rdy(Guna2ComboBox readyproduct, Guna2ComboBox readycolor, Guna2ComboBox readyshade, Guna2ComboBox readysize, Guna2TextBox quantity)
+        {
+            ready(readyproduct, readycolor, readyshade, readysize, quantity);
+            string rawquery = "UPDATE raw_material SET quantity = quantity - " + int.Parse(quantity.Text) + " WHERE design = '" + readyproduct.SelectedItem.ToString() + "';";
+            string unprintquery = "UPDATE unprinted_shirts SET quantity = quantity - " + int.Parse(quantity.Text) + " WHERE color = '" + readycolor.SelectedItem.ToString() + "' AND shade = '" + readyshade.SelectedItem.ToString() + "' AND size = '" + readysize.SelectedItem.ToString() + "';";
+            
+            connection.Close();
+            connection.Open();
+            MySqlCommand cmdraw = new MySqlCommand(rawquery, connection);
+            MySqlCommand cmdunprint = new MySqlCommand(unprintquery, connection);
+
+            cmdraw.ExecuteNonQuery();
+            cmdunprint.ExecuteNonQuery();
+
         }
 
     }

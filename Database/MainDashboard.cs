@@ -122,5 +122,28 @@ namespace DigiSort_Box.Database
             connection.Close();
         }
 
+        public void damage(System.Windows.Forms.Label lbldamage)
+        {
+            connection.Close();
+            connection.Open();
+            string dmg = "SELECT SUM(quantity) AS total_quantity\r\nFROM (\r\n    SELECT quantity FROM raw_material_damage_items\r\n    UNION ALL\r\n    SELECT quantity FROM unprinted_shirts_damage_items\r\n    UNION ALL\r\n    SELECT quantity FROM ready_to_sell_items_damage_items\r\n) AS combined_data;\r\n";
+            MySqlCommand cmd = new MySqlCommand(dmg, connection);
+            MySqlDataReader row = cmd.ExecuteReader();
+
+            if (row.HasRows)
+            {
+                while (row.Read())
+                {
+                    lbldamage.Text = row[0].ToString();
+                }
+
+            }
+            else
+            {
+                lbldamage.Text = "ERROR";
+            }
+            connection.Close();
+        }
+
     }
 }

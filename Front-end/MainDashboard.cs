@@ -27,6 +27,7 @@ namespace DigiSort_Box.Forms
             dash.unprint(lblunprinted);
             dash.raw(lblraw);
             dash.ready(lblready);
+            dash.damage(lbldamage);
         }
     }
 }
