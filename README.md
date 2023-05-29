@@ -44,4 +44,4 @@
 * You should see the tables after you imported.
 
 # Database File # 
-[UpdatedDB - 5/28/23](https://github.com/JshMaxer/DigiSort-BOX-Official-Guild-/files/11583580/digisortbox.sql.gz)
+[UpdatedDB - 5/29/23](https://github.com/JshMaxer/DigiSort-BOX-Official-Guild-/files/11592312/digisortbox.sql_2.gz)
