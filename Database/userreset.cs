@@ -17,6 +17,7 @@ namespace DigiSort_Box.Database
         public void user(Guna2ComboBox cbuser)
         {
             string SearchQuery = "SELECT username FROM account";
+            connection.Close();
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(SearchQuery, connection);
             MySqlDataReader row = cmd.ExecuteReader();
@@ -42,6 +43,7 @@ namespace DigiSort_Box.Database
             //update query
             string updateQuery = "UPDATE account SET password = MD5('" + txtpass.Text + "')" + "WHERE username = '" + cbuser.SelectedItem.ToString() + "'";
             string DeleteQuery = "DELETE FROM message_request WHERE username = '" + cbuser.SelectedItem.ToString() + "'";
+            connection.Close();
             connection.Open();
             MySqlCommand command = new MySqlCommand(updateQuery, connection);
             MySqlCommand cmd = new MySqlCommand(DeleteQuery, connection);

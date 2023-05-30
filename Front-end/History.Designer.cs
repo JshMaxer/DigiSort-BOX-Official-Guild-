@@ -36,7 +36,6 @@ namespace DigiSort_Box.Front_end
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dghistory = new System.Windows.Forms.DataGridView();
             this.btnokay = new Guna.UI2.WinForms.Guna2Button();
-            this.btnclear = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dghistory)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +103,7 @@ namespace DigiSort_Box.Front_end
             this.btnokay.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnokay.ForeColor = System.Drawing.Color.White;
             this.btnokay.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnokay.Location = new System.Drawing.Point(728, 442);
+            this.btnokay.Location = new System.Drawing.Point(374, 442);
             this.btnokay.Margin = new System.Windows.Forms.Padding(2);
             this.btnokay.Name = "btnokay";
             this.btnokay.Size = new System.Drawing.Size(104, 43);
@@ -112,33 +111,12 @@ namespace DigiSort_Box.Front_end
             this.btnokay.Text = "OKAY";
             this.btnokay.Click += new System.EventHandler(this.btnokay_Click);
             // 
-            // btnclear
-            // 
-            this.btnclear.Animated = true;
-            this.btnclear.BorderRadius = 12;
-            this.btnclear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnclear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnclear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnclear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnclear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
-            this.btnclear.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnclear.ForeColor = System.Drawing.Color.White;
-            this.btnclear.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
-            this.btnclear.Location = new System.Drawing.Point(12, 442);
-            this.btnclear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(104, 43);
-            this.btnclear.TabIndex = 71;
-            this.btnclear.Text = "CLEAR";
-            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
-            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(852, 515);
-            this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnokay);
             this.Controls.Add(this.dghistory);
             this.Controls.Add(this.panel1);
@@ -163,6 +141,5 @@ namespace DigiSort_Box.Front_end
         private System.Windows.Forms.DataGridView dghistory;
         private Guna.UI2.WinForms.Guna2Button btnokay;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnclear;
     }
 }

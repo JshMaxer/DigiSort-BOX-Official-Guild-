@@ -80,7 +80,6 @@ namespace DigiSort_Box.Database
 
         public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4)
         {
-            Items itm = new Items();
             if (cbtable.SelectedItem.Equals("Raw Materials"))
             {
                 //insert query in raw //itm should return data to insert on database.

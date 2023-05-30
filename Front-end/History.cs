@@ -26,12 +26,5 @@ namespace DigiSort_Box.Front_end
         {
             this.Close();
         }
-
-        private void btnclear_Click(object sender, EventArgs e)
-        {
-            //database
-            Database.History logs = new Database.History();
-            logs.clear(dghistory);
-        }
     }
 }

@@ -36,7 +36,6 @@ namespace DigiSort_Box.Front_end
 
         private void dgvitems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Items itm = new Items();
 
             if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
             {
@@ -48,7 +47,6 @@ namespace DigiSort_Box.Front_end
                     label2.Text = dgvRow.Cells[2].Value.ToString(); // color
                     label3.Text = dgvRow.Cells[3].Value.ToString(); // shade
                     label4.Text = dgvRow.Cells[4].Value.ToString(); // size
-                    itm.item1 = dgvRow.Cells[0].Value.ToString();
 
                 }
             }

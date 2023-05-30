@@ -34,22 +34,5 @@ namespace DigiSort_Box.Database
             select(dg);
         }
 
-        public void clear(DataGridView dg)
-        {
-            connection.Close();
-            connection.Open();
-
-            string clear = "DELETE FROM activity_logs";
-            MySqlCommand cmd = new MySqlCommand(clear, connection);
-            MySqlDataReader sdr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(sdr);
-            dg.DataSource = dt;
-
-            //select *
-            select(dg);
-
-            connection.Close();
-        }
     }
 }
