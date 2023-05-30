@@ -39,6 +39,7 @@
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnokay = new Guna.UI2.WinForms.Guna2Button();
             this.dgconcern = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.shadoow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgconcern)).BeginInit();
             this.SuspendLayout();
@@ -172,6 +173,11 @@
             this.dgconcern.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgconcern.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // shadoow
+            // 
+            this.shadoow.BorderRadius = 100;
+            this.shadoow.TargetForm = this;
+            // 
             // Concern
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,5 +206,6 @@
         private Guna.UI2.WinForms.Guna2Elipse smoothedge;
         private Guna.UI2.WinForms.Guna2Button btnokay;
         private Guna.UI2.WinForms.Guna2DataGridView dgconcern;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadoow;
     }
 }

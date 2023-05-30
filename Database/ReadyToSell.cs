@@ -60,6 +60,8 @@ namespace DigiSort_Box.Database
                     if (com.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Item added successfully!");
+                        Database.Damage dmg = new Damage();
+                        dmg.quantityzero();
                     }
                     else
                     {
@@ -89,7 +91,8 @@ namespace DigiSort_Box.Database
 
             cmdraw.ExecuteNonQuery();
             cmdunprint.ExecuteNonQuery();
-
+            Database.Damage dmg = new Damage();
+            dmg.quantityzero();
         }
 
     }

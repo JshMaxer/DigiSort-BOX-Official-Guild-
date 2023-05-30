@@ -39,6 +39,7 @@ namespace DigiSort_Box.Forms
             this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
             this.btncreateaccount = new Guna.UI2.WinForms.Guna2Button();
+            this.shadoow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -158,6 +159,11 @@ namespace DigiSort_Box.Forms
             this.btncreateaccount.Text = "Create Account";
             this.btncreateaccount.Click += new System.EventHandler(this.btncreateaccount_Click);
             // 
+            // shadoow
+            // 
+            this.shadoow.BorderRadius = 100;
+            this.shadoow.TargetForm = this;
+            // 
             // DigiSortBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,5 +199,6 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2ControlBox formminimize;
         private Guna.UI2.WinForms.Guna2Button btnsignin;
         private Guna.UI2.WinForms.Guna2Button btncreateaccount;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadoow;
     }
 }

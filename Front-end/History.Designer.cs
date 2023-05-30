@@ -36,6 +36,7 @@ namespace DigiSort_Box.Front_end
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dghistory = new System.Windows.Forms.DataGridView();
             this.btnokay = new Guna.UI2.WinForms.Guna2Button();
+            this.shadowss = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dghistory)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +112,11 @@ namespace DigiSort_Box.Front_end
             this.btnokay.Text = "OKAY";
             this.btnokay.Click += new System.EventHandler(this.btnokay_Click);
             // 
+            // shadowss
+            // 
+            this.shadowss.BorderRadius = 15;
+            this.shadowss.TargetForm = this;
+            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,5 +147,6 @@ namespace DigiSort_Box.Front_end
         private System.Windows.Forms.DataGridView dghistory;
         private Guna.UI2.WinForms.Guna2Button btnokay;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowss;
     }
 }

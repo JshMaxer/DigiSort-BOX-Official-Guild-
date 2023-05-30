@@ -44,6 +44,7 @@
             this.txtuser = new System.Windows.Forms.Label();
             this.btnupdate = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridViewStyler1 = new Guna.UI2.WinForms.Guna2DataGridViewStyler(this.components);
+            this.shadoow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgaccounts)).BeginInit();
             this.SuspendLayout();
@@ -249,6 +250,11 @@
             this.btnupdate.Text = "CONFIRM";
             this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
+            // shadoow
+            // 
+            this.shadoow.BorderRadius = 100;
+            this.shadoow.TargetForm = this;
+            // 
             // Account_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,5 +296,6 @@
         private System.Windows.Forms.Label txtuser;
         private Guna.UI2.WinForms.Guna2Button btnupdate;
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadoow;
     }
 }

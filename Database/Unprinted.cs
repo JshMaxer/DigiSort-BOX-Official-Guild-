@@ -71,6 +71,8 @@ namespace DigiSort_Box.Database
                     {
                         MessageBox.Show("Item added successfully!");
                         clear(color, shade, size, quantity);
+                        Database.Damage dmg = new Damage();
+                        dmg.quantityzero();
                     }
                     else
                     {

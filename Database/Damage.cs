@@ -1,11 +1,8 @@
 ﻿using DigiSort_Box.Model;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Relational;
-using Org.BouncyCastle.Crypto.Modes;
 using System;
 using System.Data;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Database
@@ -26,7 +23,7 @@ namespace DigiSort_Box.Database
             dtRaw.Load(sdr);
             rawdg.DataSource = dtRaw;
         }
-         void unprint(System.Windows.Forms.DataGridView unprintdg)
+        void unprint(System.Windows.Forms.DataGridView unprintdg)
         {
             connection.Close();
             connection.Open();
@@ -39,7 +36,7 @@ namespace DigiSort_Box.Database
             dtUnprint.Load(sdr);
             unprintdg.DataSource = dtUnprint;
         }
-         void ready(System.Windows.Forms.DataGridView readydg)
+        void ready(System.Windows.Forms.DataGridView readydg)
         {
             connection.Close();
             connection.Open();
@@ -55,12 +52,12 @@ namespace DigiSort_Box.Database
 
         public void tbl(System.Windows.Forms.DataGridView dg, Guna2ComboBox cbtable)
         {
-            if(cbtable.SelectedItem.Equals("Raw Materials"))
+            if (cbtable.SelectedItem.Equals("Raw Materials"))
             {
                 raw(dg);
                 dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             }
-            else if(cbtable.SelectedItem.Equals("Unprinted Shirts"))
+            else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
             {
                 unprint(dg);
                 dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -83,8 +80,8 @@ namespace DigiSort_Box.Database
             if (cbtable.SelectedItem.Equals("Raw Materials"))
             {
                 //insert query in raw //itm should return data to insert on database.
-                string InsertQuery = "INSERT INTO raw_material_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" +  txtissue.Text + "')";
-                string UpdateQuery = "UPDATE raw_material SET quantity = quantity - 1 WHERE id = " + lblid.Text;
+                string InsertQuery = "INSERT INTO raw_material_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
+                string UpdateQuery = "UPDATE raw_material SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = " + lblid.Text;
                 connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
@@ -96,6 +93,7 @@ namespace DigiSort_Box.Database
                         MessageBox.Show("Data Inserted");
                         clear(txtissue, txtquan);
                         updateCommand.ExecuteNonQuery();
+                        quantityzero();
                     }
                     else
                     {
@@ -109,11 +107,11 @@ namespace DigiSort_Box.Database
 
                 connection.Close();
             }
-            else if(cbtable.SelectedItem.Equals("Ready to Sell Items"))
+            else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
             {
                 //insert query //itm should return data to insert on database.
                 string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
-                string UpdateQuery = "UPDATE ready_to_sell_items SET quantity = quantity - 1 WHERE id = " + lblid.Text;
+                string UpdateQuery = "UPDATE ready_to_sell_items SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = " + lblid.Text;
                 connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
@@ -125,6 +123,7 @@ namespace DigiSort_Box.Database
                         MessageBox.Show("Data Inserted");
                         clear(txtissue, txtquan);
                         updateCommand.ExecuteNonQuery();
+                        quantityzero();
                     }
                     else
                     {
@@ -142,7 +141,7 @@ namespace DigiSort_Box.Database
             {
                 //insert query //itm should return data to insert on database.
                 string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
-                string UpdateQuery = "UPDATE unprinted_shirts SET quantity = quantity - 1 WHERE id = " + lblid.Text;
+                string UpdateQuery = "UPDATE unprinted_shirts SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = " + lblid.Text;
                 connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
@@ -154,6 +153,7 @@ namespace DigiSort_Box.Database
                         MessageBox.Show("Data Inserted");
                         clear(txtissue, txtquan);
                         updateCommand.ExecuteNonQuery();
+                        quantityzero();
                     }
                     else
                     {
@@ -167,6 +167,19 @@ namespace DigiSort_Box.Database
 
                 connection.Close();
             }
+        }
+
+        public void quantityzero()
+        {
+            string rawquan = "DELETE FROM raw_material WHERE quantity <= 0";
+            string readyquan = "DELETE FROM ready_to_sell_items WHERE quantity <= 0";
+            string unprintquan = "DELETE FROM unprinted_shirts WHERE quantity <= 0";
+            MySqlCommand rawcmd = new MySqlCommand(rawquan, connection);
+            MySqlCommand readycmd = new MySqlCommand(readyquan, connection);
+            MySqlCommand unprintcmd = new MySqlCommand(unprintquan, connection);
+            rawcmd.ExecuteNonQuery();
+            readycmd.ExecuteNonQuery();
+            unprintcmd.ExecuteNonQuery();
         }
 
     }
