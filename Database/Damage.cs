@@ -84,16 +84,18 @@ namespace DigiSort_Box.Database
             {
                 //insert query in raw //itm should return data to insert on database.
                 string InsertQuery = "INSERT INTO raw_material_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" +  txtissue.Text + "')";
+                string UpdateQuery = "UPDATE raw_material SET quantity = quantity - 1 WHERE id = " + lblid.Text;
                 connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-
+                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
                 try
                 {
                     if (command.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Data Inserted");
                         clear(txtissue, txtquan);
+                        updateCommand.ExecuteNonQuery();
                     }
                     else
                     {
@@ -111,16 +113,18 @@ namespace DigiSort_Box.Database
             {
                 //insert query //itm should return data to insert on database.
                 string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
+                string UpdateQuery = "UPDATE ready_to_sell_items SET quantity = quantity - 1 WHERE id = " + lblid.Text;
                 connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-
+                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
                 try
                 {
                     if (command.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Data Inserted");
                         clear(txtissue, txtquan);
+                        updateCommand.ExecuteNonQuery();
                     }
                     else
                     {
@@ -138,16 +142,18 @@ namespace DigiSort_Box.Database
             {
                 //insert query //itm should return data to insert on database.
                 string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
+                string UpdateQuery = "UPDATE unprinted_shirts SET quantity = quantity - 1 WHERE id = " + lblid.Text;
                 connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-
+                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
                 try
                 {
                     if (command.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Data Inserted");
                         clear(txtissue, txtquan);
+                        updateCommand.ExecuteNonQuery();
                     }
                     else
                     {

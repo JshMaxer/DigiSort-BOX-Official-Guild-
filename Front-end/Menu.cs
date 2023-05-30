@@ -45,15 +45,12 @@ namespace DigiSort_Box.Forms
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
             try
             {
-
                 if (model != null)
                 {
                     switch (model.Position)
                     {
-
                         case "Top_Admin":
                             btndamageitems.Visible = false;
                             btnrawmaterials.Visible = false;
