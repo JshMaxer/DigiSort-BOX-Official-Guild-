@@ -1,12 +1,12 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DigiSort_Box.Model;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Database
 {
     public class MainDashboard
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
+        MySqlConnection connection = Host.connection;
         public void floor(System.Windows.Forms.Label floorad)
         {
             connection.Close();

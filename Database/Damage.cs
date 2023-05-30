@@ -12,9 +12,8 @@ namespace DigiSort_Box.Database
 {
     public class Damage
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
-         void raw(System.Windows.Forms.DataGridView rawdg)
+        MySqlConnection connection = Host.connection;
+        void raw(System.Windows.Forms.DataGridView rawdg)
         {
             connection.Close();
             connection.Open();
@@ -85,7 +84,8 @@ namespace DigiSort_Box.Database
             if (cbtable.SelectedItem.Equals("Raw Materials"))
             {
                 //insert query in raw //itm should return data to insert on database.
-                string InsertQuery = "INSERT INTO raw_material_damage_items VALUES ('" + itm.item1 + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" +  txtissue.Text + "')";
+                string InsertQuery = "INSERT INTO raw_material_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" +  txtissue.Text + "')";
+                connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
 
@@ -111,7 +111,8 @@ namespace DigiSort_Box.Database
             else if(cbtable.SelectedItem.Equals("Ready to Sell Items"))
             {
                 //insert query //itm should return data to insert on database.
-                string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + itm.item1 + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
+                string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
+                connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
 
@@ -137,7 +138,8 @@ namespace DigiSort_Box.Database
             else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
             {
                 //insert query //itm should return data to insert on database.
-                string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + itm.item1 + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
+                string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "')";
+                connection.Close();
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
 

@@ -8,13 +8,14 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DigiSort_Box.Model;
 using MySql.Data.MySqlClient;
 
 namespace DigiSort_Box.Forms
 {
     public partial class useraccount : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
+        MySqlConnection connection = Host.connection;
         public useraccount()
         {
             InitializeComponent();

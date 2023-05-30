@@ -15,12 +15,13 @@ using System.Xml.Linq;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using System.Web;
+using DigiSort_Box.Model;
 
 namespace DigiSort_Box.Forms
 {
     public partial class Inventory : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
+        MySqlConnection connection = Host.connection;
         DataTable dtRaw = new DataTable();
         DataTable dtUnprint = new DataTable();
         DataTable dtReady = new DataTable();

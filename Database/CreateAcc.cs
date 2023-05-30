@@ -1,4 +1,5 @@
-﻿using DigiSort_Box.Mowdel;
+﻿using DigiSort_Box.Model;
+using DigiSort_Box.Mowdel;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
@@ -9,20 +10,19 @@ namespace DigiSort_Box.Database
     class CreateAcc
     {
 
-        public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username, Guna2ComboBox cbusertype, System.Windows.Forms.Label lbl)
+        public void createAcc(Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox paswword, Guna2TextBox retype, Guna2TextBox username, Guna2ComboBox cbusertype, System.Windows.Forms.Label lbl, Guna2Button btncreate)
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
+            MySqlConnection connection = Host.connection;
             try
             {
                 if (firstname.Text.Equals("") || lastname.Text.Equals("") || paswword.Text.Equals("") || retype.Text.Equals("") || username.Text.Equals(""))
                 {
-                    MessageBox.Show("Form must be filled-out completely!");
+                    btncreate.Enabled = false;
                     lbl.Text = "filled";
                 }
                 else if (!retype.Text.Equals(paswword.Text))
                 {
-                    MessageBox.Show("Password do not match!");
+                    MessageBox.Show("Password does not match!");
                     lbl.Text = "dontmatch";
                 }
                 else
@@ -83,7 +83,7 @@ namespace DigiSort_Box.Database
                         }
                         catch (Exception)
                         {
-                            MessageBox.Show("Username is already used!");
+                            MessageBox.Show("Username is already used!\nTry Another.");
                             lbl.Text = "already";
                         }
 
@@ -96,6 +96,7 @@ namespace DigiSort_Box.Database
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\n\t\tSQLServer is turned off");
+                btncreate.Enabled = false;
             }
 
         }

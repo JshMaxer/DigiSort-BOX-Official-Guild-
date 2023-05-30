@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DigiSort_Box.Model;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 
@@ -14,9 +15,9 @@ namespace DigiSort_Box.Database
     {
         public void reset(System.Windows.Forms.Label lbluser, Guna2TextBox txtpass, Guna2TextBox txtretype)
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
+            MySqlConnection connection = Host.connection;
             string updateuser = "UPDATE account SET password = MD5('" + txtpass.Text + "') WHERE username = '" + lbluser.Text + "'";
+            connection.Close();
             connection.Open();
             MySqlCommand command = new MySqlCommand(updateuser, connection);
 

@@ -249,6 +249,7 @@
     <Compile Include="Front-end\Userreset.Designer.cs">
       <DependentUpon>Userreset.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Host.cs" />
     <Compile Include="Model\Items.cs" />
     <Compile Include="Model\Lageen.cs" />
     <Compile Include="Program.cs" />

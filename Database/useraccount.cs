@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DigiSort_Box.Model;
 using DigiSort_Box.Mowdel;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
@@ -15,8 +16,7 @@ namespace DigiSort_Box.Database
         Lageen lageen = new Lageen();
         public void user(Guna2TextBox username, Guna2TextBox firstname, Guna2TextBox lastname, Guna2TextBox position)
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
+            MySqlConnection connection = Host.connection;
             //Account
             connection.Close();
             connection.Open();

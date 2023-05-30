@@ -38,10 +38,10 @@ namespace DigiSort_Box.Forms
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblforgot = new System.Windows.Forms.Label();
             this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblforgot = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -111,6 +111,7 @@ namespace DigiSort_Box.Forms
             this.txtusername.Size = new System.Drawing.Size(309, 37);
             this.txtusername.TabIndex = 0;
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // guna2ShadowPanel1
             // 
@@ -142,6 +143,20 @@ namespace DigiSort_Box.Forms
             this.guna2PictureBox2.TabIndex = 51;
             this.guna2PictureBox2.TabStop = false;
             // 
+            // lblforgot
+            // 
+            this.lblforgot.AutoSize = true;
+            this.lblforgot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblforgot.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblforgot.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblforgot.Location = new System.Drawing.Point(112, 288);
+            this.lblforgot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblforgot.Name = "lblforgot";
+            this.lblforgot.Size = new System.Drawing.Size(123, 13);
+            this.lblforgot.TabIndex = 7;
+            this.lblforgot.Text = "Forgot password?";
+            this.lblforgot.Click += new System.EventHandler(this.lblforgot_Click);
+            // 
             // btnsignin
             // 
             this.btnsignin.Animated = true;
@@ -150,6 +165,7 @@ namespace DigiSort_Box.Forms
             this.btnsignin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnsignin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnsignin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnsignin.Enabled = false;
             this.btnsignin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
             this.btnsignin.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnsignin.ForeColor = System.Drawing.Color.White;
@@ -183,6 +199,7 @@ namespace DigiSort_Box.Forms
             this.txtpassword.TabIndex = 1;
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtpassword.UseSystemPasswordChar = true;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // guna2PictureBox1
             // 
@@ -195,20 +212,6 @@ namespace DigiSort_Box.Forms
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 51;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // lblforgot
-            // 
-            this.lblforgot.AutoSize = true;
-            this.lblforgot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblforgot.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblforgot.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblforgot.Location = new System.Drawing.Point(112, 288);
-            this.lblforgot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblforgot.Name = "lblforgot";
-            this.lblforgot.Size = new System.Drawing.Size(123, 13);
-            this.lblforgot.TabIndex = 7;
-            this.lblforgot.Text = "Forgot password?";
-            this.lblforgot.Click += new System.EventHandler(this.lblforgot_Click);
             // 
             // Login
             // 

@@ -1,4 +1,5 @@
-﻿using DigiSort_Box.Mowdel;
+﻿using DigiSort_Box.Model;
+using DigiSort_Box.Mowdel;
 using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 using System;
@@ -8,7 +9,7 @@ namespace DigiSort_Box.Forms
 {
     public partial class Login : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
+        MySqlConnection connection = Host.connection;
         public Login()
         {
             InitializeComponent();
@@ -102,9 +103,9 @@ namespace DigiSort_Box.Forms
                             }
                         }
 
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            MessageBox.Show(ex.Message);
+                            //MessageBox.Show(ex.Message);
                         }
                         connection.Close();
                     }
@@ -163,5 +164,28 @@ namespace DigiSort_Box.Forms
             }
         }
 
+        private void txtusername_TextChanged(object sender, EventArgs e)
+        {
+            if(txtusername.Text.Equals("") || txtpassword.Text.Equals(""))
+            {
+                btnsignin.Enabled = false;
+            }
+            else
+            {
+                btnsignin.Enabled = true;
+            }
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtusername.Text.Equals("") || txtpassword.Text.Equals(""))
+            {
+                btnsignin.Enabled = false;
+            }
+            else
+            {
+                btnsignin.Enabled = true;
+            }
+        }
     }
 }

@@ -49,7 +49,6 @@ namespace DigiSort_Box.Front_end
                     label3.Text = dgvRow.Cells[3].Value.ToString(); // shade
                     label4.Text = dgvRow.Cells[4].Value.ToString(); // size
                     itm.item1 = dgvRow.Cells[0].Value.ToString();
-                    MessageBox.Show(itm.item1);
 
                 }
             }
@@ -71,6 +70,30 @@ namespace DigiSort_Box.Front_end
         {
             Database.Damage dmg = new Database.Damage();
             dmg.issue(txtissue, txtquantity, cbtable, lblid, label1, label2, label3, label4);
+        }
+
+        private void txtissue_TextChanged(object sender, EventArgs e)
+        {
+            if (txtissue.Text.Equals("") || txtquantity.Text.Equals("") || lblid.Text == "")
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
+        }
+
+        private void txtquantity_TextChanged(object sender, EventArgs e)
+        {
+            if (txtissue.Text.Equals("") || txtquantity.Text.Equals("") || lblid.Text == "")
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
         }
     }
 }

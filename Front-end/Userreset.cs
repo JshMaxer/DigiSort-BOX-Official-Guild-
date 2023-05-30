@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DigiSort_Box.Model;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Relational;
 
@@ -14,8 +15,7 @@ namespace DigiSort_Box.Front_end
 {
     public partial class Userreset : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
+        MySqlConnection connection = Host.connection;
         public Userreset()
         {
             InitializeComponent();

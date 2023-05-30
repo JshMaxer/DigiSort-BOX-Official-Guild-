@@ -1,4 +1,5 @@
-﻿using DigiSort_Box.Mowdel;
+﻿using DigiSort_Box.Model;
+using DigiSort_Box.Mowdel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
@@ -7,7 +8,7 @@ namespace DigiSort_Box.Forms
 {
     public partial class Dashboard : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
+        MySqlConnection connection = Host.connection;
         private Lageen model = new Lageen();
 
         public Dashboard(Lageen lageen)

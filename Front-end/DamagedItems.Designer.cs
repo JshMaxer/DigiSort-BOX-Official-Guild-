@@ -79,6 +79,7 @@ namespace DigiSort_Box.Front_end
             this.txtissue.ForeColor = System.Drawing.Color.Black;
             this.txtissue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtissue.Location = new System.Drawing.Point(118, 378);
+            this.txtissue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtissue.MaxLength = 255;
             this.txtissue.Multiline = true;
             this.txtissue.Name = "txtissue";
@@ -87,6 +88,7 @@ namespace DigiSort_Box.Front_end
             this.txtissue.SelectedText = "";
             this.txtissue.Size = new System.Drawing.Size(503, 80);
             this.txtissue.TabIndex = 47;
+            this.txtissue.TextChanged += new System.EventHandler(this.txtissue_TextChanged);
             // 
             // txtquantity
             // 
@@ -104,6 +106,7 @@ namespace DigiSort_Box.Front_end
             this.txtquantity.ForeColor = System.Drawing.Color.Black;
             this.txtquantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtquantity.Location = new System.Drawing.Point(326, 465);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtquantity.MaxLength = 3;
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.PasswordChar = '\0';
@@ -112,6 +115,7 @@ namespace DigiSort_Box.Front_end
             this.txtquantity.Size = new System.Drawing.Size(88, 25);
             this.txtquantity.TabIndex = 47;
             this.txtquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
             this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
             // 
             // btnadd
@@ -122,12 +126,13 @@ namespace DigiSort_Box.Front_end
             this.btnadd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnadd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnadd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnadd.Enabled = false;
             this.btnadd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
             this.btnadd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnadd.ForeColor = System.Drawing.Color.White;
             this.btnadd.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(184)))));
             this.btnadd.Location = new System.Drawing.Point(633, 465);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(103, 31);
             this.btnadd.TabIndex = 69;
@@ -151,7 +156,7 @@ namespace DigiSort_Box.Front_end
             "Ready to Sell Items",
             "Unprinted Shirts"});
             this.cbtable.Location = new System.Drawing.Point(160, 9);
-            this.cbtable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbtable.Margin = new System.Windows.Forms.Padding(2);
             this.cbtable.Name = "cbtable";
             this.cbtable.Size = new System.Drawing.Size(420, 36);
             this.cbtable.StartIndex = 0;
@@ -162,7 +167,7 @@ namespace DigiSort_Box.Front_end
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(724, 9);
+            this.label1.Location = new System.Drawing.Point(722, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
@@ -172,7 +177,7 @@ namespace DigiSort_Box.Front_end
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(724, 9);
+            this.label2.Location = new System.Drawing.Point(722, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
@@ -182,7 +187,7 @@ namespace DigiSort_Box.Front_end
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(724, 9);
+            this.label3.Location = new System.Drawing.Point(722, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 13);
@@ -192,7 +197,7 @@ namespace DigiSort_Box.Front_end
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(724, 9);
+            this.label4.Location = new System.Drawing.Point(722, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
@@ -202,7 +207,7 @@ namespace DigiSort_Box.Front_end
             // lblid
             // 
             this.lblid.AutoSize = true;
-            this.lblid.Location = new System.Drawing.Point(724, 9);
+            this.lblid.Location = new System.Drawing.Point(722, 9);
             this.lblid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(0, 13);

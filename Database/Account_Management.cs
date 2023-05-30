@@ -1,20 +1,16 @@
-﻿using MySql.Data.MySqlClient;
-using static Guna.UI2.WinForms.Helpers.GraphicsHelper;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using System.Security.Principal;
+﻿using DigiSort_Box.Model;
 using Guna.UI2.WinForms;
-using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using System;
 
 namespace DigiSort_Box.Database
 {
     public class Account_Management
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
-        public void account(System.Windows.Forms.Label user,Guna2ComboBox pos, Guna2DataGridView dgacc)
+        MySqlConnection connection = Host.connection;
+        public void account(System.Windows.Forms.Label user, Guna2ComboBox pos, Guna2DataGridView dgacc)
         {
             //Account
             connection.Close();

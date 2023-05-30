@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using DigiSort_Box.Model;
+using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
@@ -7,8 +8,7 @@ namespace DigiSort_Box.Database
 {
     class Unprinted
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
+        MySqlConnection connection = Host.connection;
         void clear(Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
         {
             //clear
@@ -30,12 +30,12 @@ namespace DigiSort_Box.Database
             {
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Data added");
+                    MessageBox.Show("Item added successfully!");
                     clear(color, shade, size, quantity);
                 }
                 else
                 {
-                    MessageBox.Show("Data Not added");
+                    MessageBox.Show("Item added Unsuccessfully!");
                 }
 
             }
@@ -69,7 +69,7 @@ namespace DigiSort_Box.Database
                     //If quantity  <= 0
                     if (com.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("Data updated");
+                        MessageBox.Show("Item added successfully!");
                         clear(color, shade, size, quantity);
                     }
                     else

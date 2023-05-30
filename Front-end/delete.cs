@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DigiSort_Box.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -8,7 +9,7 @@ namespace DigiSort_Box.Forms
 {
     public partial class delete : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
+        MySqlConnection connection = Host.connection;
         public delete()
         {
             InitializeComponent();
@@ -252,7 +253,7 @@ namespace DigiSort_Box.Forms
                         {
                             if (command.ExecuteNonQuery() == 1)
                             {
-                                MessageBox.Show("Data deleted", "Successful");
+                                MessageBox.Show("Data successfully deleted!", "Successful");
                                 raw();
 
                                 //history
@@ -262,7 +263,7 @@ namespace DigiSort_Box.Forms
                             }
                             else
                             {
-                                MessageBox.Show("Data not-deleted", "UnSuccessful");
+                                MessageBox.Show("Data Unsuccessfully deleted!", "UnSuccessful");
                             }
                         }
                         catch (Exception ex)
@@ -292,7 +293,7 @@ namespace DigiSort_Box.Forms
                         {
                             if (command.ExecuteNonQuery() == 1)
                             {
-                                MessageBox.Show("Data deleted", "Successful");
+                                MessageBox.Show("Data successfully deleted!", "Successful");
                                 ready();
 
                                 //history
@@ -302,7 +303,7 @@ namespace DigiSort_Box.Forms
                             }
                             else
                             {
-                                MessageBox.Show("Data not-deleted", "UnSuccessful");
+                                MessageBox.Show("Data Unsuccessfully deleted!", "UnSuccessful");
                             }
                         }
                         catch (Exception ex)
@@ -332,7 +333,7 @@ namespace DigiSort_Box.Forms
                         {
                             if (command.ExecuteNonQuery() == 1)
                             {
-                                MessageBox.Show("Data deleted", "Successful");
+                                MessageBox.Show("Data successfully deleted!", "Successful");
                                 unprint();
 
                                 //history
@@ -342,7 +343,7 @@ namespace DigiSort_Box.Forms
                             }
                             else
                             {
-                                MessageBox.Show("Data not-deleted", "UnSuccessful");
+                                MessageBox.Show("Data Unsuccessfully deleted!", "UnSuccessful");
                             }
                         }
                         catch (Exception ex)

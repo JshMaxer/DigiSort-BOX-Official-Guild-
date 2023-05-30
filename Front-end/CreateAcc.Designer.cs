@@ -142,6 +142,7 @@ namespace DigiSort_Box
             this.txtretype.TabIndex = 33;
             this.txtretype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtretype.UseSystemPasswordChar = true;
+            this.txtretype.TextChanged += new System.EventHandler(this.txtretype_TextChanged);
             // 
             // btncreate
             // 
@@ -151,6 +152,7 @@ namespace DigiSort_Box
             this.btncreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btncreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btncreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btncreate.Enabled = false;
             this.btncreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
             this.btncreate.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btncreate.ForeColor = System.Drawing.Color.White;
@@ -185,6 +187,7 @@ namespace DigiSort_Box
             this.txtfirstname.Size = new System.Drawing.Size(269, 31);
             this.txtfirstname.TabIndex = 28;
             this.txtfirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfirstname.TextChanged += new System.EventHandler(this.txtfirstname_TextChanged);
             // 
             // txtlastname
             // 
@@ -208,6 +211,7 @@ namespace DigiSort_Box
             this.txtlastname.Size = new System.Drawing.Size(269, 31);
             this.txtlastname.TabIndex = 28;
             this.txtlastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtlastname.TextChanged += new System.EventHandler(this.txtlastname_TextChanged);
             // 
             // txtusername
             // 
@@ -231,6 +235,7 @@ namespace DigiSort_Box
             this.txtusername.Size = new System.Drawing.Size(269, 31);
             this.txtusername.TabIndex = 28;
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // txtpassword
             // 
@@ -254,6 +259,7 @@ namespace DigiSort_Box
             this.txtpassword.Size = new System.Drawing.Size(269, 31);
             this.txtpassword.TabIndex = 28;
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // btnback
             // 

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DigiSort_Box.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -7,7 +8,7 @@ namespace DigiSort_Box.Forms
 {
     public partial class update : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=; convert zero datetime=true;allow user variables=true;");
+        MySqlConnection connection = Host.connection;
         public update()
         {
             InitializeComponent();
@@ -85,7 +86,7 @@ namespace DigiSort_Box.Forms
             }
             catch (Exception)
             {
-                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -116,7 +117,7 @@ namespace DigiSort_Box.Forms
             }
             catch (Exception)
             {
-                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -147,7 +148,7 @@ namespace DigiSort_Box.Forms
             }
             catch (Exception)
             {
-                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -187,7 +188,7 @@ namespace DigiSort_Box.Forms
                         {
                             if (command.ExecuteNonQuery() == 1)
                             {
-                                MessageBox.Show("Data updated", "Successful");
+                                MessageBox.Show("Data successfully changed!", "Successful");
                                 raw();
 
                                 //history
@@ -195,7 +196,7 @@ namespace DigiSort_Box.Forms
                             }
                             else
                             {
-                                MessageBox.Show("Data not-updated", "UnSuccessful");
+                                MessageBox.Show("Data Unsuccessfully changed!", "UnSuccessful");
                                 MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             }
                         }
@@ -227,7 +228,7 @@ namespace DigiSort_Box.Forms
                         {
                             if (command.ExecuteNonQuery() == 1)
                             {
-                                MessageBox.Show("Data updated", "Successful");
+                                MessageBox.Show("Data successfully changed!", "Successful");
                                 ready();
 
                                 //history
@@ -235,7 +236,7 @@ namespace DigiSort_Box.Forms
                             }
                             else
                             {
-                                MessageBox.Show("Data not-updated", "UnSuccessful");
+                                MessageBox.Show("Data Unsuccessfully changed!", "UnSuccessful");
                                 MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             }
                         }
@@ -267,7 +268,7 @@ namespace DigiSort_Box.Forms
                         {
                             if (command.ExecuteNonQuery() == 1)
                             {
-                                MessageBox.Show("Data updated", "Successful");
+                                MessageBox.Show("Data successfully changed!", "Successful");
                                 unprint();
 
                                 //history
@@ -275,7 +276,7 @@ namespace DigiSort_Box.Forms
                             }
                             else
                             {
-                                MessageBox.Show("Data not-updated", "UnSuccessful");
+                                MessageBox.Show("Data Unsuccessfully changed!", "UnSuccessful");
                                 MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             }
                         }

@@ -22,7 +22,7 @@ namespace DigiSort_Box
         {
             //database
             Database.CreateAcc Account = new Database.CreateAcc();
-            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername, cbaccount, lblstatus);
+            Account.createAcc(txtfirstname, txtlastname, txtpassword, txtretype, txtusername, cbaccount, lblstatus, btncreate);
 
             if (lblstatus.Text.Equals("success"))
             {
@@ -38,6 +38,66 @@ namespace DigiSort_Box
                 //ok
             }
             
+        }
+
+        private void txtfirstname_TextChanged(object sender, EventArgs e)
+        {
+            if (txtfirstname.Text.Equals("") || txtlastname.Text.Equals("") || txtpassword.Text.Equals("") || txtretype.Text.Equals("") || txtusername.Text.Equals(""))
+            {
+                btncreate.Enabled = false;
+            }
+            else
+            {
+                btncreate.Enabled = true;
+            }
+        }
+
+        private void txtlastname_TextChanged(object sender, EventArgs e)
+        {
+            if (txtfirstname.Text.Equals("") || txtlastname.Text.Equals("") || txtpassword.Text.Equals("") || txtretype.Text.Equals("") || txtusername.Text.Equals(""))
+            {
+                btncreate.Enabled = false;
+            }
+            else
+            {
+                btncreate.Enabled = true;
+            }
+        }
+
+        private void txtusername_TextChanged(object sender, EventArgs e)
+        {
+            if (txtfirstname.Text.Equals("") || txtlastname.Text.Equals("") || txtpassword.Text.Equals("") || txtretype.Text.Equals("") || txtusername.Text.Equals(""))
+            {
+                btncreate.Enabled = false;
+            }
+            else
+            {
+                btncreate.Enabled = true;
+            }
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtfirstname.Text.Equals("") || txtlastname.Text.Equals("") || txtpassword.Text.Equals("") || txtretype.Text.Equals("") || txtusername.Text.Equals(""))
+            {
+                btncreate.Enabled = false;
+            }
+            else
+            {
+                btncreate.Enabled = true;
+            }
+        }
+
+        private void txtretype_TextChanged(object sender, EventArgs e)
+        {
+            if (txtfirstname.Text.Equals("") || txtlastname.Text.Equals("") || txtpassword.Text.Equals("") || txtretype.Text.Equals("") || txtusername.Text.Equals(""))
+            {
+                btncreate.Enabled = false;
+            }
+            else
+            {
+                btncreate.Enabled = true;
+            }
         }
     }
 }

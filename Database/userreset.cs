@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DigiSort_Box.Model;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 
@@ -12,8 +13,7 @@ namespace DigiSort_Box.Database
 {
     public class userreset
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=");
-
+        MySqlConnection connection = Host.connection;
         public void user(Guna2ComboBox cbuser)
         {
             string SearchQuery = "SELECT username FROM account";

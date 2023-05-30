@@ -1,4 +1,5 @@
 ﻿
+using DigiSort_Box.Model;
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
@@ -8,8 +9,7 @@ namespace DigiSort_Box.Front_end
 {
     public partial class History : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog = digisortbox;username=root;password=; convert zero datetime=true;allow user variables=true;");
-
+        MySqlConnection connection = Host.connection;
         public History()
         {
             InitializeComponent();
