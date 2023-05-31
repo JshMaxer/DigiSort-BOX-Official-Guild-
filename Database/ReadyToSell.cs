@@ -9,10 +9,10 @@ namespace DigiSort_Box.Database
     class ReadyToSell
     {
         MySqlConnection connection = Host.connection;
-        void insert(Guna2ComboBox product, Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
+        void insert(Guna2ComboBox material, Guna2ComboBox design, Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
         {
             //insert query
-            string InsertQuery = "INSERT INTO ready_to_sell_items VALUES ('0', '" + product.SelectedItem.ToString() + "', '" + color.SelectedItem.ToString() + "', '" + shade.SelectedItem.ToString() + "', '" + size.SelectedItem.ToString() + "', '" + quantity.Text + "')";
+            string InsertQuery = "INSERT INTO ready_to_sell_items VALUES ('0', '" + material.SelectedItem.ToString() + "', '" + design.SelectedItem.ToString() +  "', '" + color.SelectedItem.ToString() + "', '" + shade.SelectedItem.ToString() + "', '" + size.SelectedItem.ToString() + "', '" + quantity.Text + "')";
             connection.Close();
             connection.Open();
             MySqlCommand command = new MySqlCommand(InsertQuery, connection);
@@ -37,10 +37,10 @@ namespace DigiSort_Box.Database
             connection.Close();
         }
 
-        public void ready(Guna2ComboBox product, Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
+        public void ready(Guna2ComboBox material, Guna2ComboBox design, Guna2ComboBox color, Guna2ComboBox shade, Guna2ComboBox size, Guna2TextBox quantity)
         {
             //update query add quantity
-            string updateQuery = "UPDATE ready_to_sell_items SET quantity = quantity + '" + int.Parse(quantity.Text) + "' WHERE product_name = '" + product.SelectedItem.ToString() + "' AND color = '" + color.SelectedItem.ToString() + "' AND shade = '" + shade.SelectedItem.ToString() + "' AND size = '" + size.SelectedItem.ToString() + "'";
+            string updateQuery = "UPDATE ready_to_sell_items SET quantity = quantity + '" + int.Parse(quantity.Text) + "' WHERE material = '" + material.SelectedItem.ToString() + "' AND design = '" + design.SelectedItem.ToString() + "' AND color = '" + color.SelectedItem.ToString() + "' AND shade = '" + shade.SelectedItem.ToString() + "' AND size = '" + size.SelectedItem.ToString() + "'";
             connection.Close();
             connection.Open();
             MySqlCommand com = new MySqlCommand(updateQuery, connection);
@@ -65,7 +65,7 @@ namespace DigiSort_Box.Database
                     }
                     else
                     {
-                        insert(product, color, shade, size, quantity);
+                        insert(material, design, color, shade, size, quantity);
                     }
                 }
             }
@@ -78,10 +78,10 @@ namespace DigiSort_Box.Database
         }
 
         //increase the ready to sell and decrease to raw and unprint
-        public void rdy(Guna2ComboBox readyproduct, Guna2ComboBox readycolor, Guna2ComboBox readyshade, Guna2ComboBox readysize, Guna2TextBox quantity)
+        public void rdy(Guna2ComboBox readymaterial, Guna2ComboBox readydesign, Guna2ComboBox readycolor, Guna2ComboBox readyshade, Guna2ComboBox readysize, Guna2TextBox quantity)
         {
-            ready(readyproduct, readycolor, readyshade, readysize, quantity);
-            string rawquery = "UPDATE raw_material SET quantity = quantity - " + int.Parse(quantity.Text) + " WHERE design = '" + readyproduct.SelectedItem.ToString() + "';";
+            ready(readymaterial, readydesign, readycolor, readyshade, readysize, quantity);
+            string rawquery = "UPDATE raw_material SET quantity = quantity - " + int.Parse(quantity.Text) + " WHERE material = '" + readymaterial.SelectedItem.ToString() +  "' AND design = '" + readydesign.SelectedItem.ToString() + "';";
             string unprintquery = "UPDATE unprinted_shirts SET quantity = quantity - " + int.Parse(quantity.Text) + " WHERE color = '" + readycolor.SelectedItem.ToString() + "' AND shade = '" + readyshade.SelectedItem.ToString() + "' AND size = '" + readysize.SelectedItem.ToString() + "';";
             
             connection.Close();

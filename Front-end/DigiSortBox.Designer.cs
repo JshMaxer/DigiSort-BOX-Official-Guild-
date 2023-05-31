@@ -30,7 +30,6 @@ namespace DigiSort_Box.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.formminimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -40,20 +39,10 @@ namespace DigiSort_Box.Forms
             this.btnsignin = new Guna.UI2.WinForms.Guna2Button();
             this.btncreateaccount = new Guna.UI2.WinForms.Guna2Button();
             this.shadoow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::DigiSort_Box.Properties.Resources._1;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(725, 362);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -164,6 +153,17 @@ namespace DigiSort_Box.Forms
             this.shadoow.BorderRadius = 100;
             this.shadoow.TargetForm = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::DigiSort_Box.Properties.Resources._1;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(725, 362);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // DigiSortBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,9 +181,9 @@ namespace DigiSort_Box.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DigiSortBox";
             this.Load += new System.EventHandler(this.DigiSortBox_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

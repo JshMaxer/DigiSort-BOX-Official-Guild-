@@ -21,9 +21,11 @@ namespace DigiSort_Box.Forms
         {
             //database
             Database.ReadyToSell ready = new Database.ReadyToSell();
-            ready.rdy(cbproduct, cbcolor, cbshade, cbsize, txtquantity);
+            ready.rdy(cbmaterial, cbdesign, cbcolor, cbshade, cbsize, txtquantity);
+
             //clear
-            cbproduct.Text = "";
+            cbmaterial.Text = "";
+            cbdesign.Text = "";
             cbcolor.Text = "";
             cbshade.Items.Clear();
             cbsize.Text = "";
@@ -32,7 +34,7 @@ namespace DigiSort_Box.Forms
 
         private void cbcolor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
@@ -175,7 +177,7 @@ namespace DigiSort_Box.Forms
 
         private void cbproduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbdesign.Text.Equals("") || cbmaterial.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
@@ -187,7 +189,7 @@ namespace DigiSort_Box.Forms
 
         private void cbshade_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbdesign.Text.Equals("") || cbmaterial.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
@@ -199,7 +201,7 @@ namespace DigiSort_Box.Forms
 
         private void cbsize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbdesign.Text.Equals("") || cbmaterial.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
@@ -211,7 +213,7 @@ namespace DigiSort_Box.Forms
 
         private void txtquantity_TextChanged(object sender, EventArgs e)
         {
-            if (cbproduct.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbdesign.Text.Equals("") || cbmaterial.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
@@ -224,6 +226,18 @@ namespace DigiSort_Box.Forms
         private void txtquantity_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsNumber(e.KeyChar);
+        }
+
+        private void cbproduct_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbdesign.Text.Equals("") || cbmaterial.Text.Equals("") || cbcolor.Text.Equals("") || cbshade.Text.Equals("") || cbsize.Text.Equals("") || txtquantity.Text.Equals(""))
+            {
+                btnadd.Enabled = false;
+            }
+            else
+            {
+                btnadd.Enabled = true;
+            }
         }
     }
 }

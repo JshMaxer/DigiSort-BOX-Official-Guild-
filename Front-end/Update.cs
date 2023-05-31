@@ -16,6 +16,7 @@ namespace DigiSort_Box.Forms
 
         void clear()
         {
+            txtid.Text = "";
             cb1.Text = "";
             cb1.Items.Clear();
             cb2.Text = "";
@@ -24,7 +25,10 @@ namespace DigiSort_Box.Forms
             cb3.Items.Clear();
             cb4.Text = "";
             cb4.Items.Clear();
+            cb5.Text = "";
+            cb5.Items.Clear();
             txt5.Text = "";
+            btnupdate.Enabled = false;
         }
 
         void raw()
@@ -161,7 +165,7 @@ namespace DigiSort_Box.Forms
         private void btnupdate_Click_1(object sender, EventArgs e)
         {
             //field is blank
-            if (cbtable.Text.Equals("") && (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || txt5.Text.Equals("")))
+            if (cbtable.Text.Equals("") && (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || cb5.Text.Equals("") || txt5.Text.Equals("")))
             {
                 MessageBox.Show("Field is blank!");
             }
@@ -212,7 +216,7 @@ namespace DigiSort_Box.Forms
                 {
 
                     //field is blank
-                    if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || txt5.Text.Equals(""))
+                    if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || cb5.Text.Equals("") || txt5.Text.Equals(""))
                     {
                         MessageBox.Show("Field is blank!");
                     }
@@ -221,7 +225,7 @@ namespace DigiSort_Box.Forms
                         connection.Close();
                         connection.Open();
                         //update query
-                        string updateQuery = "UPDATE ready_to_sell_items SET product_name = '" + cb1.Text + "', color = '" + cb2.Text + "', shade = '" + cb3.Text + "', size ='" + cb4.Text + "', quantity ='" + txt5.Text + "' WHERE id = '" + txtid.Text + "'";
+                        string updateQuery = "UPDATE ready_to_sell_items SET material = '" + cb1.Text + "', design = '" + cb2.Text + "', color = '" + cb3.Text + "', shade = '" + cb4.Text + "', size ='" + cb5.Text + "', quantity ='" + txt5.Text + "' WHERE id = '" + txtid.Text + "'";
                         MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
                         try
@@ -299,6 +303,9 @@ namespace DigiSort_Box.Forms
                 connection.Close();
                 connection.Open();
 
+                cb4.Enabled = false;
+                cb5.Enabled = false;
+
                 raw();
 
             }
@@ -307,6 +314,9 @@ namespace DigiSort_Box.Forms
                 clear();
                 connection.Close();
                 connection.Open();
+
+                cb4.Enabled = true;
+                cb5.Enabled = true;
 
                 ready();
 
@@ -317,12 +327,16 @@ namespace DigiSort_Box.Forms
                 connection.Close();
                 connection.Open();
 
+                cb4.Enabled = false;
+                cb5.Enabled = false;
+
                 unprint();
             }
         }
 
         private void dgtable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnupdate.Enabled = true;
             if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
             {
                 if (e.RowIndex != -1)
@@ -335,51 +349,57 @@ namespace DigiSort_Box.Forms
                     txtid.Text = "";
                     txtid.Text = dgvRow.Cells[0].Value.ToString();
 
-                    //Product name
+                    //Material
                     cb1.Items.Clear();
-                    cb1.Items.Add("SpyXFamily");
-                    cb1.Items.Add("Naruto");
-                    cb1.Items.Add("OnePiece");
-                    cb1.Items.Add("Black Clover");
-                    cb1.Items.Add("Kimetsu no Yaiba");
-                    cb1.Items.Add("Bleach");
-                    cb1.Items.Add("Boku no tige");
+                    cb1.Items.Add("");
+                    cb1.Items.Add("Vinyl");
+                    cb1.Items.Add("Sticker paper");
+                    cb1.Items.Add("Laminating film");
                     cb1.Text = dgvRow.Cells[1].Value.ToString();
                     lbltxt1.Text = cb1.Text;
 
-                    //Color
+                    //design
                     cb2.Items.Clear();
-                    cb2.Items.Add("Red");
-                    cb2.Items.Add("Orange");
-                    cb2.Items.Add("Yellow");
-                    cb2.Items.Add("Green");
-                    cb2.Items.Add("Blue");
-                    cb2.Items.Add("Purple");
-                    cb2.Items.Add("White");
-                    cb2.Items.Add("Brown");
-                    cb2.Items.Add("Gray");
-                    cb2.Items.Add("Black");
+                    cb2.Items.Add("");
+                    cb2.Items.Add("SpyXFamily");
+                    cb2.Items.Add("Naruto");
+                    cb2.Items.Add("Black Clover");
+                    cb2.Items.Add("Kimetsu no Yaiba");
+                    cb2.Items.Add("Bleach");
+                    cb2.Items.Add("Boku no tige");
                     cb2.Text = dgvRow.Cells[2].Value.ToString();
 
-                    //shade
+                    //Color
+                    cb3.Items.Clear();
+                    cb3.Items.Add("Red");
+                    cb3.Items.Add("Orange");
+                    cb3.Items.Add("Yellow");
+                    cb3.Items.Add("Green");
+                    cb3.Items.Add("Blue");
+                    cb3.Items.Add("Purple");
+                    cb3.Items.Add("White");
+                    cb3.Items.Add("Brown");
+                    cb3.Items.Add("Gray");
+                    cb3.Items.Add("Black");
                     cb3.Text = dgvRow.Cells[3].Value.ToString();
 
-                    //size
-                    cb4.Visible = true;
-                    cb4.Items.Clear();
-                    cb4.Items.Add("Small");
-                    cb4.Items.Add("Medium");
-                    cb4.Items.Add("Large");
-                    cb4.Items.Add("Extra Large");
-                    cb4.Items.Add("2XL");
-                    cb4.Items.Add("3XL");
-                    cb4.Items.Add("4XL");
-                    cb4.Items.Add("5XL");
+                    //shade
                     cb4.Text = dgvRow.Cells[4].Value.ToString();
 
+                    //size
+                    cb5.Items.Clear();
+                    cb5.Items.Add("Small");
+                    cb5.Items.Add("Medium");
+                    cb5.Items.Add("Large");
+                    cb5.Items.Add("Extra Large");
+                    cb5.Items.Add("2XL");
+                    cb5.Items.Add("3XL");
+                    cb5.Items.Add("4XL");
+                    cb5.Items.Add("5XL");
+                    cb5.Text = dgvRow.Cells[5].Value.ToString();
+
                     //Quantity
-                    txt5.Text = dgvRow.Cells[5].Value.ToString();
-                    txt5.Visible = true;
+                    txt5.Text = dgvRow.Cells[6].Value.ToString();
 
                 }
             }
@@ -429,13 +449,10 @@ namespace DigiSort_Box.Forms
                     cb3.Items.Add("Black");
                     cb3.Text = dgvRow.Cells[3].Value.ToString();
 
-                    //visible
                     cb4.Items.Clear();
-                    cb4.Visible = false;
 
                     //Quantity
                     txt5.Text = dgvRow.Cells[4].Value.ToString();
-                    txt5.Visible = true;
                 }
             }
             else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
@@ -480,13 +497,10 @@ namespace DigiSort_Box.Forms
                     cb3.Items.Add("5XL");
                     cb3.Text = dgvRow.Cells[3].Value.ToString();
 
-                    //visible
                     cb4.Items.Clear();
-                    cb4.Visible = false;
 
                     //Quantity
-                    txt5.Text = dgvRow.Cells[4].Value.ToString();
-                    txt5.Visible = true;
+                    txt5.Text = dgvRow.Cells[4].Value.ToString();;
                 }
             }
 
@@ -494,135 +508,7 @@ namespace DigiSort_Box.Forms
 
         private void cb2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
-            {
-
-                if (cb2.SelectedItem.Equals("Red"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Scarlet");
-                    cb3.Items.Add("Crimson");
-                    cb3.Items.Add("Magenta");
-                    cb3.Items.Add("Cardinal");
-                    cb3.Items.Add("Cherry");
-                }
-                else if (cb2.SelectedItem.Equals("Orange"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Tangerine ");
-                    cb3.Items.Add("Rust");
-                    cb3.Items.Add("Bronze");
-                    cb3.Items.Add("Neon");
-                    cb3.Items.Add("Fire");
-                }
-                else if (cb2.SelectedItem.Equals("Yellow"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Mustard");
-                    cb3.Items.Add("Corn");
-                    cb3.Items.Add("Pineapple");
-                    cb3.Items.Add("Marigold");
-                    cb3.Items.Add("Royal");
-                }
-                else if (cb2.SelectedItem.Equals("Green"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Moss");
-                    cb3.Items.Add("Pine");
-                    cb3.Items.Add("Military");
-                    cb3.Items.Add("Evergreen");
-                    cb3.Items.Add("Emerald");
-                }
-                else if (cb2.SelectedItem.Equals("Blue"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Sky");
-                    cb3.Items.Add("Iris");
-                    cb3.Items.Add("Royal");
-                    cb3.Items.Add("Navy");
-                    cb3.Items.Add("Carolina");
-                }
-                else if (cb2.SelectedItem.Equals("Purple"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Lavender");
-                    cb3.Items.Add("Lilac");
-                    cb3.Items.Add("Mauve");
-                    cb3.Items.Add("Plum");
-                    cb3.Items.Add("Grape");
-                    cb3.Items.Add("Violet");
-                    cb3.Items.Add("Amethyst");
-                    cb3.Items.Add("Eggplant");
-                    cb3.Items.Add("Magenta");
-                    cb3.Items.Add("Mulberry");
-                }
-                else if (cb2.SelectedItem.Equals("White"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Snow");
-                    cb3.Items.Add("Ivory");
-                    cb3.Items.Add("Pearl");
-                    cb3.Items.Add("Creamy");
-                    cb3.Items.Add("Off-white");
-                    cb3.Items.Add("Eggshell");
-                    cb3.Items.Add("Pure white");
-                    cb3.Items.Add("Antique ");
-                    cb3.Items.Add("Linen");
-                    cb3.Items.Add("Champagne ");
-                }
-                else if (cb2.SelectedItem.Equals("Brown"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Beige");
-                    cb3.Items.Add("Tan");
-                    cb3.Items.Add("Taupe");
-                    cb3.Items.Add("Caramel");
-                    cb3.Items.Add("Chestnut");
-                    cb3.Items.Add("Coffee");
-                    cb3.Items.Add("Mahogany");
-                    cb3.Items.Add("Rust");
-                    cb3.Items.Add("Sienna");
-                    cb3.Items.Add("Umber");
-                }
-                else if (cb2.SelectedItem.Equals("Gray"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Silver");
-                    cb3.Items.Add("Rain");
-                    cb3.Items.Add("Blue Gray");
-                    cb3.Items.Add("Dark");
-                    cb3.Items.Add("Medium");
-                    cb3.Items.Add("Light slate");
-                    cb3.Items.Add("Battleship");
-                    cb3.Items.Add("Cool");
-                    cb3.Items.Add("Gray-blue");
-                    cb3.Items.Add("Gray-green");
-                }
-                else if (cb2.SelectedItem.Equals("Black"))
-                {
-                    cb3.Items.Clear();
-                    cb3.Text = "";
-                    cb3.Items.Add("Jet");
-                    cb3.Items.Add("Onyx");
-                    cb3.Items.Add("Midnight");
-                    cb3.Items.Add("Ebony");
-                    cb3.Items.Add("Licorice");
-                    cb3.Items.Add("Charcoal");
-                    cb3.Items.Add("Coal");
-                    cb3.Items.Add("Raven");
-                    cb3.Items.Add("Pitch");
-                    cb3.Items.Add("Ink");
-                }
-            }
+            
 
         }
 
@@ -754,6 +640,139 @@ namespace DigiSort_Box.Forms
                     cb2.Items.Add("Raven");
                     cb2.Items.Add("Pitch");
                     cb2.Items.Add("Ink");
+                }
+            }
+        }
+
+        private void cb3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
+            {
+
+                if (cb3.SelectedItem.Equals("Red"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Scarlet");
+                    cb4.Items.Add("Crimson");
+                    cb4.Items.Add("Magenta");
+                    cb4.Items.Add("Cardinal");
+                    cb4.Items.Add("Cherry");
+                }
+                else if (cb3.SelectedItem.Equals("Orange"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Tangerine ");
+                    cb4.Items.Add("Rust");
+                    cb4.Items.Add("Bronze");
+                    cb4.Items.Add("Neon");
+                    cb4.Items.Add("Fire");
+                }
+                else if (cb3.SelectedItem.Equals("Yellow"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Mustard");
+                    cb4.Items.Add("Corn");
+                    cb4.Items.Add("Pineapple");
+                    cb4.Items.Add("Marigold");
+                    cb4.Items.Add("Royal");
+                }
+                else if (cb3.SelectedItem.Equals("Green"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Moss");
+                    cb4.Items.Add("Pine");
+                    cb4.Items.Add("Military");
+                    cb4.Items.Add("Evergreen");
+                    cb4.Items.Add("Emerald");
+                }
+                else if (cb3.SelectedItem.Equals("Blue"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Sky");
+                    cb4.Items.Add("Iris");
+                    cb4.Items.Add("Royal");
+                    cb4.Items.Add("Navy");
+                    cb4.Items.Add("Carolina");
+                }
+                else if (cb3.SelectedItem.Equals("Purple"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Lavender");
+                    cb4.Items.Add("Lilac");
+                    cb4.Items.Add("Mauve");
+                    cb4.Items.Add("Plum");
+                    cb4.Items.Add("Grape");
+                    cb4.Items.Add("Violet");
+                    cb4.Items.Add("Amethyst");
+                    cb4.Items.Add("Eggplant");
+                    cb4.Items.Add("Magenta");
+                    cb4.Items.Add("Mulberry");
+                }
+                else if (cb3.SelectedItem.Equals("White"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Snow");
+                    cb4.Items.Add("Ivory");
+                    cb4.Items.Add("Pearl");
+                    cb4.Items.Add("Creamy");
+                    cb4.Items.Add("Off-white");
+                    cb4.Items.Add("Eggshell");
+                    cb4.Items.Add("Pure white");
+                    cb4.Items.Add("Antique ");
+                    cb4.Items.Add("Linen");
+                    cb4.Items.Add("Champagne ");
+                }
+                else if (cb3.SelectedItem.Equals("Brown"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Beige");
+                    cb4.Items.Add("Tan");
+                    cb4.Items.Add("Taupe");
+                    cb4.Items.Add("Caramel");
+                    cb4.Items.Add("Chestnut");
+                    cb4.Items.Add("Coffee");
+                    cb4.Items.Add("Mahogany");
+                    cb4.Items.Add("Rust");
+                    cb4.Items.Add("Sienna");
+                    cb4.Items.Add("Umber");
+                }
+                else if (cb3.SelectedItem.Equals("Gray"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Silver");
+                    cb4.Items.Add("Rain");
+                    cb4.Items.Add("Blue Gray");
+                    cb4.Items.Add("Dark");
+                    cb4.Items.Add("Medium");
+                    cb4.Items.Add("Light slate");
+                    cb4.Items.Add("Battleship");
+                    cb4.Items.Add("Cool");
+                    cb4.Items.Add("Gray-blue");
+                    cb4.Items.Add("Gray-green");
+                }
+                else if (cb3.SelectedItem.Equals("Black"))
+                {
+                    cb4.Items.Clear();
+                    cb4.Text = "";
+                    cb4.Items.Add("Jet");
+                    cb4.Items.Add("Onyx");
+                    cb4.Items.Add("Midnight");
+                    cb4.Items.Add("Ebony");
+                    cb4.Items.Add("Licorice");
+                    cb4.Items.Add("Charcoal");
+                    cb4.Items.Add("Coal");
+                    cb4.Items.Add("Raven");
+                    cb4.Items.Add("Pitch");
+                    cb4.Items.Add("Ink");
                 }
             }
         }

@@ -44,6 +44,7 @@ namespace DigiSort_Box.Forms
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btndelete = new Guna.UI2.WinForms.Guna2Button();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.txt6 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtable)).BeginInit();
             this.SuspendLayout();
@@ -112,56 +113,55 @@ namespace DigiSort_Box.Forms
             // txt5
             // 
             this.txt5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt5.Location = new System.Drawing.Point(19, 408);
+            this.txt5.Location = new System.Drawing.Point(19, 385);
             this.txt5.Multiline = true;
             this.txt5.Name = "txt5";
             this.txt5.ReadOnly = true;
-            this.txt5.Size = new System.Drawing.Size(298, 29);
+            this.txt5.Size = new System.Drawing.Size(299, 25);
             this.txt5.TabIndex = 15;
             this.txt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt5.Visible = false;
             // 
             // txt1
             // 
             this.txt1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.Location = new System.Drawing.Point(19, 284);
+            this.txt1.Location = new System.Drawing.Point(19, 276);
             this.txt1.Multiline = true;
             this.txt1.Name = "txt1";
             this.txt1.ReadOnly = true;
-            this.txt1.Size = new System.Drawing.Size(298, 29);
+            this.txt1.Size = new System.Drawing.Size(299, 25);
             this.txt1.TabIndex = 16;
             this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt4
             // 
             this.txt4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt4.Location = new System.Drawing.Point(19, 377);
+            this.txt4.Location = new System.Drawing.Point(19, 357);
             this.txt4.Multiline = true;
             this.txt4.Name = "txt4";
             this.txt4.ReadOnly = true;
-            this.txt4.Size = new System.Drawing.Size(298, 29);
+            this.txt4.Size = new System.Drawing.Size(299, 25);
             this.txt4.TabIndex = 14;
             this.txt4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt3
             // 
             this.txt3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt3.Location = new System.Drawing.Point(19, 346);
+            this.txt3.Location = new System.Drawing.Point(19, 330);
             this.txt3.Multiline = true;
             this.txt3.Name = "txt3";
             this.txt3.ReadOnly = true;
-            this.txt3.Size = new System.Drawing.Size(298, 29);
+            this.txt3.Size = new System.Drawing.Size(299, 25);
             this.txt3.TabIndex = 13;
             this.txt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt2
             // 
             this.txt2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt2.Location = new System.Drawing.Point(19, 315);
+            this.txt2.Location = new System.Drawing.Point(19, 303);
             this.txt2.Multiline = true;
             this.txt2.Name = "txt2";
             this.txt2.ReadOnly = true;
-            this.txt2.Size = new System.Drawing.Size(298, 29);
+            this.txt2.Size = new System.Drawing.Size(299, 25);
             this.txt2.TabIndex = 12;
             this.txt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -207,13 +207,24 @@ namespace DigiSort_Box.Forms
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtid.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid.Location = new System.Drawing.Point(19, 253);
+            this.txtid.Location = new System.Drawing.Point(19, 249);
             this.txtid.Multiline = true;
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(123, 29);
+            this.txtid.Size = new System.Drawing.Size(120, 25);
             this.txtid.TabIndex = 86;
             this.txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt6
+            // 
+            this.txt6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt6.Location = new System.Drawing.Point(18, 413);
+            this.txt6.Multiline = true;
+            this.txt6.Name = "txt6";
+            this.txt6.ReadOnly = true;
+            this.txt6.Size = new System.Drawing.Size(299, 25);
+            this.txt6.TabIndex = 15;
+            this.txt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // delete
             // 
@@ -223,6 +234,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.cbtable);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txt6);
             this.Controls.Add(this.txt5);
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.txt4);
@@ -259,5 +271,6 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2Button btndelete;
         public System.Windows.Forms.Label txtusername;
         private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.TextBox txt6;
     }
 }

@@ -45,6 +45,7 @@ namespace DigiSort_Box.Forms
             this.txtusername = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
             this.dgtable = new System.Windows.Forms.DataGridView();
+            this.cb5 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtable)).BeginInit();
             this.SuspendLayout();
@@ -110,6 +111,7 @@ namespace DigiSort_Box.Forms
             this.btnupdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnupdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnupdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnupdate.Enabled = false;
             this.btnupdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
             this.btnupdate.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnupdate.ForeColor = System.Drawing.Color.White;
@@ -125,11 +127,11 @@ namespace DigiSort_Box.Forms
             // txt5
             // 
             this.txt5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt5.Font = new System.Drawing.Font("Verdana", 12F);
-            this.txt5.Location = new System.Drawing.Point(20, 405);
+            this.txt5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt5.Location = new System.Drawing.Point(19, 411);
             this.txt5.Multiline = true;
             this.txt5.Name = "txt5";
-            this.txt5.Size = new System.Drawing.Size(298, 26);
+            this.txt5.Size = new System.Drawing.Size(298, 24);
             this.txt5.TabIndex = 80;
             this.txt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -152,47 +154,48 @@ namespace DigiSort_Box.Forms
             // cb1
             // 
             this.cb1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb1.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cb1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb1.FormattingEnabled = true;
-            this.cb1.Location = new System.Drawing.Point(19, 284);
+            this.cb1.Location = new System.Drawing.Point(19, 276);
             this.cb1.Margin = new System.Windows.Forms.Padding(2);
             this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(298, 26);
+            this.cb1.Size = new System.Drawing.Size(298, 24);
             this.cb1.TabIndex = 84;
             this.cb1.SelectedIndexChanged += new System.EventHandler(this.cb1_SelectedIndexChanged);
             // 
             // cb2
             // 
             this.cb2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb2.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cb2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb2.FormattingEnabled = true;
-            this.cb2.Location = new System.Drawing.Point(19, 314);
+            this.cb2.Location = new System.Drawing.Point(19, 303);
             this.cb2.Margin = new System.Windows.Forms.Padding(2);
             this.cb2.Name = "cb2";
-            this.cb2.Size = new System.Drawing.Size(298, 26);
+            this.cb2.Size = new System.Drawing.Size(298, 24);
             this.cb2.TabIndex = 84;
             this.cb2.SelectedIndexChanged += new System.EventHandler(this.cb2_SelectedIndexChanged);
             // 
             // cb3
             // 
             this.cb3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb3.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cb3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb3.FormattingEnabled = true;
-            this.cb3.Location = new System.Drawing.Point(19, 344);
+            this.cb3.Location = new System.Drawing.Point(19, 330);
             this.cb3.Margin = new System.Windows.Forms.Padding(2);
             this.cb3.Name = "cb3";
-            this.cb3.Size = new System.Drawing.Size(298, 26);
+            this.cb3.Size = new System.Drawing.Size(298, 24);
             this.cb3.TabIndex = 84;
+            this.cb3.SelectedIndexChanged += new System.EventHandler(this.cb3_SelectedIndexChanged);
             // 
             // cb4
             // 
             this.cb4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb4.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cb4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb4.FormattingEnabled = true;
-            this.cb4.Location = new System.Drawing.Point(19, 374);
+            this.cb4.Location = new System.Drawing.Point(19, 357);
             this.cb4.Margin = new System.Windows.Forms.Padding(2);
             this.cb4.Name = "cb4";
-            this.cb4.Size = new System.Drawing.Size(298, 26);
+            this.cb4.Size = new System.Drawing.Size(298, 24);
             this.cb4.TabIndex = 84;
             // 
             // txtusername
@@ -209,11 +212,11 @@ namespace DigiSort_Box.Forms
             // txtid
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtid.Font = new System.Drawing.Font("Verdana", 12F);
+            this.txtid.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(20, 250);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(121, 27);
+            this.txtid.Size = new System.Drawing.Size(121, 23);
             this.txtid.TabIndex = 85;
             this.txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -232,6 +235,17 @@ namespace DigiSort_Box.Forms
             this.dgtable.TabIndex = 76;
             this.dgtable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtable_CellClick);
             // 
+            // cb5
+            // 
+            this.cb5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb5.FormattingEnabled = true;
+            this.cb5.Location = new System.Drawing.Point(19, 384);
+            this.cb5.Margin = new System.Windows.Forms.Padding(2);
+            this.cb5.Name = "cb5";
+            this.cb5.Size = new System.Drawing.Size(298, 24);
+            this.cb5.TabIndex = 84;
+            // 
             // update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +254,7 @@ namespace DigiSort_Box.Forms
             this.ClientSize = new System.Drawing.Size(334, 500);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txtusername);
+            this.Controls.Add(this.cb5);
             this.Controls.Add(this.cb4);
             this.Controls.Add(this.cb3);
             this.Controls.Add(this.cb2);
@@ -280,5 +295,6 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2Button btnupdate;
         private System.Windows.Forms.Label lbltxt1;
         private System.Windows.Forms.DataGridView dgtable;
+        private System.Windows.Forms.ComboBox cb5;
     }
 }

@@ -16,12 +16,13 @@ namespace DigiSort_Box.Forms
         }
         void clear()
         {
+            txtid.Text = "";
             txt1.Text = "";
             txt2.Text = "";
             txt3.Text = "";
             txt4.Text = "";
             txt5.Text = "";
-            txtid.Text = "";
+            txt6.Text = "";
         }
 
         private void btnback_Click(object sender, EventArgs e)
@@ -162,9 +163,11 @@ namespace DigiSort_Box.Forms
             if (cbtable.SelectedItem.Equals("Raw Materials"))
             {
                 clear();
-                txt5.Visible = false;
                 connection.Close();
                 connection.Open();
+
+                txt5.Enabled = false;
+                txt6.Enabled = false;
 
                 raw();
 
@@ -172,18 +175,22 @@ namespace DigiSort_Box.Forms
             else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
             {
                 clear();
-                txt5.Visible = true;
                 connection.Close();
                 connection.Open();
+
+                txt5.Enabled = true;
+                txt6.Enabled = true;
 
                 ready();
             }
             else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
             {
                 clear();
-                txt5.Visible = false;
                 connection.Close();
                 connection.Open();
+
+                txt5.Enabled = false;
+                txt6.Enabled = false;
 
                 unprint();
             }
@@ -203,6 +210,7 @@ namespace DigiSort_Box.Forms
                     txt3.Text = dgvRow.Cells[3].Value.ToString();
                     txt4.Text = dgvRow.Cells[4].Value.ToString();
                     txt5.Text = dgvRow.Cells[5].Value.ToString();
+                    txt6.Text = dgvRow.Cells[6].Value.ToString();
                 }
             }
             else
@@ -246,7 +254,7 @@ namespace DigiSort_Box.Forms
                         connection.Close();
                         connection.Open();
                         //update query
-                        string deleteQuery = "DELETE FROM raw_material WHERE material = '" + txt1.Text + "' AND design = '" + txt2.Text + "' AND color = '" + txt3.Text + "'";
+                        string deleteQuery = "DELETE FROM raw_material WHERE id = '" + txtid.Text + "'";
                         MySqlCommand command = new MySqlCommand(deleteQuery, connection);
 
                         try
@@ -286,7 +294,7 @@ namespace DigiSort_Box.Forms
                         connection.Close();
                         connection.Open();
                         //delete query
-                        string updateQuery = "DELETE FROM ready_to_sell_items WHERE product_name = '" + txt1.Text + "' AND color = '" + txt2.Text + "' AND shade = '" + txt3.Text + "' AND size = '" + txt4.Text + "'";
+                        string updateQuery = "DELETE FROM ready_to_sell_items WHERE id = '" + txtid.Text + "'";
                         MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
                         try
@@ -326,7 +334,7 @@ namespace DigiSort_Box.Forms
                         connection.Close();
                         connection.Open();
                         //update query
-                        string updateQuery = "DELETE FROM unprinted_shirts WHERE color = '" + txt1.Text + "' AND shade = '" + txt2.Text + "' AND size = '" + txt3.Text + "'";
+                        string updateQuery = "DELETE FROM unprinted_shirts WHERE id = '" + txtid.Text + "'";
                         MySqlCommand command = new MySqlCommand(updateQuery, connection);
 
                         try

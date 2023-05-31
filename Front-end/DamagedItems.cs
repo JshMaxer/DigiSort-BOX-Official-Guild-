@@ -43,11 +43,12 @@ namespace DigiSort_Box.Front_end
                 {
                     DataGridViewRow dgvRow = dgvitems.Rows[e.RowIndex];
                     lblid.Text = dgvRow.Cells[0].Value.ToString();  // id
-                    label1.Text = dgvRow.Cells[1].Value.ToString(); // product name
-                    label2.Text = dgvRow.Cells[2].Value.ToString(); // color
-                    label3.Text = dgvRow.Cells[3].Value.ToString(); // shade
-                    label4.Text = dgvRow.Cells[4].Value.ToString(); // size
-
+                    label1.Text = dgvRow.Cells[1].Value.ToString(); // material
+                    label2.Text = dgvRow.Cells[2].Value.ToString(); // design
+                    label3.Text = dgvRow.Cells[3].Value.ToString(); // color
+                    label4.Text = dgvRow.Cells[4].Value.ToString(); // shade
+                    label5.Text = dgvRow.Cells[5].Value.ToString(); // size
+                    label6.Text = dgvRow.Cells[6].Value.ToString(); // quantity
                 }
             }
             else
@@ -67,7 +68,7 @@ namespace DigiSort_Box.Front_end
         private void btnadd_Click(object sender, EventArgs e)
         {
             Database.Damage dmg = new Database.Damage();
-            dmg.issue(txtissue, txtquantity, cbtable, lblid, label1, label2, label3, label4);
+            dmg.issue(txtissue, txtquantity, cbtable, lblid, label1, label2, label3, label4, label5, label6);
         }
 
         private void txtissue_TextChanged(object sender, EventArgs e)

@@ -75,7 +75,7 @@ namespace DigiSort_Box.Database
             txtquan.Text = "";
         }
 
-        public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4)
+        public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6)
         {
             if (cbtable.SelectedItem.Equals("Raw Materials"))
             {
