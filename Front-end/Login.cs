@@ -103,9 +103,9 @@ namespace DigiSort_Box.Forms
                             }
                         }
 
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            //MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message);
                         }
                         connection.Close();
                     }
