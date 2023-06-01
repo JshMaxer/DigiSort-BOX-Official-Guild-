@@ -154,6 +154,7 @@ namespace DigiSort_Box.Forms
             // cb1
             // 
             this.cb1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb1.FormattingEnabled = true;
             this.cb1.Location = new System.Drawing.Point(19, 276);
@@ -166,6 +167,7 @@ namespace DigiSort_Box.Forms
             // cb2
             // 
             this.cb2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb2.FormattingEnabled = true;
             this.cb2.Location = new System.Drawing.Point(19, 303);
@@ -178,6 +180,7 @@ namespace DigiSort_Box.Forms
             // cb3
             // 
             this.cb3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb3.FormattingEnabled = true;
             this.cb3.Location = new System.Drawing.Point(19, 330);
@@ -190,6 +193,7 @@ namespace DigiSort_Box.Forms
             // cb4
             // 
             this.cb4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb4.FormattingEnabled = true;
             this.cb4.Location = new System.Drawing.Point(19, 357);
@@ -238,6 +242,7 @@ namespace DigiSort_Box.Forms
             // cb5
             // 
             this.cb5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb5.FormattingEnabled = true;
             this.cb5.Location = new System.Drawing.Point(19, 384);

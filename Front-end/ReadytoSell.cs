@@ -21,15 +21,7 @@ namespace DigiSort_Box.Forms
         {
             //database
             Database.ReadyToSell ready = new Database.ReadyToSell();
-            ready.rdy(cbmaterial, cbdesign, cbcolor, cbshade, cbsize, txtquantity);
-
-            //clear
-            cbmaterial.Text = "";
-            cbdesign.Text = "";
-            cbcolor.Text = "";
-            cbshade.Items.Clear();
-            cbsize.Text = "";
-            txtquantity.Text = "";
+            ready.check(cbmaterial, cbdesign, cbcolor, cbshade, cbsize, txtquantity);
         }
 
         private void cbcolor_SelectedIndexChanged(object sender, EventArgs e)

@@ -63,101 +63,6 @@ namespace DigiSort_Box.Forms
             dgtable.DataSource = dtRecords;
         }
 
-        void history_raw()
-        {
-            //date
-            DateTime dateTimeVariable = DateTime.Now;
-            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-            try
-            {
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Raw Material" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
-
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-        }
-
-        void history_unprint()
-        {
-            //date
-            DateTime dateTimeVariable = DateTime.Now;
-            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-            try
-            {
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Unprinted Shirts" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
-
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
-        }
-
-        void history_ready()
-        {
-            //date
-            DateTime dateTimeVariable = DateTime.Now;
-            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-            try
-            {
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Ready to sell items" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
-
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
-        }
-
         private void cbtable_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbtable.SelectedItem.Equals("Raw Materials"))
@@ -166,6 +71,7 @@ namespace DigiSort_Box.Forms
                 connection.Close();
                 connection.Open();
 
+                txt4.Enabled = false;
                 txt5.Enabled = false;
                 txt6.Enabled = false;
 
@@ -178,6 +84,7 @@ namespace DigiSort_Box.Forms
                 connection.Close();
                 connection.Open();
 
+                txt4.Enabled = true;
                 txt5.Enabled = true;
                 txt6.Enabled = true;
 
@@ -189,6 +96,7 @@ namespace DigiSort_Box.Forms
                 connection.Close();
                 connection.Open();
 
+                txt4.Enabled = true;
                 txt5.Enabled = false;
                 txt6.Enabled = false;
 
@@ -213,7 +121,19 @@ namespace DigiSort_Box.Forms
                     txt6.Text = dgvRow.Cells[6].Value.ToString();
                 }
             }
-            else
+            else if (cbtable.SelectedItem.Equals("Raw Materials"))
+            {
+                //click cell to show
+                if (e.RowIndex != -1)
+                {
+                    DataGridViewRow dgvRow = dgtable.Rows[e.RowIndex];
+                    txtid.Text = dgvRow.Cells[0].Value.ToString();
+                    txt1.Text = dgvRow.Cells[1].Value.ToString();
+                    txt2.Text = dgvRow.Cells[2].Value.ToString();
+                    txt3.Text = dgvRow.Cells[3].Value.ToString();
+                }
+            }
+            else if(cbtable.SelectedItem.Equals("Unprinted Shirts"))
             {
                 //click cell to show
                 if (e.RowIndex != -1)
@@ -235,136 +155,11 @@ namespace DigiSort_Box.Forms
 
         private void btndelete_Click_1(object sender, EventArgs e)
         {
-            //field is blank
-            if (cbtable.Text.Equals("") && (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals("") || txt5.Text.Equals("")))
-            {
-                MessageBox.Show("Field is blank!");
-            }
-            else
-            {
-                if (cbtable.SelectedItem.Equals("Raw Materials"))
-                {
-                    //field is blank
-                    if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals(""))
-                    {
-                        MessageBox.Show("Field is blank!");
-                    }
-                    else
-                    {
-                        connection.Close();
-                        connection.Open();
-                        //update query
-                        string deleteQuery = "DELETE FROM raw_material WHERE id = '" + txtid.Text + "'";
-                        MySqlCommand command = new MySqlCommand(deleteQuery, connection);
-
-                        try
-                        {
-                            if (command.ExecuteNonQuery() == 1)
-                            {
-                                MessageBox.Show("Data successfully deleted!", "Successful");
-                                raw();
-
-                                //history
-                                history_raw();
-
-                                clear();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Data Unsuccessfully deleted!", "UnSuccessful");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                    }
-
-                    connection.Close();
-                }
-                else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
-                {
-                    //field is blank
-                    if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals("") || txt5.Text.Equals(""))
-                    {
-                        MessageBox.Show("Field is blank!");
-                    }
-                    else
-                    {
-                        connection.Close();
-                        connection.Open();
-                        //delete query
-                        string updateQuery = "DELETE FROM ready_to_sell_items WHERE id = '" + txtid.Text + "'";
-                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                        try
-                        {
-                            if (command.ExecuteNonQuery() == 1)
-                            {
-                                MessageBox.Show("Data successfully deleted!", "Successful");
-                                ready();
-
-                                //history
-                                history_ready();
-
-                                clear();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Data Unsuccessfully deleted!", "UnSuccessful");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                    }
-
-                    connection.Close();
-                }
-                else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
-                {
-                    //field is blank
-                    if (txt1.Text.Equals("") || txt2.Text.Equals("") || txt3.Text.Equals("") || txt4.Text.Equals(""))
-                    {
-                        MessageBox.Show("Field is blank!");
-                    }
-                    else
-                    {
-                        connection.Close();
-                        connection.Open();
-                        //update query
-                        string updateQuery = "DELETE FROM unprinted_shirts WHERE id = '" + txtid.Text + "'";
-                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                        try
-                        {
-                            if (command.ExecuteNonQuery() == 1)
-                            {
-                                MessageBox.Show("Data successfully deleted!", "Successful");
-                                unprint();
-
-                                //history
-                                history_unprint();
-
-                                clear();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Data Unsuccessfully deleted!", "UnSuccessful");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                    }
-
-                    connection.Close();
-                }
-
-            }
+            //Database
+            Database.delete dlt = new Database.delete();
+            dlt.dlt(cbtable, txt1, txt2, txt3, txt4, txt5, txt6, txtid, txtusername, dgtable);
 
         }
+
     }
 }

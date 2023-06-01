@@ -223,6 +223,7 @@ namespace DigiSort_Box.Front_end
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 82;
+            this.label5.Visible = false;
             // 
             // label6
             // 
@@ -231,6 +232,7 @@ namespace DigiSort_Box.Front_end
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 82;
+            this.label6.Visible = false;
             // 
             // Damaged_Items
             // 

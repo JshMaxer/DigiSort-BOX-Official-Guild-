@@ -64,98 +64,7 @@ namespace DigiSort_Box.Forms
             dgtable.DataSource = dtRecords;
         }
 
-        void history_raw()
-        {
-            try
-            {
-                //date
-                DateTime dateTimeVariable = DateTime.Now;
-                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "updated items in Raw Material" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
-
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-        }
-
-        void history_unprint()
-        {
-            try
-            {
-                //date
-                DateTime dateTimeVariable = DateTime.Now;
-                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "updated items in Unprinted Shirts" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
-
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-        }
-
-        void history_ready()
-        {
-            try
-            {
-                //date
-                DateTime dateTimeVariable = DateTime.Now;
-                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "updated items in Ready to sell items" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
-
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-        }
+        
 
         private void exitform_Click(object sender, EventArgs e)
         {
@@ -164,135 +73,10 @@ namespace DigiSort_Box.Forms
 
         private void btnupdate_Click_1(object sender, EventArgs e)
         {
-            //field is blank
-            if (cbtable.Text.Equals("") && (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || cb5.Text.Equals("") || txt5.Text.Equals("")))
-            {
-                MessageBox.Show("Field is blank!");
-            }
-            else
-            {
+            //Database
+            Database.Update upt = new Database.Update();
+            upt.update(cbtable, cb1, cb2, cb3, cb4, cb5, txt5, txtid, dgtable, txtusername);
 
-                if (cbtable.SelectedItem.Equals("Raw Materials")) //Raw Materials
-                {
-
-                    //field is blank
-                    if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || txt5.Text.Equals(""))
-                    {
-                        MessageBox.Show("Field is blank!");
-                    }
-                    else
-                    {
-                        connection.Close();
-                        connection.Open();
-                        //update query
-                        string updateQuery = "UPDATE raw_material SET material = '" + cb1.Text + "', design = '" + cb2.Text + "', color = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE id = '" + txtid.Text + "'";
-                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                        try
-                        {
-                            if (command.ExecuteNonQuery() == 1)
-                            {
-                                MessageBox.Show("Data successfully changed!", "Successful");
-                                raw();
-
-                                //history
-                                history_raw();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Data Unsuccessfully changed!", "UnSuccessful");
-                                MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                    }
-
-                    connection.Close();
-                }
-                else if (cbtable.SelectedItem.Equals("Ready to Sell Items")) //Ready to sell items
-                {
-
-                    //field is blank
-                    if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || cb4.Text.Equals("") || cb5.Text.Equals("") || txt5.Text.Equals(""))
-                    {
-                        MessageBox.Show("Field is blank!");
-                    }
-                    else
-                    {
-                        connection.Close();
-                        connection.Open();
-                        //update query
-                        string updateQuery = "UPDATE ready_to_sell_items SET material = '" + cb1.Text + "', design = '" + cb2.Text + "', color = '" + cb3.Text + "', shade = '" + cb4.Text + "', size ='" + cb5.Text + "', quantity ='" + txt5.Text + "' WHERE id = '" + txtid.Text + "'";
-                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                        try
-                        {
-                            if (command.ExecuteNonQuery() == 1)
-                            {
-                                MessageBox.Show("Data successfully changed!", "Successful");
-                                ready();
-
-                                //history
-                                history_ready();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Data Unsuccessfully changed!", "UnSuccessful");
-                                MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                    }
-
-                    connection.Close();
-                }
-                else if (cbtable.SelectedItem.Equals("Unprinted Shirts")) //Unprinted Shirts
-                {
-
-                    //field is blank
-                    if (cb1.Text.Equals("") || cb2.Text.Equals("") || cb3.Text.Equals("") || txt5.Text.Equals(""))
-                    {
-                        MessageBox.Show("Field is blank!");
-                    }
-                    else
-                    {
-                        connection.Close();
-                        connection.Open();
-                        //update query
-                        string updateQuery = "UPDATE unprinted_shirts SET color = '" + cb1.Text + "', shade = '" + cb2.Text + "', size = '" + cb3.Text + "', quantity ='" + txt5.Text + "' WHERE id = '" + txtid.Text + "'";
-                        MySqlCommand command = new MySqlCommand(updateQuery, connection);
-
-                        try
-                        {
-                            if (command.ExecuteNonQuery() == 1)
-                            {
-                                MessageBox.Show("Data successfully changed!", "Successful");
-                                unprint();
-
-                                //history
-                                history_unprint();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Data Unsuccessfully changed!", "UnSuccessful");
-                                MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-
-                    }
-                    connection.Close();
-                }
-            }
         }
 
         private void cbtable_SelectedIndexChanged(object sender, EventArgs e)
@@ -303,6 +87,7 @@ namespace DigiSort_Box.Forms
                 connection.Close();
                 connection.Open();
 
+                cb3.Enabled = false;
                 cb4.Enabled = false;
                 cb5.Enabled = false;
 
@@ -315,6 +100,7 @@ namespace DigiSort_Box.Forms
                 connection.Close();
                 connection.Open();
 
+                cb3.Enabled = true;
                 cb4.Enabled = true;
                 cb5.Enabled = true;
 
@@ -327,6 +113,7 @@ namespace DigiSort_Box.Forms
                 connection.Close();
                 connection.Open();
 
+                cb3.Enabled = true;
                 cb4.Enabled = false;
                 cb5.Enabled = false;
 
@@ -435,24 +222,10 @@ namespace DigiSort_Box.Forms
                     cb2.Items.Add("Boku no tige");
                     cb2.Text = dgvRow.Cells[2].Value.ToString();
 
-                    //Color
-                    cb3.Items.Clear();
-                    cb3.Items.Add("Red");
-                    cb3.Items.Add("Orange");
-                    cb3.Items.Add("Yellow");
-                    cb3.Items.Add("Green");
-                    cb3.Items.Add("Blue");
-                    cb3.Items.Add("Purple");
-                    cb3.Items.Add("White");
-                    cb3.Items.Add("Brown");
-                    cb3.Items.Add("Gray");
-                    cb3.Items.Add("Black");
-                    cb3.Text = dgvRow.Cells[3].Value.ToString();
-
                     cb4.Items.Clear();
 
                     //Quantity
-                    txt5.Text = dgvRow.Cells[4].Value.ToString();
+                    txt5.Text = dgvRow.Cells[3].Value.ToString();
                 }
             }
             else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))

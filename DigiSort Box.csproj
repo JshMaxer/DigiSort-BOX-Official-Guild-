@@ -102,32 +102,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Back-end\CreateAcc.cs" />
-    <Compile Include="Back-end\Dashboard.cs" />
-    <Compile Include="Back-end\delete.cs" />
-    <Compile Include="Back-end\DigiSortBox.cs" />
-    <Compile Include="Back-end\Inventory.cs" />
     <Compile Include="Back-end\Constants.cs" />
-    <Compile Include="Back-end\MainDashboard.cs" />
     <Compile Include="Back-end\Menu.cs" />
     <Compile Include="Back-end\preview.cs" />
-    <Compile Include="Back-end\RawMaterial.cs" />
-    <Compile Include="Back-end\ReadyToSell.cs" />
-    <Compile Include="Back-end\Unprinted.cs" />
-    <Compile Include="Back-end\Update.cs" />
-    <Compile Include="Back-end\useraccount.cs" />
     <Compile Include="Database\Account_Management.cs" />
     <Compile Include="Database\Concern.cs" />
     <Compile Include="Database\CreateAcc.cs" />
     <Compile Include="Database\Damage.cs" />
-    <Compile Include="Database\Dashboard.cs" />
     <Compile Include="Database\delete.cs" />
-    <Compile Include="Database\DigiSortBox.cs" />
     <Compile Include="Database\History.cs" />
     <Compile Include="Database\Inventory.cs" />
     <Compile Include="Database\Login.cs" />
     <Compile Include="Database\MainDashboard.cs" />
-    <Compile Include="Database\preview.cs" />
     <Compile Include="Database\RawMaterial.cs" />
     <Compile Include="Database\ReadyToSell.cs" />
     <Compile Include="Database\Reset_Password.cs" />

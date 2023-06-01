@@ -1,5 +1,4 @@
-﻿using DigiSort_Box.Model;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 
@@ -51,16 +50,27 @@ namespace DigiSort_Box.Front_end
                     label6.Text = dgvRow.Cells[6].Value.ToString(); // quantity
                 }
             }
-            else
+            else if (cbtable.SelectedItem.Equals("Raw Materials"))
             {
                 //click cell to show
                 if (e.RowIndex != -1)
                 {
                     DataGridViewRow dgvRow = dgvitems.Rows[e.RowIndex];
                     lblid.Text = dgvRow.Cells[0].Value.ToString(); // id
-                    label1.Text = dgvRow.Cells[1].Value.ToString();
-                    label2.Text = dgvRow.Cells[2].Value.ToString();
-                    label3.Text = dgvRow.Cells[3].Value.ToString();
+                    label1.Text = dgvRow.Cells[1].Value.ToString(); // material
+                    label2.Text = dgvRow.Cells[2].Value.ToString(); //design
+                }
+            }
+            else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
+            {
+                //click cell to show
+                if (e.RowIndex != -1)
+                {
+                    DataGridViewRow dgvRow = dgvitems.Rows[e.RowIndex];
+                    lblid.Text = dgvRow.Cells[0].Value.ToString(); // id
+                    label1.Text = dgvRow.Cells[1].Value.ToString(); // color
+                    label2.Text = dgvRow.Cells[2].Value.ToString(); // shade
+                    label3.Text = dgvRow.Cells[3].Value.ToString(); // size
                 }
             }
         }

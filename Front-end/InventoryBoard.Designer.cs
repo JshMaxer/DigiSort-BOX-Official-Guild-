@@ -48,8 +48,8 @@ namespace DigiSort_Box.Forms
             this.tabunprinted = new System.Windows.Forms.TabPage();
             this.tabrawdamage = new System.Windows.Forms.TabPage();
             this.tabreadydamage = new System.Windows.Forms.TabPage();
-            this.tabunprinteddamage = new System.Windows.Forms.TabPage();
             this.dgreadydamage = new System.Windows.Forms.DataGridView();
+            this.tabunprinteddamage = new System.Windows.Forms.TabPage();
             this.dgunprinteddamage = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgready)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrawmaterial)).BeginInit();
@@ -61,8 +61,8 @@ namespace DigiSort_Box.Forms
             this.tabunprinted.SuspendLayout();
             this.tabrawdamage.SuspendLayout();
             this.tabreadydamage.SuspendLayout();
-            this.tabunprinteddamage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgreadydamage)).BeginInit();
+            this.tabunprinteddamage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgunprinteddamage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +83,7 @@ namespace DigiSort_Box.Forms
             // 
             this.dgrawmaterial.AllowUserToAddRows = false;
             this.dgrawmaterial.AllowUserToDeleteRows = false;
-            this.dgrawmaterial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgrawmaterial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrawmaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrawmaterial.Location = new System.Drawing.Point(6, 6);
             this.dgrawmaterial.Name = "dgrawmaterial";
@@ -96,7 +96,7 @@ namespace DigiSort_Box.Forms
             // 
             this.dgunprinted.AllowUserToAddRows = false;
             this.dgunprinted.AllowUserToDeleteRows = false;
-            this.dgunprinted.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgunprinted.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgunprinted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgunprinted.Location = new System.Drawing.Point(6, 6);
             this.dgunprinted.Name = "dgunprinted";
@@ -399,17 +399,6 @@ namespace DigiSort_Box.Forms
             this.tabreadydamage.Text = "Ready to sell Items Damage Items";
             this.tabreadydamage.UseVisualStyleBackColor = true;
             // 
-            // tabunprinteddamage
-            // 
-            this.tabunprinteddamage.Controls.Add(this.dgunprinteddamage);
-            this.tabunprinteddamage.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabunprinteddamage.Location = new System.Drawing.Point(184, 4);
-            this.tabunprinteddamage.Name = "tabunprinteddamage";
-            this.tabunprinteddamage.Size = new System.Drawing.Size(438, 494);
-            this.tabunprinteddamage.TabIndex = 5;
-            this.tabunprinteddamage.Text = "Unprinted Shirts Damage Items";
-            this.tabunprinteddamage.UseVisualStyleBackColor = true;
-            // 
             // dgreadydamage
             // 
             this.dgreadydamage.AllowUserToAddRows = false;
@@ -422,6 +411,17 @@ namespace DigiSort_Box.Forms
             this.dgreadydamage.RowHeadersWidth = 51;
             this.dgreadydamage.Size = new System.Drawing.Size(426, 481);
             this.dgreadydamage.TabIndex = 20;
+            // 
+            // tabunprinteddamage
+            // 
+            this.tabunprinteddamage.Controls.Add(this.dgunprinteddamage);
+            this.tabunprinteddamage.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabunprinteddamage.Location = new System.Drawing.Point(184, 4);
+            this.tabunprinteddamage.Name = "tabunprinteddamage";
+            this.tabunprinteddamage.Size = new System.Drawing.Size(438, 494);
+            this.tabunprinteddamage.TabIndex = 5;
+            this.tabunprinteddamage.Text = "Unprinted Shirts Damage Items";
+            this.tabunprinteddamage.UseVisualStyleBackColor = true;
             // 
             // dgunprinteddamage
             // 
@@ -468,8 +468,8 @@ namespace DigiSort_Box.Forms
             this.tabunprinted.ResumeLayout(false);
             this.tabrawdamage.ResumeLayout(false);
             this.tabreadydamage.ResumeLayout(false);
-            this.tabunprinteddamage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgreadydamage)).EndInit();
+            this.tabunprinteddamage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgunprinteddamage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

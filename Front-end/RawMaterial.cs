@@ -21,13 +21,13 @@ namespace DigiSort_Box.Forms
         {
             //database
             Database.RawMaterial rm = new Database.RawMaterial();
-            rm.raw(cbmaterial, cbdesign, cbcolor, txtquantity, btnadd);
+            rm.raw(cbmaterial, cbdesign, txtquantity, btnadd);
         }
 
         private void txtquantity_TextChanged(object sender, EventArgs e)
         {
             //disable
-            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
@@ -40,7 +40,7 @@ namespace DigiSort_Box.Forms
         private void cbmaterial_SelectedIndexChanged(object sender, EventArgs e)
         {
             //disable
-            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
@@ -53,7 +53,7 @@ namespace DigiSort_Box.Forms
         private void cbdesign_SelectedIndexChanged(object sender, EventArgs e)
         {
             //disable
-            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
@@ -66,7 +66,7 @@ namespace DigiSort_Box.Forms
         private void cbcolor_SelectedIndexChanged(object sender, EventArgs e)
         {
             //disable
-            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || cbcolor.Text.Equals("") || txtquantity.Text.Equals(""))
+            if (cbmaterial.Text.Equals("") || cbdesign.Text.Equals("") || txtquantity.Text.Equals(""))
             {
                 btnadd.Enabled = false;
             }
