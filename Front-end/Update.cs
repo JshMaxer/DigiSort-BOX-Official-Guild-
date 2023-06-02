@@ -150,6 +150,7 @@ namespace DigiSort_Box.Forms
                     cb2.Items.Add("");
                     cb2.Items.Add("SpyXFamily");
                     cb2.Items.Add("Naruto");
+                    cb2.Items.Add("OnePiece");
                     cb2.Items.Add("Black Clover");
                     cb2.Items.Add("Kimetsu no Yaiba");
                     cb2.Items.Add("Bleach");

@@ -43,6 +43,7 @@ namespace DigiSort_Box.Front_end
             this.lblid = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtusername = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvitems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,7 +170,7 @@ namespace DigiSort_Box.Front_end
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(722, 9);
+            this.label1.Location = new System.Drawing.Point(667, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
@@ -179,7 +180,7 @@ namespace DigiSort_Box.Front_end
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(722, 9);
+            this.label2.Location = new System.Drawing.Point(667, 75);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
@@ -189,7 +190,7 @@ namespace DigiSort_Box.Front_end
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(722, 9);
+            this.label3.Location = new System.Drawing.Point(667, 75);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 13);
@@ -199,7 +200,7 @@ namespace DigiSort_Box.Front_end
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(722, 9);
+            this.label4.Location = new System.Drawing.Point(667, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
@@ -209,7 +210,7 @@ namespace DigiSort_Box.Front_end
             // lblid
             // 
             this.lblid.AutoSize = true;
-            this.lblid.Location = new System.Drawing.Point(722, 9);
+            this.lblid.Location = new System.Drawing.Point(667, 75);
             this.lblid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(0, 13);
@@ -219,7 +220,7 @@ namespace DigiSort_Box.Front_end
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(722, 17);
+            this.label5.Location = new System.Drawing.Point(656, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 82;
@@ -228,11 +229,20 @@ namespace DigiSort_Box.Front_end
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(722, 58);
+            this.label6.Location = new System.Drawing.Point(722, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 82;
             this.label6.Visible = false;
+            // 
+            // txtusername
+            // 
+            this.txtusername.AutoSize = true;
+            this.txtusername.Location = new System.Drawing.Point(21, 32);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.Size = new System.Drawing.Size(0, 13);
+            this.txtusername.TabIndex = 83;
+            this.txtusername.Visible = false;
             // 
             // Damaged_Items
             // 
@@ -240,6 +250,7 @@ namespace DigiSort_Box.Front_end
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(745, 505);
+            this.Controls.Add(this.txtusername);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblid);
@@ -277,5 +288,6 @@ namespace DigiSort_Box.Front_end
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label txtusername;
     }
 }

@@ -93,7 +93,7 @@ namespace DigiSort_Box
             this.cbaccount.Name = "cbaccount";
             this.cbaccount.Size = new System.Drawing.Size(270, 36);
             this.cbaccount.StartIndex = 0;
-            this.cbaccount.TabIndex = 54;
+            this.cbaccount.TabIndex = 6;
             this.cbaccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2PictureBox2
@@ -139,7 +139,7 @@ namespace DigiSort_Box
             this.txtretype.PlaceholderText = "Retype password";
             this.txtretype.SelectedText = "";
             this.txtretype.Size = new System.Drawing.Size(269, 31);
-            this.txtretype.TabIndex = 33;
+            this.txtretype.TabIndex = 4;
             this.txtretype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtretype.UseSystemPasswordChar = true;
             this.txtretype.TextChanged += new System.EventHandler(this.txtretype_TextChanged);
@@ -161,7 +161,7 @@ namespace DigiSort_Box
             this.btncreate.Margin = new System.Windows.Forms.Padding(2);
             this.btncreate.Name = "btncreate";
             this.btncreate.Size = new System.Drawing.Size(171, 37);
-            this.btncreate.TabIndex = 29;
+            this.btncreate.TabIndex = 5;
             this.btncreate.Text = "Create Account";
             this.btncreate.Click += new System.EventHandler(this.btncreate_Click);
             // 
@@ -185,7 +185,7 @@ namespace DigiSort_Box
             this.txtfirstname.PlaceholderText = "Fistname";
             this.txtfirstname.SelectedText = "";
             this.txtfirstname.Size = new System.Drawing.Size(269, 31);
-            this.txtfirstname.TabIndex = 28;
+            this.txtfirstname.TabIndex = 0;
             this.txtfirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtfirstname.TextChanged += new System.EventHandler(this.txtfirstname_TextChanged);
             // 
@@ -209,7 +209,7 @@ namespace DigiSort_Box
             this.txtlastname.PlaceholderText = "Lastname";
             this.txtlastname.SelectedText = "";
             this.txtlastname.Size = new System.Drawing.Size(269, 31);
-            this.txtlastname.TabIndex = 28;
+            this.txtlastname.TabIndex = 1;
             this.txtlastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtlastname.TextChanged += new System.EventHandler(this.txtlastname_TextChanged);
             // 
@@ -233,7 +233,7 @@ namespace DigiSort_Box
             this.txtusername.PlaceholderText = "Username";
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(269, 31);
-            this.txtusername.TabIndex = 28;
+            this.txtusername.TabIndex = 2;
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
@@ -257,7 +257,7 @@ namespace DigiSort_Box
             this.txtpassword.PlaceholderText = "Password";
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(269, 31);
-            this.txtpassword.TabIndex = 28;
+            this.txtpassword.TabIndex = 3;
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 

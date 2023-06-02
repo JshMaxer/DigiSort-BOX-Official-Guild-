@@ -32,6 +32,7 @@ namespace DigiSort_Box.Forms
         {
             InitializeComponent();
         }
+
         private void Inventory_Load(object sender, EventArgs e)
         {
             //show Database table
@@ -47,72 +48,84 @@ namespace DigiSort_Box.Forms
 
             connection.Close();
         }
-        private void raw()
+         void raw()
         {
             connection.Close();
             connection.Open();
-            //show raw
+            
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandText = "SELECT * FROM raw_material";
             MySqlDataReader sdr = cmd.ExecuteReader();
             dtRaw.Load(sdr);
             dgrawmaterial.DataSource = dtRaw;
+
+            connection.Close();
         }
-        private void unprint()
+         void unprint()
         {
             connection.Close();
             connection.Open();
-            //unprinted shirts
+            
             MySqlCommand unprint = connection.CreateCommand();
             unprint.CommandText = "SELECT * FROM unprinted_shirts";
             MySqlDataReader sdr = unprint.ExecuteReader();
             dtUnprint.Load(sdr);
             dgunprinted.DataSource = dtUnprint;
+
+            connection.Close();
         }
-        private void ready()
+         void ready()
         {
             connection.Close();
             connection.Open();
-            //ready
+            
             MySqlCommand unprint = connection.CreateCommand();
             unprint.CommandText = "SELECT * FROM ready_to_sell_items";
             MySqlDataReader sdr = unprint.ExecuteReader();
             dtReady.Load(sdr);
             dgready.DataSource = dtReady;
+
+            connection.Close();
         }
 
-        private void rawdamage()
+         void rawdamage()
         {
             connection.Close();
             connection.Open();
-            //ready
+            
             string rawdamage = "SELECT * FROM raw_material_damage_items";
             MySqlCommand cmd = new MySqlCommand(rawdamage, connection);
             MySqlDataReader sdr = cmd.ExecuteReader();
             dtrawdamage.Load(sdr);
             dgrawdamage.DataSource = dtrawdamage;
+
+            connection.Close();
         }
-        private void readydamage()
+         void readydamage()
         {
             connection.Close();
             connection.Open();
-            //ready
+            
             string readydamage = "SELECT * FROM ready_to_sell_items_damage_items";
             MySqlCommand cmd = new MySqlCommand(readydamage, connection);
             MySqlDataReader sdr = cmd.ExecuteReader();
             dtreadydamage.Load(sdr);
             dgreadydamage.DataSource = dtreadydamage;
+
+            connection.Close();
         }
-        private void unprintdamage()
+         void unprintdamage()
         {
             connection.Close();
             connection.Open();
-            //ready
+            
             string unprintdamage = "SELECT * FROM unprinted_shirts_damage_items";
             MySqlCommand cmd = new MySqlCommand(unprintdamage, connection);
             MySqlDataReader sdr = cmd.ExecuteReader();
             dtunprintdamage.Load(sdr);
             dgunprinteddamage.DataSource = dtunprintdamage;
+
+            connection.Close();
         }
 
         private void txtunprinted_TextChanged_1(object sender, EventArgs e)

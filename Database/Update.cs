@@ -46,93 +46,113 @@ namespace DigiSort_Box.Database
 
         void history_raw(System.Windows.Forms.Label txtusername)
         {
-            try
+            string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
+            connection.Close();
+            connection.Open();
+            MySqlCommand cmdid = new MySqlCommand(idquery, connection);
+            MySqlDataReader row = cmdid.ExecuteReader();
+
+            if (row.HasRows)
             {
-                //date
-                DateTime dateTimeVariable = DateTime.Now;
-                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "updated items in Raw Material" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
+                while (row.Read())
                 {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
+                    string id = row["id"].ToString();
 
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        //date
+                        DateTime dateTimeVariable = DateTime.Now;
+                        string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+                        connection.Close();
+                        connection.Open();
+                        string logs = "INSERT INTO activity_logs VALUES ('" + int.Parse(id) + "', '" + txtusername.Text + "', '" + "updated items in Raw Material" + "', '" + date + "')";
+                        MySqlCommand cmd = new MySqlCommand(logs, connection);
+                        cmd.ExecuteNonQuery();
+
+                        connection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
 
         }
 
         void history_unprint(System.Windows.Forms.Label txtusername)
         {
-            try
+            string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
+            connection.Close();
+            connection.Open();
+            MySqlCommand cmdid = new MySqlCommand(idquery, connection);
+            MySqlDataReader row = cmdid.ExecuteReader();
+
+            if (row.HasRows)
             {
-                //date
-                DateTime dateTimeVariable = DateTime.Now;
-                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "updated items in Unprinted Shirts" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
+                while (row.Read())
                 {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
+                    string id = row["id"].ToString();
 
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        //date
+                        DateTime dateTimeVariable = DateTime.Now;
+                        string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+                        connection.Close();
+                        connection.Open();
+                        string logs = "INSERT INTO activity_logs VALUES ('" + int.Parse(id) + "', '" + txtusername.Text + "', '" + "updated items in Unprinted Shirts" + "', '" + date + "')";
+                        MySqlCommand cmd = new MySqlCommand(logs, connection);
+                        cmd.ExecuteNonQuery();
+
+                        connection.Close();
+
+                    }
+
+                    catch (Exception)
+                    {
+                        //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
 
         }
 
         void history_ready(System.Windows.Forms.Label txtusername)
         {
-            try
+            string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
+            connection.Close();
+            connection.Open();
+            MySqlCommand cmdid = new MySqlCommand(idquery, connection);
+            MySqlDataReader row = cmdid.ExecuteReader();
+
+            if (row.HasRows)
             {
-                //date
-                DateTime dateTimeVariable = DateTime.Now;
-                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
-
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "updated items in Ready to sell items" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
-
-                if (cmd.ExecuteNonQuery() == 1)
+                while (row.Read())
                 {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
+                    string id = row["id"].ToString();
 
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        //date
+                        DateTime dateTimeVariable = DateTime.Now;
+                        string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+                        connection.Close();
+                        connection.Open();
+                        string logs = "INSERT INTO activity_logs VALUES ('" + int.Parse(id) + "', '" + txtusername.Text + "', '" + "updated items in Ready to sell items" + "', '" + date + "')";
+                        MySqlCommand cmd = new MySqlCommand(logs, connection);
+                        cmd.ExecuteNonQuery();
+
+                        connection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
 
         }
@@ -179,9 +199,9 @@ namespace DigiSort_Box.Database
                                 MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             }
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            MessageBox.Show(ex.Message);
+                            //MessageBox.Show(ex.Message);
                         }
                     }
 
@@ -219,9 +239,9 @@ namespace DigiSort_Box.Database
                                 MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             }
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            MessageBox.Show(ex.Message);
+                            //MessageBox.Show(ex.Message);
                         }
                     }
 
@@ -259,9 +279,9 @@ namespace DigiSort_Box.Database
                                 MessageBox.Show("It seems like the data is glitching and having some error.\nTry contacting the super admin for the fix", "Information", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             }
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            MessageBox.Show(ex.Message);
+                            //MessageBox.Show(ex.Message);
                         }
 
                     }

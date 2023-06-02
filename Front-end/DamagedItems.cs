@@ -78,7 +78,7 @@ namespace DigiSort_Box.Front_end
         private void btnadd_Click(object sender, EventArgs e)
         {
             Database.Damage dmg = new Database.Damage();
-            dmg.issue(txtissue, txtquantity, cbtable, lblid, label1, label2, label3, label4, label5, label6);
+            dmg.issue(txtissue, txtquantity, cbtable, lblid, label1, label2, label3, label4, label5, label6, txtusername);
         }
 
         private void txtissue_TextChanged(object sender, EventArgs e)

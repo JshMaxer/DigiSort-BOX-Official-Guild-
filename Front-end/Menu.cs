@@ -185,6 +185,7 @@ namespace DigiSort_Box.Forms
             mainpanel.Controls.Clear();
             Front_end.Damaged_Items dmg = new Front_end.Damaged_Items() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainpanel.Controls.Add(dmg);
+            dmg.txtusername.Text = txtname.Text;
             dmg.Show();
         }
 

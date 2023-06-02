@@ -153,7 +153,7 @@ namespace DigiSort_Box.Forms
             this.lblforgot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblforgot.Name = "lblforgot";
             this.lblforgot.Size = new System.Drawing.Size(123, 13);
-            this.lblforgot.TabIndex = 7;
+            this.lblforgot.TabIndex = 3;
             this.lblforgot.Text = "Forgot password?";
             this.lblforgot.Click += new System.EventHandler(this.lblforgot_Click);
             // 
@@ -200,6 +200,7 @@ namespace DigiSort_Box.Forms
             this.txtpassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtpassword.UseSystemPasswordChar = true;
             this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
+            this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             // 
             // guna2PictureBox1
             // 

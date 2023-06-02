@@ -52,10 +52,9 @@ namespace DigiSort_Box.Database
                                 MessageBox.Show("Account Unsuccessfully created!");
                             }
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            MessageBox.Show(ex.Message);
-                            MessageBox.Show("Username is already used!");
+                            MessageBox.Show("Username is already used!\nTry Another.");
                             lbl.Text = "already";
                         }
 

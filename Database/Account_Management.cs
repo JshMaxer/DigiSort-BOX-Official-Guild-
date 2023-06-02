@@ -1,4 +1,5 @@
-﻿using DigiSort_Box.Model;
+﻿using DigiSort_Box.Forms;
+using DigiSort_Box.Model;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
@@ -73,6 +74,30 @@ namespace DigiSort_Box.Database
             }
 
             connection.Close();
+        }
+
+        public void search(Guna2DataGridView dgacc, Guna2TextBox search)
+        {
+            connection.Close();
+            connection.Open();
+            if (search.Text.Equals(""))
+            {
+                string searchall = "SELECT * FROM account";
+                MySqlDataAdapter all = new MySqlDataAdapter(searchall, connection);
+                DataTable tblall = new DataTable();
+                all.Fill(tblall);
+                dgacc.DataSource = tblall;
+            }
+            else
+            {
+                //search
+                string searchquery = "SELECT * FROM account WHERE username LIKE '" + search.Text + "%'";
+                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
+                DataTable tbl = new DataTable();
+                adp.Fill(tbl);
+                dgacc.DataSource = tbl;
+            }
+
         }
 
     }

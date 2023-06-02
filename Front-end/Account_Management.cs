@@ -72,5 +72,11 @@ namespace DigiSort_Box.Front_end
         {
             btnupdate.Enabled = true;
         }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            Database.Account_Management am = new Database.Account_Management();
+            am.search(dgaccounts, txtsearch);
+        }
     }
 }

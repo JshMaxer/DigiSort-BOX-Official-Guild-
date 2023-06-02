@@ -76,10 +76,10 @@ namespace DigiSort_Box.Database
         }
 
 
-        public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6)
+        public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername)
         {
             DateTime dateTimeVariable = DateTime.Now;
-            string date = dateTimeVariable.ToString("yyyy-MM-dd");
+            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
 
             if (cbtable.SelectedItem.Equals("Raw Materials"))
             {
@@ -105,35 +105,65 @@ namespace DigiSort_Box.Database
                         }
                     }
 
+                    rawrd.Close(); // Close the rawrd reader
+
                     //Raw Code here
-                    //insert query in raw //itm should return data to insert on database.
-                    string InsertQuery = "INSERT INTO raw_material_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', " + int.Parse(txtquan.Text) + ", '" + txtissue.Text + "', '" + date + "')";
-                    string UpdateQuery = "UPDATE raw_material SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+                    //activity_logs
+                    string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
                     connection.Close();
                     connection.Open();
-                    MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-                    MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+                    MySqlCommand cmdid = new MySqlCommand(idquery, connection);
+                    MySqlDataReader row = cmdid.ExecuteReader();
+
                     try
                     {
-                        if (command.ExecuteNonQuery() == 1)
+
+                        if (row.HasRows)
                         {
-                            MessageBox.Show("Data Inserted");
-                            clear(txtissue, txtquan);
-                            updateCommand.ExecuteNonQuery();
-                            quantityzero();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data Not Inserted");
+                            while (row.Read())
+                            {
+                                string id = row["id"].ToString();
+
+                                //insert query in raw //itm should return data to insert on database.
+                                string InsertQuery = "INSERT INTO raw_material_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', " + int.Parse(txtquan.Text) + ", '" + txtissue.Text + "', '" + date + "')";
+                                string UpdateQuery = "UPDATE raw_material SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+                                string userandid = "INSERT INTO activity_logs VALUES ('" + int.Parse(id) + "', '" + txtusername.Text + "', '" + "added raw materials as damage items" + "', '" + date + "')";
+                                connection.Close();
+                                connection.Open();
+
+                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+                                MySqlCommand cmd = new MySqlCommand(userandid, connection);
+
+                                try
+                                {
+                                    if (command.ExecuteNonQuery() == 1)
+                                    {
+                                        MessageBox.Show("Item added successfully!");
+                                        cmd.ExecuteNonQuery();
+                                        clear(txtissue, txtquan);
+                                        updateCommand.ExecuteNonQuery();
+                                        quantityzero();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Item added Un-successfull!");
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+
+                                connection.Close();
+
+                            }
                         }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ex.Message);
+                        //catch the error
                     }
-
-                    connection.Close();
-
                 }
 
             }
@@ -161,36 +191,69 @@ namespace DigiSort_Box.Database
                         }
                     }
 
+                    rawrd.Close();
+
                     //Code here
-                    //insert query //itm should return data to insert on database.
-                    string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
-                    string UpdateQuery = "UPDATE ready_to_sell_items SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+                    //activity_logs
+                    string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
                     connection.Close();
                     connection.Open();
-                    MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-                    MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+                    MySqlCommand cmdid = new MySqlCommand(idquery, connection);
+                    MySqlDataReader row = cmdid.ExecuteReader();
+
                     try
                     {
-                        if (command.ExecuteNonQuery() == 1)
+
+                        if (row.HasRows)
                         {
-                            MessageBox.Show("Data Inserted");
-                            clear(txtissue, txtquan);
-                            updateCommand.ExecuteNonQuery();
-                            quantityzero();
+                            while (row.Read())
+                            {
+                                string id = row["id"].ToString();
+
+                                //insert query //itm should return data to insert on database.
+                                string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
+                                string UpdateQuery = "UPDATE ready_to_sell_items SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+                                string userandid = "INSERT INTO activity_logs VALUES ('" + int.Parse(id) + "', '" + txtusername.Text + "', '" + "added ready to sell items as damage items" + "', '" + date + "')";
+
+                                connection.Close();
+                                connection.Open();
+
+                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+                                MySqlCommand cmd = new MySqlCommand(userandid, connection);
+
+                                try
+                                {
+                                    if (command.ExecuteNonQuery() == 1)
+                                    {
+                                        MessageBox.Show("Item added successfully!");
+                                        cmd.ExecuteNonQuery();
+                                        clear(txtissue, txtquan);
+                                        updateCommand.ExecuteNonQuery();
+                                        quantityzero();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Item added Un-successfull!");
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+
+                                connection.Close();
+
+                            }
                         }
-                        else
-                        {
-                            MessageBox.Show("Data Not Inserted");
-                        }
+
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ex.Message);
+                        //catch the error
                     }
-
-                    connection.Close();
-
                 }
+
 
             }
             else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
@@ -218,35 +281,64 @@ namespace DigiSort_Box.Database
                     }
 
                     //Code here
-                    //insert query //itm should return data to insert on database.
-                    string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
-                    string UpdateQuery = "UPDATE unprinted_shirts SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+                    //activity_logs
+                    string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
                     connection.Close();
                     connection.Open();
-                    MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-                    MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+                    MySqlCommand cmdid = new MySqlCommand(idquery, connection);
+                    MySqlDataReader row = cmdid.ExecuteReader();
+
                     try
                     {
-                        if (command.ExecuteNonQuery() == 1)
+
+                        if (row.HasRows)
                         {
-                            MessageBox.Show("Data Inserted");
-                            clear(txtissue, txtquan);
-                            updateCommand.ExecuteNonQuery();
-                            quantityzero();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data Not Inserted");
+                            while (row.Read())
+                            {
+                                string id = row["id"].ToString();
+
+                                //insert query //itm should return data to insert on database.
+                                string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
+                                string UpdateQuery = "UPDATE unprinted_shirts SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+                                string userandid = "INSERT INTO activity_logs VALUES ('" + int.Parse(id) + "', '" + txtusername.Text + "', '" + "added unprinted shirts as damage items" + "', '" + date + "')";
+
+                                connection.Close();
+                                connection.Open();
+
+                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+                                MySqlCommand cmd = new MySqlCommand(userandid, connection);
+
+                                try
+                                {
+                                    if (command.ExecuteNonQuery() == 1)
+                                    {
+                                        MessageBox.Show("Item added successfully!");
+                                        cmd.ExecuteNonQuery();
+                                        clear(txtissue, txtquan);
+                                        updateCommand.ExecuteNonQuery();
+                                        quantityzero();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Item added Un-successfull!");
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+
+                                connection.Close();
+                            }
                         }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ex.Message);
+                        //catch the error
                     }
 
-                    connection.Close();
                 }
-
             }
         }
 
