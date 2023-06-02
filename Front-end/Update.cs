@@ -64,7 +64,7 @@ namespace DigiSort_Box.Forms
             dgtable.DataSource = dtRecords;
         }
 
-        
+
 
         private void exitform_Click(object sender, EventArgs e)
         {
@@ -273,7 +273,7 @@ namespace DigiSort_Box.Forms
                     cb4.Items.Clear();
 
                     //Quantity
-                    txt5.Text = dgvRow.Cells[4].Value.ToString();;
+                    txt5.Text = dgvRow.Cells[4].Value.ToString(); ;
                 }
             }
 
@@ -281,7 +281,7 @@ namespace DigiSort_Box.Forms
 
         private void cb2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
 
         }
 

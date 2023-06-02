@@ -155,7 +155,7 @@ namespace DigiSort_Box.Forms
 
                         connection.Close();
                     }
-                     catch(Exception)
+                    catch (Exception)
                     {
                         //Hide the error message
                     }
@@ -166,7 +166,7 @@ namespace DigiSort_Box.Forms
 
         private void txtusername_TextChanged(object sender, EventArgs e)
         {
-            if(txtusername.Text.Equals("") || txtpassword.Text.Equals(""))
+            if (txtusername.Text.Equals("") || txtpassword.Text.Equals(""))
             {
                 btnsignin.Enabled = false;
             }

@@ -1,8 +1,6 @@
-﻿
-using DigiSort_Box.Model;
+﻿using DigiSort_Box.Model;
 using MySql.Data.MySqlClient;
 using System;
-using System.Data;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Front_end

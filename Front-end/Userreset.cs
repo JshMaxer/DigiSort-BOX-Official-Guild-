@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DigiSort_Box.Model;
+﻿using DigiSort_Box.Model;
 using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Relational;
+using System;
+using System.Windows.Forms;
 
 namespace DigiSort_Box.Front_end
 {
@@ -42,7 +34,7 @@ namespace DigiSort_Box.Front_end
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
         {
-            if(txtpassword.Text.Equals("") || txtpassword.Text == "" || txtpassword.Text == null)
+            if (txtpassword.Text.Equals("") || txtpassword.Text == "" || txtpassword.Text == null)
             {
                 btnproceed.Enabled = false;
             }
@@ -50,7 +42,7 @@ namespace DigiSort_Box.Front_end
             {
                 btnproceed.Enabled = true;
             }
-            
+
         }
     }
 }

@@ -133,7 +133,7 @@ namespace DigiSort_Box.Forms
                     txt3.Text = dgvRow.Cells[3].Value.ToString();
                 }
             }
-            else if(cbtable.SelectedItem.Equals("Unprinted Shirts"))
+            else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
             {
                 //click cell to show
                 if (e.RowIndex != -1)

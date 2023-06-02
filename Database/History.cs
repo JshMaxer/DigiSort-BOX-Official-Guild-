@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DigiSort_Box.Front_end;
-using DigiSort_Box.Model;
+﻿using DigiSort_Box.Model;
 using MySql.Data.MySqlClient;
+using System.Data;
+using System.Windows.Forms;
 
 namespace DigiSort_Box.Database
 {
-     class History
+    class History
     {
         MySqlConnection connection = Host.connection;
         void select(DataGridView dg)

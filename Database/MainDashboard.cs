@@ -1,6 +1,5 @@
 ﻿using DigiSort_Box.Model;
 using MySql.Data.MySqlClient;
-using System.Windows.Forms;
 
 namespace DigiSort_Box.Database
 {

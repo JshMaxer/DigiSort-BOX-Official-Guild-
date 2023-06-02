@@ -40,8 +40,8 @@ namespace DigiSort_Box.Front_end
             if (cbposition.Text.Equals("InActive"))
             {
                 DialogResult = MessageBox.Show("Are you sure you want to deactivate this account?", "Deactivate?", MessageBoxButtons.YesNo);
-                
-                if(DialogResult == DialogResult.Yes)
+
+                if (DialogResult == DialogResult.Yes)
                 {
                     Database.Account_Management am = new Database.Account_Management();
                     am.updatedeact(txtuser, cbposition);
@@ -52,7 +52,7 @@ namespace DigiSort_Box.Front_end
                 }
 
             }
-            else if(cbposition.Text.Equals("Active"))
+            else if (cbposition.Text.Equals("Active"))
             {
                 DialogResult = MessageBox.Show("Are you sure you want to reactivate this account?", "Re-activate?", MessageBoxButtons.YesNo);
 
