@@ -1,5 +1,4 @@
-﻿using DigiSort_Box.Mowdel;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace DigiSort_Box
@@ -37,7 +36,7 @@ namespace DigiSort_Box
             {
                 //ok
             }
-            
+
         }
 
         private void txtfirstname_TextChanged(object sender, EventArgs e)

@@ -1,21 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Printing;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using DigiSort_Box.Model;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
 using MySql.Data.MySqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
-using System.Web;
-using DigiSort_Box.Model;
+using System;
+using System.Data;
+using System.IO;
+using System.Windows.Forms;
 
 namespace DigiSort_Box.Forms
 {

@@ -1,5 +1,4 @@
 ﻿using DigiSort_Box.Model;
-using DigiSort_Box.Mowdel;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
@@ -67,14 +66,14 @@ namespace DigiSort_Box.Database
                         connection.Close();
                         connection.Open();
                         MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
-                        
+
                         try
                         {
                             if (cmd.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Account successfully created!");
                                 Forms.Login log = new Forms.Login();
-                                log.Show(); 
+                                log.Show();
                                 lbl.Text = "success";
                             }
                             else

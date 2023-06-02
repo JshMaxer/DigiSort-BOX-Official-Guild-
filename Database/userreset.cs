@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DigiSort_Box.Model;
+﻿using DigiSort_Box.Model;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
+using System;
+using System.Windows.Forms;
 
 namespace DigiSort_Box.Database
 {

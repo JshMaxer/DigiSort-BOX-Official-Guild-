@@ -1,7 +1,5 @@
 ﻿using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
-using System;
-using System.Windows.Forms;
 
 namespace DigiSort_Box.Database
 {
@@ -11,12 +9,12 @@ namespace DigiSort_Box.Database
 
         public void loginCODE(Guna2TextBox username, Guna2TextBox password)
         {
-            
+
         }
 
         public void concern()
         {
-            
+
         }
 
     }

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace DigiSort_Box.Model
 {
@@ -23,6 +16,6 @@ namespace DigiSort_Box.Model
 
         //Host name = datasource
         //username = User name
-        
+
     }
 }
