@@ -16,10 +16,10 @@ namespace DigiSort_Box.Front_end
             Database.Account_Management am = new Database.Account_Management();
             am.account(txtuser, cbposition, dgaccounts);
 
-            dgaccounts.Columns[0].HeaderText = "USERNAME";
-            dgaccounts.Columns[1].HeaderText = "FIRST NAME";
-            dgaccounts.Columns[2].HeaderText = "LAST NAME";
-            dgaccounts.Columns[3].HeaderText = "PASSWORD";
+            dgaccounts.Columns[0].HeaderText = "ID";
+            dgaccounts.Columns[1].HeaderText = "USERNAME";
+            dgaccounts.Columns[2].HeaderText = "FIRSTNAME";
+            dgaccounts.Columns[3].HeaderText = "LASTNAME";
             dgaccounts.Columns[4].HeaderText = "POSITION";
             dgaccounts.Columns[5].HeaderText = "STATUS";
         }
@@ -30,8 +30,8 @@ namespace DigiSort_Box.Front_end
             if (e.RowIndex != -1)
             {
                 DataGridViewRow dgrow = dgaccounts.Rows[e.RowIndex];
-                txtuser.Text = dgrow.Cells[0].Value.ToString();
-                cbposition.Text = dgrow.Cells[5].Value.ToString();
+                txtuser.Text = dgrow.Cells[1].Value.ToString();
+                cbposition.Text = dgrow.Cells[4].Value.ToString();
             }
         }
 

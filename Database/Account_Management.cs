@@ -16,7 +16,7 @@ namespace DigiSort_Box.Database
             //Account
             connection.Close();
             connection.Open();
-            string accounttop = "SELECT username, first_name, last_name, password, position, activation FROM account";
+            string accounttop = "SELECT id, username, first_name, last_name, position, activation FROM account";
             MySqlCommand cmd = new MySqlCommand(accounttop, connection);
             MySqlDataReader sdr = cmd.ExecuteReader();
             DataTable table = new DataTable();
@@ -82,7 +82,7 @@ namespace DigiSort_Box.Database
             connection.Open();
             if (search.Text.Equals(""))
             {
-                string searchall = "SELECT * FROM account";
+                string searchall = "SELECT id, username, first_name, last_name, position, activation FROM account";
                 MySqlDataAdapter all = new MySqlDataAdapter(searchall, connection);
                 DataTable tblall = new DataTable();
                 all.Fill(tblall);
@@ -91,7 +91,7 @@ namespace DigiSort_Box.Database
             else
             {
                 //search
-                string searchquery = "SELECT * FROM account WHERE username LIKE '" + search.Text + "%'";
+                string searchquery = "SELECT id, username, first_name, last_name, position, activation FROM account WHERE username LIKE '" + search.Text + "%'";
                 MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
                 DataTable tbl = new DataTable();
                 adp.Fill(tbl);

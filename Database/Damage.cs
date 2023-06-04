@@ -75,8 +75,8 @@ namespace DigiSort_Box.Database
             txtquan.Text = "";
         }
 
-
-        public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername)
+        //issue for top and floor admin
+        void issuetopfloor(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername)
         {
             DateTime dateTimeVariable = DateTime.Now;
             string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
@@ -339,6 +339,258 @@ namespace DigiSort_Box.Database
                     }
 
                 }
+            }
+        }
+
+        //issue for super admin
+        void issuesuper(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername)
+        {
+            DateTime dateTimeVariable = DateTime.Now;
+            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+            if (cbtable.SelectedItem.Equals("Raw Materials"))
+            {
+                //Restriction
+                string rawquant = "SELECT quantity FROM Raw_Material WHERE Material = '" + lbl1.Text + "'AND design = '" + lbl2.Text + "'";
+                connection.Close();
+                connection.Open();
+
+                MySqlCommand rawcmd = new MySqlCommand(rawquant, connection);
+                MySqlDataReader rawrd = rawcmd.ExecuteReader();
+
+                if (rawrd.HasRows)
+                {
+                    while (rawrd.Read())
+                    {
+                        int rawquan = int.Parse(rawrd["quantity"].ToString());
+
+                        // Condition if the quantity exceeds
+                        if (int.Parse(txtquan.Text) > rawquan)
+                        {
+                            MessageBox.Show("Quantity exceeds for materials");
+                            return; // Exit the method if the quantity exceeds
+                        }
+                    }
+
+                    rawrd.Close(); // Close the rawrd reader
+
+
+                    //insert query in raw //itm should return data to insert on database.
+                    string InsertQuery = "INSERT INTO raw_material_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', " + int.Parse(txtquan.Text) + ", '" + txtissue.Text + "', '" + date + "')";
+                    string UpdateQuery = "UPDATE raw_material SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+                    connection.Close();
+                    connection.Open();
+
+                    MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                    MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+
+                    try
+                    {
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("Item added successfully!");
+                            clear(txtissue, txtquan);
+                            updateCommand.ExecuteNonQuery();
+                            quantityzero();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Item added Un-successfull!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    connection.Close();
+
+                }
+
+            }
+
+
+
+            else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
+            {
+                //Restriction
+                string rawquant = "SELECT quantity FROM ready_to_sell_items WHERE material = '" + lbl1.Text + "'AND design = '" + lbl2.Text + "' AND color = '" + lbl3.Text + "' AND shade = '" + lbl4.Text + "' AND size = '" + lbl5.Text + "'";
+                connection.Close();
+                connection.Open();
+
+                MySqlCommand rawcmd = new MySqlCommand(rawquant, connection);
+                MySqlDataReader rawrd = rawcmd.ExecuteReader();
+
+                if (rawrd.HasRows)
+                {
+                    while (rawrd.Read())
+                    {
+                        int rawquan = int.Parse(rawrd["quantity"].ToString());
+
+                        // Condition if the quantity exceeds
+                        if (int.Parse(txtquan.Text) > rawquan)
+                        {
+                            MessageBox.Show("Quantity exceeds for materials");
+                            return; // Exit the method if the quantity exceeds
+                        }
+                    }
+
+                    rawrd.Close();
+
+                    //Code here
+                    //activity_logs
+                    string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
+                    connection.Close();
+                    connection.Open();
+                    MySqlCommand cmdid = new MySqlCommand(idquery, connection);
+                    MySqlDataReader row = cmdid.ExecuteReader();
+
+                    try
+                    {
+
+                        if (row.HasRows)
+                        {
+                            while (row.Read())
+                            {
+                                string id = row["id"].ToString();
+
+                                //insert query //itm should return data to insert on database.
+                                string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
+                                string UpdateQuery = "UPDATE ready_to_sell_items SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+
+                                connection.Close();
+                                connection.Open();
+
+                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+
+                                try
+                                {
+                                    if (command.ExecuteNonQuery() == 1)
+                                    {
+                                        MessageBox.Show("Item added successfully!");
+                                        clear(txtissue, txtquan);
+                                        updateCommand.ExecuteNonQuery();
+                                        quantityzero();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Item added Un-successfull!");
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+
+                                connection.Close();
+
+                            }
+                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        //catch the error
+                        MessageBox.Show(e.Message);
+                    }
+                }
+
+
+            }
+            else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
+            {
+                //Restriction
+                string rawquant = "SELECT quantity FROM unprinted_shirts WHERE color = '" + lbl1.Text + "' AND shade = '" + lbl2.Text + "' AND size = '" + lbl3.Text + "'";
+                connection.Close();
+                connection.Open();
+
+                MySqlCommand rawcmd = new MySqlCommand(rawquant, connection);
+                MySqlDataReader rawrd = rawcmd.ExecuteReader();
+
+                if (rawrd.HasRows)
+                {
+                    while (rawrd.Read())
+                    {
+                        int rawquan = int.Parse(rawrd["quantity"].ToString());
+
+                        // Condition if the quantity exceeds
+                        if (int.Parse(txtquan.Text) > rawquan)
+                        {
+                            MessageBox.Show("Quantity exceeds for materials");
+                            return; // Exit the method if the quantity exceeds
+                        }
+                    }
+
+                    //Code here
+                    //activity_logs
+                    string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
+                    connection.Close();
+                    connection.Open();
+                    MySqlCommand cmdid = new MySqlCommand(idquery, connection);
+                    MySqlDataReader row = cmdid.ExecuteReader();
+
+                    try
+                    {
+
+                        if (row.HasRows)
+                        {
+                            while (row.Read())
+                            {
+                                string id = row["id"].ToString();
+
+                                //insert query //itm should return data to insert on database.
+                                string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
+                                string UpdateQuery = "UPDATE unprinted_shirts SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+
+                                connection.Close();
+                                connection.Open();
+
+                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
+
+                                try
+                                {
+                                    if (command.ExecuteNonQuery() == 1)
+                                    {
+                                        MessageBox.Show("Item added successfully!");
+                                        clear(txtissue, txtquan);
+                                        updateCommand.ExecuteNonQuery();
+                                        quantityzero();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Item added Un-successfull!");
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
+
+                                connection.Close();
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        //catch the error
+                        MessageBox.Show(e.Message);
+                    }
+
+                }
+            }
+        }
+
+        public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername)
+        {
+            if (txtusername.Text.Equals("SUPER ADMIN"))
+            {
+                issuesuper(txtissue, txtquan, cbtable, lblid, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, txtusername);
+            }
+            else
+            {
+                issuetopfloor(txtissue, txtquan, cbtable, lblid, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, txtusername);
             }
         }
 
