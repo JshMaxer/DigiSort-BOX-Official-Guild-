@@ -105,6 +105,7 @@
     <Compile Include="Back-end\Constants.cs" />
     <Compile Include="Back-end\Menu.cs" />
     <Compile Include="Back-end\preview.cs" />
+    <Compile Include="Back-end\Print.cs" />
     <Compile Include="Database\Account_Management.cs" />
     <Compile Include="Database\Concern.cs" />
     <Compile Include="Database\CreateAcc.cs" />
@@ -138,6 +139,12 @@
     </Compile>
     <Compile Include="Front-end\History.Designer.cs">
       <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-end\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-end\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Front-end\Menu.cs">
       <SubType>Form</SubType>
@@ -247,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\History.resx">
       <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-end\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

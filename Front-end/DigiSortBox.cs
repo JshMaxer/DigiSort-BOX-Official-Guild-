@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigiSort_Box.Front_end;
+using System;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Forms
@@ -29,9 +30,5 @@ namespace DigiSort_Box.Forms
             Environment.Exit(0);
         }
 
-        private void DigiSortBox_Load(object sender, EventArgs e)
-        {
-            //MessageBox.Show("PLEASE FETCH FIRST AND THEN PULL BEFORE DOING CHANGES IN SYSTEM TO NOT MESSED UP THE COMMIT TIMELINE.\n\nBEFORE PUSHING THE GIT CHANGES, MAKE SURE YOU FETCH AND PULL FIRST.\n\nKINDLY REMOVE THIS MESSAGE ON PRESENTING OR DEFENSE DAY. ty :)\n-dev lead", "REMEMBER!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
     }
 }

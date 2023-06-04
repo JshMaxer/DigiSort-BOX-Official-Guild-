@@ -180,7 +180,6 @@ namespace DigiSort_Box.Forms
             this.Name = "DigiSortBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DigiSortBox";
-            this.Load += new System.EventHandler(this.DigiSortBox_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

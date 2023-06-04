@@ -16,7 +16,7 @@ namespace DigiSort_Box
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.DigiSortBox());
+            Application.Run(new Front_end.LoadingForm());
         }
     }
 }

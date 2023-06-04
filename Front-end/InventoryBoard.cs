@@ -1,23 +1,11 @@
-﻿using DigiSort_Box.Model;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using MySql.Data.MySqlClient;
-using System;
-using System.Data;
-using System.IO;
+﻿using System;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Forms
 {
     public partial class Inventory : Form
     {
-        MySqlConnection connection = Host.connection;
-        DataTable dtRaw = new DataTable();
-        DataTable dtUnprint = new DataTable();
-        DataTable dtReady = new DataTable();
-        DataTable dtrawdamage = new DataTable();
-        DataTable dtunprintdamage = new DataTable();
-        DataTable dtreadydamage = new DataTable();
+
         public Inventory()
         {
             InitializeComponent();
@@ -26,160 +14,17 @@ namespace DigiSort_Box.Forms
         private void Inventory_Load(object sender, EventArgs e)
         {
             //show Database table
-            connection.Close();
-            connection.Open();
-
-            raw();
-            unprint();
-            ready();
-            rawdamage();
-            unprintdamage();
-            readydamage();
-
-            connection.Close();
-        }
-         void raw()
-        {
-            connection.Close();
-            connection.Open();
-            
-            MySqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "SELECT * FROM raw_material";
-            MySqlDataReader sdr = cmd.ExecuteReader();
-            dtRaw.Load(sdr);
-            dgrawmaterial.DataSource = dtRaw;
-
-            connection.Close();
-        }
-         void unprint()
-        {
-            connection.Close();
-            connection.Open();
-            
-            MySqlCommand unprint = connection.CreateCommand();
-            unprint.CommandText = "SELECT * FROM unprinted_shirts";
-            MySqlDataReader sdr = unprint.ExecuteReader();
-            dtUnprint.Load(sdr);
-            dgunprinted.DataSource = dtUnprint;
-
-            connection.Close();
-        }
-         void ready()
-        {
-            connection.Close();
-            connection.Open();
-            
-            MySqlCommand unprint = connection.CreateCommand();
-            unprint.CommandText = "SELECT * FROM ready_to_sell_items";
-            MySqlDataReader sdr = unprint.ExecuteReader();
-            dtReady.Load(sdr);
-            dgready.DataSource = dtReady;
-
-            connection.Close();
+            Database.Inventory inv = new Database.Inventory();
+            inv.InvLoad(dgrawmaterial, dgunprinted, dgready, dgrawdamage, dgreadydamage, dgunprinteddamage);
         }
 
-         void rawdamage()
-        {
-            connection.Close();
-            connection.Open();
-            
-            string rawdamage = "SELECT * FROM raw_material_damage_items";
-            MySqlCommand cmd = new MySqlCommand(rawdamage, connection);
-            MySqlDataReader sdr = cmd.ExecuteReader();
-            dtrawdamage.Load(sdr);
-            dgrawdamage.DataSource = dtrawdamage;
-
-            connection.Close();
-        }
-         void readydamage()
-        {
-            connection.Close();
-            connection.Open();
-            
-            string readydamage = "SELECT * FROM ready_to_sell_items_damage_items";
-            MySqlCommand cmd = new MySqlCommand(readydamage, connection);
-            MySqlDataReader sdr = cmd.ExecuteReader();
-            dtreadydamage.Load(sdr);
-            dgreadydamage.DataSource = dtreadydamage;
-
-            connection.Close();
-        }
-         void unprintdamage()
-        {
-            connection.Close();
-            connection.Open();
-            
-            string unprintdamage = "SELECT * FROM unprinted_shirts_damage_items";
-            MySqlCommand cmd = new MySqlCommand(unprintdamage, connection);
-            MySqlDataReader sdr = cmd.ExecuteReader();
-            dtunprintdamage.Load(sdr);
-            dgunprinteddamage.DataSource = dtunprintdamage;
-
-            connection.Close();
-        }
 
         private void txtunprinted_TextChanged_1(object sender, EventArgs e)
         {
-            connection.Close();
-            connection.Open();
-            if (txtunprinted.Text.Equals(""))
-            {
-                string searchquery = "SELECT * FROM unprinted_shirts";
-                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
-                DataTable tbl = new DataTable();
-                adp.Fill(tbl);
-                dgunprinted.DataSource = tbl;
-            }
-            else
-            {
-                string searchquery = "SELECT * FROM unprinted_shirts WHERE color LIKE '" + txtunprinted.Text + "%'";
-                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
-                DataTable tbl = new DataTable();
-                adp.Fill(tbl);
-                dgunprinted.DataSource = tbl;
-            }
-        }
-        private void txtready_TextChanged(object sender, EventArgs e)
-        {
-            connection.Close();
-            connection.Open();
-            if (txtready.Text.Equals(""))
-            {
-                string searchquery = "SELECT * FROM ready_to_sell_items";
-                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
-                DataTable tbl = new DataTable();
-                adp.Fill(tbl);
-                dgready.DataSource = tbl;
-            }
-            else
-            {
-                string searchquery = "SELECT * FROM ready_to_sell_items WHERE product_name LIKE '" + txtready.Text + "%'";
-                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
-                DataTable tbl = new DataTable();
-                adp.Fill(tbl);
-                dgready.DataSource = tbl;
-            }
-        }
-        private void txtraw_TextChanged(object sender, EventArgs e)
-        {
-            connection.Close();
-            connection.Open();
-            if (txtraw.Text.Equals(""))
-            {
-                string searchquery = "SELECT * FROM raw_material";
-                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
-                DataTable tbl = new DataTable();
-                adp.Fill(tbl);
-                dgrawmaterial.DataSource = tbl;
-            }
-            else
-            {
-                string searchquery = "SELECT * FROM raw_material WHERE material LIKE '" + txtraw.Text + "%'";
-                MySqlDataAdapter adp = new MySqlDataAdapter(searchquery, connection);
-                DataTable tbl = new DataTable();
-                adp.Fill(tbl);
-                dgrawmaterial.DataSource = tbl;
-            }
+            Database.Inventory inv = new Database.Inventory();
+            inv.unprintSearch(txtsearch, dgunprinted);
+            inv.readySearch(txtsearch, dgready);
+            inv.rawSearch(txtsearch, dgrawmaterial);
         }
         private void btnupdate_Click(object sender, EventArgs e)
         {
@@ -196,137 +41,11 @@ namespace DigiSort_Box.Forms
 
         private void btnprint_Click(object sender, EventArgs e)
         {
-            ExportToPdf(dtRaw, dtUnprint, dtReady);
+            Database.Inventory inv = new Database.Inventory();
+            Back_end.Print pr = new Back_end.Print();
+            pr.ExportToPdf(dgready, dgunprinted, dgready);
         }
-        public void ExportToPdf(DataTable myDataTableRaw, DataTable myDataTableUnprinted, DataTable myDataTableReady)
-        {
-            DataTable dtRaw = myDataTableRaw;
-            DataTable dtUnprinted = myDataTableUnprinted;
-            DataTable dtReady = myDataTableReady;
 
-            Document pdfDoc = new Document(PageSize.A4.Rotate(), 10, 10, 10, 10);
-            iTextSharp.text.Font font13 = FontFactory.GetFont("ARIAL", 13);
-            iTextSharp.text.Font font18 = FontFactory.GetFont("ARIAL", 18);
-
-            string documentsFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string filePath = Path.Combine(documentsFolderPath, "Inventory.pdf");
-
-            try
-            {
-                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, new FileStream(filePath, FileMode.Create));
-                pdfDoc.Open();
-
-                if (dtRaw.Rows.Count > 0)
-                {
-                    PdfPTable PdfTable = new PdfPTable(1);
-                    PdfTable.TotalWidth = 200f;
-                    PdfTable.LockedWidth = true;
-
-                    PdfPCell PdfPCell = new PdfPCell(new Phrase(new iTextSharp.text.Chunk("Raw Materials", font18)));
-                    PdfPCell.Border = iTextSharp.text.Rectangle.NO_BORDER;
-                    PdfTable.AddCell(PdfPCell);
-                    pdfDoc.Add(PdfTable);
-
-                    PdfTable = new PdfPTable(dtRaw.Columns.Count);
-                    PdfTable.SpacingBefore = 20f;
-
-                    for (int columns = 0; columns <= dtRaw.Columns.Count - 1; columns++)
-                    {
-                        PdfPCell = new PdfPCell(new Phrase(new iTextSharp.text.Chunk(dtRaw.Columns[columns].ColumnName, font18)));
-                        PdfTable.AddCell(PdfPCell);
-                    }
-
-                    for (int rows = 0; rows <= dtRaw.Rows.Count - 1; rows++)
-                    {
-                        for (int column = 0; column <= dtRaw.Columns.Count - 1; column++)
-                        {
-                            PdfPCell = new PdfPCell(new Phrase(new iTextSharp.text.Chunk(dtRaw.Rows[rows][column].ToString(), font13)));
-                            PdfTable.AddCell(PdfPCell);
-                        }
-                    }
-
-                    pdfDoc.Add(PdfTable);
-
-                    PdfTable = new PdfPTable(1);
-                    PdfTable.TotalWidth = 200f;
-                    PdfTable.LockedWidth = true;
-                    PdfTable.SpacingBefore = 30f;
-
-                    PdfPCell PdfPCell1 = new PdfPCell(new Phrase(new iTextSharp.text.Chunk("Unprinted Shirts", font18)));
-                    PdfPCell1.Border = iTextSharp.text.Rectangle.NO_BORDER;
-                    PdfTable.AddCell(PdfPCell1);
-
-                    pdfDoc.Add(PdfTable);
-
-                    PdfTable = new PdfPTable(dtUnprinted.Columns.Count);
-                    PdfTable.SpacingBefore = 20f;
-
-                    for (int columns = 0; columns <= dtUnprinted.Columns.Count - 1; columns++)
-                    {
-                        PdfPCell = new PdfPCell(new Phrase(new iTextSharp.text.Chunk(dtUnprinted.Columns[columns].ColumnName, font18)));
-                        PdfTable.AddCell(PdfPCell);
-                    }
-
-                    for (int rows = 0; rows <= dtUnprinted.Rows.Count - 1; rows++)
-                    {
-                        for (int column = 0; column <= dtUnprinted.Columns.Count - 1; column++)
-                        {
-                            PdfPCell = new PdfPCell(new Phrase(new iTextSharp.text.Chunk(dtUnprinted.Rows[rows][column].ToString(), font13)));
-                            PdfTable.AddCell(PdfPCell);
-                        }
-                    }
-
-                    pdfDoc.Add(PdfTable);
-
-                    PdfTable = new PdfPTable(1);
-                    PdfTable.TotalWidth = 200f;
-                    PdfTable.LockedWidth = true;
-                    PdfTable.SpacingBefore = 30f;
-
-                    PdfPCell PdfPCell2 = new PdfPCell(new Phrase(new iTextSharp.text.Chunk("Ready to sell items", font18)));
-                    PdfPCell2.Border = iTextSharp.text.Rectangle.NO_BORDER;
-                    PdfTable.AddCell(PdfPCell2);
-
-                    pdfDoc.Add(PdfTable);
-
-                    PdfTable = new PdfPTable(dtReady.Columns.Count);
-                    PdfTable.SpacingBefore = 20f;
-
-                    for (int columns = 0; columns <= dtReady.Columns.Count - 1; columns++)
-                    {
-                        PdfPCell = new PdfPCell(new Phrase(new iTextSharp.text.Chunk(dtReady.Columns[columns].ColumnName, font18)));
-                        PdfTable.AddCell(PdfPCell);
-                    }
-
-                    for (int rows = 0; rows <= dtReady.Rows.Count - 1; rows++)
-                    {
-                        for (int column = 0; column <= dtReady.Columns.Count - 1; column++)
-                        {
-                            PdfPCell = new PdfPCell(new Phrase(new iTextSharp.text.Chunk(dtReady.Rows[rows][column].ToString(), font13)));
-                            PdfTable.AddCell(PdfPCell);
-                        }
-                    }
-
-                    pdfDoc.Add(PdfTable);
-
-
-                }
-                pdfDoc.Close();
-                MessageBox.Show("The file is now ready for printing. \nYour file is saved on C:\\Users\\YourComputerName\\Documents");
-            }
-            catch (DocumentException)
-            {
-            }
-            // System.Web.HttpContext.Current.Response.Write(de.Message)
-            catch (IOException)
-            {
-            }
-            // System.Web.HttpContext.Current.Response.Write(ioEx.Message)
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
     }
 }
 
