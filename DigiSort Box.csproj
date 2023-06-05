@@ -243,6 +243,12 @@
       <DependentUpon>Userreset.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Host.cs" />
+    <Compile Include="Model\IPConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\IPConfig.Designer.cs">
+      <DependentUpon>IPConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Lageen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Front-end\Userreset.resx">
       <DependentUpon>Userreset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\IPConfig.resx">
+      <DependentUpon>IPConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

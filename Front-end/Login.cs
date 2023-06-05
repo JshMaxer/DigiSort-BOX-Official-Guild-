@@ -10,10 +10,12 @@ namespace DigiSort_Box.Forms
 {
     public partial class Login : Form
     {
-        MySqlConnection connection = Host.connection;
+        MySqlConnection connection;
         public Login()
         {
             InitializeComponent();
+            Host.InitializeConnection();
+            connection = Host.connection;
         }
         private void btnback_Click(object sender, EventArgs e)
         {
@@ -208,6 +210,11 @@ namespace DigiSort_Box.Forms
 
                 e.Handled = true; // Mark the event as handled
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

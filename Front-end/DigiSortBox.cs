@@ -30,5 +30,12 @@ namespace DigiSort_Box.Forms
             Environment.Exit(0);
         }
 
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            //IPCONFIG
+
+            Model.IPConfig conf = new Model.IPConfig();
+            conf.ShowDialog();
+        }
     }
 }
