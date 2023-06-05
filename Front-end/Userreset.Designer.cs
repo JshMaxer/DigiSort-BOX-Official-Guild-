@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Reset = new System.Windows.Forms.Label();
             this.btnproceed = new Guna.UI2.WinForms.Guna2Button();
-            this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
             this.cbusername = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
@@ -53,6 +53,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 45);
             this.panel1.TabIndex = 70;
+            // 
+            // exitform
+            // 
+            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitform.Animated = true;
+            this.exitform.FillColor = System.Drawing.Color.Transparent;
+            this.exitform.HoverState.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.exitform.IconColor = System.Drawing.Color.White;
+            this.exitform.Location = new System.Drawing.Point(276, 7);
+            this.exitform.Margin = new System.Windows.Forms.Padding(2);
+            this.exitform.Name = "exitform";
+            this.exitform.PressedColor = System.Drawing.Color.Transparent;
+            this.exitform.Size = new System.Drawing.Size(33, 31);
+            this.exitform.TabIndex = 13;
             // 
             // Reset
             // 
@@ -85,20 +99,6 @@
             this.btnproceed.TabIndex = 71;
             this.btnproceed.Text = "Proceed";
             this.btnproceed.Click += new System.EventHandler(this.btnproceed_Click);
-            // 
-            // exitform
-            // 
-            this.exitform.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitform.Animated = true;
-            this.exitform.FillColor = System.Drawing.Color.Transparent;
-            this.exitform.HoverState.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.exitform.IconColor = System.Drawing.Color.White;
-            this.exitform.Location = new System.Drawing.Point(276, 7);
-            this.exitform.Margin = new System.Windows.Forms.Padding(2);
-            this.exitform.Name = "exitform";
-            this.exitform.PressedColor = System.Drawing.Color.Transparent;
-            this.exitform.Size = new System.Drawing.Size(33, 31);
-            this.exitform.TabIndex = 13;
             // 
             // cbusername
             // 
@@ -155,6 +155,7 @@
             this.Controls.Add(this.btnproceed);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Userreset";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Userreset";
             this.Load += new System.EventHandler(this.Userreset_Load);

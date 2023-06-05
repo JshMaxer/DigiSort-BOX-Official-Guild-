@@ -76,7 +76,7 @@ namespace DigiSort_Box.Database
         }
 
         //issue for top and floor admin
-        void issuetopfloor(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername)
+        void issuetopfloor(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername, System.Windows.Forms.DataGridView dg)
         {
             DateTime dateTimeVariable = DateTime.Now;
             string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
@@ -144,10 +144,12 @@ namespace DigiSort_Box.Database
                                         clear(txtissue, txtquan);
                                         updateCommand.ExecuteNonQuery();
                                         quantityzero();
+                                        raw(dg);
                                     }
                                     else
                                     {
                                         MessageBox.Show("Item added Un-successfull!");
+                                        raw(dg);
                                     }
                                 }
                                 catch (Exception ex)
@@ -231,10 +233,12 @@ namespace DigiSort_Box.Database
                                         clear(txtissue, txtquan);
                                         updateCommand.ExecuteNonQuery();
                                         quantityzero();
+                                        ready(dg);
                                     }
                                     else
                                     {
                                         MessageBox.Show("Item added Un-successfull!");
+                                        ready(dg);
                                     }
                                 }
                                 catch (Exception ex)
@@ -318,10 +322,12 @@ namespace DigiSort_Box.Database
                                         clear(txtissue, txtquan);
                                         updateCommand.ExecuteNonQuery();
                                         quantityzero();
+                                        unprint(dg);
                                     }
                                     else
                                     {
                                         MessageBox.Show("Item added Un-successfull!");
+                                        unprint(dg);
                                     }
                                 }
                                 catch (Exception ex)
@@ -343,7 +349,7 @@ namespace DigiSort_Box.Database
         }
 
         //issue for super admin
-        void issuesuper(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername)
+        void issuesuper(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername, System.Windows.Forms.DataGridView dg)
         {
             DateTime dateTimeVariable = DateTime.Now;
             string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
@@ -392,10 +398,12 @@ namespace DigiSort_Box.Database
                             clear(txtissue, txtquan);
                             updateCommand.ExecuteNonQuery();
                             quantityzero();
+                            raw(dg);
                         }
                         else
                         {
                             MessageBox.Show("Item added Un-successfull!");
+                            raw(dg);
                         }
                     }
                     catch (Exception ex)
@@ -408,9 +416,6 @@ namespace DigiSort_Box.Database
                 }
 
             }
-
-
-
             else if (cbtable.SelectedItem.Equals("Ready to Sell Items"))
             {
                 //Restriction
@@ -437,66 +442,42 @@ namespace DigiSort_Box.Database
 
                     rawrd.Close();
 
-                    //Code here
-                    //activity_logs
-                    string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
+
+                    //insert query //itm should return data to insert on database.
+                    string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
+                    string UpdateQuery = "UPDATE ready_to_sell_items SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+
                     connection.Close();
                     connection.Open();
-                    MySqlCommand cmdid = new MySqlCommand(idquery, connection);
-                    MySqlDataReader row = cmdid.ExecuteReader();
+
+                    MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                    MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
 
                     try
                     {
-
-                        if (row.HasRows)
+                        if (command.ExecuteNonQuery() == 1)
                         {
-                            while (row.Read())
-                            {
-                                string id = row["id"].ToString();
-
-                                //insert query //itm should return data to insert on database.
-                                string InsertQuery = "INSERT INTO ready_to_sell_items_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + lbl4.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
-                                string UpdateQuery = "UPDATE ready_to_sell_items SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
-
-                                connection.Close();
-                                connection.Open();
-
-                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-                                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
-
-                                try
-                                {
-                                    if (command.ExecuteNonQuery() == 1)
-                                    {
-                                        MessageBox.Show("Item added successfully!");
-                                        clear(txtissue, txtquan);
-                                        updateCommand.ExecuteNonQuery();
-                                        quantityzero();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Item added Un-successfull!");
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message);
-                                }
-
-                                connection.Close();
-
-                            }
+                            MessageBox.Show("Item added successfully!");
+                            clear(txtissue, txtquan);
+                            updateCommand.ExecuteNonQuery();
+                            quantityzero();
+                            ready(dg);
                         }
-
+                        else
+                        {
+                            MessageBox.Show("Item added Un-successfull!");
+                            ready(dg);
+                        }
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        //catch the error
-                        MessageBox.Show(e.Message);
+                        MessageBox.Show(ex.Message);
                     }
+
+                    connection.Close();
+
+
                 }
-
-
             }
             else if (cbtable.SelectedItem.Equals("Unprinted Shirts"))
             {
@@ -522,75 +503,54 @@ namespace DigiSort_Box.Database
                         }
                     }
 
-                    //Code here
-                    //activity_logs
-                    string idquery = "SELECT id FROM account where username = '" + txtusername.Text + "'";
+                    rawrd.Close();
+
+                    //insert query //itm should return data to insert on database.
+                    string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
+                    string UpdateQuery = "UPDATE unprinted_shirts SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
+
                     connection.Close();
                     connection.Open();
-                    MySqlCommand cmdid = new MySqlCommand(idquery, connection);
-                    MySqlDataReader row = cmdid.ExecuteReader();
+
+                    MySqlCommand command = new MySqlCommand(InsertQuery, connection);
+                    MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
 
                     try
                     {
-
-                        if (row.HasRows)
+                        if (command.ExecuteNonQuery() == 1)
                         {
-                            while (row.Read())
-                            {
-                                string id = row["id"].ToString();
-
-                                //insert query //itm should return data to insert on database.
-                                string InsertQuery = "INSERT INTO unprinted_shirts_damage_items VALUES ('" + lblid.Text + "', '" + lbl1.Text + "', '" + lbl2.Text + "', '" + lbl3.Text + "', '" + int.Parse(txtquan.Text) + "', '" + txtissue.Text + "', '" + date + "')";
-                                string UpdateQuery = "UPDATE unprinted_shirts SET quantity = quantity - " + int.Parse(txtquan.Text) + " WHERE id = '" + lblid.Text + "'";
-
-                                connection.Close();
-                                connection.Open();
-
-                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-                                MySqlCommand updateCommand = new MySqlCommand(UpdateQuery, connection);
-
-                                try
-                                {
-                                    if (command.ExecuteNonQuery() == 1)
-                                    {
-                                        MessageBox.Show("Item added successfully!");
-                                        clear(txtissue, txtquan);
-                                        updateCommand.ExecuteNonQuery();
-                                        quantityzero();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Item added Un-successfull!");
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message);
-                                }
-
-                                connection.Close();
-                            }
+                            MessageBox.Show("Item added successfully!");
+                            clear(txtissue, txtquan);
+                            updateCommand.ExecuteNonQuery();
+                            quantityzero();
+                            unprint(dg);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Item added Un-successfull!");
+                            unprint(dg);
                         }
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        //catch the error
-                        MessageBox.Show(e.Message);
+                        MessageBox.Show(ex.Message);
                     }
+
+                    connection.Close();
 
                 }
             }
         }
 
-        public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername)
+        public void issue(Guna2TextBox txtissue, Guna2TextBox txtquan, Guna2ComboBox cbtable, System.Windows.Forms.Label lblid, System.Windows.Forms.Label lbl1, System.Windows.Forms.Label lbl2, System.Windows.Forms.Label lbl3, System.Windows.Forms.Label lbl4, System.Windows.Forms.Label lbl5, System.Windows.Forms.Label lbl6, System.Windows.Forms.Label txtusername, System.Windows.Forms.DataGridView dg)
         {
             if (txtusername.Text.Equals("SUPER ADMIN"))
             {
-                issuesuper(txtissue, txtquan, cbtable, lblid, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, txtusername);
+                issuesuper(txtissue, txtquan, cbtable, lblid, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, txtusername, dg);
             }
             else
             {
-                issuetopfloor(txtissue, txtquan, cbtable, lblid, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, txtusername);
+                issuetopfloor(txtissue, txtquan, cbtable, lblid, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, txtusername, dg);
             }
         }
 

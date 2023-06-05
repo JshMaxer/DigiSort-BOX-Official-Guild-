@@ -9,7 +9,7 @@ namespace DigiSort_Box.Database
     public class Update
     {
         MySqlConnection connection = Host.connection;
-        Forms.update upt = new Forms.update();
+        Damage dmg = new Damage();
 
         void raw(System.Windows.Forms.DataGridView dgtable)
         {
@@ -188,8 +188,8 @@ namespace DigiSort_Box.Database
                             if (command.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Data successfully changed!", "Successful");
+                                dmg.quantityzero();
                                 raw(dgtable);
-
                                 //history
                                 history_raw(txtusername);
                             }
@@ -228,8 +228,9 @@ namespace DigiSort_Box.Database
                             if (command.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Data successfully changed!", "Successful");
+                                dmg.quantityzero();
                                 ready(dgtable);
-
+                                
                                 //history
                                 history_ready(txtusername);
                             }
@@ -268,8 +269,9 @@ namespace DigiSort_Box.Database
                             if (command.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("Data successfully changed!", "Successful");
+                                dmg.quantityzero();
                                 unprint(dgtable);
-
+                                
                                 //history
                                 history_unprint(txtusername);
                             }

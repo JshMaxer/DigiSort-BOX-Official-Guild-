@@ -188,6 +188,7 @@
             this.Controls.Add(this.btnokay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Concern";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Concern";
             this.Load += new System.EventHandler(this.Concern_Load);

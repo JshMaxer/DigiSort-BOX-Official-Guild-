@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingForm));
             this.smoothedge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dragcotrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.shadoow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
@@ -92,6 +93,7 @@
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoadingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoadingForm";

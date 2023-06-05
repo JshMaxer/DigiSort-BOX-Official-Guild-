@@ -170,6 +170,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "IPConfig";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IPConfig";
             this.ResumeLayout(false);

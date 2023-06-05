@@ -30,6 +30,7 @@ namespace DigiSort_Box.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DigiSortBox));
             this.panel1 = new System.Windows.Forms.Panel();
             this.formminimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.exitform = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -176,6 +177,7 @@ namespace DigiSort_Box.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "DigiSortBox";

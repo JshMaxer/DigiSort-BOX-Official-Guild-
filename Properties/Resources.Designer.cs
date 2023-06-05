@@ -73,6 +73,16 @@ namespace DigiSort_Box.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_modified {
+            get {
+                object obj = ResourceManager.GetObject("1-modified", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap account {
             get {
                 object obj = ResourceManager.GetObject("account", resourceCulture);
@@ -146,6 +156,16 @@ namespace DigiSort_Box.Properties {
         internal static System.Drawing.Bitmap dashboard__1_ {
             get {
                 object obj = ResourceManager.GetObject("dashboard (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap favicon__4_ {
+            get {
+                object obj = ResourceManager.GetObject("favicon (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
