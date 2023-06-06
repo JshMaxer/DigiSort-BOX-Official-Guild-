@@ -40,7 +40,12 @@ namespace DigiSort_Box.Forms
         private void label1_DoubleClick(object sender, EventArgs e)
         {
             MessageBox.Show("CREATED AND DESIGN BY: SORTECH CORP.\n\nJAMES BRYAN TIGUE - FRONT-END\nJOSHUA CAMBAL - DATABASE ADMIN\nLESTER MIGUEL RAPADA - BACK-END\n\nSPECIAL THANKS TO, ALONA EVANGELISTA - BUSINESS ANALYST" +
-            "\n\n\nDigiSort Box alright reserved 2023", "DEVELOPERS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            "\n\n\nDigiSort Box all rights reserved 2023", "DEVELOPERS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
