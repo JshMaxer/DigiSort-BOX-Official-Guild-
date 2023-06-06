@@ -129,54 +129,63 @@ namespace DigiSort_Box.Forms
 
         private void lblforgot_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Contact the SUPER ADMIN for reset password?", "Forgot Password", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            DialogResult = MessageBox.Show("Contact the SUPER ADMIN for reset password?", "Forgot Password", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (DialogResult == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 string input = Interaction.InputBox("Please enter username", "Username");
 
                 if (!string.IsNullOrEmpty(input))
                 {
-                    //search username
-                    string ad = "SELECT username FROM account where username = '" + input + "'";
+                    // Search username
+                    string selectQuery = "SELECT username FROM account WHERE username = @username";
                     connection.Close();
                     connection.Open();
-                    MySqlCommand cmd = new MySqlCommand(ad, connection);
-                    MySqlDataReader row = cmd.ExecuteReader();
+                    MySqlCommand selectCommand = new MySqlCommand(selectQuery, connection);
+                    selectCommand.Parameters.AddWithValue("@username", input);
+                    MySqlDataReader reader = selectCommand.ExecuteReader();
 
                     try
                     {
-                        if (row.HasRows)
+                        if (reader.HasRows)
                         {
-                            while (row.Read())
+                            reader.Close();
+                            string checkQuery = "SELECT username FROM message_request WHERE username = @username";
+                            MySqlCommand checkCommand = new MySqlCommand(checkQuery, connection);
+                            checkCommand.Parameters.AddWithValue("@username", input);
+                            MySqlDataReader checkReader = checkCommand.ExecuteReader();
+
+                            if (checkReader.HasRows)
                             {
-                                string user = row["username"].ToString();
-
-                                //contact
-                                row.Close();
-                                string InsertQuery = "INSERT INTO message_request VALUES ('" + user + "', 'Wants to reset password'" + ")";
-                                MySqlCommand command = new MySqlCommand(InsertQuery, connection);
-                                command.ExecuteNonQuery();
-
-                                MessageBox.Show(user + ", Your concern has been submitted");
+                                MessageBox.Show("Your concern is already submitted!");
+                            }
+                            else
+                            {
+                                checkReader.Close();
+                                string insertQuery = "INSERT INTO message_request VALUES (@username, 'Wants to reset password')";
+                                MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection);
+                                insertCommand.Parameters.AddWithValue("@username", input);
+                                insertCommand.ExecuteNonQuery();
+                                MessageBox.Show(input + ", Your concern has been submitted!");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Username not found");
+                            reader.Close();
+                            MessageBox.Show("Username not found!");
                         }
 
                         connection.Close();
                     }
                     catch (Exception)
                     {
-                        //Hide the error message
+                        // Hide the error message
                     }
                 }
-                //else
             }
         }
+
+
 
         private void txtusername_TextChanged(object sender, EventArgs e)
         {
@@ -214,7 +223,7 @@ namespace DigiSort_Box.Forms
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
