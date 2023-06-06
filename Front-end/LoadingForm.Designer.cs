@@ -92,6 +92,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.pictureBox1);
+            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoadingForm";
