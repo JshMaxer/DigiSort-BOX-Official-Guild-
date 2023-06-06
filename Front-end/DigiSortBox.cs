@@ -1,5 +1,4 @@
-﻿using DigiSort_Box.Front_end;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace DigiSort_Box.Forms
@@ -36,6 +35,12 @@ namespace DigiSort_Box.Forms
 
             Model.IPConfig conf = new Model.IPConfig();
             conf.ShowDialog();
+        }
+
+        private void label1_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("CREATED AND DESIGN BY: SORTECH CORP.\n\nJAMES BRYAN TIGUE - FRONT-END\nJOSHUA CAMBAL - DATABASE ADMIN\nLESTER MIGUEL RAPADA - BACK-END\n\nSPECIAL THANKS TO, ALONA EVANGELISTA - BUSINESS ANALYST" +
+            "\n\n\nDigiSort Box alright reserved 2023", "DEVELOPERS", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

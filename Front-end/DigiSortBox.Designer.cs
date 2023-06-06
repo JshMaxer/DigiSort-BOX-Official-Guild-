@@ -95,6 +95,7 @@ namespace DigiSort_Box.Forms
             this.label1.Size = new System.Drawing.Size(100, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "DigiSortBox";
+            this.label1.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
             // 
             // smoothedge
             // 
