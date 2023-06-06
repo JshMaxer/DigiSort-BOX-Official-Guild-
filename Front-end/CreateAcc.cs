@@ -1,13 +1,20 @@
-﻿using System;
+﻿using DigiSort_Box.Model;
+using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
+
 
 namespace DigiSort_Box
 {
     public partial class CreateAcc : Form
     {
+        MySqlConnection connection;
+
         public CreateAcc()
         {
             InitializeComponent();
+            Host.InitializeConnection();
+            connection = Host.connection;
         }
 
         private void btnback_Click_1(object sender, EventArgs e)
