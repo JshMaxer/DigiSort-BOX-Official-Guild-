@@ -56,97 +56,134 @@ namespace DigiSort_Box.Database
 
         void history_raw(System.Windows.Forms.Label txtusername)
         {
-            //date
-            DateTime dateTimeVariable = DateTime.Now;
-            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+            //id
+            connection.Close();
+            connection.Open();
+            string id = "SELECT id FROM account WHERE username = '" + txtusername.Text + "'";
+            MySqlCommand idcmd = new MySqlCommand(id, connection);
+            MySqlDataReader row = idcmd.ExecuteReader();
 
-            try
+            if (row.Read())
             {
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Raw Material" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
+                string ids = row["id"].ToString();
 
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    //MessageBox.Show("Logs");
-                }
-                else
-                {
-                    //MessageBox.Show("Meow");
-                }
+                //date
+                DateTime dateTimeVariable = DateTime.Now;
+                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
 
-                connection.Close();
+                try
+                {
+                    row.Close();
+                    connection.Close();
+                    connection.Open();
+                    string logs = "INSERT INTO activity_logs VALUES ('" + ids + "', '" + txtusername.Text + "', '" + "deleted items in Raw Material" + "', '" + date + "')";
+                    MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        //MessageBox.Show("Logs");
+                    }
+                    else
+                    {
+                        //MessageBox.Show("Meow");
+                    }
+
+                    connection.Close();
+                }
+                catch (Exception e)
+                {
+                    //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
+
+
 
         }
 
         void history_unprint(System.Windows.Forms.Label txtusername)
         {
-            //date
-            DateTime dateTimeVariable = DateTime.Now;
-            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+            //id
+            connection.Close();
+            connection.Open();
+            string id = "SELECT id FROM account WHERE username = '" + txtusername.Text + "'";
+            MySqlCommand idcmd = new MySqlCommand(id, connection);
+            MySqlDataReader row = idcmd.ExecuteReader();
 
-            try
+            if (row.Read())
             {
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Unprinted Shirts" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
+                string ids = row["id"].ToString();
 
-                if (cmd.ExecuteNonQuery() == 1)
+                //date
+                DateTime dateTimeVariable = DateTime.Now;
+                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+                try
                 {
-                    //MessageBox.Show("Logs");
+                    connection.Close();
+                    connection.Open();
+                    string logs = "INSERT INTO activity_logs VALUES ('" + ids + "', '" + txtusername.Text + "', '" + "deleted items in Unprinted Shirts" + "', '" + date + "')";
+                    MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        //MessageBox.Show("Logs");
+                    }
+                    else
+                    {
+                        //MessageBox.Show("Meow");
+                    }
+
+                    connection.Close();
                 }
-                else
+                catch (Exception)
                 {
-                    //MessageBox.Show("Meow");
+                    //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-                connection.Close();
             }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
         }
 
         void history_ready(System.Windows.Forms.Label txtusername)
         {
-            //date
-            DateTime dateTimeVariable = DateTime.Now;
-            string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+            //id
+            connection.Close();
+            connection.Open();
+            string id = "SELECT id FROM account WHERE username = '" + txtusername.Text + "'";
+            MySqlCommand idcmd = new MySqlCommand(id, connection);
+            MySqlDataReader row = idcmd.ExecuteReader();
 
-            try
+            if (row.Read())
             {
-                connection.Close();
-                connection.Open();
-                string logs = "INSERT INTO activity_logs VALUES ('" + txtusername.Text + "', '" + "deleted items in Ready to sell items" + "', '" + date + "')";
-                MySqlCommand cmd = new MySqlCommand(logs, connection);
+                string ids = row["id"].ToString();
 
-                if (cmd.ExecuteNonQuery() == 1)
+                //date
+                DateTime dateTimeVariable = DateTime.Now;
+                string date = dateTimeVariable.ToString("yyyy-MM-dd HH:mm:ss");
+
+                try
                 {
-                    //MessageBox.Show("Logs");
+                    connection.Close();
+                    connection.Open();
+                    string logs = "INSERT INTO activity_logs VALUES ('" + ids + "', '" + txtusername.Text + "', '" + "deleted items in Ready to sell items" + "', '" + date + "')";
+                    MySqlCommand cmd = new MySqlCommand(logs, connection);
+
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        //MessageBox.Show("Logs");
+                    }
+                    else
+                    {
+                        //MessageBox.Show("Meow");
+                    }
+
+                    connection.Close();
                 }
-                else
+                catch (Exception)
                 {
-                    //MessageBox.Show("Meow");
+                    //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                connection.Close();
             }
-            catch (Exception)
-            {
-                //MessageBox.Show("Activities executed by SUPER ADMIN will not be added to Activity logs", "REMINDER", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
         }
 
         public void dlt(System.Windows.Forms.ComboBox cbtable, System.Windows.Forms.TextBox txt1, System.Windows.Forms.TextBox txt2, System.Windows.Forms.TextBox txt3, System.Windows.Forms.TextBox txt4, System.Windows.Forms.TextBox txt5, System.Windows.Forms.TextBox txt6, System.Windows.Forms.TextBox txtid, System.Windows.Forms.Label txtusername, System.Windows.Forms.DataGridView dgtable)

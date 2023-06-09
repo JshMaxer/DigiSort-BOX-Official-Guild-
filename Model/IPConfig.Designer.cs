@@ -79,10 +79,8 @@
             this.cbip.FormattingEnabled = true;
             this.cbip.Items.AddRange(new object[] {
             "LOCALHOST (Default)",
-            "SOHO (HOME)",
-            "PEER TO PEER (22.21)",
-            "PUBLIC IP (152)",
-            "TUNNEL (TEST)"});
+            "LAN (22.21)",
+            "PUBLIC IP (152)"});
             this.cbip.Location = new System.Drawing.Point(56, 183);
             this.cbip.Name = "cbip";
             this.cbip.Size = new System.Drawing.Size(256, 26);

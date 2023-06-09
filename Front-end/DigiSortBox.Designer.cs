@@ -41,6 +41,7 @@ namespace DigiSort_Box.Forms
             this.btncreateaccount = new Guna.UI2.WinForms.Guna2Button();
             this.shadoow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblversion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -168,12 +169,23 @@ namespace DigiSort_Box.Forms
             this.pictureBox1.TabStop = false;
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
+            // lblversion
+            // 
+            this.lblversion.AutoSize = true;
+            this.lblversion.Font = new System.Drawing.Font("Verdana", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.Location = new System.Drawing.Point(715, 488);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(21, 8);
+            this.lblversion.TabIndex = 12;
+            this.lblversion.Text = "v 1.5";
+            // 
             // DigiSortBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(745, 505);
+            this.Controls.Add(this.lblversion);
             this.Controls.Add(this.btncreateaccount);
             this.Controls.Add(this.btnsignin);
             this.Controls.Add(this.panel1);
@@ -189,6 +201,7 @@ namespace DigiSort_Box.Forms
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -204,5 +217,6 @@ namespace DigiSort_Box.Forms
         private Guna.UI2.WinForms.Guna2Button btnsignin;
         private Guna.UI2.WinForms.Guna2Button btncreateaccount;
         private Guna.UI2.WinForms.Guna2ShadowForm shadoow;
+        private System.Windows.Forms.Label lblversion;
     }
 }
